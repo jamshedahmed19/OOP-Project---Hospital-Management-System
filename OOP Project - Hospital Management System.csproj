@@ -51,6 +51,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddNewDoctor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AddNewDoctor.Designer.cs">
+      <DependentUpon>AddNewDoctor.cs</DependentUpon>
+    </Compile>
     <Compile Include="ControlClass.cs" />
     <Compile Include="CovidUserControl.cs">
       <SubType>UserControl</SubType>
@@ -58,18 +64,26 @@
     <Compile Include="CovidUserControl.Designer.cs">
       <DependentUpon>CovidUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="CRUDDoctor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CRUDDoctor.Designer.cs">
+      <DependentUpon>CRUDDoctor.cs</DependentUpon>
+    </Compile>
     <Compile Include="DashBoard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DashBoard.Designer.cs">
       <DependentUpon>DashBoard.cs</DependentUpon>
     </Compile>
-    <Compile Include="HomeControl.cs">
+    <Compile Include="AdminHomeControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="HomeControl.Designer.cs">
-      <DependentUpon>HomeControl.cs</DependentUpon>
+    <Compile Include="AdminHomeControl.Designer.cs">
+      <DependentUpon>AdminHomeControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="DatabaseOps.cs" />
+    <Compile Include="Doctor.cs" />
     <Compile Include="SplashScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,14 +98,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddNewDoctor.resx">
+      <DependentUpon>AddNewDoctor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CovidUserControl.resx">
       <DependentUpon>CovidUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRUDDoctor.resx">
+      <DependentUpon>CRUDDoctor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DashBoard.resx">
       <DependentUpon>DashBoard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HomeControl.resx">
-      <DependentUpon>HomeControl.cs</DependentUpon>
+    <EmbeddedResource Include="AdminHomeControl.resx">
+      <DependentUpon>AdminHomeControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SplashScreen.resx">
       <DependentUpon>SplashScreen.cs</DependentUpon>

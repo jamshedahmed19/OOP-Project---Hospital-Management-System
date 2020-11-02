@@ -17,5 +17,10 @@ namespace OOP_Project___Hospital_Management_System
             content.Controls.Add(control);
             //rameen was here
         }
+
+        public static void ShowPreviousControl(System.Windows.Forms.Control control)
+        {
+            
+        }
     }
 }

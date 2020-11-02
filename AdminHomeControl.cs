@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace OOP_Project___Hospital_Management_System
 {
-    public partial class HomeControl : UserControl
+    public partial class AdminHomeControl : UserControl
     {
-        public HomeControl()
+        public AdminHomeControl()
         {
             InitializeComponent();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            CRUDDoctor cRUDDoctor = new CRUDDoctor();
+            ControlClass.ShowControl(cRUDDoctor, Content);
         }
     }
 }

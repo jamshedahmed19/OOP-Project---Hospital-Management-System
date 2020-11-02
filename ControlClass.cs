@@ -16,5 +16,10 @@ namespace OOP_Project___Hospital_Management_System
             control.BringToFront();
             content.Controls.Add(control);
         }
+
+        public static void ShowPreviousControl(System.Windows.Forms.Control control)
+        {
+            
+        }
     }
 }

@@ -24,13 +24,13 @@ namespace OOP_Project___Hospital_Management_System
 
         private void DashBoard_Load(object sender, EventArgs e)
         {
-            HomeControl homeControl = new HomeControl();
+            AdminHomeControl homeControl = new AdminHomeControl();
             ControlClass.ShowControl(homeControl, Content);
         }
 
         private void buttonHome_Click(object sender, EventArgs e)
         {
-            HomeControl homeControl = new HomeControl();
+            AdminHomeControl homeControl = new AdminHomeControl();
             ControlClass.ShowControl(homeControl, Content);
         }
 
@@ -43,6 +43,11 @@ namespace OOP_Project___Hospital_Management_System
         {
             CovidUserControl covidUserControl = new CovidUserControl();
             ControlClass.ShowControl(covidUserControl, Content);
+        }
+
+        private void buttonBack_Click(object sender, EventArgs e)
+        {
+            this.Content.Controls[0].SendToBack();
         }
     }
 }

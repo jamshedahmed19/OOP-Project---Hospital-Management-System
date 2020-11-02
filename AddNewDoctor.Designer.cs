@@ -1,6 +1,6 @@
 ﻿namespace OOP_Project___Hospital_Management_System
 {
-    partial class CovidUserControl
+    partial class AddNewDoctor
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,46 +28,43 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Content = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.Content.SuspendLayout();
+            this.Content = new System.Windows.Forms.Panel();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.Content.SuspendLayout();
             this.SuspendLayout();
             // 
-            // Content
+            // label2
             // 
-            this.Content.BackColor = System.Drawing.Color.White;
-            this.Content.Controls.Add(this.panel6);
-            this.Content.Controls.Add(this.panel5);
-            this.Content.Controls.Add(this.panel4);
-            this.Content.Controls.Add(this.panel3);
-            this.Content.Controls.Add(this.panel2);
-            this.Content.Controls.Add(this.panel1);
-            this.Content.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Content.Location = new System.Drawing.Point(0, 0);
-            this.Content.Name = "Content";
-            this.Content.Size = new System.Drawing.Size(907, 451);
-            this.Content.TabIndex = 0;
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(41)))));
+            this.label2.Font = new System.Drawing.Font("Raleway", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(249)))));
+            this.label2.Location = new System.Drawing.Point(54, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(83, 34);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Cases";
             // 
             // panel6
             // 
@@ -90,6 +87,18 @@
             this.label10.TabIndex = 2;
             this.label10.Text = "Book Or Modify an Appointment";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(41)))));
+            this.label4.Font = new System.Drawing.Font("Raleway", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(249)))));
+            this.label4.Location = new System.Drawing.Point(54, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(83, 34);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Cases";
+            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(41)))));
@@ -109,6 +118,18 @@
             this.label9.Size = new System.Drawing.Size(380, 39);
             this.label9.TabIndex = 2;
             this.label9.Text = "COVID-19 Self-Assessment";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(41)))));
+            this.label1.Font = new System.Drawing.Font("Fira Code", 16.8F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(163)))), ((int)(((byte)(65)))));
+            this.label1.Location = new System.Drawing.Point(43, 34);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(105, 44);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "10000";
             // 
             // panel4
             // 
@@ -144,16 +165,6 @@
             this.label8.TabIndex = 1;
             this.label8.Text = "Cases";
             // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(41)))));
-            this.panel3.Controls.Add(this.label5);
-            this.panel3.Controls.Add(this.label6);
-            this.panel3.Location = new System.Drawing.Point(460, 47);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(191, 78);
-            this.panel3.TabIndex = 0;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -178,6 +189,16 @@
             this.label6.TabIndex = 1;
             this.label6.Text = "Cases";
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(41)))));
+            this.panel3.Controls.Add(this.label5);
+            this.panel3.Controls.Add(this.label6);
+            this.panel3.Location = new System.Drawing.Point(460, 47);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(191, 78);
+            this.panel3.TabIndex = 0;
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(41)))));
@@ -187,30 +208,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(191, 78);
             this.panel2.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(41)))));
-            this.label1.Font = new System.Drawing.Font("Fira Code", 16.8F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(163)))), ((int)(((byte)(65)))));
-            this.label1.Location = new System.Drawing.Point(43, 34);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 44);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "10000";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(41)))));
-            this.label4.Font = new System.Drawing.Font("Raleway", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(249)))));
-            this.label4.Location = new System.Drawing.Point(54, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(83, 34);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Cases";
             // 
             // panel1
             // 
@@ -234,26 +231,27 @@
             this.label3.TabIndex = 1;
             this.label3.Text = "10000";
             // 
-            // label2
+            // Content
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(41)))));
-            this.label2.Font = new System.Drawing.Font("Raleway", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(249)))));
-            this.label2.Location = new System.Drawing.Point(54, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 34);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Cases";
+            this.Content.BackColor = System.Drawing.Color.White;
+            this.Content.Controls.Add(this.panel6);
+            this.Content.Controls.Add(this.panel5);
+            this.Content.Controls.Add(this.panel4);
+            this.Content.Controls.Add(this.panel3);
+            this.Content.Controls.Add(this.panel2);
+            this.Content.Controls.Add(this.panel1);
+            this.Content.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Content.Location = new System.Drawing.Point(0, 0);
+            this.Content.Name = "Content";
+            this.Content.Size = new System.Drawing.Size(907, 451);
+            this.Content.TabIndex = 1;
             // 
-            // CovidUserControl
+            // AddNewDoctor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.Controls.Add(this.Content);
-            this.Name = "CovidUserControl";
+            this.Name = "AddNewDoctor";
             this.Size = new System.Drawing.Size(907, 451);
-            this.Content.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel5.ResumeLayout(false);
@@ -266,28 +264,29 @@
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.Content.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel Content;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel Content;
     }
 }

@@ -65,7 +65,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(98, 550);
+            this.panel1.Size = new System.Drawing.Size(98, 689);
             this.panel1.TabIndex = 0;
             // 
             // pictureBoxLogo
@@ -88,7 +88,7 @@
             this.buttonCovid.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonCovid.FlatAppearance.BorderSize = 0;
             this.buttonCovid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCovid.Location = new System.Drawing.Point(27, 166);
+            this.buttonCovid.Location = new System.Drawing.Point(27, 235);
             this.buttonCovid.Margin = new System.Windows.Forms.Padding(5);
             this.buttonCovid.Name = "buttonCovid";
             this.buttonCovid.Padding = new System.Windows.Forms.Padding(5);
@@ -105,7 +105,7 @@
             this.buttonHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonHome.FlatAppearance.BorderSize = 0;
             this.buttonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonHome.Location = new System.Drawing.Point(27, 97);
+            this.buttonHome.Location = new System.Drawing.Point(27, 166);
             this.buttonHome.Margin = new System.Windows.Forms.Padding(5);
             this.buttonHome.Name = "buttonHome";
             this.buttonHome.Padding = new System.Windows.Forms.Padding(5);
@@ -122,7 +122,7 @@
             this.buttonDoctor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonDoctor.FlatAppearance.BorderSize = 0;
             this.buttonDoctor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonDoctor.Location = new System.Drawing.Point(27, 242);
+            this.buttonDoctor.Location = new System.Drawing.Point(27, 311);
             this.buttonDoctor.Margin = new System.Windows.Forms.Padding(5);
             this.buttonDoctor.Name = "buttonDoctor";
             this.buttonDoctor.Padding = new System.Windows.Forms.Padding(5);
@@ -138,7 +138,7 @@
             this.buttonLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonLogout.FlatAppearance.BorderSize = 0;
             this.buttonLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonLogout.Location = new System.Drawing.Point(27, 499);
+            this.buttonLogout.Location = new System.Drawing.Point(27, 638);
             this.buttonLogout.Margin = new System.Windows.Forms.Padding(5);
             this.buttonLogout.Name = "buttonLogout";
             this.buttonLogout.Padding = new System.Windows.Forms.Padding(5);
@@ -154,7 +154,7 @@
             this.buttonSettings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonSettings.FlatAppearance.BorderSize = 0;
             this.buttonSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSettings.Location = new System.Drawing.Point(27, 453);
+            this.buttonSettings.Location = new System.Drawing.Point(27, 522);
             this.buttonSettings.Margin = new System.Windows.Forms.Padding(5);
             this.buttonSettings.Name = "buttonSettings";
             this.buttonSettings.Padding = new System.Windows.Forms.Padding(5);
@@ -170,7 +170,7 @@
             this.buttonStaff.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonStaff.FlatAppearance.BorderSize = 0;
             this.buttonStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonStaff.Location = new System.Drawing.Point(27, 386);
+            this.buttonStaff.Location = new System.Drawing.Point(27, 455);
             this.buttonStaff.Margin = new System.Windows.Forms.Padding(5);
             this.buttonStaff.Name = "buttonStaff";
             this.buttonStaff.Padding = new System.Windows.Forms.Padding(5);
@@ -186,7 +186,7 @@
             this.buttonPatient.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonPatient.FlatAppearance.BorderSize = 0;
             this.buttonPatient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPatient.Location = new System.Drawing.Point(27, 314);
+            this.buttonPatient.Location = new System.Drawing.Point(27, 383);
             this.buttonPatient.Margin = new System.Windows.Forms.Padding(5);
             this.buttonPatient.Name = "buttonPatient";
             this.buttonPatient.Padding = new System.Windows.Forms.Padding(5);
@@ -203,7 +203,7 @@
             this.panelHead.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHead.Location = new System.Drawing.Point(98, 0);
             this.panelHead.Name = "panelHead";
-            this.panelHead.Size = new System.Drawing.Size(1202, 63);
+            this.panelHead.Size = new System.Drawing.Size(1264, 63);
             this.panelHead.TabIndex = 1;
             this.panelHead.Paint += new System.Windows.Forms.PaintEventHandler(this.panelHead_Paint);
             // 
@@ -226,7 +226,7 @@
             this.buttonExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonExit.FlatAppearance.BorderSize = 0;
             this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonExit.Location = new System.Drawing.Point(1052, 17);
+            this.buttonExit.Location = new System.Drawing.Point(1083, 17);
             this.buttonExit.Margin = new System.Windows.Forms.Padding(5);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Padding = new System.Windows.Forms.Padding(5);
@@ -243,7 +243,7 @@
             this.buttonBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonBack.FlatAppearance.BorderSize = 0;
             this.buttonBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonBack.Location = new System.Drawing.Point(123, 17);
+            this.buttonBack.Location = new System.Drawing.Point(154, 17);
             this.buttonBack.Margin = new System.Windows.Forms.Padding(5);
             this.buttonBack.Name = "buttonBack";
             this.buttonBack.Padding = new System.Windows.Forms.Padding(5);
@@ -267,14 +267,14 @@
             this.Content.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Content.Location = new System.Drawing.Point(98, 63);
             this.Content.Name = "Content";
-            this.Content.Size = new System.Drawing.Size(1202, 487);
+            this.Content.Size = new System.Drawing.Size(1264, 626);
             this.Content.TabIndex = 2;
             // 
             // DashBoard
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1300, 550);
+            this.ClientSize = new System.Drawing.Size(1362, 689);
             this.Controls.Add(this.Content);
             this.Controls.Add(this.panelHead);
             this.Controls.Add(this.panel1);

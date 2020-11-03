@@ -84,6 +84,17 @@
     </Compile>
     <Compile Include="DatabaseOps.cs" />
     <Compile Include="Doctor.cs" />
+    <Compile Include="HMS_DatabaseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HMS_DatabaseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PatientCRUD.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PatientCRUD.Designer.cs">
+      <DependentUpon>PatientCRUD.cs</DependentUpon>
+    </Compile>
     <Compile Include="SplashScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +124,9 @@
     <EmbeddedResource Include="AdminHomeControl.resx">
       <DependentUpon>AdminHomeControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PatientCRUD.resx">
+      <DependentUpon>PatientCRUD.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SplashScreen.resx">
       <DependentUpon>SplashScreen.cs</DependentUpon>
     </EmbeddedResource>
@@ -128,6 +142,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="HMS_DatabaseDataSet.xsc">
+      <DependentUpon>HMS_DatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HMS_DatabaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HMS_DatabaseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HMS_DatabaseDataSet.xss">
+      <DependentUpon>HMS_DatabaseDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

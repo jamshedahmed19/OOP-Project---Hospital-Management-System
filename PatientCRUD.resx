@@ -117,13 +117,28 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="dOCTORSBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>227, 17</value>
-  </metadata>
-  <metadata name="hMS_DatabaseDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="button4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAB3RJ
+        TUUH5AodCxQAizlcYwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAMeSURBVFhH
+        xVfNThRBEO7LTs+w07NgVOIPJv6d9OBBfQAfQQQxPoPiSfBqYhAwGE/y8ziEiHrzDfQGBi6sEUhc/L6u
+        ml12YZneYaNfUpnpqq7qmq6f7jHhOOtMlD0x1q2Y2H3BcxO0r7QJ3mc8l02UTvi5fcPAwAVjs4/Gpr+w
+        wEEY+bkr0LuhVkohMXH2Gobqh4w39EtnYXwSXzsGGvfv5MnONHQuaR+8t7BlxWQo6Ll135qGYrdlIvcS
+        u3FRZ3RHklzC3Cmvk+tHbs1Uq8M6owCV6h0obagyv+adMYODKu0BtSHoLqgN2Mp+YLduq7AL5MvzxetQ
+        eKiS8ojSUW/L20y/n7QTCSbl2143ldpd5Z8elexe0wmG49ickITj4n/68uWdiNJHsC3hiN2MchW+1JrZ
+        jpgHwmd/9lxHxbDpe11jz9jadeUCvs69Z1vBCZcMXVFjB8j8EeUWAIkZu23VW1YmulbeZFhqobDZzaYD
+        fA9F5KZVr27MuRQM317JaPgaDkVZB5Lksl+LemxieEHLxIAdrheUdYCI3VfVXeKA7ZODWRWH4TQOWDfv
+        9SK3zsFPNTKp4qPgtsW1ax30QPRAfO+UU6cbbPZCdTfoAEqC3qBOj4McNPqlvVKXEvUHmJ+ze9iBMRW3
+        g0bajPZC2TO10o4ofaxzvAP/OQRyvnMwp+Iw9CcJP3Gw7Af/pwwXGY8JHfyrRjTi16Ke5F1bK56SWQEo
+        60DkXqnejjHDVWG2uiEOIxwYISh1GGVnsEZ+GKEL5pCbEK/XFCwotxgss26ldhxs+kHX2EWlXFWugrdX
+        ETYQm1Hl9g+Mdx772L1Rbhss4rOmTuBKhmtUv1DJ7jfzzLpVcCIRdIIXRt5eZeJvHNVPVVIechULupQK
+        eHVuOYEtwzUqNDHbgISTmMu2c/EovaXCAtDLVjgYs22Mp09srzlYESy1VraTVk2antcZwbAwMgNlOayE
+        +GvGLjaHXeKv2bgnOTHnVaZf7GkPPCZcl5iHgAeLtOvD/4hFtANaOlpqpwIukHKOL2KL1/HkHxR3h7Qh
+        PNyufXvNO1wRjPkLJXA0EdZEzd4AAAAASUVORK5CYII=
+</value>
+  </data>
   <data name="buttonDisplay.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
@@ -188,7 +203,4 @@
         riqTLkjT7E8AfAIRDJS/R84uEQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <metadata name="dOCTORSTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>450, 17</value>
-  </metadata>
 </root>

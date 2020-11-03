@@ -45,5 +45,29 @@ namespace OOP_Project___Hospital_Management_System
             sqlConnection.Close();
             return dataTable;
         }
+
+        public DataTable search(string tableValue, string searchValue, string searchByValue)
+        {
+            sqlConnection.Open();
+            if (tableValue == "DOCTORS")
+            {
+                if (searchByValue.ToLower() == "Doctor ID")
+                {
+                    sqlDataAdapter = new SqlDataAdapter("SELECT * FROM " + tableValue + " WHERE DOC_ID LIKE '%" + searchValue + "%'", sqlConnection);
+                }
+                else
+                {
+                    sqlDataAdapter = new SqlDataAdapter("SELECT * FROM " + tableValue + " WHERE DOC_NAME LIKE '%" + searchValue + "%'", sqlConnection);
+                }
+            }
+            else
+            {
+                sqlDataAdapter = new SqlDataAdapter("SELECT * FROM " + tableValue + " WHERE DOC_NAME LIKE '%" + searchValue + "%'", sqlConnection);
+            }
+            DataTable dataTable = new DataTable();
+            sqlDataAdapter.Fill(dataTable);
+            sqlConnection.Close();
+            return dataTable;
+        }
     }
 }

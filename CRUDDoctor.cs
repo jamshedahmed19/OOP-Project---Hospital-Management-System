@@ -39,5 +39,11 @@ namespace OOP_Project___Hospital_Management_System
             DatabaseOps displayDoc = new DatabaseOps();
             dataGridView1.DataSource = displayDoc.display("DOCTORS");
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            DatabaseOps databaseOps = new DatabaseOps();
+            dataGridView1.DataSource = databaseOps.search("DOCTORS", textBoxSearch.Text, comboBoxSearchBy.Text);
+        }
     }
 }

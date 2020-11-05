@@ -29,16 +29,30 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CRUDDoctor));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CRUDDoctor));
             this.Content = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dOCIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dOCNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dOCDEPARTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dOCTELDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dOCEMAILDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dOCPASSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dOCGENDERDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dOCADDRESSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dOCDESIGDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dOCTORSBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hMS_DatabaseDataSet = new OOP_Project___Hospital_Management_System.HMS_DatabaseDataSet();
+            this.comboBoxSearchBy = new System.Windows.Forms.ComboBox();
             this.comboBoxGender = new System.Windows.Forms.ComboBox();
             this.buttonDisplay = new System.Windows.Forms.Button();
             this.buttonUpdate = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonInsert = new System.Windows.Forms.Button();
+            this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.textBoxDepartment = new System.Windows.Forms.TextBox();
@@ -53,30 +67,15 @@
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxid = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.hMS_DatabaseDataSet = new OOP_Project___Hospital_Management_System.HMS_DatabaseDataSet();
-            this.dOCTORSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dOCTORSTableAdapter = new OOP_Project___Hospital_Management_System.HMS_DatabaseDataSetTableAdapters.DOCTORSTableAdapter();
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dOCIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dOCNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dOCDEPARTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dOCTELDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dOCEMAILDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dOCPASSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dOCGENDERDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dOCADDRESSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dOCDESIGDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBoxSearch = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.comboBoxSearchBy = new System.Windows.Forms.ComboBox();
             this.Content.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hMS_DatabaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dOCTORSBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hMS_DatabaseDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // Content
@@ -115,19 +114,163 @@
             this.Content.Size = new System.Drawing.Size(1261, 550);
             this.Content.TabIndex = 2;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(13)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Raleway ExtraBold", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.ColumnHeadersHeight = 40;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDDataGridViewTextBoxColumn,
+            this.dOCIDDataGridViewTextBoxColumn,
+            this.dOCNAMEDataGridViewTextBoxColumn,
+            this.dOCDEPARTDataGridViewTextBoxColumn,
+            this.dOCTELDataGridViewTextBoxColumn,
+            this.dOCEMAILDataGridViewTextBoxColumn,
+            this.dOCPASSDataGridViewTextBoxColumn,
+            this.dOCGENDERDataGridViewTextBoxColumn,
+            this.dOCADDRESSDataGridViewTextBoxColumn,
+            this.dOCDESIGDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.dOCTORSBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(29, 312);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Raleway ExtraBold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView1.RowHeadersWidth = 50;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(1201, 216);
+            this.dataGridView1.TabIndex = 12;
+            // 
+            // iDDataGridViewTextBoxColumn
+            // 
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dOCIDDataGridViewTextBoxColumn
+            // 
+            this.dOCIDDataGridViewTextBoxColumn.DataPropertyName = "DOC_ID";
+            this.dOCIDDataGridViewTextBoxColumn.HeaderText = "DOC_ID";
+            this.dOCIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dOCIDDataGridViewTextBoxColumn.Name = "dOCIDDataGridViewTextBoxColumn";
+            this.dOCIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dOCNAMEDataGridViewTextBoxColumn
+            // 
+            this.dOCNAMEDataGridViewTextBoxColumn.DataPropertyName = "DOC_NAME";
+            this.dOCNAMEDataGridViewTextBoxColumn.HeaderText = "DOC_NAME";
+            this.dOCNAMEDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dOCNAMEDataGridViewTextBoxColumn.Name = "dOCNAMEDataGridViewTextBoxColumn";
+            // 
+            // dOCDEPARTDataGridViewTextBoxColumn
+            // 
+            this.dOCDEPARTDataGridViewTextBoxColumn.DataPropertyName = "DOC_DEPART";
+            this.dOCDEPARTDataGridViewTextBoxColumn.HeaderText = "DOC_DEPART";
+            this.dOCDEPARTDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dOCDEPARTDataGridViewTextBoxColumn.Name = "dOCDEPARTDataGridViewTextBoxColumn";
+            // 
+            // dOCTELDataGridViewTextBoxColumn
+            // 
+            this.dOCTELDataGridViewTextBoxColumn.DataPropertyName = "DOC_TEL";
+            this.dOCTELDataGridViewTextBoxColumn.HeaderText = "DOC_TEL";
+            this.dOCTELDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dOCTELDataGridViewTextBoxColumn.Name = "dOCTELDataGridViewTextBoxColumn";
+            // 
+            // dOCEMAILDataGridViewTextBoxColumn
+            // 
+            this.dOCEMAILDataGridViewTextBoxColumn.DataPropertyName = "DOC_EMAIL";
+            this.dOCEMAILDataGridViewTextBoxColumn.HeaderText = "DOC_EMAIL";
+            this.dOCEMAILDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dOCEMAILDataGridViewTextBoxColumn.Name = "dOCEMAILDataGridViewTextBoxColumn";
+            // 
+            // dOCPASSDataGridViewTextBoxColumn
+            // 
+            this.dOCPASSDataGridViewTextBoxColumn.DataPropertyName = "DOC_PASS";
+            this.dOCPASSDataGridViewTextBoxColumn.HeaderText = "DOC_PASS";
+            this.dOCPASSDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dOCPASSDataGridViewTextBoxColumn.Name = "dOCPASSDataGridViewTextBoxColumn";
+            // 
+            // dOCGENDERDataGridViewTextBoxColumn
+            // 
+            this.dOCGENDERDataGridViewTextBoxColumn.DataPropertyName = "DOC_GENDER";
+            this.dOCGENDERDataGridViewTextBoxColumn.HeaderText = "DOC_GENDER";
+            this.dOCGENDERDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dOCGENDERDataGridViewTextBoxColumn.Name = "dOCGENDERDataGridViewTextBoxColumn";
+            // 
+            // dOCADDRESSDataGridViewTextBoxColumn
+            // 
+            this.dOCADDRESSDataGridViewTextBoxColumn.DataPropertyName = "DOC_ADDRESS";
+            this.dOCADDRESSDataGridViewTextBoxColumn.HeaderText = "DOC_ADDRESS";
+            this.dOCADDRESSDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dOCADDRESSDataGridViewTextBoxColumn.Name = "dOCADDRESSDataGridViewTextBoxColumn";
+            // 
+            // dOCDESIGDataGridViewTextBoxColumn
+            // 
+            this.dOCDESIGDataGridViewTextBoxColumn.DataPropertyName = "DOC_DESIG";
+            this.dOCDESIGDataGridViewTextBoxColumn.HeaderText = "DOC_DESIG";
+            this.dOCDESIGDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dOCDESIGDataGridViewTextBoxColumn.Name = "dOCDESIGDataGridViewTextBoxColumn";
+            // 
+            // dOCTORSBindingSource
+            // 
+            this.dOCTORSBindingSource.DataMember = "DOCTORS";
+            this.dOCTORSBindingSource.DataSource = this.hMS_DatabaseDataSet;
+            // 
+            // hMS_DatabaseDataSet
+            // 
+            this.hMS_DatabaseDataSet.DataSetName = "HMS_DatabaseDataSet";
+            this.hMS_DatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // comboBoxSearchBy
+            // 
+            this.comboBoxSearchBy.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBoxSearchBy.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.comboBoxSearchBy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.comboBoxSearchBy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBoxSearchBy.Font = new System.Drawing.Font("Raleway", 14F);
+            this.comboBoxSearchBy.FormattingEnabled = true;
+            this.comboBoxSearchBy.Items.AddRange(new object[] {
+            "Doctor ID",
+            "Name",
+            "Number",
+            "Designation",
+            "Department"});
+            this.comboBoxSearchBy.Location = new System.Drawing.Point(860, 220);
+            this.comboBoxSearchBy.Name = "comboBoxSearchBy";
+            this.comboBoxSearchBy.Size = new System.Drawing.Size(370, 40);
+            this.comboBoxSearchBy.TabIndex = 3;
+            // 
             // comboBoxGender
             // 
             this.comboBoxGender.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
             this.comboBoxGender.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBoxGender.Font = new System.Drawing.Font("Raleway", 14F);
+            this.comboBoxGender.Font = new System.Drawing.Font("Raleway", 12F);
             this.comboBoxGender.FormattingEnabled = true;
             this.comboBoxGender.Items.AddRange(new object[] {
             "Female",
             "Male",
             "Other"});
-            this.comboBoxGender.Location = new System.Drawing.Point(492, 102);
+            this.comboBoxGender.Location = new System.Drawing.Point(569, 106);
             this.comboBoxGender.Name = "comboBoxGender";
-            this.comboBoxGender.Size = new System.Drawing.Size(200, 40);
+            this.comboBoxGender.Size = new System.Drawing.Size(123, 36);
             this.comboBoxGender.TabIndex = 3;
             // 
             // buttonDisplay
@@ -195,6 +338,17 @@
             this.buttonInsert.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonInsert.UseVisualStyleBackColor = false;
             this.buttonInsert.Click += new System.EventHandler(this.buttonInsert_Click);
+            // 
+            // textBoxSearch
+            // 
+            this.textBoxSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.textBoxSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxSearch.Font = new System.Drawing.Font("Raleway", 16F);
+            this.textBoxSearch.Location = new System.Drawing.Point(906, 266);
+            this.textBoxSearch.Name = "textBoxSearch";
+            this.textBoxSearch.Size = new System.Drawing.Size(324, 32);
+            this.textBoxSearch.TabIndex = 6;
+            this.textBoxSearch.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBoxEmail
             // 
@@ -345,6 +499,28 @@
             this.textBoxid.Size = new System.Drawing.Size(123, 28);
             this.textBoxid.TabIndex = 0;
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Raleway", 14F);
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.label11.Location = new System.Drawing.Point(702, 220);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(152, 34);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "SEARCH BY:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Raleway", 14F);
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.label10.Location = new System.Drawing.Point(702, 265);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(198, 34);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "SEARCH VALUE:";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -367,194 +543,9 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "DOCTOR";
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(13)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Raleway ExtraBold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.ColumnHeadersHeight = 40;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDDataGridViewTextBoxColumn,
-            this.dOCIDDataGridViewTextBoxColumn,
-            this.dOCNAMEDataGridViewTextBoxColumn,
-            this.dOCDEPARTDataGridViewTextBoxColumn,
-            this.dOCTELDataGridViewTextBoxColumn,
-            this.dOCEMAILDataGridViewTextBoxColumn,
-            this.dOCPASSDataGridViewTextBoxColumn,
-            this.dOCGENDERDataGridViewTextBoxColumn,
-            this.dOCADDRESSDataGridViewTextBoxColumn,
-            this.dOCDESIGDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.dOCTORSBindingSource;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Raleway SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.Location = new System.Drawing.Point(29, 312);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Raleway ExtraBold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridView1.RowHeadersWidth = 50;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1201, 216);
-            this.dataGridView1.TabIndex = 12;
-            // 
-            // hMS_DatabaseDataSet
-            // 
-            this.hMS_DatabaseDataSet.DataSetName = "HMS_DatabaseDataSet";
-            this.hMS_DatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dOCTORSBindingSource
-            // 
-            this.dOCTORSBindingSource.DataMember = "DOCTORS";
-            this.dOCTORSBindingSource.DataSource = this.hMS_DatabaseDataSet;
-            // 
             // dOCTORSTableAdapter
             // 
             this.dOCTORSTableAdapter.ClearBeforeFill = true;
-            // 
-            // iDDataGridViewTextBoxColumn
-            // 
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dOCIDDataGridViewTextBoxColumn
-            // 
-            this.dOCIDDataGridViewTextBoxColumn.DataPropertyName = "DOC_ID";
-            this.dOCIDDataGridViewTextBoxColumn.HeaderText = "DOC_ID";
-            this.dOCIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.dOCIDDataGridViewTextBoxColumn.Name = "dOCIDDataGridViewTextBoxColumn";
-            this.dOCIDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dOCNAMEDataGridViewTextBoxColumn
-            // 
-            this.dOCNAMEDataGridViewTextBoxColumn.DataPropertyName = "DOC_NAME";
-            this.dOCNAMEDataGridViewTextBoxColumn.HeaderText = "DOC_NAME";
-            this.dOCNAMEDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.dOCNAMEDataGridViewTextBoxColumn.Name = "dOCNAMEDataGridViewTextBoxColumn";
-            // 
-            // dOCDEPARTDataGridViewTextBoxColumn
-            // 
-            this.dOCDEPARTDataGridViewTextBoxColumn.DataPropertyName = "DOC_DEPART";
-            this.dOCDEPARTDataGridViewTextBoxColumn.HeaderText = "DOC_DEPART";
-            this.dOCDEPARTDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.dOCDEPARTDataGridViewTextBoxColumn.Name = "dOCDEPARTDataGridViewTextBoxColumn";
-            // 
-            // dOCTELDataGridViewTextBoxColumn
-            // 
-            this.dOCTELDataGridViewTextBoxColumn.DataPropertyName = "DOC_TEL";
-            this.dOCTELDataGridViewTextBoxColumn.HeaderText = "DOC_TEL";
-            this.dOCTELDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.dOCTELDataGridViewTextBoxColumn.Name = "dOCTELDataGridViewTextBoxColumn";
-            // 
-            // dOCEMAILDataGridViewTextBoxColumn
-            // 
-            this.dOCEMAILDataGridViewTextBoxColumn.DataPropertyName = "DOC_EMAIL";
-            this.dOCEMAILDataGridViewTextBoxColumn.HeaderText = "DOC_EMAIL";
-            this.dOCEMAILDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.dOCEMAILDataGridViewTextBoxColumn.Name = "dOCEMAILDataGridViewTextBoxColumn";
-            // 
-            // dOCPASSDataGridViewTextBoxColumn
-            // 
-            this.dOCPASSDataGridViewTextBoxColumn.DataPropertyName = "DOC_PASS";
-            this.dOCPASSDataGridViewTextBoxColumn.HeaderText = "DOC_PASS";
-            this.dOCPASSDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.dOCPASSDataGridViewTextBoxColumn.Name = "dOCPASSDataGridViewTextBoxColumn";
-            // 
-            // dOCGENDERDataGridViewTextBoxColumn
-            // 
-            this.dOCGENDERDataGridViewTextBoxColumn.DataPropertyName = "DOC_GENDER";
-            this.dOCGENDERDataGridViewTextBoxColumn.HeaderText = "DOC_GENDER";
-            this.dOCGENDERDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.dOCGENDERDataGridViewTextBoxColumn.Name = "dOCGENDERDataGridViewTextBoxColumn";
-            // 
-            // dOCADDRESSDataGridViewTextBoxColumn
-            // 
-            this.dOCADDRESSDataGridViewTextBoxColumn.DataPropertyName = "DOC_ADDRESS";
-            this.dOCADDRESSDataGridViewTextBoxColumn.HeaderText = "DOC_ADDRESS";
-            this.dOCADDRESSDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.dOCADDRESSDataGridViewTextBoxColumn.Name = "dOCADDRESSDataGridViewTextBoxColumn";
-            // 
-            // dOCDESIGDataGridViewTextBoxColumn
-            // 
-            this.dOCDESIGDataGridViewTextBoxColumn.DataPropertyName = "DOC_DESIG";
-            this.dOCDESIGDataGridViewTextBoxColumn.HeaderText = "DOC_DESIG";
-            this.dOCDESIGDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.dOCDESIGDataGridViewTextBoxColumn.Name = "dOCDESIGDataGridViewTextBoxColumn";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Raleway", 14F);
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.label10.Location = new System.Drawing.Point(702, 265);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(198, 34);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "SEARCH VALUE:";
-            // 
-            // textBoxSearch
-            // 
-            this.textBoxSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.textBoxSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxSearch.Font = new System.Drawing.Font("Raleway", 16F);
-            this.textBoxSearch.Location = new System.Drawing.Point(906, 266);
-            this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(324, 32);
-            this.textBoxSearch.TabIndex = 6;
-            this.textBoxSearch.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Raleway", 14F);
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.label11.Location = new System.Drawing.Point(702, 220);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(152, 34);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "SEARCH BY:";
-            // 
-            // comboBoxSearchBy
-            // 
-            this.comboBoxSearchBy.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboBoxSearchBy.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.comboBoxSearchBy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.comboBoxSearchBy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBoxSearchBy.Font = new System.Drawing.Font("Raleway", 14F);
-            this.comboBoxSearchBy.FormattingEnabled = true;
-            this.comboBoxSearchBy.Items.AddRange(new object[] {
-            "Doctor ID",
-            "Name",
-            "Number",
-            "Designation",
-            "Department"});
-            this.comboBoxSearchBy.Location = new System.Drawing.Point(860, 220);
-            this.comboBoxSearchBy.Name = "comboBoxSearchBy";
-            this.comboBoxSearchBy.Size = new System.Drawing.Size(370, 40);
-            this.comboBoxSearchBy.TabIndex = 3;
             // 
             // CRUDDoctor
             // 
@@ -565,8 +556,8 @@
             this.Content.ResumeLayout(false);
             this.Content.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hMS_DatabaseDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dOCTORSBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hMS_DatabaseDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }

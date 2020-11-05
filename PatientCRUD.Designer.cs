@@ -28,7 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PatientCRUD));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.comboBoxGender = new System.Windows.Forms.ComboBox();
             this.button4 = new System.Windows.Forms.Button();
             this.buttonDisplay = new System.Windows.Forms.Button();
@@ -53,7 +56,48 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.Content = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.comboBoxSearchBy = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.hMS_DatabaseDataSet1 = new OOP_Project___Hospital_Management_System.HMS_DatabaseDataSet1();
+            this.pATIENTSBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pATIENTSTableAdapter = new OOP_Project___Hospital_Management_System.HMS_DatabaseDataSet1TableAdapters.PATIENTSTableAdapter();
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pATIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pATNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pATTELDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pATEMAILDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pATPASSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pATGENDERDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pATADDRESSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dOCCODEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Content.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.hMS_DatabaseDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pATIENTSBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBoxGender
@@ -328,13 +372,14 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
             this.label2.Location = new System.Drawing.Point(19, 20);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(192, 55);
+            this.label2.Size = new System.Drawing.Size(187, 55);
             this.label2.TabIndex = 1;
-            this.label2.Text = "DOCTOR";
+            this.label2.Text = "PATIENT";
             // 
             // Content
             // 
             this.Content.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(13)))));
+            this.Content.Controls.Add(this.panel1);
             this.Content.Controls.Add(this.comboBoxGender);
             this.Content.Controls.Add(this.button4);
             this.Content.Controls.Add(this.buttonDisplay);
@@ -365,15 +410,459 @@
             this.Content.Size = new System.Drawing.Size(1261, 550);
             this.Content.TabIndex = 3;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(13)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Raleway ExtraBold", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridView1.ColumnHeadersHeight = 40;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDDataGridViewTextBoxColumn,
+            this.pATIDDataGridViewTextBoxColumn,
+            this.pATNAMEDataGridViewTextBoxColumn,
+            this.pATTELDataGridViewTextBoxColumn,
+            this.pATEMAILDataGridViewTextBoxColumn,
+            this.pATPASSDataGridViewTextBoxColumn,
+            this.pATGENDERDataGridViewTextBoxColumn,
+            this.pATADDRESSDataGridViewTextBoxColumn,
+            this.dOCCODEDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.pATIENTSBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(29, 312);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Raleway ExtraBold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridView1.RowHeadersWidth = 50;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(1201, 216);
+            this.dataGridView1.TabIndex = 12;
+            // 
+            // comboBoxSearchBy
+            // 
+            this.comboBoxSearchBy.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBoxSearchBy.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.comboBoxSearchBy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.comboBoxSearchBy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBoxSearchBy.Font = new System.Drawing.Font("Raleway", 14F);
+            this.comboBoxSearchBy.FormattingEnabled = true;
+            this.comboBoxSearchBy.Items.AddRange(new object[] {
+            "Doctor ID",
+            "Name",
+            "Number",
+            "Designation",
+            "Department"});
+            this.comboBoxSearchBy.Location = new System.Drawing.Point(860, 220);
+            this.comboBoxSearchBy.Name = "comboBoxSearchBy";
+            this.comboBoxSearchBy.Size = new System.Drawing.Size(370, 40);
+            this.comboBoxSearchBy.TabIndex = 3;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox1.Font = new System.Drawing.Font("Raleway", 12F);
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Female",
+            "Male",
+            "Other"});
+            this.comboBox1.Location = new System.Drawing.Point(511, 97);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(181, 36);
+            this.comboBox1.TabIndex = 3;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Raleway", 10F, System.Drawing.FontStyle.Bold);
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(13)))));
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(971, 144);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(259, 46);
+            this.button1.TabIndex = 5;
+            this.button1.Text = " DISPLAY PATIENT";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Raleway", 10F, System.Drawing.FontStyle.Bold);
+            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(13)))));
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Location = new System.Drawing.Point(706, 144);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(259, 46);
+            this.button2.TabIndex = 9;
+            this.button2.Text = " UPDATE PATIENT";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Raleway", 10F, System.Drawing.FontStyle.Bold);
+            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(13)))));
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.Location = new System.Drawing.Point(971, 92);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(259, 46);
+            this.button3.TabIndex = 10;
+            this.button3.Text = " DELETE PATIENT";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Raleway", 10F, System.Drawing.FontStyle.Bold);
+            this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(13)))));
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
+            this.button5.Location = new System.Drawing.Point(706, 92);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(259, 46);
+            this.button5.TabIndex = 8;
+            this.button5.Text = " INSERT PATIENT";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button5.UseVisualStyleBackColor = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(13)))));
+            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.comboBoxSearchBy);
+            this.panel1.Controls.Add(this.comboBox2);
+            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.button5);
+            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.label11);
+            this.panel1.Controls.Add(this.textBox4);
+            this.panel1.Controls.Add(this.label12);
+            this.panel1.Controls.Add(this.textBox6);
+            this.panel1.Controls.Add(this.label14);
+            this.panel1.Controls.Add(this.label15);
+            this.panel1.Controls.Add(this.textBox7);
+            this.panel1.Controls.Add(this.label16);
+            this.panel1.Controls.Add(this.textBox8);
+            this.panel1.Controls.Add(this.label17);
+            this.panel1.Controls.Add(this.label18);
+            this.panel1.Controls.Add(this.label19);
+            this.panel1.Controls.Add(this.label20);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Font = new System.Drawing.Font("Raleway ExtraBold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1261, 550);
+            this.panel1.TabIndex = 12;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Raleway", 16F);
+            this.textBox1.Location = new System.Drawing.Point(906, 266);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(324, 32);
+            this.textBox1.TabIndex = 6;
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Font = new System.Drawing.Font("Raleway SemiBold", 14F, System.Drawing.FontStyle.Bold);
+            this.textBox2.Location = new System.Drawing.Point(243, 216);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(449, 28);
+            this.textBox2.TabIndex = 6;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Raleway SemiBold", 14F, System.Drawing.FontStyle.Bold);
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.label10.Location = new System.Drawing.Point(67, 212);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(92, 34);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "EMAIL:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Raleway SemiBold", 14F, System.Drawing.FontStyle.Bold);
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.label11.Location = new System.Drawing.Point(67, 175);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(142, 34);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "DOC CODE:";
+            // 
+            // textBox4
+            // 
+            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox4.Font = new System.Drawing.Font("Raleway SemiBold", 14F, System.Drawing.FontStyle.Bold);
+            this.textBox4.Location = new System.Drawing.Point(243, 250);
+            this.textBox4.Multiline = true;
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(449, 48);
+            this.textBox4.TabIndex = 7;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Raleway SemiBold", 14F, System.Drawing.FontStyle.Bold);
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.label12.Location = new System.Drawing.Point(67, 242);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(130, 34);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "ADDRESS:";
+            // 
+            // textBox6
+            // 
+            this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox6.Font = new System.Drawing.Font("Raleway SemiBold", 14F, System.Drawing.FontStyle.Bold);
+            this.textBox6.Location = new System.Drawing.Point(511, 139);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(181, 28);
+            this.textBox6.TabIndex = 4;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Raleway SemiBold", 14F, System.Drawing.FontStyle.Bold);
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.label14.Location = new System.Drawing.Point(383, 136);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(104, 34);
+            this.label14.TabIndex = 0;
+            this.label14.Text = "TEL NO:";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Raleway SemiBold", 14F, System.Drawing.FontStyle.Bold);
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.label15.Location = new System.Drawing.Point(383, 98);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(116, 34);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "GENDER:";
+            // 
+            // textBox7
+            // 
+            this.textBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox7.Font = new System.Drawing.Font("Raleway SemiBold", 14F, System.Drawing.FontStyle.Bold);
+            this.textBox7.Location = new System.Drawing.Point(243, 138);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(123, 28);
+            this.textBox7.TabIndex = 1;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Raleway SemiBold", 14F, System.Drawing.FontStyle.Bold);
+            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.label16.Location = new System.Drawing.Point(67, 134);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(89, 34);
+            this.label16.TabIndex = 0;
+            this.label16.Text = "NAME:";
+            // 
+            // textBox8
+            // 
+            this.textBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox8.Font = new System.Drawing.Font("Raleway SemiBold", 14F, System.Drawing.FontStyle.Bold);
+            this.textBox8.Location = new System.Drawing.Point(243, 105);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.ReadOnly = true;
+            this.textBox8.Size = new System.Drawing.Size(123, 28);
+            this.textBox8.TabIndex = 0;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Raleway", 14F);
+            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.label17.Location = new System.Drawing.Point(702, 220);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(152, 34);
+            this.label17.TabIndex = 0;
+            this.label17.Text = "SEARCH BY:";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Raleway", 14F);
+            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.label18.Location = new System.Drawing.Point(702, 265);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(198, 34);
+            this.label18.TabIndex = 0;
+            this.label18.Text = "SEARCH VALUE:";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Raleway SemiBold", 14F, System.Drawing.FontStyle.Bold);
+            this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.label19.Location = new System.Drawing.Point(67, 102);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(146, 34);
+            this.label19.TabIndex = 0;
+            this.label19.Text = "PATIENT ID:";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Raleway ExtraBold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.label20.Location = new System.Drawing.Point(19, 20);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(187, 55);
+            this.label20.TabIndex = 1;
+            this.label20.Text = "PATIENT";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox2.Font = new System.Drawing.Font("Raleway", 12F);
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Female",
+            "Male",
+            "Other"});
+            this.comboBox2.Location = new System.Drawing.Point(243, 174);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(449, 36);
+            this.comboBox2.TabIndex = 3;
+            // 
+            // hMS_DatabaseDataSet1
+            // 
+            this.hMS_DatabaseDataSet1.DataSetName = "HMS_DatabaseDataSet1";
+            this.hMS_DatabaseDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // pATIENTSBindingSource
+            // 
+            this.pATIENTSBindingSource.DataMember = "PATIENTS";
+            this.pATIENTSBindingSource.DataSource = this.hMS_DatabaseDataSet1;
+            // 
+            // pATIENTSTableAdapter
+            // 
+            this.pATIENTSTableAdapter.ClearBeforeFill = true;
+            // 
+            // iDDataGridViewTextBoxColumn
+            // 
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // pATIDDataGridViewTextBoxColumn
+            // 
+            this.pATIDDataGridViewTextBoxColumn.DataPropertyName = "PAT_ID";
+            this.pATIDDataGridViewTextBoxColumn.HeaderText = "PAT_ID";
+            this.pATIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.pATIDDataGridViewTextBoxColumn.Name = "pATIDDataGridViewTextBoxColumn";
+            this.pATIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // pATNAMEDataGridViewTextBoxColumn
+            // 
+            this.pATNAMEDataGridViewTextBoxColumn.DataPropertyName = "PAT_NAME";
+            this.pATNAMEDataGridViewTextBoxColumn.HeaderText = "PAT_NAME";
+            this.pATNAMEDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.pATNAMEDataGridViewTextBoxColumn.Name = "pATNAMEDataGridViewTextBoxColumn";
+            // 
+            // pATTELDataGridViewTextBoxColumn
+            // 
+            this.pATTELDataGridViewTextBoxColumn.DataPropertyName = "PAT_TEL";
+            this.pATTELDataGridViewTextBoxColumn.HeaderText = "PAT_TEL";
+            this.pATTELDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.pATTELDataGridViewTextBoxColumn.Name = "pATTELDataGridViewTextBoxColumn";
+            // 
+            // pATEMAILDataGridViewTextBoxColumn
+            // 
+            this.pATEMAILDataGridViewTextBoxColumn.DataPropertyName = "PAT_EMAIL";
+            this.pATEMAILDataGridViewTextBoxColumn.HeaderText = "PAT_EMAIL";
+            this.pATEMAILDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.pATEMAILDataGridViewTextBoxColumn.Name = "pATEMAILDataGridViewTextBoxColumn";
+            // 
+            // pATPASSDataGridViewTextBoxColumn
+            // 
+            this.pATPASSDataGridViewTextBoxColumn.DataPropertyName = "PAT_PASS";
+            this.pATPASSDataGridViewTextBoxColumn.HeaderText = "PAT_PASS";
+            this.pATPASSDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.pATPASSDataGridViewTextBoxColumn.Name = "pATPASSDataGridViewTextBoxColumn";
+            // 
+            // pATGENDERDataGridViewTextBoxColumn
+            // 
+            this.pATGENDERDataGridViewTextBoxColumn.DataPropertyName = "PAT_GENDER";
+            this.pATGENDERDataGridViewTextBoxColumn.HeaderText = "PAT_GENDER";
+            this.pATGENDERDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.pATGENDERDataGridViewTextBoxColumn.Name = "pATGENDERDataGridViewTextBoxColumn";
+            // 
+            // pATADDRESSDataGridViewTextBoxColumn
+            // 
+            this.pATADDRESSDataGridViewTextBoxColumn.DataPropertyName = "PAT_ADDRESS";
+            this.pATADDRESSDataGridViewTextBoxColumn.HeaderText = "PAT_ADDRESS";
+            this.pATADDRESSDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.pATADDRESSDataGridViewTextBoxColumn.Name = "pATADDRESSDataGridViewTextBoxColumn";
+            // 
+            // dOCCODEDataGridViewTextBoxColumn
+            // 
+            this.dOCCODEDataGridViewTextBoxColumn.DataPropertyName = "DOC_CODE";
+            this.dOCCODEDataGridViewTextBoxColumn.HeaderText = "DOC_CODE";
+            this.dOCCODEDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dOCCODEDataGridViewTextBoxColumn.Name = "dOCCODEDataGridViewTextBoxColumn";
+            // 
             // PatientCRUD
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.Controls.Add(this.Content);
             this.Name = "PatientCRUD";
             this.Size = new System.Drawing.Size(1261, 550);
             this.Content.ResumeLayout(false);
             this.Content.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.hMS_DatabaseDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pATIENTSBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -403,5 +892,42 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel Content;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ComboBox comboBoxSearchBy;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.BindingSource pATIENTSBindingSource;
+        private HMS_DatabaseDataSet1 hMS_DatabaseDataSet1;
+        private HMS_DatabaseDataSet1TableAdapters.PATIENTSTableAdapter pATIENTSTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pATIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pATNAMEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pATTELDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pATEMAILDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pATPASSDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pATGENDERDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pATADDRESSDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dOCCODEDataGridViewTextBoxColumn;
     }
 }

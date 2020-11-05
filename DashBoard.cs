@@ -49,5 +49,12 @@ namespace OOP_Project___Hospital_Management_System
         {
             this.Content.Controls[0].SendToBack();
         }
+
+        private void buttonLogout_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            this.Close();
+            login.Show();
+        }
     }
 }

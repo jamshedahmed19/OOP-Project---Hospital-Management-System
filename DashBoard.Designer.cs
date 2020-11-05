@@ -42,13 +42,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.buttonExit = new System.Windows.Forms.Button();
             this.buttonBack = new System.Windows.Forms.Button();
-            this.pictureBoxProfilePic = new System.Windows.Forms.PictureBox();
             this.Content = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.panelHead.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfilePic)).BeginInit();
-            this.Content.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -145,6 +142,7 @@
             this.buttonLogout.Size = new System.Drawing.Size(39, 37);
             this.buttonLogout.TabIndex = 7;
             this.buttonLogout.UseVisualStyleBackColor = false;
+            this.buttonLogout.Click += new System.EventHandler(this.buttonLogout_Click);
             // 
             // buttonSettings
             // 
@@ -212,7 +210,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Raleway", 16F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.label1.Location = new System.Drawing.Point(264, 13);
+            this.label1.Location = new System.Drawing.Point(406, 14);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(456, 37);
             this.label1.TabIndex = 9;
@@ -226,7 +224,7 @@
             this.buttonExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonExit.FlatAppearance.BorderSize = 0;
             this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonExit.Location = new System.Drawing.Point(1083, 17);
+            this.buttonExit.Location = new System.Drawing.Point(1223, 14);
             this.buttonExit.Margin = new System.Windows.Forms.Padding(5);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Padding = new System.Windows.Forms.Padding(5);
@@ -243,7 +241,7 @@
             this.buttonBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonBack.FlatAppearance.BorderSize = 0;
             this.buttonBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonBack.Location = new System.Drawing.Point(154, 17);
+            this.buttonBack.Location = new System.Drawing.Point(8, 13);
             this.buttonBack.Margin = new System.Windows.Forms.Padding(5);
             this.buttonBack.Name = "buttonBack";
             this.buttonBack.Padding = new System.Windows.Forms.Padding(5);
@@ -251,19 +249,8 @@
             this.buttonBack.TabIndex = 8;
             this.buttonBack.UseVisualStyleBackColor = false;
             // 
-            // pictureBoxProfilePic
-            // 
-            this.pictureBoxProfilePic.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxProfilePic.BackgroundImage")));
-            this.pictureBoxProfilePic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBoxProfilePic.Location = new System.Drawing.Point(1041, 34);
-            this.pictureBoxProfilePic.Name = "pictureBoxProfilePic";
-            this.pictureBoxProfilePic.Size = new System.Drawing.Size(68, 63);
-            this.pictureBoxProfilePic.TabIndex = 10;
-            this.pictureBoxProfilePic.TabStop = false;
-            // 
             // Content
             // 
-            this.Content.Controls.Add(this.pictureBoxProfilePic);
             this.Content.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Content.Location = new System.Drawing.Point(98, 63);
             this.Content.Name = "Content";
@@ -288,8 +275,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.panelHead.ResumeLayout(false);
             this.panelHead.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfilePic)).EndInit();
-            this.Content.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -306,7 +291,6 @@
         private System.Windows.Forms.Button buttonPatient;
         private System.Windows.Forms.Panel panelHead;
         private System.Windows.Forms.Button buttonSettings;
-        private System.Windows.Forms.PictureBox pictureBoxProfilePic;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonBack;
         private System.Windows.Forms.Panel Content;

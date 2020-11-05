@@ -22,5 +22,11 @@ namespace OOP_Project___Hospital_Management_System
             CRUDDoctor cRUDDoctor = new CRUDDoctor();
             ControlClass.ShowControl(cRUDDoctor, Content);
         }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            PatientCRUD cRUDPatient = new PatientCRUD();
+            ControlClass.ShowControl(cRUDPatient, Content);
+        }
     }
 }

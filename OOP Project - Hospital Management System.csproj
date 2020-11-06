@@ -57,6 +57,12 @@
     <Compile Include="AddNewDoctor.Designer.cs">
       <DependentUpon>AddNewDoctor.cs</DependentUpon>
     </Compile>
+    <Compile Include="BedAvailibilityUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BedAvailibilityUserControl.Designer.cs">
+      <DependentUpon>BedAvailibilityUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="ControlClass.cs" />
     <Compile Include="CovidUserControl.cs">
       <SubType>UserControl</SubType>
@@ -94,11 +100,28 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>HMS_DatabaseDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="HMS_DatabaseDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HMS_DatabaseDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InpatientUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InpatientUserControl.Designer.cs">
+      <DependentUpon>InpatientUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="PatientCRUD.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="PatientCRUD.Designer.cs">
       <DependentUpon>PatientCRUD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RoomCRUD.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RoomCRUD.Designer.cs">
+      <DependentUpon>RoomCRUD.cs</DependentUpon>
     </Compile>
     <Compile Include="SplashScreen.cs">
       <SubType>Form</SubType>
@@ -117,6 +140,9 @@
     <EmbeddedResource Include="AddNewDoctor.resx">
       <DependentUpon>AddNewDoctor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BedAvailibilityUserControl.resx">
+      <DependentUpon>BedAvailibilityUserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CovidUserControl.resx">
       <DependentUpon>CovidUserControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -129,8 +155,14 @@
     <EmbeddedResource Include="AdminHomeControl.resx">
       <DependentUpon>AdminHomeControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InpatientUserControl.resx">
+      <DependentUpon>InpatientUserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PatientCRUD.resx">
       <DependentUpon>PatientCRUD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RoomCRUD.resx">
+      <DependentUpon>RoomCRUD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SplashScreen.resx">
       <DependentUpon>SplashScreen.cs</DependentUpon>
@@ -168,6 +200,17 @@
     </None>
     <None Include="HMS_DatabaseDataSet1.xss">
       <DependentUpon>HMS_DatabaseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="HMS_DatabaseDataSet2.xsc">
+      <DependentUpon>HMS_DatabaseDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="HMS_DatabaseDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HMS_DatabaseDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HMS_DatabaseDataSet2.xss">
+      <DependentUpon>HMS_DatabaseDataSet2.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

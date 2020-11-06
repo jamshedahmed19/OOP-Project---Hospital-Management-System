@@ -9,7 +9,14 @@ namespace OOP_Project___Hospital_Management_System
 {
     class Doctor
     {
+        string id;
         string name, gender, department, designation, tel_no, email, address;
+
+        public string Id
+        {
+            get { return this.id; }
+            set { this.id = value; }
+        }
 
         public string Name
         {
@@ -60,6 +67,18 @@ namespace OOP_Project___Hospital_Management_System
 
         public Doctor(string name, string gender, string tel_no, string email, string depart, string desig, string address)
         {
+            this.Name = name;
+            this.Gender = gender;
+            this.Tel_No = tel_no;
+            this.Email = email;
+            this.Department = depart;
+            this.Designation = desig;
+            this.address = address;
+        }
+
+        public Doctor(string id, string name, string gender, string tel_no, string email, string depart, string desig, string address)
+        {
+            this.Id = id;
             this.Name = name;
             this.Gender = gender;
             this.Tel_No = tel_no;

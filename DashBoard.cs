@@ -17,11 +17,6 @@ namespace OOP_Project___Hospital_Management_System
             InitializeComponent();
         }
 
-        private void panelHead_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void DashBoard_Load(object sender, EventArgs e)
         {
             AdminHomeControl homeControl = new AdminHomeControl();
@@ -41,8 +36,8 @@ namespace OOP_Project___Hospital_Management_System
 
         private void buttonCovid_Click(object sender, EventArgs e)
         {
-            CovidUserControl covidUserControl = new CovidUserControl();
-            ControlClass.ShowControl(covidUserControl, Content);
+            InpatientUserControl inpatientUser = new InpatientUserControl();
+            ControlClass.ShowControl(inpatientUser, Content);
         }
 
         private void buttonBack_Click(object sender, EventArgs e)
@@ -55,6 +50,12 @@ namespace OOP_Project___Hospital_Management_System
             Login login = new Login();
             this.Close();
             login.Show();
+        }
+
+        private void buttonPatient_Click(object sender, EventArgs e)
+        {
+            RoomCRUD room = new RoomCRUD();
+            ControlClass.ShowControl(room, Content);
         }
     }
 }

@@ -85,7 +85,7 @@
             this.Content.Font = new System.Drawing.Font("Raleway ExtraBold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Content.Location = new System.Drawing.Point(0, 0);
             this.Content.Name = "Content";
-            this.Content.Size = new System.Drawing.Size(1300, 550);
+            this.Content.Size = new System.Drawing.Size(1261, 550);
             this.Content.TabIndex = 1;
             // 
             // label2
@@ -106,7 +106,7 @@
             this.panel13.Controls.Add(this.panel14);
             this.panel13.Controls.Add(this.panel17);
             this.panel13.Controls.Add(this.panel18);
-            this.panel13.Location = new System.Drawing.Point(877, 189);
+            this.panel13.Location = new System.Drawing.Point(821, 189);
             this.panel13.Name = "panel13";
             this.panel13.Padding = new System.Windows.Forms.Padding(2);
             this.panel13.Size = new System.Drawing.Size(380, 319);
@@ -222,7 +222,7 @@
             this.panel7.Controls.Add(this.panel8);
             this.panel7.Controls.Add(this.panel11);
             this.panel7.Controls.Add(this.panel12);
-            this.panel7.Location = new System.Drawing.Point(457, 189);
+            this.panel7.Location = new System.Drawing.Point(435, 189);
             this.panel7.Name = "panel7";
             this.panel7.Padding = new System.Windows.Forms.Padding(2);
             this.panel7.Size = new System.Drawing.Size(380, 319);
@@ -356,7 +356,7 @@
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.panel4);
-            this.panel1.Location = new System.Drawing.Point(35, 189);
+            this.panel1.Location = new System.Drawing.Point(49, 189);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(2);
             this.panel1.Size = new System.Drawing.Size(380, 319);
@@ -469,11 +469,10 @@
             // 
             // AdminHomeControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.Controls.Add(this.Content);
             this.Name = "AdminHomeControl";
-            this.Size = new System.Drawing.Size(1300, 550);
+            this.Size = new System.Drawing.Size(1261, 550);
             this.Content.ResumeLayout(false);
             this.Content.PerformLayout();
             this.panel13.ResumeLayout(false);

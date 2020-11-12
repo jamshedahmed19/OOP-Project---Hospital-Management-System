@@ -22,7 +22,7 @@ namespace OOP_Project___Hospital_Management_System
         {
             tmr = new Timer();
             //set time interval 3 sec
-            tmr.Interval = 3000;
+            tmr.Interval = 30;
             //starts the timer
             tmr.Start();
             tmr.Tick += timer1_Tick;

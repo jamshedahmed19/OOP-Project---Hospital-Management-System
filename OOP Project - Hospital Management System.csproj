@@ -116,12 +116,14 @@
     <Compile Include="InpatientUserControl.Designer.cs">
       <DependentUpon>InpatientUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Patient.cs" />
     <Compile Include="PatientCRUD.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="PatientCRUD.Designer.cs">
       <DependentUpon>PatientCRUD.cs</DependentUpon>
     </Compile>
+    <Compile Include="Person.cs" />
     <Compile Include="Room.cs" />
     <Compile Include="RoomCRUD.cs">
       <SubType>UserControl</SubType>

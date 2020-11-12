@@ -30,9 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RoomCRUD));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             this.textBoxid = new System.Windows.Forms.TextBox();
             this.comboBoxSearchBy = new System.Windows.Forms.ComboBox();
             this.comboBoxType = new System.Windows.Forms.ComboBox();
@@ -58,8 +60,16 @@
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Content = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rOOMNODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fLOORNODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rOOMSTATUSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rOOMTYPEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pRICEPERHOURDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rOOMBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hMS_DatabaseDataSet3 = new OOP_Project___Hospital_Management_System.HMS_DatabaseDataSet3();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.comboBoxSearchValue = new System.Windows.Forms.ComboBox();
             this.comboBoxFloorNo = new System.Windows.Forms.ComboBox();
             this.comboBoxStatus = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -79,21 +89,13 @@
             this.label8 = new System.Windows.Forms.Label();
             this.textBoxAddress = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.hMS_DatabaseDataSet3 = new OOP_Project___Hospital_Management_System.HMS_DatabaseDataSet3();
-            this.rOOMBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rOOMTableAdapter = new OOP_Project___Hospital_Management_System.HMS_DatabaseDataSet3TableAdapters.ROOMTableAdapter();
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rOOMNODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fLOORNODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rOOMSTATUSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rOOMTYPEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pRICEPERHOURDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBoxSearchValue = new System.Windows.Forms.TextBox();
             this.Content.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hMS_DatabaseDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rOOMBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hMS_DatabaseDataSet3)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBoxid
@@ -113,17 +115,17 @@
             this.comboBoxSearchBy.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.comboBoxSearchBy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
             this.comboBoxSearchBy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBoxSearchBy.Font = new System.Drawing.Font("Raleway", 14F);
+            this.comboBoxSearchBy.Font = new System.Drawing.Font("Segoe UI", 13.8F);
             this.comboBoxSearchBy.FormattingEnabled = true;
             this.comboBoxSearchBy.Items.AddRange(new object[] {
-            "Doctor ID",
-            "Name",
-            "Number",
-            "Designation",
-            "Department"});
-            this.comboBoxSearchBy.Location = new System.Drawing.Point(225, 432);
+            "Room No",
+            "Status",
+            "Type",
+            "Floor No",
+            "Price"});
+            this.comboBoxSearchBy.Location = new System.Drawing.Point(225, 440);
             this.comboBoxSearchBy.Name = "comboBoxSearchBy";
-            this.comboBoxSearchBy.Size = new System.Drawing.Size(272, 40);
+            this.comboBoxSearchBy.Size = new System.Drawing.Size(272, 39);
             this.comboBoxSearchBy.TabIndex = 3;
             // 
             // comboBoxType
@@ -131,7 +133,7 @@
             this.comboBoxType.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.comboBoxType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
             this.comboBoxType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBoxType.Font = new System.Drawing.Font("Raleway", 12F);
+            this.comboBoxType.Font = new System.Drawing.Font("Segoe UI", 13.8F);
             this.comboBoxType.FormattingEnabled = true;
             this.comboBoxType.Items.AddRange(new object[] {
             "Deluxe",
@@ -139,7 +141,7 @@
             "Ward"});
             this.comboBoxType.Location = new System.Drawing.Point(243, 215);
             this.comboBoxType.Name = "comboBoxType";
-            this.comboBoxType.Size = new System.Drawing.Size(254, 36);
+            this.comboBoxType.Size = new System.Drawing.Size(254, 39);
             this.comboBoxType.TabIndex = 3;
             // 
             // buttonRoomDisplay
@@ -149,7 +151,7 @@
             this.buttonRoomDisplay.Font = new System.Drawing.Font("Raleway", 10F, System.Drawing.FontStyle.Bold);
             this.buttonRoomDisplay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(13)))));
             this.buttonRoomDisplay.Image = ((System.Drawing.Image)(resources.GetObject("buttonRoomDisplay.Image")));
-            this.buttonRoomDisplay.Location = new System.Drawing.Point(287, 383);
+            this.buttonRoomDisplay.Location = new System.Drawing.Point(287, 391);
             this.buttonRoomDisplay.Name = "buttonRoomDisplay";
             this.buttonRoomDisplay.Size = new System.Drawing.Size(210, 43);
             this.buttonRoomDisplay.TabIndex = 5;
@@ -166,7 +168,7 @@
             this.buttonRoomUpdate.Font = new System.Drawing.Font("Raleway", 10F, System.Drawing.FontStyle.Bold);
             this.buttonRoomUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(13)))));
             this.buttonRoomUpdate.Image = ((System.Drawing.Image)(resources.GetObject("buttonRoomUpdate.Image")));
-            this.buttonRoomUpdate.Location = new System.Drawing.Point(71, 383);
+            this.buttonRoomUpdate.Location = new System.Drawing.Point(71, 391);
             this.buttonRoomUpdate.Name = "buttonRoomUpdate";
             this.buttonRoomUpdate.Size = new System.Drawing.Size(210, 43);
             this.buttonRoomUpdate.TabIndex = 9;
@@ -174,6 +176,7 @@
             this.buttonRoomUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonRoomUpdate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonRoomUpdate.UseVisualStyleBackColor = false;
+            this.buttonRoomUpdate.Click += new System.EventHandler(this.buttonRoomUpdate_Click);
             // 
             // buttonRoomDelete
             // 
@@ -182,7 +185,7 @@
             this.buttonRoomDelete.Font = new System.Drawing.Font("Raleway", 10F, System.Drawing.FontStyle.Bold);
             this.buttonRoomDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(13)))));
             this.buttonRoomDelete.Image = ((System.Drawing.Image)(resources.GetObject("buttonRoomDelete.Image")));
-            this.buttonRoomDelete.Location = new System.Drawing.Point(287, 334);
+            this.buttonRoomDelete.Location = new System.Drawing.Point(287, 342);
             this.buttonRoomDelete.Name = "buttonRoomDelete";
             this.buttonRoomDelete.Size = new System.Drawing.Size(210, 43);
             this.buttonRoomDelete.TabIndex = 10;
@@ -190,6 +193,7 @@
             this.buttonRoomDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonRoomDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonRoomDelete.UseVisualStyleBackColor = false;
+            this.buttonRoomDelete.Click += new System.EventHandler(this.buttonRoomDelete_Click);
             // 
             // buttonRoomInsert
             // 
@@ -198,7 +202,7 @@
             this.buttonRoomInsert.Font = new System.Drawing.Font("Raleway", 10F, System.Drawing.FontStyle.Bold);
             this.buttonRoomInsert.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(13)))));
             this.buttonRoomInsert.Image = ((System.Drawing.Image)(resources.GetObject("buttonRoomInsert.Image")));
-            this.buttonRoomInsert.Location = new System.Drawing.Point(71, 334);
+            this.buttonRoomInsert.Location = new System.Drawing.Point(71, 342);
             this.buttonRoomInsert.Name = "buttonRoomInsert";
             this.buttonRoomInsert.Size = new System.Drawing.Size(210, 43);
             this.buttonRoomInsert.TabIndex = 8;
@@ -213,7 +217,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Raleway SemiBold", 14F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.label10.Location = new System.Drawing.Point(67, 255);
+            this.label10.Location = new System.Drawing.Point(67, 258);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(153, 34);
             this.label10.TabIndex = 0;
@@ -320,7 +324,7 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Raleway SemiBold", 14F, System.Drawing.FontStyle.Bold);
             this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.label16.Location = new System.Drawing.Point(67, 174);
+            this.label16.Location = new System.Drawing.Point(67, 171);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(110, 34);
             this.label16.TabIndex = 0;
@@ -330,11 +334,11 @@
             // 
             this.textBoxRoomID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
             this.textBoxRoomID.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxRoomID.Font = new System.Drawing.Font("Raleway SemiBold", 14F, System.Drawing.FontStyle.Bold);
-            this.textBoxRoomID.Location = new System.Drawing.Point(243, 105);
+            this.textBoxRoomID.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.textBoxRoomID.Location = new System.Drawing.Point(243, 96);
             this.textBoxRoomID.Name = "textBoxRoomID";
             this.textBoxRoomID.ReadOnly = true;
-            this.textBoxRoomID.Size = new System.Drawing.Size(254, 28);
+            this.textBoxRoomID.Size = new System.Drawing.Size(254, 31);
             this.textBoxRoomID.TabIndex = 0;
             // 
             // label17
@@ -342,7 +346,7 @@
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Raleway", 14F);
             this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.label17.Location = new System.Drawing.Point(67, 432);
+            this.label17.Location = new System.Drawing.Point(67, 440);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(152, 34);
             this.label17.TabIndex = 0;
@@ -353,7 +357,7 @@
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Raleway", 14F);
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.label18.Location = new System.Drawing.Point(67, 477);
+            this.label18.Location = new System.Drawing.Point(67, 485);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(198, 34);
             this.label18.TabIndex = 0;
@@ -364,7 +368,7 @@
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Raleway SemiBold", 14F, System.Drawing.FontStyle.Bold);
             this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.label19.Location = new System.Drawing.Point(67, 102);
+            this.label19.Location = new System.Drawing.Point(67, 93);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(123, 34);
             this.label19.TabIndex = 0;
@@ -426,10 +430,115 @@
             this.Content.Size = new System.Drawing.Size(1261, 550);
             this.Content.TabIndex = 5;
             // 
+            // dataGridView1
+            // 
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Raleway", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(13)))));
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Raleway", 12F);
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            this.dataGridView1.ColumnHeadersHeight = 40;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDDataGridViewTextBoxColumn,
+            this.rOOMNODataGridViewTextBoxColumn,
+            this.fLOORNODataGridViewTextBoxColumn,
+            this.rOOMSTATUSDataGridViewTextBoxColumn,
+            this.rOOMTYPEDataGridViewTextBoxColumn,
+            this.pRICEPERHOURDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.rOOMBindingSource;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Raleway", 12F);
+            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle18;
+            this.dataGridView1.Location = new System.Drawing.Point(511, 93);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Raleway", 12F);
+            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            this.dataGridView1.RowHeadersWidth = 50;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Raleway", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle20;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(689, 430);
+            this.dataGridView1.TabIndex = 13;
+            this.dataGridView1.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_RowHeaderMouseClick);
+            // 
+            // iDDataGridViewTextBoxColumn
+            // 
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // rOOMNODataGridViewTextBoxColumn
+            // 
+            this.rOOMNODataGridViewTextBoxColumn.DataPropertyName = "ROOM_NO";
+            this.rOOMNODataGridViewTextBoxColumn.HeaderText = "ROOM_NO";
+            this.rOOMNODataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.rOOMNODataGridViewTextBoxColumn.Name = "rOOMNODataGridViewTextBoxColumn";
+            // 
+            // fLOORNODataGridViewTextBoxColumn
+            // 
+            this.fLOORNODataGridViewTextBoxColumn.DataPropertyName = "FLOOR_NO";
+            this.fLOORNODataGridViewTextBoxColumn.HeaderText = "FLOOR_NO";
+            this.fLOORNODataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.fLOORNODataGridViewTextBoxColumn.Name = "fLOORNODataGridViewTextBoxColumn";
+            // 
+            // rOOMSTATUSDataGridViewTextBoxColumn
+            // 
+            this.rOOMSTATUSDataGridViewTextBoxColumn.DataPropertyName = "ROOM_STATUS";
+            this.rOOMSTATUSDataGridViewTextBoxColumn.HeaderText = "ROOM_STATUS";
+            this.rOOMSTATUSDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.rOOMSTATUSDataGridViewTextBoxColumn.Name = "rOOMSTATUSDataGridViewTextBoxColumn";
+            // 
+            // rOOMTYPEDataGridViewTextBoxColumn
+            // 
+            this.rOOMTYPEDataGridViewTextBoxColumn.DataPropertyName = "ROOM_TYPE";
+            this.rOOMTYPEDataGridViewTextBoxColumn.HeaderText = "ROOM_TYPE";
+            this.rOOMTYPEDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.rOOMTYPEDataGridViewTextBoxColumn.Name = "rOOMTYPEDataGridViewTextBoxColumn";
+            // 
+            // pRICEPERHOURDataGridViewTextBoxColumn
+            // 
+            this.pRICEPERHOURDataGridViewTextBoxColumn.DataPropertyName = "PRICE_PER_HOUR";
+            this.pRICEPERHOURDataGridViewTextBoxColumn.HeaderText = "PRICE_PER_HOUR";
+            this.pRICEPERHOURDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.pRICEPERHOURDataGridViewTextBoxColumn.Name = "pRICEPERHOURDataGridViewTextBoxColumn";
+            // 
+            // rOOMBindingSource
+            // 
+            this.rOOMBindingSource.DataMember = "ROOM";
+            this.rOOMBindingSource.DataSource = this.hMS_DatabaseDataSet3;
+            // 
+            // hMS_DatabaseDataSet3
+            // 
+            this.hMS_DatabaseDataSet3.DataSetName = "HMS_DatabaseDataSet3";
+            this.hMS_DatabaseDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(13)))));
-            this.panel1.Controls.Add(this.comboBoxSearchValue);
+            this.panel1.Controls.Add(this.textBoxSearchValue);
             this.panel1.Controls.Add(this.comboBoxSearchBy);
             this.panel1.Controls.Add(this.comboBoxFloorNo);
             this.panel1.Controls.Add(this.comboBoxStatus);
@@ -457,31 +566,12 @@
             this.panel1.Size = new System.Drawing.Size(1261, 550);
             this.panel1.TabIndex = 12;
             // 
-            // comboBoxSearchValue
-            // 
-            this.comboBoxSearchValue.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboBoxSearchValue.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.comboBoxSearchValue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.comboBoxSearchValue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBoxSearchValue.Font = new System.Drawing.Font("Raleway", 14F);
-            this.comboBoxSearchValue.FormattingEnabled = true;
-            this.comboBoxSearchValue.Items.AddRange(new object[] {
-            "Doctor ID",
-            "Name",
-            "Number",
-            "Designation",
-            "Department"});
-            this.comboBoxSearchValue.Location = new System.Drawing.Point(271, 479);
-            this.comboBoxSearchValue.Name = "comboBoxSearchValue";
-            this.comboBoxSearchValue.Size = new System.Drawing.Size(226, 40);
-            this.comboBoxSearchValue.TabIndex = 3;
-            // 
             // comboBoxFloorNo
             // 
             this.comboBoxFloorNo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.comboBoxFloorNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
             this.comboBoxFloorNo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBoxFloorNo.Font = new System.Drawing.Font("Raleway", 12F);
+            this.comboBoxFloorNo.Font = new System.Drawing.Font("Segoe UI", 13.8F);
             this.comboBoxFloorNo.FormattingEnabled = true;
             this.comboBoxFloorNo.Items.AddRange(new object[] {
             "B",
@@ -490,9 +580,9 @@
             "2",
             "3",
             "4"});
-            this.comboBoxFloorNo.Location = new System.Drawing.Point(243, 257);
+            this.comboBoxFloorNo.Location = new System.Drawing.Point(243, 260);
             this.comboBoxFloorNo.Name = "comboBoxFloorNo";
-            this.comboBoxFloorNo.Size = new System.Drawing.Size(254, 36);
+            this.comboBoxFloorNo.Size = new System.Drawing.Size(254, 39);
             this.comboBoxFloorNo.TabIndex = 3;
             // 
             // comboBoxStatus
@@ -500,14 +590,14 @@
             this.comboBoxStatus.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.comboBoxStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
             this.comboBoxStatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBoxStatus.Font = new System.Drawing.Font("Raleway", 12F);
+            this.comboBoxStatus.Font = new System.Drawing.Font("Segoe UI", 13.8F);
             this.comboBoxStatus.FormattingEnabled = true;
             this.comboBoxStatus.Items.AddRange(new object[] {
             "Available",
-            "Not Available"});
-            this.comboBoxStatus.Location = new System.Drawing.Point(243, 173);
+            "Unavailable"});
+            this.comboBoxStatus.Location = new System.Drawing.Point(243, 170);
             this.comboBoxStatus.Name = "comboBoxStatus";
-            this.comboBoxStatus.Size = new System.Drawing.Size(254, 36);
+            this.comboBoxStatus.Size = new System.Drawing.Size(254, 39);
             this.comboBoxStatus.TabIndex = 3;
             // 
             // label12
@@ -515,7 +605,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Raleway SemiBold", 14F, System.Drawing.FontStyle.Bold);
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.label12.Location = new System.Drawing.Point(67, 297);
+            this.label12.Location = new System.Drawing.Point(67, 302);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(215, 34);
             this.label12.TabIndex = 0;
@@ -525,21 +615,20 @@
             // 
             this.textBoxPrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
             this.textBoxPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxPrice.Font = new System.Drawing.Font("Raleway SemiBold", 14F, System.Drawing.FontStyle.Bold);
-            this.textBoxPrice.Location = new System.Drawing.Point(288, 300);
+            this.textBoxPrice.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.textBoxPrice.Location = new System.Drawing.Point(288, 305);
             this.textBoxPrice.Name = "textBoxPrice";
-            this.textBoxPrice.ReadOnly = true;
-            this.textBoxPrice.Size = new System.Drawing.Size(209, 28);
+            this.textBoxPrice.Size = new System.Drawing.Size(209, 31);
             this.textBoxPrice.TabIndex = 0;
             // 
             // textBoxRoomNo
             // 
             this.textBoxRoomNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
             this.textBoxRoomNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxRoomNo.Font = new System.Drawing.Font("Raleway SemiBold", 14F, System.Drawing.FontStyle.Bold);
-            this.textBoxRoomNo.Location = new System.Drawing.Point(243, 139);
+            this.textBoxRoomNo.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.textBoxRoomNo.Location = new System.Drawing.Point(243, 133);
             this.textBoxRoomNo.Name = "textBoxRoomNo";
-            this.textBoxRoomNo.Size = new System.Drawing.Size(254, 28);
+            this.textBoxRoomNo.Size = new System.Drawing.Size(254, 31);
             this.textBoxRoomNo.TabIndex = 0;
             // 
             // label13
@@ -547,11 +636,11 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Raleway SemiBold", 14F, System.Drawing.FontStyle.Bold);
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.label13.Location = new System.Drawing.Point(67, 136);
+            this.label13.Location = new System.Drawing.Point(67, 130);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(123, 34);
+            this.label13.Size = new System.Drawing.Size(135, 34);
             this.label13.TabIndex = 0;
-            this.label13.Text = "ROOM ID:";
+            this.label13.Text = "ROOM NO:";
             // 
             // label20
             // 
@@ -723,109 +812,20 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "PATIENT";
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(13)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Raleway", 12F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.ColumnHeadersHeight = 40;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDDataGridViewTextBoxColumn,
-            this.rOOMNODataGridViewTextBoxColumn,
-            this.fLOORNODataGridViewTextBoxColumn,
-            this.rOOMSTATUSDataGridViewTextBoxColumn,
-            this.rOOMTYPEDataGridViewTextBoxColumn,
-            this.pRICEPERHOURDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.rOOMBindingSource;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Raleway", 12F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.Location = new System.Drawing.Point(511, 105);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Raleway ExtraBold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridView1.RowHeadersWidth = 50;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(689, 414);
-            this.dataGridView1.TabIndex = 13;
-            // 
-            // hMS_DatabaseDataSet3
-            // 
-            this.hMS_DatabaseDataSet3.DataSetName = "HMS_DatabaseDataSet3";
-            this.hMS_DatabaseDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // rOOMBindingSource
-            // 
-            this.rOOMBindingSource.DataMember = "ROOM";
-            this.rOOMBindingSource.DataSource = this.hMS_DatabaseDataSet3;
-            // 
             // rOOMTableAdapter
             // 
             this.rOOMTableAdapter.ClearBeforeFill = true;
             // 
-            // iDDataGridViewTextBoxColumn
+            // textBoxSearchValue
             // 
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // rOOMNODataGridViewTextBoxColumn
-            // 
-            this.rOOMNODataGridViewTextBoxColumn.DataPropertyName = "ROOM_NO";
-            this.rOOMNODataGridViewTextBoxColumn.HeaderText = "ROOM_NO";
-            this.rOOMNODataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.rOOMNODataGridViewTextBoxColumn.Name = "rOOMNODataGridViewTextBoxColumn";
-            // 
-            // fLOORNODataGridViewTextBoxColumn
-            // 
-            this.fLOORNODataGridViewTextBoxColumn.DataPropertyName = "FLOOR_NO";
-            this.fLOORNODataGridViewTextBoxColumn.HeaderText = "FLOOR_NO";
-            this.fLOORNODataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.fLOORNODataGridViewTextBoxColumn.Name = "fLOORNODataGridViewTextBoxColumn";
-            // 
-            // rOOMSTATUSDataGridViewTextBoxColumn
-            // 
-            this.rOOMSTATUSDataGridViewTextBoxColumn.DataPropertyName = "ROOM_STATUS";
-            this.rOOMSTATUSDataGridViewTextBoxColumn.HeaderText = "ROOM_STATUS";
-            this.rOOMSTATUSDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.rOOMSTATUSDataGridViewTextBoxColumn.Name = "rOOMSTATUSDataGridViewTextBoxColumn";
-            // 
-            // rOOMTYPEDataGridViewTextBoxColumn
-            // 
-            this.rOOMTYPEDataGridViewTextBoxColumn.DataPropertyName = "ROOM_TYPE";
-            this.rOOMTYPEDataGridViewTextBoxColumn.HeaderText = "ROOM_TYPE";
-            this.rOOMTYPEDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.rOOMTYPEDataGridViewTextBoxColumn.Name = "rOOMTYPEDataGridViewTextBoxColumn";
-            // 
-            // pRICEPERHOURDataGridViewTextBoxColumn
-            // 
-            this.pRICEPERHOURDataGridViewTextBoxColumn.DataPropertyName = "PRICE_PER_HOUR";
-            this.pRICEPERHOURDataGridViewTextBoxColumn.HeaderText = "PRICE_PER_HOUR";
-            this.pRICEPERHOURDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.pRICEPERHOURDataGridViewTextBoxColumn.Name = "pRICEPERHOURDataGridViewTextBoxColumn";
+            this.textBoxSearchValue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.textBoxSearchValue.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxSearchValue.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.textBoxSearchValue.Location = new System.Drawing.Point(271, 487);
+            this.textBoxSearchValue.Name = "textBoxSearchValue";
+            this.textBoxSearchValue.Size = new System.Drawing.Size(226, 36);
+            this.textBoxSearchValue.TabIndex = 11;
+            this.textBoxSearchValue.TextChanged += new System.EventHandler(this.textBoxSearchValue_TextChanged);
             // 
             // RoomCRUD
             // 
@@ -835,11 +835,11 @@
             this.Size = new System.Drawing.Size(1261, 550);
             this.Content.ResumeLayout(false);
             this.Content.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rOOMBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hMS_DatabaseDataSet3)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hMS_DatabaseDataSet3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rOOMBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -886,7 +886,6 @@
         private System.Windows.Forms.TextBox textBoxAddress;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBoxStatus;
-        private System.Windows.Forms.ComboBox comboBoxSearchValue;
         private System.Windows.Forms.ComboBox comboBoxFloorNo;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox textBoxPrice;
@@ -902,5 +901,6 @@
         private System.Windows.Forms.BindingSource rOOMBindingSource;
         private HMS_DatabaseDataSet3 hMS_DatabaseDataSet3;
         private HMS_DatabaseDataSet3TableAdapters.ROOMTableAdapter rOOMTableAdapter;
+        private System.Windows.Forms.TextBox textBoxSearchValue;
     }
 }

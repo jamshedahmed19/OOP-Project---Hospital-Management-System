@@ -90,6 +90,12 @@
     </Compile>
     <Compile Include="DatabaseOps.cs" />
     <Compile Include="Doctor.cs" />
+    <Compile Include="FindRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindRoom.Designer.cs">
+      <DependentUpon>FindRoom.cs</DependentUpon>
+    </Compile>
     <Compile Include="HMS_DatabaseDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -109,6 +115,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>HMS_DatabaseDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HMS_DatabaseDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HMS_DatabaseDataSet4.xsd</DependentUpon>
     </Compile>
     <Compile Include="InpatientUserControl.cs">
       <SubType>UserControl</SubType>
@@ -162,6 +173,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminHomeControl.resx">
       <DependentUpon>AdminHomeControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindRoom.resx">
+      <DependentUpon>FindRoom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InpatientUserControl.resx">
       <DependentUpon>InpatientUserControl.cs</DependentUpon>
@@ -230,6 +244,17 @@
     </None>
     <None Include="HMS_DatabaseDataSet3.xss">
       <DependentUpon>HMS_DatabaseDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="HMS_DatabaseDataSet4.xsc">
+      <DependentUpon>HMS_DatabaseDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="HMS_DatabaseDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HMS_DatabaseDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HMS_DatabaseDataSet4.xss">
+      <DependentUpon>HMS_DatabaseDataSet4.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

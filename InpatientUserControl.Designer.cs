@@ -63,6 +63,14 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBoxRoomNo = new System.Windows.Forms.ComboBox();
+            this.comboBoxFloorNo = new System.Windows.Forms.ComboBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.comboBoxType = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.dateTimePickerDOD = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerDOA = new System.Windows.Forms.DateTimePicker();
             this.comboBoxGender = new System.Windows.Forms.ComboBox();
             this.button4 = new System.Windows.Forms.Button();
             this.buttonDisplay = new System.Windows.Forms.Button();
@@ -81,14 +89,7 @@
             this.textBoxid = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Content = new System.Windows.Forms.Panel();
-            this.dateTimePickerDOA = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePickerDOD = new System.Windows.Forms.DateTimePicker();
-            this.comboBoxFloorNo = new System.Windows.Forms.ComboBox();
-            this.comboBoxType = new System.Windows.Forms.ComboBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.comboBoxRoomNo = new System.Windows.Forms.ComboBox();
+            this.buttonRoom = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rOOMBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hMS_DatabaseDataSet2)).BeginInit();
@@ -471,6 +472,7 @@
             this.panel1.Controls.Add(this.buttonRoomDisplay);
             this.panel1.Controls.Add(this.buttonRoomUpdate);
             this.panel1.Controls.Add(this.buttonRoomDelete);
+            this.panel1.Controls.Add(this.buttonRoom);
             this.panel1.Controls.Add(this.buttonRoomInsert);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label11);
@@ -486,6 +488,100 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1261, 550);
             this.panel1.TabIndex = 12;
+            // 
+            // comboBoxRoomNo
+            // 
+            this.comboBoxRoomNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.comboBoxRoomNo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBoxRoomNo.Font = new System.Drawing.Font("Raleway", 12F);
+            this.comboBoxRoomNo.FormattingEnabled = true;
+            this.comboBoxRoomNo.Items.AddRange(new object[] {
+            "Female",
+            "Male",
+            "Other"});
+            this.comboBoxRoomNo.Location = new System.Drawing.Point(243, 329);
+            this.comboBoxRoomNo.Name = "comboBoxRoomNo";
+            this.comboBoxRoomNo.Size = new System.Drawing.Size(254, 36);
+            this.comboBoxRoomNo.TabIndex = 17;
+            // 
+            // comboBoxFloorNo
+            // 
+            this.comboBoxFloorNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.comboBoxFloorNo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBoxFloorNo.Font = new System.Drawing.Font("Raleway", 12F);
+            this.comboBoxFloorNo.FormattingEnabled = true;
+            this.comboBoxFloorNo.Items.AddRange(new object[] {
+            "Female",
+            "Male",
+            "Other"});
+            this.comboBoxFloorNo.Location = new System.Drawing.Point(243, 287);
+            this.comboBoxFloorNo.Name = "comboBoxFloorNo";
+            this.comboBoxFloorNo.Size = new System.Drawing.Size(254, 36);
+            this.comboBoxFloorNo.TabIndex = 17;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Raleway SemiBold", 14F, System.Drawing.FontStyle.Bold);
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.label14.Location = new System.Drawing.Point(67, 327);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(146, 34);
+            this.label14.TabIndex = 15;
+            this.label14.Text = "ROOM NO. :";
+            // 
+            // comboBoxType
+            // 
+            this.comboBoxType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.comboBoxType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBoxType.Font = new System.Drawing.Font("Raleway", 12F);
+            this.comboBoxType.FormattingEnabled = true;
+            this.comboBoxType.Items.AddRange(new object[] {
+            "Female",
+            "Male",
+            "Other"});
+            this.comboBoxType.Location = new System.Drawing.Point(243, 245);
+            this.comboBoxType.Name = "comboBoxType";
+            this.comboBoxType.Size = new System.Drawing.Size(254, 36);
+            this.comboBoxType.TabIndex = 18;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Raleway SemiBold", 14F, System.Drawing.FontStyle.Bold);
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.label12.Location = new System.Drawing.Point(67, 285);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(153, 34);
+            this.label12.TabIndex = 15;
+            this.label12.Text = "FLOOR NO. :";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Raleway SemiBold", 14F, System.Drawing.FontStyle.Bold);
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.label13.Location = new System.Drawing.Point(67, 246);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(158, 34);
+            this.label13.TabIndex = 16;
+            this.label13.Text = "ROOM TYPE:";
+            // 
+            // dateTimePickerDOD
+            // 
+            this.dateTimePickerDOD.Location = new System.Drawing.Point(243, 208);
+            this.dateTimePickerDOD.Name = "dateTimePickerDOD";
+            this.dateTimePickerDOD.Size = new System.Drawing.Size(254, 31);
+            this.dateTimePickerDOD.TabIndex = 14;
+            this.dateTimePickerDOD.Value = new System.DateTime(2020, 11, 6, 22, 21, 3, 0);
+            // 
+            // dateTimePickerDOA
+            // 
+            this.dateTimePickerDOA.Location = new System.Drawing.Point(243, 171);
+            this.dateTimePickerDOA.Name = "dateTimePickerDOA";
+            this.dateTimePickerDOA.Size = new System.Drawing.Size(254, 31);
+            this.dateTimePickerDOA.TabIndex = 14;
+            this.dateTimePickerDOA.Value = new System.DateTime(2020, 11, 6, 22, 21, 3, 0);
             // 
             // comboBoxGender
             // 
@@ -733,99 +829,22 @@
             this.Content.Size = new System.Drawing.Size(1261, 550);
             this.Content.TabIndex = 6;
             // 
-            // dateTimePickerDOA
+            // buttonRoom
             // 
-            this.dateTimePickerDOA.Location = new System.Drawing.Point(243, 171);
-            this.dateTimePickerDOA.Name = "dateTimePickerDOA";
-            this.dateTimePickerDOA.Size = new System.Drawing.Size(254, 31);
-            this.dateTimePickerDOA.TabIndex = 14;
-            this.dateTimePickerDOA.Value = new System.DateTime(2020, 11, 6, 22, 21, 3, 0);
-            // 
-            // dateTimePickerDOD
-            // 
-            this.dateTimePickerDOD.Location = new System.Drawing.Point(243, 208);
-            this.dateTimePickerDOD.Name = "dateTimePickerDOD";
-            this.dateTimePickerDOD.Size = new System.Drawing.Size(254, 31);
-            this.dateTimePickerDOD.TabIndex = 14;
-            this.dateTimePickerDOD.Value = new System.DateTime(2020, 11, 6, 22, 21, 3, 0);
-            // 
-            // comboBoxFloorNo
-            // 
-            this.comboBoxFloorNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.comboBoxFloorNo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBoxFloorNo.Font = new System.Drawing.Font("Raleway", 12F);
-            this.comboBoxFloorNo.FormattingEnabled = true;
-            this.comboBoxFloorNo.Items.AddRange(new object[] {
-            "Female",
-            "Male",
-            "Other"});
-            this.comboBoxFloorNo.Location = new System.Drawing.Point(243, 287);
-            this.comboBoxFloorNo.Name = "comboBoxFloorNo";
-            this.comboBoxFloorNo.Size = new System.Drawing.Size(254, 36);
-            this.comboBoxFloorNo.TabIndex = 17;
-            // 
-            // comboBoxType
-            // 
-            this.comboBoxType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.comboBoxType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBoxType.Font = new System.Drawing.Font("Raleway", 12F);
-            this.comboBoxType.FormattingEnabled = true;
-            this.comboBoxType.Items.AddRange(new object[] {
-            "Female",
-            "Male",
-            "Other"});
-            this.comboBoxType.Location = new System.Drawing.Point(243, 245);
-            this.comboBoxType.Name = "comboBoxType";
-            this.comboBoxType.Size = new System.Drawing.Size(254, 36);
-            this.comboBoxType.TabIndex = 18;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Raleway SemiBold", 14F, System.Drawing.FontStyle.Bold);
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.label12.Location = new System.Drawing.Point(67, 285);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(153, 34);
-            this.label12.TabIndex = 15;
-            this.label12.Text = "FLOOR NO. :";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Raleway SemiBold", 14F, System.Drawing.FontStyle.Bold);
-            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.label13.Location = new System.Drawing.Point(67, 246);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(158, 34);
-            this.label13.TabIndex = 16;
-            this.label13.Text = "ROOM TYPE:";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Raleway SemiBold", 14F, System.Drawing.FontStyle.Bold);
-            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.label14.Location = new System.Drawing.Point(67, 327);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(146, 34);
-            this.label14.TabIndex = 15;
-            this.label14.Text = "ROOM NO. :";
-            // 
-            // comboBoxRoomNo
-            // 
-            this.comboBoxRoomNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.comboBoxRoomNo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBoxRoomNo.Font = new System.Drawing.Font("Raleway", 12F);
-            this.comboBoxRoomNo.FormattingEnabled = true;
-            this.comboBoxRoomNo.Items.AddRange(new object[] {
-            "Female",
-            "Male",
-            "Other"});
-            this.comboBoxRoomNo.Location = new System.Drawing.Point(243, 329);
-            this.comboBoxRoomNo.Name = "comboBoxRoomNo";
-            this.comboBoxRoomNo.Size = new System.Drawing.Size(254, 36);
-            this.comboBoxRoomNo.TabIndex = 17;
+            this.buttonRoom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.buttonRoom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRoom.Font = new System.Drawing.Font("Raleway", 10F, System.Drawing.FontStyle.Bold);
+            this.buttonRoom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(13)))));
+            this.buttonRoom.Image = ((System.Drawing.Image)(resources.GetObject("buttonRoom.Image")));
+            this.buttonRoom.Location = new System.Drawing.Point(79, 371);
+            this.buttonRoom.Name = "buttonRoom";
+            this.buttonRoom.Size = new System.Drawing.Size(418, 43);
+            this.buttonRoom.TabIndex = 8;
+            this.buttonRoom.Text = " FIND A ROOM";
+            this.buttonRoom.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonRoom.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonRoom.UseVisualStyleBackColor = false;
+            this.buttonRoom.Click += new System.EventHandler(this.buttonRoom_Click);
             // 
             // InpatientUserControl
             // 
@@ -903,5 +922,6 @@
         private System.Windows.Forms.ComboBox comboBoxType;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button buttonRoom;
     }
 }

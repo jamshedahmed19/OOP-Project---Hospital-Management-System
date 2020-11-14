@@ -16,5 +16,11 @@ namespace OOP_Project___Hospital_Management_System
         {
             InitializeComponent();
         }
+
+        private void buttonRoom_Click(object sender, EventArgs e)
+        {
+            FindRoom findRoom = new FindRoom();
+            findRoom.Show();
+        }
     }
 }

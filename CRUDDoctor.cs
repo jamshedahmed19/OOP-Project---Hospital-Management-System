@@ -56,7 +56,7 @@ namespace OOP_Project___Hospital_Management_System
             }
             else
             {
-                comboBoxGender.Text = "Male";
+                comboBoxGender.Text = "Female";
             }
             textBoxAddress.Text = dataGridView1.Rows[e.RowIndex].Cells[8].Value.ToString();
             textBoxDesignation.Text = dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString();

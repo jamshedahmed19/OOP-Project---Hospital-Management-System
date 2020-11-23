@@ -52,5 +52,30 @@ namespace OOP_Project___Hospital_Management_System
         {
             this.Close();
         }
+
+        private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            textBoxRoomNo.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            comboBoxFloorNo.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+            comboBoxType.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView1.Columns[e.ColumnIndex].Name == "SELECT")
+            {
+                if (MessageBox.Show("Are you sure you want to select this room?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    InpatientUserControl inpatientUserControl = new InpatientUserControl()
+                    { 
+                        RoomNo = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString(),
+                        FloorNo = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString(),
+                        RoomType = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString(),
+                    };
+                    inpatientUserControl.SelectRoom();
+                    this.Close();
+                }
+            }
+        }
     }
 }

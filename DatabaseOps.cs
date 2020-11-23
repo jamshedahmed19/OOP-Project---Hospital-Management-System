@@ -50,6 +50,36 @@
                 MessageBox.Show(e.Message, "Error Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        public void insert(Patient patient)
+        {
+            try
+            {
+                sqlConnection.Open();
+                sqlCommand = new SqlCommand("INSERT INTO PATIENTS(PAT_NAME, PAT_TEL, PAT_EMAIL, PAT_PASS, PAT_GENDER, PAT_ADDRESS, DOC_CODE) VALUES (@name, @tel, @email, @pass, @gender, @address, @doc)", sqlConnection);
+                sqlCommand.Parameters.AddWithValue("@name", patient.Name);
+                sqlCommand.Parameters.AddWithValue("@tel", patient.Tel);
+                sqlCommand.Parameters.AddWithValue("@email", patient.Email);
+                sqlCommand.Parameters.AddWithValue("@pass", "123456865");
+                sqlCommand.Parameters.AddWithValue("@gender", patient.Gender);
+                sqlCommand.Parameters.AddWithValue("@address", patient.Address);
+                sqlCommand.Parameters.AddWithValue("@doc", patient.DocCode);
+                int a = sqlCommand.ExecuteNonQuery();
+                if (a > 0)
+                {
+                    MessageBox.Show("Registered Successfully", "Registered", MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Data not inserted", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                sqlConnection.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         public void insert(Room room)
         {
             try
@@ -191,7 +221,6 @@
         {
             sqlConnection.Open();
             sqlDataAdapter = new SqlDataAdapter("SELECT * FROM ROOM WHERE ROOM_STATUS = 'AVAILABLE'", sqlConnection);
-            //sqlCommand.Parameters.AddWithValue("@ROOM_STATUS", "AVAILABLE");
             DataTable dataTable = new DataTable();
             sqlDataAdapter.Fill(dataTable);
             sqlConnection.Close();
@@ -298,7 +327,25 @@
             try
             {
                 sqlConnection.Open();
-                sqlDataAdapter = new SqlDataAdapter("SELECT * FROM ROOM WHERE ROOM_STATUS = 'AVAILABLE' AND ROOM_NO LIKE '%" + roomNo + "%' ROOM_TYPE LIKE '%" + roomType + "%' AND FLOOR_NO LIKE '%" + floorNo + "%'", sqlConnection);
+                sqlDataAdapter = new SqlDataAdapter("SELECT * FROM " + tableValue + " WHERE ROOM_STATUS = 'AVAILABLE' AND ROOM_NO LIKE '%" + roomNo + "%' AND ROOM_TYPE LIKE '%" + roomType + "%' AND FLOOR_NO LIKE '%" + floorNo + "%'", sqlConnection);
+            }
+
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            DataTable dataTable = new DataTable();
+            sqlDataAdapter.Fill(dataTable);
+            sqlConnection.Close();
+            return dataTable;
+        }
+
+        public DataTable doctorList()
+        {
+            try
+            {
+                sqlConnection.Open();
+                sqlDataAdapter = new SqlDataAdapter("SELECT * FROM DOCTORS ORDER BY DOC_NAME", sqlConnection);
             }
 
             catch (Exception e)

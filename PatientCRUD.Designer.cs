@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PatientCRUD));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.comboBoxGender = new System.Windows.Forms.ComboBox();
             this.button4 = new System.Windows.Forms.Button();
             this.buttonDisplay = new System.Windows.Forms.Button();
@@ -70,34 +70,39 @@
             this.pATIENTSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.hMS_DatabaseDataSet1 = new OOP_Project___Hospital_Management_System.HMS_DatabaseDataSet1();
             this.comboBoxSearchBy = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.comboBoxDOCID = new System.Windows.Forms.ComboBox();
+            this.comboBoxPATGender = new System.Windows.Forms.ComboBox();
+            this.buttonPATDisplay = new System.Windows.Forms.Button();
+            this.buttonPATUpdate = new System.Windows.Forms.Button();
+            this.buttonPATDelete = new System.Windows.Forms.Button();
+            this.buttonPATInsert = new System.Windows.Forms.Button();
+            this.textBoxSearchVal = new System.Windows.Forms.TextBox();
+            this.textBoxPATEmail = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBoxPATAddress = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBoxPATTel = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBoxPATName = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBoxPATID = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.pATIENTSTableAdapter = new OOP_Project___Hospital_Management_System.HMS_DatabaseDataSet1TableAdapters.PATIENTSTableAdapter();
+            this.hMS_DatabaseDataSet5 = new OOP_Project___Hospital_Management_System.HMS_DatabaseDataSet5();
+            this.dOCTORSBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dOCTORSTableAdapter = new OOP_Project___Hospital_Management_System.HMS_DatabaseDataSet5TableAdapters.DOCTORSTableAdapter();
             this.Content.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pATIENTSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hMS_DatabaseDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hMS_DatabaseDataSet5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dOCTORSBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBoxGender
@@ -415,24 +420,24 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(13)))));
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.comboBoxSearchBy);
-            this.panel1.Controls.Add(this.comboBox2);
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.comboBoxDOCID);
+            this.panel1.Controls.Add(this.comboBoxPATGender);
+            this.panel1.Controls.Add(this.buttonPATDisplay);
+            this.panel1.Controls.Add(this.buttonPATUpdate);
+            this.panel1.Controls.Add(this.buttonPATDelete);
+            this.panel1.Controls.Add(this.buttonPATInsert);
+            this.panel1.Controls.Add(this.textBoxSearchVal);
+            this.panel1.Controls.Add(this.textBoxPATEmail);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label11);
-            this.panel1.Controls.Add(this.textBox4);
+            this.panel1.Controls.Add(this.textBoxPATAddress);
             this.panel1.Controls.Add(this.label12);
-            this.panel1.Controls.Add(this.textBox6);
+            this.panel1.Controls.Add(this.textBoxPATTel);
             this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.label15);
-            this.panel1.Controls.Add(this.textBox7);
+            this.panel1.Controls.Add(this.textBoxPATName);
             this.panel1.Controls.Add(this.label16);
-            this.panel1.Controls.Add(this.textBox8);
+            this.panel1.Controls.Add(this.textBoxPATID);
             this.panel1.Controls.Add(this.label17);
             this.panel1.Controls.Add(this.label18);
             this.panel1.Controls.Add(this.label19);
@@ -449,14 +454,14 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(13)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(13)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.ColumnHeadersHeight = 40;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -473,18 +478,19 @@
             this.dataGridView1.Location = new System.Drawing.Point(29, 312);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.RowHeadersWidth = 50;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1201, 216);
             this.dataGridView1.TabIndex = 12;
+            this.dataGridView1.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_RowHeaderMouseClick);
             // 
             // iDDataGridViewTextBoxColumn
             // 
@@ -580,119 +586,120 @@
             this.comboBoxSearchBy.Size = new System.Drawing.Size(370, 40);
             this.comboBoxSearchBy.TabIndex = 3;
             // 
-            // comboBox2
+            // comboBoxDOCID
             // 
-            this.comboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox2.Font = new System.Drawing.Font("Raleway", 12F);
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.comboBoxDOCID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.comboBoxDOCID.DisplayMember = "DOC_ID";
+            this.comboBoxDOCID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBoxDOCID.Font = new System.Drawing.Font("Raleway", 12F);
+            this.comboBoxDOCID.FormattingEnabled = true;
+            this.comboBoxDOCID.Location = new System.Drawing.Point(243, 174);
+            this.comboBoxDOCID.Name = "comboBoxDOCID";
+            this.comboBoxDOCID.Size = new System.Drawing.Size(449, 36);
+            this.comboBoxDOCID.TabIndex = 3;
+            this.comboBoxDOCID.ValueMember = "DOC_ID";
+            // 
+            // comboBoxPATGender
+            // 
+            this.comboBoxPATGender.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.comboBoxPATGender.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBoxPATGender.Font = new System.Drawing.Font("Raleway", 12F);
+            this.comboBoxPATGender.FormattingEnabled = true;
+            this.comboBoxPATGender.Items.AddRange(new object[] {
             "Female",
             "Male",
             "Other"});
-            this.comboBox2.Location = new System.Drawing.Point(243, 174);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(449, 36);
-            this.comboBox2.TabIndex = 3;
+            this.comboBoxPATGender.Location = new System.Drawing.Point(511, 97);
+            this.comboBoxPATGender.Name = "comboBoxPATGender";
+            this.comboBoxPATGender.Size = new System.Drawing.Size(181, 36);
+            this.comboBoxPATGender.TabIndex = 3;
             // 
-            // comboBox1
+            // buttonPATDisplay
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Raleway", 12F);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Female",
-            "Male",
-            "Other"});
-            this.comboBox1.Location = new System.Drawing.Point(511, 97);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(181, 36);
-            this.comboBox1.TabIndex = 3;
+            this.buttonPATDisplay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.buttonPATDisplay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPATDisplay.Font = new System.Drawing.Font("Raleway", 10F, System.Drawing.FontStyle.Bold);
+            this.buttonPATDisplay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(13)))));
+            this.buttonPATDisplay.Image = ((System.Drawing.Image)(resources.GetObject("buttonPATDisplay.Image")));
+            this.buttonPATDisplay.Location = new System.Drawing.Point(971, 144);
+            this.buttonPATDisplay.Name = "buttonPATDisplay";
+            this.buttonPATDisplay.Size = new System.Drawing.Size(259, 46);
+            this.buttonPATDisplay.TabIndex = 5;
+            this.buttonPATDisplay.Text = " DISPLAY PATIENT";
+            this.buttonPATDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonPATDisplay.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonPATDisplay.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // buttonPATUpdate
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Raleway", 10F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(13)))));
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(971, 144);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(259, 46);
-            this.button1.TabIndex = 5;
-            this.button1.Text = " DISPLAY PATIENT";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = false;
+            this.buttonPATUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.buttonPATUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPATUpdate.Font = new System.Drawing.Font("Raleway", 10F, System.Drawing.FontStyle.Bold);
+            this.buttonPATUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(13)))));
+            this.buttonPATUpdate.Image = ((System.Drawing.Image)(resources.GetObject("buttonPATUpdate.Image")));
+            this.buttonPATUpdate.Location = new System.Drawing.Point(706, 144);
+            this.buttonPATUpdate.Name = "buttonPATUpdate";
+            this.buttonPATUpdate.Size = new System.Drawing.Size(259, 46);
+            this.buttonPATUpdate.TabIndex = 9;
+            this.buttonPATUpdate.Text = " UPDATE PATIENT";
+            this.buttonPATUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonPATUpdate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonPATUpdate.UseVisualStyleBackColor = false;
+            this.buttonPATUpdate.Click += new System.EventHandler(this.buttonPATUpdate_Click);
             // 
-            // button2
+            // buttonPATDelete
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Raleway", 10F, System.Drawing.FontStyle.Bold);
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(13)))));
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(706, 144);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(259, 46);
-            this.button2.TabIndex = 9;
-            this.button2.Text = " UPDATE PATIENT";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = false;
+            this.buttonPATDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.buttonPATDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPATDelete.Font = new System.Drawing.Font("Raleway", 10F, System.Drawing.FontStyle.Bold);
+            this.buttonPATDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(13)))));
+            this.buttonPATDelete.Image = ((System.Drawing.Image)(resources.GetObject("buttonPATDelete.Image")));
+            this.buttonPATDelete.Location = new System.Drawing.Point(971, 92);
+            this.buttonPATDelete.Name = "buttonPATDelete";
+            this.buttonPATDelete.Size = new System.Drawing.Size(259, 46);
+            this.buttonPATDelete.TabIndex = 10;
+            this.buttonPATDelete.Text = " DELETE PATIENT";
+            this.buttonPATDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonPATDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonPATDelete.UseVisualStyleBackColor = false;
+            this.buttonPATDelete.Click += new System.EventHandler(this.buttonPATDelete_Click);
             // 
-            // button3
+            // buttonPATInsert
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Raleway", 10F, System.Drawing.FontStyle.Bold);
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(13)))));
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(971, 92);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(259, 46);
-            this.button3.TabIndex = 10;
-            this.button3.Text = " DELETE PATIENT";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button3.UseVisualStyleBackColor = false;
+            this.buttonPATInsert.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.buttonPATInsert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPATInsert.Font = new System.Drawing.Font("Raleway", 10F, System.Drawing.FontStyle.Bold);
+            this.buttonPATInsert.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(13)))));
+            this.buttonPATInsert.Image = ((System.Drawing.Image)(resources.GetObject("buttonPATInsert.Image")));
+            this.buttonPATInsert.Location = new System.Drawing.Point(706, 92);
+            this.buttonPATInsert.Name = "buttonPATInsert";
+            this.buttonPATInsert.Size = new System.Drawing.Size(259, 46);
+            this.buttonPATInsert.TabIndex = 8;
+            this.buttonPATInsert.Text = " INSERT PATIENT";
+            this.buttonPATInsert.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonPATInsert.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonPATInsert.UseVisualStyleBackColor = false;
+            this.buttonPATInsert.Click += new System.EventHandler(this.buttonPATInsert_Click);
             // 
-            // button5
+            // textBoxSearchVal
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Raleway", 10F, System.Drawing.FontStyle.Bold);
-            this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(13)))));
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(706, 92);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(259, 46);
-            this.button5.TabIndex = 8;
-            this.button5.Text = " INSERT PATIENT";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button5.UseVisualStyleBackColor = false;
+            this.textBoxSearchVal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.textBoxSearchVal.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxSearchVal.Font = new System.Drawing.Font("Raleway", 16F);
+            this.textBoxSearchVal.Location = new System.Drawing.Point(906, 266);
+            this.textBoxSearchVal.Name = "textBoxSearchVal";
+            this.textBoxSearchVal.Size = new System.Drawing.Size(324, 32);
+            this.textBoxSearchVal.TabIndex = 6;
             // 
-            // textBox1
+            // textBoxPATEmail
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Raleway", 16F);
-            this.textBox1.Location = new System.Drawing.Point(906, 266);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(324, 32);
-            this.textBox1.TabIndex = 6;
-            // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Raleway SemiBold", 14F, System.Drawing.FontStyle.Bold);
-            this.textBox2.Location = new System.Drawing.Point(243, 216);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(449, 28);
-            this.textBox2.TabIndex = 6;
+            this.textBoxPATEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.textBoxPATEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxPATEmail.Font = new System.Drawing.Font("Raleway SemiBold", 14F, System.Drawing.FontStyle.Bold);
+            this.textBoxPATEmail.Location = new System.Drawing.Point(243, 216);
+            this.textBoxPATEmail.Name = "textBoxPATEmail";
+            this.textBoxPATEmail.Size = new System.Drawing.Size(449, 28);
+            this.textBoxPATEmail.TabIndex = 6;
             // 
             // label10
             // 
@@ -716,16 +723,16 @@
             this.label11.TabIndex = 0;
             this.label11.Text = "DOC CODE:";
             // 
-            // textBox4
+            // textBoxPATAddress
             // 
-            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Font = new System.Drawing.Font("Raleway SemiBold", 14F, System.Drawing.FontStyle.Bold);
-            this.textBox4.Location = new System.Drawing.Point(243, 250);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(449, 48);
-            this.textBox4.TabIndex = 7;
+            this.textBoxPATAddress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.textBoxPATAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxPATAddress.Font = new System.Drawing.Font("Raleway SemiBold", 14F, System.Drawing.FontStyle.Bold);
+            this.textBoxPATAddress.Location = new System.Drawing.Point(243, 250);
+            this.textBoxPATAddress.Multiline = true;
+            this.textBoxPATAddress.Name = "textBoxPATAddress";
+            this.textBoxPATAddress.Size = new System.Drawing.Size(449, 48);
+            this.textBoxPATAddress.TabIndex = 7;
             // 
             // label12
             // 
@@ -738,15 +745,15 @@
             this.label12.TabIndex = 0;
             this.label12.Text = "ADDRESS:";
             // 
-            // textBox6
+            // textBoxPATTel
             // 
-            this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Font = new System.Drawing.Font("Raleway SemiBold", 14F, System.Drawing.FontStyle.Bold);
-            this.textBox6.Location = new System.Drawing.Point(511, 139);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(181, 28);
-            this.textBox6.TabIndex = 4;
+            this.textBoxPATTel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.textBoxPATTel.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxPATTel.Font = new System.Drawing.Font("Raleway SemiBold", 14F, System.Drawing.FontStyle.Bold);
+            this.textBoxPATTel.Location = new System.Drawing.Point(511, 139);
+            this.textBoxPATTel.Name = "textBoxPATTel";
+            this.textBoxPATTel.Size = new System.Drawing.Size(181, 28);
+            this.textBoxPATTel.TabIndex = 4;
             // 
             // label14
             // 
@@ -770,15 +777,15 @@
             this.label15.TabIndex = 0;
             this.label15.Text = "GENDER:";
             // 
-            // textBox7
+            // textBoxPATName
             // 
-            this.textBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox7.Font = new System.Drawing.Font("Raleway SemiBold", 14F, System.Drawing.FontStyle.Bold);
-            this.textBox7.Location = new System.Drawing.Point(243, 138);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(123, 28);
-            this.textBox7.TabIndex = 1;
+            this.textBoxPATName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.textBoxPATName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxPATName.Font = new System.Drawing.Font("Raleway SemiBold", 14F, System.Drawing.FontStyle.Bold);
+            this.textBoxPATName.Location = new System.Drawing.Point(243, 138);
+            this.textBoxPATName.Name = "textBoxPATName";
+            this.textBoxPATName.Size = new System.Drawing.Size(123, 28);
+            this.textBoxPATName.TabIndex = 1;
             // 
             // label16
             // 
@@ -791,16 +798,16 @@
             this.label16.TabIndex = 0;
             this.label16.Text = "NAME:";
             // 
-            // textBox8
+            // textBoxPATID
             // 
-            this.textBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox8.Font = new System.Drawing.Font("Raleway SemiBold", 14F, System.Drawing.FontStyle.Bold);
-            this.textBox8.Location = new System.Drawing.Point(243, 105);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.ReadOnly = true;
-            this.textBox8.Size = new System.Drawing.Size(123, 28);
-            this.textBox8.TabIndex = 0;
+            this.textBoxPATID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.textBoxPATID.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxPATID.Font = new System.Drawing.Font("Raleway SemiBold", 14F, System.Drawing.FontStyle.Bold);
+            this.textBoxPATID.Location = new System.Drawing.Point(243, 105);
+            this.textBoxPATID.Name = "textBoxPATID";
+            this.textBoxPATID.ReadOnly = true;
+            this.textBoxPATID.Size = new System.Drawing.Size(123, 28);
+            this.textBoxPATID.TabIndex = 0;
             // 
             // label17
             // 
@@ -850,6 +857,20 @@
             // 
             this.pATIENTSTableAdapter.ClearBeforeFill = true;
             // 
+            // hMS_DatabaseDataSet5
+            // 
+            this.hMS_DatabaseDataSet5.DataSetName = "HMS_DatabaseDataSet5";
+            this.hMS_DatabaseDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dOCTORSBindingSource
+            // 
+            this.dOCTORSBindingSource.DataMember = "DOCTORS";
+            this.dOCTORSBindingSource.DataSource = this.hMS_DatabaseDataSet5;
+            // 
+            // dOCTORSTableAdapter
+            // 
+            this.dOCTORSTableAdapter.ClearBeforeFill = true;
+            // 
             // PatientCRUD
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -863,6 +884,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pATIENTSBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hMS_DatabaseDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hMS_DatabaseDataSet5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dOCTORSBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -895,28 +918,28 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ComboBox comboBoxSearchBy;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ComboBox comboBoxPATGender;
+        private System.Windows.Forms.Button buttonPATDisplay;
+        private System.Windows.Forms.Button buttonPATUpdate;
+        private System.Windows.Forms.Button buttonPATDelete;
+        private System.Windows.Forms.Button buttonPATInsert;
+        private System.Windows.Forms.TextBox textBoxSearchVal;
+        private System.Windows.Forms.TextBox textBoxPATEmail;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBoxPATAddress;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBoxPATTel;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBoxPATName;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox textBoxPATID;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBoxDOCID;
         private System.Windows.Forms.BindingSource pATIENTSBindingSource;
         private HMS_DatabaseDataSet1 hMS_DatabaseDataSet1;
         private HMS_DatabaseDataSet1TableAdapters.PATIENTSTableAdapter pATIENTSTableAdapter;
@@ -929,5 +952,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn pATGENDERDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pATADDRESSDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dOCCODEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource dOCTORSBindingSource;
+        private HMS_DatabaseDataSet5 hMS_DatabaseDataSet5;
+        private HMS_DatabaseDataSet5TableAdapters.DOCTORSTableAdapter dOCTORSTableAdapter;
     }
 }

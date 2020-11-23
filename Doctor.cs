@@ -17,6 +17,5 @@ namespace OOP_Project___Hospital_Management_System
             this.Designation = doc_desig;
             this.Department = depart;
         }
-
     }
 }

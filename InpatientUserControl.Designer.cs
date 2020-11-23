@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InpatientUserControl));
             this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.textBoxDepartment = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.textBoxAddress = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewINP = new System.Windows.Forms.DataGridView();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rOOMNODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rOOMSTATUSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,14 +63,12 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.comboBoxRoomNo = new System.Windows.Forms.ComboBox();
-            this.comboBoxFloorNo = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.comboBoxType = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.dateTimePickerDOD = new System.Windows.Forms.DateTimePicker();
             this.dateTimePickerDOA = new System.Windows.Forms.DateTimePicker();
+            this.buttonRoom = new System.Windows.Forms.Button();
             this.comboBoxGender = new System.Windows.Forms.ComboBox();
             this.button4 = new System.Windows.Forms.Button();
             this.buttonDisplay = new System.Windows.Forms.Button();
@@ -89,8 +87,10 @@
             this.textBoxid = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Content = new System.Windows.Forms.Panel();
-            this.buttonRoom = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.textBoxINPRoomType = new System.Windows.Forms.TextBox();
+            this.textBoxINPFloorNo = new System.Windows.Forms.TextBox();
+            this.textBoxINPRoomNo = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewINP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rOOMBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hMS_DatabaseDataSet2)).BeginInit();
             this.panel1.SuspendLayout();
@@ -150,43 +150,43 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "PATIENT";
             // 
-            // dataGridView1
+            // dataGridViewINP
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(13)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridView1.ColumnHeadersHeight = 40;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewINP.AutoGenerateColumns = false;
+            this.dataGridViewINP.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewINP.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(13)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewINP.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.dataGridViewINP.ColumnHeadersHeight = 40;
+            this.dataGridViewINP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dataGridViewINP.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iDDataGridViewTextBoxColumn,
             this.rOOMNODataGridViewTextBoxColumn,
             this.rOOMSTATUSDataGridViewTextBoxColumn,
             this.rOOMTYPEDataGridViewTextBoxColumn,
             this.iNPATCODEDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.rOOMBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(511, 132);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridView1.RowHeadersWidth = 50;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(683, 384);
-            this.dataGridView1.TabIndex = 13;
+            this.dataGridViewINP.DataSource = this.rOOMBindingSource;
+            this.dataGridViewINP.Location = new System.Drawing.Point(511, 132);
+            this.dataGridViewINP.Name = "dataGridViewINP";
+            this.dataGridViewINP.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewINP.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.dataGridViewINP.RowHeadersWidth = 50;
+            this.dataGridViewINP.RowTemplate.Height = 24;
+            this.dataGridViewINP.Size = new System.Drawing.Size(683, 384);
+            this.dataGridViewINP.TabIndex = 13;
             // 
             // iDDataGridViewTextBoxColumn
             // 
@@ -457,15 +457,12 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(13)))));
-            this.panel1.Controls.Add(this.comboBoxRoomNo);
-            this.panel1.Controls.Add(this.comboBoxFloorNo);
             this.panel1.Controls.Add(this.label14);
-            this.panel1.Controls.Add(this.comboBoxType);
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.dateTimePickerDOD);
             this.panel1.Controls.Add(this.dateTimePickerDOA);
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.dataGridViewINP);
             this.panel1.Controls.Add(this.comboBoxSearchValue);
             this.panel1.Controls.Add(this.comboBoxSearchBy);
             this.panel1.Controls.Add(this.comboBoxPatient);
@@ -477,6 +474,9 @@
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.label16);
+            this.panel1.Controls.Add(this.textBoxINPRoomNo);
+            this.panel1.Controls.Add(this.textBoxINPFloorNo);
+            this.panel1.Controls.Add(this.textBoxINPRoomType);
             this.panel1.Controls.Add(this.textBoxInpatientID);
             this.panel1.Controls.Add(this.label17);
             this.panel1.Controls.Add(this.label18);
@@ -489,68 +489,23 @@
             this.panel1.Size = new System.Drawing.Size(1261, 550);
             this.panel1.TabIndex = 12;
             // 
-            // comboBoxRoomNo
-            // 
-            this.comboBoxRoomNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.comboBoxRoomNo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBoxRoomNo.Font = new System.Drawing.Font("Raleway", 12F);
-            this.comboBoxRoomNo.FormattingEnabled = true;
-            this.comboBoxRoomNo.Items.AddRange(new object[] {
-            "Female",
-            "Male",
-            "Other"});
-            this.comboBoxRoomNo.Location = new System.Drawing.Point(243, 329);
-            this.comboBoxRoomNo.Name = "comboBoxRoomNo";
-            this.comboBoxRoomNo.Size = new System.Drawing.Size(254, 36);
-            this.comboBoxRoomNo.TabIndex = 17;
-            // 
-            // comboBoxFloorNo
-            // 
-            this.comboBoxFloorNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.comboBoxFloorNo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBoxFloorNo.Font = new System.Drawing.Font("Raleway", 12F);
-            this.comboBoxFloorNo.FormattingEnabled = true;
-            this.comboBoxFloorNo.Items.AddRange(new object[] {
-            "Female",
-            "Male",
-            "Other"});
-            this.comboBoxFloorNo.Location = new System.Drawing.Point(243, 287);
-            this.comboBoxFloorNo.Name = "comboBoxFloorNo";
-            this.comboBoxFloorNo.Size = new System.Drawing.Size(254, 36);
-            this.comboBoxFloorNo.TabIndex = 17;
-            // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Raleway SemiBold", 14F, System.Drawing.FontStyle.Bold);
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.label14.Location = new System.Drawing.Point(67, 327);
+            this.label14.Location = new System.Drawing.Point(67, 291);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(146, 34);
             this.label14.TabIndex = 15;
             this.label14.Text = "ROOM NO. :";
-            // 
-            // comboBoxType
-            // 
-            this.comboBoxType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.comboBoxType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBoxType.Font = new System.Drawing.Font("Raleway", 12F);
-            this.comboBoxType.FormattingEnabled = true;
-            this.comboBoxType.Items.AddRange(new object[] {
-            "Female",
-            "Male",
-            "Other"});
-            this.comboBoxType.Location = new System.Drawing.Point(243, 245);
-            this.comboBoxType.Name = "comboBoxType";
-            this.comboBoxType.Size = new System.Drawing.Size(254, 36);
-            this.comboBoxType.TabIndex = 18;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Raleway SemiBold", 14F, System.Drawing.FontStyle.Bold);
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.label12.Location = new System.Drawing.Point(67, 285);
+            this.label12.Location = new System.Drawing.Point(67, 325);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(153, 34);
             this.label12.TabIndex = 15;
@@ -561,7 +516,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Raleway SemiBold", 14F, System.Drawing.FontStyle.Bold);
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.label13.Location = new System.Drawing.Point(67, 246);
+            this.label13.Location = new System.Drawing.Point(67, 359);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(158, 34);
             this.label13.TabIndex = 16;
@@ -582,6 +537,23 @@
             this.dateTimePickerDOA.Size = new System.Drawing.Size(254, 31);
             this.dateTimePickerDOA.TabIndex = 14;
             this.dateTimePickerDOA.Value = new System.DateTime(2020, 11, 6, 22, 21, 3, 0);
+            // 
+            // buttonRoom
+            // 
+            this.buttonRoom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.buttonRoom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRoom.Font = new System.Drawing.Font("Raleway", 10F, System.Drawing.FontStyle.Bold);
+            this.buttonRoom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(13)))));
+            this.buttonRoom.Image = ((System.Drawing.Image)(resources.GetObject("buttonRoom.Image")));
+            this.buttonRoom.Location = new System.Drawing.Point(71, 245);
+            this.buttonRoom.Name = "buttonRoom";
+            this.buttonRoom.Size = new System.Drawing.Size(426, 43);
+            this.buttonRoom.TabIndex = 8;
+            this.buttonRoom.Text = " FIND A ROOM";
+            this.buttonRoom.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonRoom.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonRoom.UseVisualStyleBackColor = false;
+            this.buttonRoom.Click += new System.EventHandler(this.buttonRoom_Click);
             // 
             // comboBoxGender
             // 
@@ -829,22 +801,38 @@
             this.Content.Size = new System.Drawing.Size(1261, 550);
             this.Content.TabIndex = 6;
             // 
-            // buttonRoom
+            // textBoxINPRoomType
             // 
-            this.buttonRoom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.buttonRoom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonRoom.Font = new System.Drawing.Font("Raleway", 10F, System.Drawing.FontStyle.Bold);
-            this.buttonRoom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(13)))));
-            this.buttonRoom.Image = ((System.Drawing.Image)(resources.GetObject("buttonRoom.Image")));
-            this.buttonRoom.Location = new System.Drawing.Point(79, 371);
-            this.buttonRoom.Name = "buttonRoom";
-            this.buttonRoom.Size = new System.Drawing.Size(418, 43);
-            this.buttonRoom.TabIndex = 8;
-            this.buttonRoom.Text = " FIND A ROOM";
-            this.buttonRoom.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonRoom.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonRoom.UseVisualStyleBackColor = false;
-            this.buttonRoom.Click += new System.EventHandler(this.buttonRoom_Click);
+            this.textBoxINPRoomType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.textBoxINPRoomType.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxINPRoomType.Font = new System.Drawing.Font("Raleway SemiBold", 14F, System.Drawing.FontStyle.Bold);
+            this.textBoxINPRoomType.Location = new System.Drawing.Point(243, 362);
+            this.textBoxINPRoomType.Name = "textBoxINPRoomType";
+            this.textBoxINPRoomType.ReadOnly = true;
+            this.textBoxINPRoomType.Size = new System.Drawing.Size(254, 28);
+            this.textBoxINPRoomType.TabIndex = 0;
+            // 
+            // textBoxINPFloorNo
+            // 
+            this.textBoxINPFloorNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.textBoxINPFloorNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxINPFloorNo.Font = new System.Drawing.Font("Raleway SemiBold", 14F, System.Drawing.FontStyle.Bold);
+            this.textBoxINPFloorNo.Location = new System.Drawing.Point(243, 328);
+            this.textBoxINPFloorNo.Name = "textBoxINPFloorNo";
+            this.textBoxINPFloorNo.ReadOnly = true;
+            this.textBoxINPFloorNo.Size = new System.Drawing.Size(254, 28);
+            this.textBoxINPFloorNo.TabIndex = 0;
+            // 
+            // textBoxINPRoomNo
+            // 
+            this.textBoxINPRoomNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.textBoxINPRoomNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxINPRoomNo.Font = new System.Drawing.Font("Raleway SemiBold", 14F, System.Drawing.FontStyle.Bold);
+            this.textBoxINPRoomNo.Location = new System.Drawing.Point(243, 294);
+            this.textBoxINPRoomNo.Name = "textBoxINPRoomNo";
+            this.textBoxINPRoomNo.ReadOnly = true;
+            this.textBoxINPRoomNo.Size = new System.Drawing.Size(254, 28);
+            this.textBoxINPRoomNo.TabIndex = 0;
             // 
             // InpatientUserControl
             // 
@@ -852,7 +840,7 @@
             this.Controls.Add(this.Content);
             this.Name = "InpatientUserControl";
             this.Size = new System.Drawing.Size(1261, 550);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewINP)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rOOMBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hMS_DatabaseDataSet2)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -870,7 +858,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBoxAddress;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewINP;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rOOMNODataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rOOMSTATUSDataGridViewTextBoxColumn;
@@ -916,12 +904,12 @@
         private System.Windows.Forms.Panel Content;
         private System.Windows.Forms.DateTimePicker dateTimePickerDOD;
         private System.Windows.Forms.DateTimePicker dateTimePickerDOA;
-        private System.Windows.Forms.ComboBox comboBoxRoomNo;
-        private System.Windows.Forms.ComboBox comboBoxFloorNo;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.ComboBox comboBoxType;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button buttonRoom;
+        private System.Windows.Forms.TextBox textBoxINPRoomNo;
+        private System.Windows.Forms.TextBox textBoxINPFloorNo;
+        private System.Windows.Forms.TextBox textBoxINPRoomType;
     }
 }

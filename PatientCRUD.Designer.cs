@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PatientCRUD));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -58,17 +57,6 @@
             this.Content = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pATIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pATNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pATTELDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pATEMAILDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pATPASSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pATGENDERDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pATADDRESSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dOCCODEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pATIENTSBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.hMS_DatabaseDataSet1 = new OOP_Project___Hospital_Management_System.HMS_DatabaseDataSet1();
             this.comboBoxSearchBy = new System.Windows.Forms.ComboBox();
             this.comboBoxDOCID = new System.Windows.Forms.ComboBox();
             this.comboBoxPATGender = new System.Windows.Forms.ComboBox();
@@ -92,17 +80,9 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.pATIENTSTableAdapter = new OOP_Project___Hospital_Management_System.HMS_DatabaseDataSet1TableAdapters.PATIENTSTableAdapter();
-            this.hMS_DatabaseDataSet5 = new OOP_Project___Hospital_Management_System.HMS_DatabaseDataSet5();
-            this.dOCTORSBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dOCTORSTableAdapter = new OOP_Project___Hospital_Management_System.HMS_DatabaseDataSet5TableAdapters.DOCTORSTableAdapter();
             this.Content.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pATIENTSBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hMS_DatabaseDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hMS_DatabaseDataSet5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dOCTORSBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBoxGender
@@ -451,7 +431,6 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -464,17 +443,6 @@
             this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.ColumnHeadersHeight = 40;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDDataGridViewTextBoxColumn,
-            this.pATIDDataGridViewTextBoxColumn,
-            this.pATNAMEDataGridViewTextBoxColumn,
-            this.pATTELDataGridViewTextBoxColumn,
-            this.pATEMAILDataGridViewTextBoxColumn,
-            this.pATPASSDataGridViewTextBoxColumn,
-            this.pATGENDERDataGridViewTextBoxColumn,
-            this.pATADDRESSDataGridViewTextBoxColumn,
-            this.dOCCODEDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.pATIENTSBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(29, 312);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -492,95 +460,21 @@
             this.dataGridView1.TabIndex = 12;
             this.dataGridView1.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_RowHeaderMouseClick);
             // 
-            // iDDataGridViewTextBoxColumn
-            // 
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // pATIDDataGridViewTextBoxColumn
-            // 
-            this.pATIDDataGridViewTextBoxColumn.DataPropertyName = "PAT_ID";
-            this.pATIDDataGridViewTextBoxColumn.HeaderText = "PAT_ID";
-            this.pATIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.pATIDDataGridViewTextBoxColumn.Name = "pATIDDataGridViewTextBoxColumn";
-            this.pATIDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // pATNAMEDataGridViewTextBoxColumn
-            // 
-            this.pATNAMEDataGridViewTextBoxColumn.DataPropertyName = "PAT_NAME";
-            this.pATNAMEDataGridViewTextBoxColumn.HeaderText = "PAT_NAME";
-            this.pATNAMEDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.pATNAMEDataGridViewTextBoxColumn.Name = "pATNAMEDataGridViewTextBoxColumn";
-            // 
-            // pATTELDataGridViewTextBoxColumn
-            // 
-            this.pATTELDataGridViewTextBoxColumn.DataPropertyName = "PAT_TEL";
-            this.pATTELDataGridViewTextBoxColumn.HeaderText = "PAT_TEL";
-            this.pATTELDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.pATTELDataGridViewTextBoxColumn.Name = "pATTELDataGridViewTextBoxColumn";
-            // 
-            // pATEMAILDataGridViewTextBoxColumn
-            // 
-            this.pATEMAILDataGridViewTextBoxColumn.DataPropertyName = "PAT_EMAIL";
-            this.pATEMAILDataGridViewTextBoxColumn.HeaderText = "PAT_EMAIL";
-            this.pATEMAILDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.pATEMAILDataGridViewTextBoxColumn.Name = "pATEMAILDataGridViewTextBoxColumn";
-            // 
-            // pATPASSDataGridViewTextBoxColumn
-            // 
-            this.pATPASSDataGridViewTextBoxColumn.DataPropertyName = "PAT_PASS";
-            this.pATPASSDataGridViewTextBoxColumn.HeaderText = "PAT_PASS";
-            this.pATPASSDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.pATPASSDataGridViewTextBoxColumn.Name = "pATPASSDataGridViewTextBoxColumn";
-            // 
-            // pATGENDERDataGridViewTextBoxColumn
-            // 
-            this.pATGENDERDataGridViewTextBoxColumn.DataPropertyName = "PAT_GENDER";
-            this.pATGENDERDataGridViewTextBoxColumn.HeaderText = "PAT_GENDER";
-            this.pATGENDERDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.pATGENDERDataGridViewTextBoxColumn.Name = "pATGENDERDataGridViewTextBoxColumn";
-            // 
-            // pATADDRESSDataGridViewTextBoxColumn
-            // 
-            this.pATADDRESSDataGridViewTextBoxColumn.DataPropertyName = "PAT_ADDRESS";
-            this.pATADDRESSDataGridViewTextBoxColumn.HeaderText = "PAT_ADDRESS";
-            this.pATADDRESSDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.pATADDRESSDataGridViewTextBoxColumn.Name = "pATADDRESSDataGridViewTextBoxColumn";
-            // 
-            // dOCCODEDataGridViewTextBoxColumn
-            // 
-            this.dOCCODEDataGridViewTextBoxColumn.DataPropertyName = "DOC_CODE";
-            this.dOCCODEDataGridViewTextBoxColumn.HeaderText = "DOC_CODE";
-            this.dOCCODEDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.dOCCODEDataGridViewTextBoxColumn.Name = "dOCCODEDataGridViewTextBoxColumn";
-            // 
-            // pATIENTSBindingSource
-            // 
-            this.pATIENTSBindingSource.DataMember = "PATIENTS";
-            this.pATIENTSBindingSource.DataSource = this.hMS_DatabaseDataSet1;
-            // 
-            // hMS_DatabaseDataSet1
-            // 
-            this.hMS_DatabaseDataSet1.DataSetName = "HMS_DatabaseDataSet1";
-            this.hMS_DatabaseDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // comboBoxSearchBy
             // 
             this.comboBoxSearchBy.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboBoxSearchBy.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.comboBoxSearchBy.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBoxSearchBy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
             this.comboBoxSearchBy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBoxSearchBy.Font = new System.Drawing.Font("Raleway", 14F);
             this.comboBoxSearchBy.FormattingEnabled = true;
             this.comboBoxSearchBy.Items.AddRange(new object[] {
-            "Doctor ID",
-            "Name",
-            "Number",
-            "Designation",
-            "Department"});
+            "Patient ID",
+            "Patient Name",
+            "Doctor Name",
+            "Patient Number",
+            "Doctor Designation",
+            "Doctor Department"});
             this.comboBoxSearchBy.Location = new System.Drawing.Point(860, 220);
             this.comboBoxSearchBy.Name = "comboBoxSearchBy";
             this.comboBoxSearchBy.Size = new System.Drawing.Size(370, 40);
@@ -588,6 +482,8 @@
             // 
             // comboBoxDOCID
             // 
+            this.comboBoxDOCID.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBoxDOCID.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBoxDOCID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
             this.comboBoxDOCID.DisplayMember = "DOC_ID";
             this.comboBoxDOCID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -601,6 +497,8 @@
             // 
             // comboBoxPATGender
             // 
+            this.comboBoxPATGender.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBoxPATGender.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBoxPATGender.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
             this.comboBoxPATGender.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBoxPATGender.Font = new System.Drawing.Font("Raleway", 12F);
@@ -690,6 +588,7 @@
             this.textBoxSearchVal.Name = "textBoxSearchVal";
             this.textBoxSearchVal.Size = new System.Drawing.Size(324, 32);
             this.textBoxSearchVal.TabIndex = 6;
+            this.textBoxSearchVal.TextChanged += new System.EventHandler(this.textBoxSearchVal_TextChanged);
             // 
             // textBoxPATEmail
             // 
@@ -853,24 +752,6 @@
             this.label20.TabIndex = 1;
             this.label20.Text = "PATIENT";
             // 
-            // pATIENTSTableAdapter
-            // 
-            this.pATIENTSTableAdapter.ClearBeforeFill = true;
-            // 
-            // hMS_DatabaseDataSet5
-            // 
-            this.hMS_DatabaseDataSet5.DataSetName = "HMS_DatabaseDataSet5";
-            this.hMS_DatabaseDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dOCTORSBindingSource
-            // 
-            this.dOCTORSBindingSource.DataMember = "DOCTORS";
-            this.dOCTORSBindingSource.DataSource = this.hMS_DatabaseDataSet5;
-            // 
-            // dOCTORSTableAdapter
-            // 
-            this.dOCTORSTableAdapter.ClearBeforeFill = true;
-            // 
             // PatientCRUD
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -882,10 +763,6 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pATIENTSBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hMS_DatabaseDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hMS_DatabaseDataSet5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dOCTORSBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -940,20 +817,5 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.ComboBox comboBoxDOCID;
-        private System.Windows.Forms.BindingSource pATIENTSBindingSource;
-        private HMS_DatabaseDataSet1 hMS_DatabaseDataSet1;
-        private HMS_DatabaseDataSet1TableAdapters.PATIENTSTableAdapter pATIENTSTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pATIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pATNAMEDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pATTELDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pATEMAILDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pATPASSDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pATGENDERDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pATADDRESSDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dOCCODEDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource dOCTORSBindingSource;
-        private HMS_DatabaseDataSet5 hMS_DatabaseDataSet5;
-        private HMS_DatabaseDataSet5TableAdapters.DOCTORSTableAdapter dOCTORSTableAdapter;
     }
 }

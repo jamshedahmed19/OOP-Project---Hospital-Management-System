@@ -210,7 +210,14 @@
         public DataTable display(string value)
         {
             sqlConnection.Open();
-            sqlDataAdapter = new SqlDataAdapter("SELECT * FROM " + value + "", sqlConnection);
+            if (value == "PATIENTS")
+            {
+                sqlDataAdapter = new SqlDataAdapter("SELECT PAT_ID, PAT_NAME, DOC_NAME, PAT_GENDER, PAT_TEL, PAT_EMAIL, PAT_ADDRESS, DOC_DESIG, DOC_DEPART FROM PATIENTS INNER JOIN DOCTORS ON 1=1", sqlConnection);
+            }
+            else
+            {
+                sqlDataAdapter = new SqlDataAdapter("SELECT * FROM " + value + "", sqlConnection);
+            }
             DataTable dataTable = new DataTable();
             sqlDataAdapter.Fill(dataTable);
             sqlConnection.Close();
@@ -255,27 +262,31 @@
                         sqlDataAdapter = new SqlDataAdapter("SELECT * FROM " + tableValue + " WHERE DOC_NAME LIKE '%" + searchValue + "%'", sqlConnection);
                     }
                 }
-                else if (tableValue == "ROOM")
+                else if (tableValue == "PATIENTS")
                 {
-                    if (searchByValue.ToLower() == "room no")
+                    if (searchByValue.ToLower() == "patient name")
                     {
-                        sqlDataAdapter = new SqlDataAdapter("SELECT * FROM " + tableValue + " WHERE ROOM_NO LIKE '%" + searchValue + "%'", sqlConnection);
+                        sqlDataAdapter = new SqlDataAdapter("SELECT PAT_ID, PAT_NAME, DOC_NAME, PAT_GENDER, PAT_TEL, PAT_EMAIL, PAT_ADDRESS, DOC_DESIG, DOC_DEPART FROM PATIENTS INNER JOIN DOCTORS ON PAT_NAME LIKE '%" + searchValue + "%'", sqlConnection);
                     }
-                    else if (searchByValue.ToLower() == "status")
+                    else if (searchByValue.ToLower() == "doctor name")
                     {
-                        sqlDataAdapter = new SqlDataAdapter("SELECT * FROM " + tableValue + " WHERE ROOM_STATUS LIKE '%" + searchValue + "%'", sqlConnection);
+                        sqlDataAdapter = new SqlDataAdapter("SELECT PAT_ID, PAT_NAME, DOC_NAME, PAT_GENDER, PAT_TEL, PAT_EMAIL, PAT_ADDRESS, DOC_DESIG, DOC_DEPART FROM PATIENTS INNER JOIN DOCTORS ON DOC_NAME LIKE '%" + searchValue + "%'", sqlConnection);
                     }
-                    else if (searchByValue.ToLower() == "type")
+                    else if (searchByValue.ToLower() == "patient number")
                     {
-                        sqlDataAdapter = new SqlDataAdapter("SELECT * FROM " + tableValue + " WHERE ROOM_TYPE LIKE '%" + searchValue + "%'", sqlConnection);
+                        sqlDataAdapter = new SqlDataAdapter("SELECT PAT_ID, PAT_NAME, DOC_NAME, PAT_GENDER, PAT_TEL, PAT_EMAIL, PAT_ADDRESS, DOC_DESIG, DOC_DEPART FROM PATIENTS INNER JOIN DOCTORS ON PAT_TEL LIKE '%" + searchValue + "%'", sqlConnection);
                     }
-                    else if (searchByValue.ToLower() == "floor no")
+                    else if (searchByValue.ToLower() == "doctor designation")
                     {
-                        sqlDataAdapter = new SqlDataAdapter("SELECT * FROM " + tableValue + " WHERE FLOOR_NO LIKE '%" + searchValue + "%'", sqlConnection);
+                        sqlDataAdapter = new SqlDataAdapter("SELECT PAT_ID, PAT_NAME, DOC_NAME, PAT_GENDER, PAT_TEL, PAT_EMAIL, PAT_ADDRESS, DOC_DESIG, DOC_DEPART FROM PATIENTS INNER JOIN DOCTORS ON DOC_DESIG LIKE '%" + searchValue + "%'", sqlConnection);
+                    }
+                    else if (searchByValue.ToLower() == "doctor department")
+                    {
+                        sqlDataAdapter = new SqlDataAdapter("SELECT PAT_ID, PAT_NAME, DOC_NAME, PAT_GENDER, PAT_TEL, PAT_EMAIL, PAT_ADDRESS, DOC_DESIG, DOC_DEPART FROM PATIENTS INNER JOIN DOCTORS ON DOC_DEPART LIKE '%" + searchValue + "%'", sqlConnection);
                     }
                     else
                     {
-                        sqlDataAdapter = new SqlDataAdapter("SELECT * FROM " + tableValue + " WHERE PRICE_PER_HOUR LIKE '%" + searchValue + "%'", sqlConnection);
+                        sqlDataAdapter = new SqlDataAdapter("SELECT PAT_ID, PAT_NAME, DOC_NAME, PAT_GENDER, PAT_TEL, PAT_EMAIL, PAT_ADDRESS, DOC_DESIG, DOC_DEPART FROM PATIENTS INNER JOIN DOCTORS ON PAT_ID LIKE '%" + searchValue + "%'", sqlConnection);
                     }
                 }
             }

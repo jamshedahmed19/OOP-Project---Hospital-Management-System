@@ -34,18 +34,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CRUDDoctor));
             this.Content = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dOCIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dOCNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dOCDEPARTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dOCTELDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dOCEMAILDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dOCPASSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dOCGENDERDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dOCADDRESSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dOCDESIGDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dOCTORSBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.hMS_DatabaseDataSet = new OOP_Project___Hospital_Management_System.HMS_DatabaseDataSet();
             this.comboBoxSearchBy = new System.Windows.Forms.ComboBox();
             this.comboBoxGender = new System.Windows.Forms.ComboBox();
             this.buttonDisplay = new System.Windows.Forms.Button();
@@ -71,11 +59,27 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.hMS_DatabaseDataSet5 = new OOP_Project___Hospital_Management_System.HMS_DatabaseDataSet5();
+            this.hMS_DatabaseDataSet6 = new OOP_Project___Hospital_Management_System.HMS_DatabaseDataSet6();
             this.dOCTORSTableAdapter = new OOP_Project___Hospital_Management_System.HMS_DatabaseDataSetTableAdapters.DOCTORSTableAdapter();
+            this.hMS_DatabaseDataSet = new OOP_Project___Hospital_Management_System.HMS_DatabaseDataSet();
+            this.dOCTORSBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dOCDESIGDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dOCADDRESSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dOCGENDERDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dOCPASSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dOCEMAILDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dOCTELDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dOCDEPARTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dOCNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dOCIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Content.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dOCTORSBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hMS_DatabaseDataSet5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hMS_DatabaseDataSet6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hMS_DatabaseDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dOCTORSBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // Content
@@ -116,7 +120,6 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -140,7 +143,6 @@
             this.dOCGENDERDataGridViewTextBoxColumn,
             this.dOCADDRESSDataGridViewTextBoxColumn,
             this.dOCDESIGDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.dOCTORSBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(29, 312);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -157,88 +159,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(1201, 216);
             this.dataGridView1.TabIndex = 12;
             this.dataGridView1.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_RowHeaderMouseDoubleClick);
-            // 
-            // iDDataGridViewTextBoxColumn
-            // 
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dOCIDDataGridViewTextBoxColumn
-            // 
-            this.dOCIDDataGridViewTextBoxColumn.DataPropertyName = "DOC_ID";
-            this.dOCIDDataGridViewTextBoxColumn.HeaderText = "DOC_ID";
-            this.dOCIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.dOCIDDataGridViewTextBoxColumn.Name = "dOCIDDataGridViewTextBoxColumn";
-            this.dOCIDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dOCNAMEDataGridViewTextBoxColumn
-            // 
-            this.dOCNAMEDataGridViewTextBoxColumn.DataPropertyName = "DOC_NAME";
-            this.dOCNAMEDataGridViewTextBoxColumn.HeaderText = "DOC_NAME";
-            this.dOCNAMEDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.dOCNAMEDataGridViewTextBoxColumn.Name = "dOCNAMEDataGridViewTextBoxColumn";
-            // 
-            // dOCDEPARTDataGridViewTextBoxColumn
-            // 
-            this.dOCDEPARTDataGridViewTextBoxColumn.DataPropertyName = "DOC_DEPART";
-            this.dOCDEPARTDataGridViewTextBoxColumn.HeaderText = "DOC_DEPART";
-            this.dOCDEPARTDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.dOCDEPARTDataGridViewTextBoxColumn.Name = "dOCDEPARTDataGridViewTextBoxColumn";
-            // 
-            // dOCTELDataGridViewTextBoxColumn
-            // 
-            this.dOCTELDataGridViewTextBoxColumn.DataPropertyName = "DOC_TEL";
-            this.dOCTELDataGridViewTextBoxColumn.HeaderText = "DOC_TEL";
-            this.dOCTELDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.dOCTELDataGridViewTextBoxColumn.Name = "dOCTELDataGridViewTextBoxColumn";
-            // 
-            // dOCEMAILDataGridViewTextBoxColumn
-            // 
-            this.dOCEMAILDataGridViewTextBoxColumn.DataPropertyName = "DOC_EMAIL";
-            this.dOCEMAILDataGridViewTextBoxColumn.HeaderText = "DOC_EMAIL";
-            this.dOCEMAILDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.dOCEMAILDataGridViewTextBoxColumn.Name = "dOCEMAILDataGridViewTextBoxColumn";
-            // 
-            // dOCPASSDataGridViewTextBoxColumn
-            // 
-            this.dOCPASSDataGridViewTextBoxColumn.DataPropertyName = "DOC_PASS";
-            this.dOCPASSDataGridViewTextBoxColumn.HeaderText = "DOC_PASS";
-            this.dOCPASSDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.dOCPASSDataGridViewTextBoxColumn.Name = "dOCPASSDataGridViewTextBoxColumn";
-            // 
-            // dOCGENDERDataGridViewTextBoxColumn
-            // 
-            this.dOCGENDERDataGridViewTextBoxColumn.DataPropertyName = "DOC_GENDER";
-            this.dOCGENDERDataGridViewTextBoxColumn.HeaderText = "DOC_GENDER";
-            this.dOCGENDERDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.dOCGENDERDataGridViewTextBoxColumn.Name = "dOCGENDERDataGridViewTextBoxColumn";
-            // 
-            // dOCADDRESSDataGridViewTextBoxColumn
-            // 
-            this.dOCADDRESSDataGridViewTextBoxColumn.DataPropertyName = "DOC_ADDRESS";
-            this.dOCADDRESSDataGridViewTextBoxColumn.HeaderText = "DOC_ADDRESS";
-            this.dOCADDRESSDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.dOCADDRESSDataGridViewTextBoxColumn.Name = "dOCADDRESSDataGridViewTextBoxColumn";
-            // 
-            // dOCDESIGDataGridViewTextBoxColumn
-            // 
-            this.dOCDESIGDataGridViewTextBoxColumn.DataPropertyName = "DOC_DESIG";
-            this.dOCDESIGDataGridViewTextBoxColumn.HeaderText = "DOC_DESIG";
-            this.dOCDESIGDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.dOCDESIGDataGridViewTextBoxColumn.Name = "dOCDESIGDataGridViewTextBoxColumn";
-            // 
-            // dOCTORSBindingSource
-            // 
-            this.dOCTORSBindingSource.DataMember = "DOCTORS";
-            this.dOCTORSBindingSource.DataSource = this.hMS_DatabaseDataSet;
-            // 
-            // hMS_DatabaseDataSet
-            // 
-            this.hMS_DatabaseDataSet.DataSetName = "HMS_DatabaseDataSet";
-            this.hMS_DatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // comboBoxSearchBy
             // 
@@ -547,9 +467,101 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "DOCTOR";
             // 
+            // hMS_DatabaseDataSet5
+            // 
+            this.hMS_DatabaseDataSet5.DataSetName = "HMS_DatabaseDataSet5";
+            this.hMS_DatabaseDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // hMS_DatabaseDataSet6
+            // 
+            this.hMS_DatabaseDataSet6.DataSetName = "HMS_DatabaseDataSet6";
+            this.hMS_DatabaseDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // dOCTORSTableAdapter
             // 
             this.dOCTORSTableAdapter.ClearBeforeFill = true;
+            // 
+            // hMS_DatabaseDataSet
+            // 
+            this.hMS_DatabaseDataSet.DataSetName = "HMS_DatabaseDataSet";
+            this.hMS_DatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dOCTORSBindingSource
+            // 
+            this.dOCTORSBindingSource.DataMember = "DOCTORS";
+            this.dOCTORSBindingSource.DataSource = this.hMS_DatabaseDataSet;
+            // 
+            // dOCDESIGDataGridViewTextBoxColumn
+            // 
+            this.dOCDESIGDataGridViewTextBoxColumn.DataPropertyName = "DOC_DESIG";
+            this.dOCDESIGDataGridViewTextBoxColumn.HeaderText = "DOC_DESIG";
+            this.dOCDESIGDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dOCDESIGDataGridViewTextBoxColumn.Name = "dOCDESIGDataGridViewTextBoxColumn";
+            // 
+            // dOCADDRESSDataGridViewTextBoxColumn
+            // 
+            this.dOCADDRESSDataGridViewTextBoxColumn.DataPropertyName = "DOC_ADDRESS";
+            this.dOCADDRESSDataGridViewTextBoxColumn.HeaderText = "DOC_ADDRESS";
+            this.dOCADDRESSDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dOCADDRESSDataGridViewTextBoxColumn.Name = "dOCADDRESSDataGridViewTextBoxColumn";
+            // 
+            // dOCGENDERDataGridViewTextBoxColumn
+            // 
+            this.dOCGENDERDataGridViewTextBoxColumn.DataPropertyName = "DOC_GENDER";
+            this.dOCGENDERDataGridViewTextBoxColumn.HeaderText = "DOC_GENDER";
+            this.dOCGENDERDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dOCGENDERDataGridViewTextBoxColumn.Name = "dOCGENDERDataGridViewTextBoxColumn";
+            // 
+            // dOCPASSDataGridViewTextBoxColumn
+            // 
+            this.dOCPASSDataGridViewTextBoxColumn.DataPropertyName = "DOC_PASS";
+            this.dOCPASSDataGridViewTextBoxColumn.HeaderText = "DOC_PASS";
+            this.dOCPASSDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dOCPASSDataGridViewTextBoxColumn.Name = "dOCPASSDataGridViewTextBoxColumn";
+            // 
+            // dOCEMAILDataGridViewTextBoxColumn
+            // 
+            this.dOCEMAILDataGridViewTextBoxColumn.DataPropertyName = "DOC_EMAIL";
+            this.dOCEMAILDataGridViewTextBoxColumn.HeaderText = "DOC_EMAIL";
+            this.dOCEMAILDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dOCEMAILDataGridViewTextBoxColumn.Name = "dOCEMAILDataGridViewTextBoxColumn";
+            // 
+            // dOCTELDataGridViewTextBoxColumn
+            // 
+            this.dOCTELDataGridViewTextBoxColumn.DataPropertyName = "DOC_TEL";
+            this.dOCTELDataGridViewTextBoxColumn.HeaderText = "DOC_TEL";
+            this.dOCTELDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dOCTELDataGridViewTextBoxColumn.Name = "dOCTELDataGridViewTextBoxColumn";
+            // 
+            // dOCDEPARTDataGridViewTextBoxColumn
+            // 
+            this.dOCDEPARTDataGridViewTextBoxColumn.DataPropertyName = "DOC_DEPART";
+            this.dOCDEPARTDataGridViewTextBoxColumn.HeaderText = "DOC_DEPART";
+            this.dOCDEPARTDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dOCDEPARTDataGridViewTextBoxColumn.Name = "dOCDEPARTDataGridViewTextBoxColumn";
+            // 
+            // dOCNAMEDataGridViewTextBoxColumn
+            // 
+            this.dOCNAMEDataGridViewTextBoxColumn.DataPropertyName = "DOC_NAME";
+            this.dOCNAMEDataGridViewTextBoxColumn.HeaderText = "DOC_NAME";
+            this.dOCNAMEDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dOCNAMEDataGridViewTextBoxColumn.Name = "dOCNAMEDataGridViewTextBoxColumn";
+            // 
+            // dOCIDDataGridViewTextBoxColumn
+            // 
+            this.dOCIDDataGridViewTextBoxColumn.DataPropertyName = "DOC_ID";
+            this.dOCIDDataGridViewTextBoxColumn.HeaderText = "DOC_ID";
+            this.dOCIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dOCIDDataGridViewTextBoxColumn.Name = "dOCIDDataGridViewTextBoxColumn";
+            this.dOCIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // iDDataGridViewTextBoxColumn
+            // 
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // CRUDDoctor
             // 
@@ -560,8 +572,10 @@
             this.Content.ResumeLayout(false);
             this.Content.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dOCTORSBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hMS_DatabaseDataSet5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hMS_DatabaseDataSet6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hMS_DatabaseDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dOCTORSBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -591,6 +605,10 @@
         private System.Windows.Forms.TextBox textBoxTel;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox textBoxSearch;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ComboBox comboBoxSearchBy;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dOCIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dOCNAMEDataGridViewTextBoxColumn;
@@ -601,12 +619,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dOCGENDERDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dOCADDRESSDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dOCDESIGDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource dOCTORSBindingSource;
-        private HMS_DatabaseDataSet hMS_DatabaseDataSet;
+        private HMS_DatabaseDataSet5 hMS_DatabaseDataSet5;
+        private HMS_DatabaseDataSet6 hMS_DatabaseDataSet6;
         private HMS_DatabaseDataSetTableAdapters.DOCTORSTableAdapter dOCTORSTableAdapter;
-        private System.Windows.Forms.TextBox textBoxSearch;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox comboBoxSearchBy;
+        private HMS_DatabaseDataSet hMS_DatabaseDataSet;
+        private System.Windows.Forms.BindingSource dOCTORSBindingSource;
     }
 }

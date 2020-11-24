@@ -69,11 +69,10 @@ namespace OOP_Project___Hospital_Management_System
 
         private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            textBoxPATID.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-            textBoxPATName.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-            textBoxPATTel.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-            textBoxPATEmail.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();           
-            if (dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString() == "Male")
+            textBoxPATID.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            textBoxPATName.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            comboBoxDOCID.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+            if (dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString() == "Male")
             {
                 comboBoxPATGender.Text = "Male";
             }
@@ -81,8 +80,9 @@ namespace OOP_Project___Hospital_Management_System
             {
                 comboBoxPATGender.Text = "Female";
             }
-            textBoxPATAddress.Text = dataGridView1.Rows[e.RowIndex].Cells[8].Value.ToString();
-            comboBoxDOCID.Text = dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString();
+            textBoxPATTel.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+            textBoxPATEmail.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();          
+            textBoxPATAddress.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
         }
 
         private void buttonPATUpdate_Click(object sender, EventArgs e)
@@ -99,6 +99,12 @@ namespace OOP_Project___Hospital_Management_System
             DatabaseOps databaseOps = new DatabaseOps();
             databaseOps.insert(patient);
             display();
+        }
+
+        private void textBoxSearchVal_TextChanged(object sender, EventArgs e)
+        {
+            DatabaseOps databaseOps = new DatabaseOps();
+            dataGridView1.DataSource = databaseOps.search("PATIENTS", textBoxSearchVal.Text, comboBoxSearchBy.Text);
         }
     }
 }

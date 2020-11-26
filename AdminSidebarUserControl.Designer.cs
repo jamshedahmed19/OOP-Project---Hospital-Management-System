@@ -1,13 +1,13 @@
 ﻿namespace OOP_Project___Hospital_Management_System
 {
-    partial class DashBoard
+    partial class AdminSidebarUserControl
     {
-        /// <summary>
+        /// <summary> 
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
+        /// <summary> 
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
@@ -20,15 +20,15 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        #region Component Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
+        /// <summary> 
+        /// Required method for Designer support - do not modify 
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashBoard));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminSidebarUserControl));
             this.SideBar = new System.Windows.Forms.Panel();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.buttonCovid = new System.Windows.Forms.Button();
@@ -36,16 +36,10 @@
             this.buttonDoctor = new System.Windows.Forms.Button();
             this.buttonLogout = new System.Windows.Forms.Button();
             this.buttonSettings = new System.Windows.Forms.Button();
-            this.buttonStaff = new System.Windows.Forms.Button();
             this.buttonPatient = new System.Windows.Forms.Button();
-            this.panelHead = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.buttonExit = new System.Windows.Forms.Button();
-            this.buttonBack = new System.Windows.Forms.Button();
-            this.Content = new System.Windows.Forms.Panel();
+            this.buttonStaff = new System.Windows.Forms.Button();
             this.SideBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
-            this.panelHead.SuspendLayout();
             this.SuspendLayout();
             // 
             // SideBar
@@ -63,7 +57,7 @@
             this.SideBar.Location = new System.Drawing.Point(0, 0);
             this.SideBar.Name = "SideBar";
             this.SideBar.Size = new System.Drawing.Size(98, 689);
-            this.SideBar.TabIndex = 0;
+            this.SideBar.TabIndex = 1;
             // 
             // pictureBoxLogo
             // 
@@ -92,7 +86,6 @@
             this.buttonCovid.Size = new System.Drawing.Size(39, 37);
             this.buttonCovid.TabIndex = 2;
             this.buttonCovid.UseVisualStyleBackColor = false;
-            this.buttonCovid.Click += new System.EventHandler(this.buttonCovid_Click);
             // 
             // buttonHome
             // 
@@ -109,7 +102,6 @@
             this.buttonHome.Size = new System.Drawing.Size(39, 37);
             this.buttonHome.TabIndex = 1;
             this.buttonHome.UseVisualStyleBackColor = false;
-            this.buttonHome.Click += new System.EventHandler(this.buttonHome_Click);
             // 
             // buttonDoctor
             // 
@@ -142,7 +134,6 @@
             this.buttonLogout.Size = new System.Drawing.Size(39, 37);
             this.buttonLogout.TabIndex = 7;
             this.buttonLogout.UseVisualStyleBackColor = false;
-            this.buttonLogout.Click += new System.EventHandler(this.buttonLogout_Click);
             // 
             // buttonSettings
             // 
@@ -160,6 +151,22 @@
             this.buttonSettings.TabIndex = 6;
             this.buttonSettings.UseVisualStyleBackColor = false;
             // 
+            // buttonPatient
+            // 
+            this.buttonPatient.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonPatient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(41)))));
+            this.buttonPatient.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonPatient.BackgroundImage")));
+            this.buttonPatient.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonPatient.FlatAppearance.BorderSize = 0;
+            this.buttonPatient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPatient.Location = new System.Drawing.Point(27, 383);
+            this.buttonPatient.Margin = new System.Windows.Forms.Padding(5);
+            this.buttonPatient.Name = "buttonPatient";
+            this.buttonPatient.Padding = new System.Windows.Forms.Padding(5);
+            this.buttonPatient.Size = new System.Drawing.Size(39, 37);
+            this.buttonPatient.TabIndex = 4;
+            this.buttonPatient.UseVisualStyleBackColor = false;
+            // 
             // buttonStaff
             // 
             this.buttonStaff.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -176,105 +183,14 @@
             this.buttonStaff.TabIndex = 5;
             this.buttonStaff.UseVisualStyleBackColor = false;
             // 
-            // buttonPatient
-            // 
-            this.buttonPatient.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonPatient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(41)))));
-            this.buttonPatient.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonPatient.BackgroundImage")));
-            this.buttonPatient.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.buttonPatient.FlatAppearance.BorderSize = 0;
-            this.buttonPatient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPatient.Location = new System.Drawing.Point(27, 383);
-            this.buttonPatient.Margin = new System.Windows.Forms.Padding(5);
-            this.buttonPatient.Name = "buttonPatient";
-            this.buttonPatient.Padding = new System.Windows.Forms.Padding(5);
-            this.buttonPatient.Size = new System.Drawing.Size(39, 37);
-            this.buttonPatient.TabIndex = 4;
-            this.buttonPatient.UseVisualStyleBackColor = false;
-            this.buttonPatient.Click += new System.EventHandler(this.buttonPatient_Click);
-            // 
-            // panelHead
-            // 
-            this.panelHead.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(41)))));
-            this.panelHead.Controls.Add(this.label1);
-            this.panelHead.Controls.Add(this.buttonExit);
-            this.panelHead.Controls.Add(this.buttonBack);
-            this.panelHead.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelHead.Location = new System.Drawing.Point(98, 0);
-            this.panelHead.Name = "panelHead";
-            this.panelHead.Size = new System.Drawing.Size(1264, 63);
-            this.panelHead.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Raleway", 16F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.label1.Location = new System.Drawing.Point(406, 14);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(456, 37);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "HOSPITAL MANAGEMENT SYSTEM";
-            // 
-            // buttonExit
-            // 
-            this.buttonExit.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(41)))));
-            this.buttonExit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonExit.BackgroundImage")));
-            this.buttonExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.buttonExit.FlatAppearance.BorderSize = 0;
-            this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonExit.Location = new System.Drawing.Point(1223, 14);
-            this.buttonExit.Margin = new System.Windows.Forms.Padding(5);
-            this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Padding = new System.Windows.Forms.Padding(5);
-            this.buttonExit.Size = new System.Drawing.Size(27, 27);
-            this.buttonExit.TabIndex = 8;
-            this.buttonExit.UseVisualStyleBackColor = false;
-            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
-            // 
-            // buttonBack
-            // 
-            this.buttonBack.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(41)))));
-            this.buttonBack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonBack.BackgroundImage")));
-            this.buttonBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.buttonBack.FlatAppearance.BorderSize = 0;
-            this.buttonBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonBack.Location = new System.Drawing.Point(8, 13);
-            this.buttonBack.Margin = new System.Windows.Forms.Padding(5);
-            this.buttonBack.Name = "buttonBack";
-            this.buttonBack.Padding = new System.Windows.Forms.Padding(5);
-            this.buttonBack.Size = new System.Drawing.Size(27, 27);
-            this.buttonBack.TabIndex = 8;
-            this.buttonBack.UseVisualStyleBackColor = false;
-            // 
-            // Content
-            // 
-            this.Content.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Content.Location = new System.Drawing.Point(98, 63);
-            this.Content.Name = "Content";
-            this.Content.Size = new System.Drawing.Size(1264, 626);
-            this.Content.TabIndex = 2;
-            // 
-            // DashBoard
+            // AdminSidebarUserControl
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1362, 689);
-            this.Controls.Add(this.Content);
-            this.Controls.Add(this.panelHead);
             this.Controls.Add(this.SideBar);
-            this.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "DashBoard";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "DashBoard";
-            this.Load += new System.EventHandler(this.DashBoard_Load);
+            this.Name = "AdminSidebarUserControl";
+            this.Size = new System.Drawing.Size(98, 689);
             this.SideBar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
-            this.panelHead.ResumeLayout(false);
-            this.panelHead.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -287,13 +203,8 @@
         private System.Windows.Forms.Button buttonHome;
         private System.Windows.Forms.Button buttonDoctor;
         private System.Windows.Forms.Button buttonLogout;
-        private System.Windows.Forms.Button buttonStaff;
-        private System.Windows.Forms.Button buttonPatient;
-        private System.Windows.Forms.Panel panelHead;
         private System.Windows.Forms.Button buttonSettings;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button buttonBack;
-        private System.Windows.Forms.Panel Content;
-        private System.Windows.Forms.Button buttonExit;
+        private System.Windows.Forms.Button buttonPatient;
+        private System.Windows.Forms.Button buttonStaff;
     }
 }

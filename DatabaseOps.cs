@@ -55,11 +55,10 @@
             try
             {
                 sqlConnection.Open();
-                sqlCommand = new SqlCommand("INSERT INTO PATIENTS(PAT_NAME, PAT_TEL, PAT_EMAIL, PAT_PASS, PAT_GENDER, PAT_ADDRESS, DOC_CODE) VALUES (@name, @tel, @email, @pass, @gender, @address, @doc)", sqlConnection);
+                sqlCommand = new SqlCommand("INSERT INTO PATIENTS(PAT_NAME, PAT_TEL, PAT_EMAIL, PAT_GENDER, PAT_ADDRESS, DOC_CODE) VALUES (@name, @tel, @email, @gender, @address, @doc)", sqlConnection);
                 sqlCommand.Parameters.AddWithValue("@name", patient.Name);
                 sqlCommand.Parameters.AddWithValue("@tel", patient.Tel);
                 sqlCommand.Parameters.AddWithValue("@email", patient.Email);
-                sqlCommand.Parameters.AddWithValue("@pass", "123456865");
                 sqlCommand.Parameters.AddWithValue("@gender", patient.Gender);
                 sqlCommand.Parameters.AddWithValue("@address", patient.Address);
                 sqlCommand.Parameters.AddWithValue("@doc", patient.DocCode);
@@ -367,6 +366,35 @@
             sqlDataAdapter.Fill(dataTable);
             sqlConnection.Close();
             return dataTable;
+        }
+
+        public void login(UserLogin userLogin)
+        {
+            try
+            {
+                sqlConnection.Open();
+                string query = "SELECT * FROM EMPLOYEE WHERE USERNAME = '" + userLogin.Username + "' AND EMP_PASS = '" + userLogin.Pass + "'";
+                sqlCommand = new SqlCommand(query, sqlConnection);
+                SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+                if (sqlDataReader.Read())
+                {
+                    DashBoard dashBoard = new DashBoard()
+                    {
+                        ID = sqlDataReader.GetValue(0).ToString().ToLower(),
+                        Role = sqlDataReader.GetValue(10).ToString().ToLower()
+                    };
+                    dashBoard.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Login", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

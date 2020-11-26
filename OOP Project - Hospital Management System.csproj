@@ -57,6 +57,12 @@
     <Compile Include="AddNewDoctor.Designer.cs">
       <DependentUpon>AddNewDoctor.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminSidebarUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminSidebarUserControl.Designer.cs">
+      <DependentUpon>AdminSidebarUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="BedAvailibilityUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -90,6 +96,12 @@
     </Compile>
     <Compile Include="DatabaseOps.cs" />
     <Compile Include="Doctor.cs" />
+    <Compile Include="DoctorSidebarUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DoctorSidebarUserControl.Designer.cs">
+      <DependentUpon>DoctorSidebarUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="FindRoom.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,6 +181,9 @@
     <EmbeddedResource Include="AddNewDoctor.resx">
       <DependentUpon>AddNewDoctor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdminSidebarUserControl.resx">
+      <DependentUpon>AdminSidebarUserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BedAvailibilityUserControl.resx">
       <DependentUpon>BedAvailibilityUserControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -183,6 +198,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminHomeControl.resx">
       <DependentUpon>AdminHomeControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorSidebarUserControl.resx">
+      <DependentUpon>DoctorSidebarUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FindRoom.resx">
       <DependentUpon>FindRoom.cs</DependentUpon>

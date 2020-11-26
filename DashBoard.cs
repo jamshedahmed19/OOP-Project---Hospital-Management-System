@@ -17,10 +17,28 @@ namespace OOP_Project___Hospital_Management_System
             InitializeComponent();
         }
 
+        public string ID { get; set; }
+        public string Role { get; set; }
+
         private void DashBoard_Load(object sender, EventArgs e)
         {
             AdminHomeControl homeControl = new AdminHomeControl();
             ControlClass.ShowControl(homeControl, Content);
+            if (Role == "admin")
+            {
+                AdminSidebarUserControl adminSidebar = new AdminSidebarUserControl();
+                ControlClass.ShowControl(adminSidebar, SideBar);
+            }
+            else if (Role == "doctor")
+            {
+                DoctorSidebarUserControl doctorSidebar = new DoctorSidebarUserControl();
+                ControlClass.ShowControl(doctorSidebar, SideBar);
+            }
+            else
+            {
+                AdminSidebarUserControl adminSidebar = new AdminSidebarUserControl();
+                ControlClass.ShowControl(adminSidebar, SideBar);
+            }
         }
 
         private void buttonHome_Click(object sender, EventArgs e)

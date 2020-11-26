@@ -19,9 +19,33 @@ namespace OOP_Project___Hospital_Management_System
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DashBoard dashBoard = new DashBoard();
-            dashBoard.Show();
-            this.Close();
+            if (textBoxPass.Text.Length != 0 && textBoxUsername.Text.Length != 0)
+            {
+                UserLogin userLogin = new UserLogin()
+                {
+                    Username = textBoxUsername.Text,
+                    Pass = textBoxPass.Text
+                };
+                userLogin.login(userLogin);
+                this.Close();
+            }
+            else
+            {
+                textboxError.Visible = true;
+                button1.BackColor = Color.FromArgb(textboxError.ForeColor.ToArgb());
+            }
+        }
+    }
+
+    public class UserLogin
+    {
+        public string Username { get; set; }
+        public string Pass { get; set; }
+
+        public void login(UserLogin userLogin)
+        {
+            DatabaseOps databaseOps = new DatabaseOps();
+            databaseOps.login(userLogin);
         }
     }
 }

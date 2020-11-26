@@ -33,12 +33,13 @@
             this.labelTitle = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxPass = new System.Windows.Forms.TextBox();
             this.textBoxUsername = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.labelPassword = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.labelLoginTitle = new System.Windows.Forms.Label();
+            this.textboxError = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,8 +68,9 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.textBoxPass);
             this.panel1.Controls.Add(this.textBoxUsername);
+            this.panel1.Controls.Add(this.textboxError);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.labelPassword);
             this.panel1.Controls.Add(this.label2);
@@ -92,16 +94,16 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // textBoxPass
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(41)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(23, 160);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(379, 31);
-            this.textBox1.TabIndex = 2;
+            this.textBoxPass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(41)))));
+            this.textBoxPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxPass.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxPass.ForeColor = System.Drawing.Color.White;
+            this.textBoxPass.Location = new System.Drawing.Point(23, 160);
+            this.textBoxPass.Name = "textBoxPass";
+            this.textBoxPass.Size = new System.Drawing.Size(379, 31);
+            this.textBoxPass.TabIndex = 2;
             // 
             // textBoxUsername
             // 
@@ -166,6 +168,20 @@
             this.labelLoginTitle.TabIndex = 0;
             this.labelLoginTitle.Text = "Login";
             // 
+            // textboxError
+            // 
+            this.textboxError.AutoSize = true;
+            this.textboxError.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(5)))), ((int)(((byte)(249)))));
+            this.textboxError.Font = new System.Drawing.Font("Fira Code", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textboxError.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.textboxError.Location = new System.Drawing.Point(60, 280);
+            this.textboxError.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.textboxError.Name = "textboxError";
+            this.textboxError.Size = new System.Drawing.Size(342, 26);
+            this.textboxError.TabIndex = 3;
+            this.textboxError.Text = "Please Enter Required Information";
+            this.textboxError.Visible = false;
+            // 
             // Login
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -191,12 +207,13 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxPass;
         private System.Windows.Forms.TextBox textBoxUsername;
         private System.Windows.Forms.Label labelPassword;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label labelLoginTitle;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label textboxError;
     }
 }

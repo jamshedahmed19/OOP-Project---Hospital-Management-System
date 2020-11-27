@@ -106,6 +106,37 @@
                 MessageBox.Show(e.Message, "Error Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+
+        public void insert(Inpatient inpatient)
+        {
+            try
+            {
+                sqlConnection.Open();
+                sqlCommand = new SqlCommand("INSERT INTO INPATIENT(DATE_OF_AD, DATE_OF_DIS, ADVANCE, ROOM_CODE, PAT_CODE) VALUES (@DATE_OF_AD, @DATE_OF_DIS, @ADVANCE, @ROOM_CODE, @PAT_CODE)", sqlConnection);
+                sqlCommand.Parameters.AddWithValue("@DATE_OF_AD", inpatient.Admission);
+                sqlCommand.Parameters.AddWithValue("@DATE_OF_DIS", inpatient.Discharge);
+                sqlCommand.Parameters.AddWithValue("@ADVANCE", inpatient.Advance);
+                sqlCommand.Parameters.AddWithValue("@ROOM_CODE", inpatient.RoomNo);
+                sqlCommand.Parameters.AddWithValue("@PAT_CODE", inpatient.PatID);
+                int a = sqlCommand.ExecuteNonQuery();
+                if (a > 0)
+                {
+                    MessageBox.Show("Registered Successfully", "Registered", MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Data not inserted", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                sqlConnection.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         public void update(Doctor doctor)
         {
             try
@@ -356,6 +387,42 @@
             {
                 sqlConnection.Open();
                 sqlDataAdapter = new SqlDataAdapter("SELECT * FROM DOCTORS ORDER BY DOC_NAME", sqlConnection);
+            }
+
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            DataTable dataTable = new DataTable();
+            sqlDataAdapter.Fill(dataTable);
+            sqlConnection.Close();
+            return dataTable;
+        }
+
+        public DataTable patientList()
+        {
+            try
+            {
+                sqlConnection.Open();
+                sqlDataAdapter = new SqlDataAdapter("SELECT * FROM PATIENTS ORDER BY PAT_NAME", sqlConnection);
+            }
+
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            DataTable dataTable = new DataTable();
+            sqlDataAdapter.Fill(dataTable);
+            sqlConnection.Close();
+            return dataTable;
+        }
+
+        public DataTable roomList(string roomType)
+        {
+            try
+            {
+                sqlConnection.Open();
+                sqlDataAdapter = new SqlDataAdapter("SELECT * FROM ROOM WHERE ROOM_STATUS = 'AVAILABLE' AND ROOM_TYPE = '" + roomType + "'", sqlConnection);
             }
 
             catch (Exception e)

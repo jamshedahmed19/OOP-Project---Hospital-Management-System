@@ -143,6 +143,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>HMS_DatabaseDataSet6.xsd</DependentUpon>
     </Compile>
+    <Compile Include="HMS_DatabaseDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HMS_DatabaseDataSet7.xsd</DependentUpon>
+    </Compile>
     <Compile Include="InpatientUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -332,6 +337,17 @@
     </None>
     <None Include="HMS_DatabaseDataSet6.xss">
       <DependentUpon>HMS_DatabaseDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="HMS_DatabaseDataSet7.xsc">
+      <DependentUpon>HMS_DatabaseDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="HMS_DatabaseDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HMS_DatabaseDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HMS_DatabaseDataSet7.xss">
+      <DependentUpon>HMS_DatabaseDataSet7.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

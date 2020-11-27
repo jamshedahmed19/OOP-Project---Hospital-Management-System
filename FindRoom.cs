@@ -66,14 +66,14 @@ namespace OOP_Project___Hospital_Management_System
             {
                 if (MessageBox.Show("Are you sure you want to select this room?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    InpatientUserControl inpatientUserControl = new InpatientUserControl()
-                    { 
-                        RoomNo = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString(),
-                        FloorNo = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString(),
-                        RoomType = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString(),
-                    };
-                    inpatientUserControl.SelectRoom();
-                    this.Close();
+                    //InpatientUserControl inpatientUserControl = new InpatientUserControl()
+                    //{ 
+                    //    RoomNo = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString(),
+                    //    FloorNo = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString(),
+                    //    RoomType = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString(),
+                    //};
+                    ////inpatientUserControl.SelectRoom();
+                    //this.Close();
                 }
             }
         }

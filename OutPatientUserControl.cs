@@ -16,5 +16,10 @@ namespace OOP_Project___Hospital_Management_System
         {
             InitializeComponent();
         }
+
+        private void comboBoxRType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

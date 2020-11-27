@@ -26,18 +26,15 @@ namespace OOP_Project___Hospital_Management_System
             ControlClass.ShowControl(homeControl, Content);
             if (Role == "admin")
             {
-                AdminSidebarUserControl adminSidebar = new AdminSidebarUserControl();
-                ControlClass.ShowControl(adminSidebar, SideBar);
+                buttonBilling.Enabled = true;
             }
             else if (Role == "doctor")
             {
-                DoctorSidebarUserControl doctorSidebar = new DoctorSidebarUserControl();
-                ControlClass.ShowControl(doctorSidebar, SideBar);
+                buttonBilling.Visible = false;
             }
             else
             {
-                AdminSidebarUserControl adminSidebar = new AdminSidebarUserControl();
-                ControlClass.ShowControl(adminSidebar, SideBar);
+                buttonBilling.Enabled = true;
             }
         }
 
@@ -74,6 +71,28 @@ namespace OOP_Project___Hospital_Management_System
         {
             RoomCRUD room = new RoomCRUD();
             ControlClass.ShowControl(room, Content);
+        }
+
+        private void buttonDoctor_Click(object sender, EventArgs e)
+        {
+            CRUDDoctor cRUDDoctor = new CRUDDoctor();
+            ControlClass.ShowControl(cRUDDoctor, Content);
+        }
+
+        private void buttonBilling_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonSettings_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonPatient_Click_1(object sender, EventArgs e)
+        {
+            PatientWindowUserControl patientWindowUserControl = new PatientWindowUserControl();
+            ControlClass.ShowControl(patientWindowUserControl, Content);
         }
     }
 }

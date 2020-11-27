@@ -44,7 +44,7 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
+            this.buttonAddPatient = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
@@ -233,7 +233,7 @@
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(13)))));
             this.panel8.Controls.Add(this.button5);
             this.panel8.Controls.Add(this.button6);
-            this.panel8.Controls.Add(this.button9);
+            this.panel8.Controls.Add(this.buttonAddPatient);
             this.panel8.Controls.Add(this.button1);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel8.Location = new System.Drawing.Point(2, 83);
@@ -273,22 +273,22 @@
             this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button6.UseVisualStyleBackColor = false;
             // 
-            // button9
+            // buttonAddPatient
             // 
-            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold);
-            this.button9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(13)))));
-            this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
-            this.button9.Location = new System.Drawing.Point(13, 22);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(348, 57);
-            this.button9.TabIndex = 1;
-            this.button9.Text = "Add New Patient";
-            this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button9.UseVisualStyleBackColor = false;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
+            this.buttonAddPatient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.buttonAddPatient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAddPatient.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold);
+            this.buttonAddPatient.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(13)))));
+            this.buttonAddPatient.Image = ((System.Drawing.Image)(resources.GetObject("buttonAddPatient.Image")));
+            this.buttonAddPatient.Location = new System.Drawing.Point(13, 22);
+            this.buttonAddPatient.Name = "buttonAddPatient";
+            this.buttonAddPatient.Size = new System.Drawing.Size(348, 57);
+            this.buttonAddPatient.TabIndex = 1;
+            this.buttonAddPatient.Text = "Add New Patient";
+            this.buttonAddPatient.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonAddPatient.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonAddPatient.UseVisualStyleBackColor = false;
+            this.buttonAddPatient.Click += new System.EventHandler(this.button9_Click);
             // 
             // button1
             // 
@@ -522,7 +522,7 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button buttonAddPatient;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Label label2;
     }

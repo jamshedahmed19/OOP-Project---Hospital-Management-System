@@ -33,6 +33,9 @@ namespace OOP_Project___Hospital_Management_System
             {
                 textboxError.Visible = true;
                 button1.BackColor = Color.FromArgb(textboxError.ForeColor.ToArgb());
+                DashBoard dashBoard = new DashBoard();
+                dashBoard.Show();
+                this.Close();
             }
         }
     }

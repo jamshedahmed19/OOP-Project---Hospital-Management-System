@@ -149,12 +149,24 @@
     <Compile Include="InpatientUserControl.Designer.cs">
       <DependentUpon>InpatientUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="OutPatientUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OutPatientUserControl.Designer.cs">
+      <DependentUpon>OutPatientUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Patient.cs" />
     <Compile Include="PatientCRUD.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="PatientCRUD.Designer.cs">
       <DependentUpon>PatientCRUD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientWindowUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PatientWindowUserControl.Designer.cs">
+      <DependentUpon>PatientWindowUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Person.cs" />
     <Compile Include="Room.cs" />
@@ -163,6 +175,12 @@
     </Compile>
     <Compile Include="RoomCRUD.Designer.cs">
       <DependentUpon>RoomCRUD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingUserControl.Designer.cs">
+      <DependentUpon>SettingUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="SplashScreen.cs">
       <SubType>Form</SubType>
@@ -208,11 +226,20 @@
     <EmbeddedResource Include="InpatientUserControl.resx">
       <DependentUpon>InpatientUserControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="OutPatientUserControl.resx">
+      <DependentUpon>OutPatientUserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PatientCRUD.resx">
       <DependentUpon>PatientCRUD.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PatientWindowUserControl.resx">
+      <DependentUpon>PatientWindowUserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RoomCRUD.resx">
       <DependentUpon>RoomCRUD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingUserControl.resx">
+      <DependentUpon>SettingUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SplashScreen.resx">
       <DependentUpon>SplashScreen.cs</DependentUpon>

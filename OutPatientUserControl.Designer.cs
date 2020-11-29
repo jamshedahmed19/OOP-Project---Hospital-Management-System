@@ -28,40 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OutPatientUserControl));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.label14 = new System.Windows.Forms.Label();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label13 = new System.Windows.Forms.Label();
-            this.dateTimePickerDOD = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePickerDOA = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerDAY = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerSTARTTIME = new System.Windows.Forms.DateTimePicker();
             this.comboBoxGender = new System.Windows.Forms.ComboBox();
             this.button4 = new System.Windows.Forms.Button();
             this.dataGridViewINP = new System.Windows.Forms.DataGridView();
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rOOMNODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rOOMSTATUSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rOOMTYPEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iNPATCODEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rOOMBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.hMS_DatabaseDataSet2 = new OOP_Project___Hospital_Management_System.HMS_DatabaseDataSet2();
             this.buttonDisplay = new System.Windows.Forms.Button();
             this.buttonUpdate = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonInsert = new System.Windows.Forms.Button();
-            this.comboBoxSearchValue = new System.Windows.Forms.ComboBox();
             this.Content = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBoxDoctorName = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.comboBoxSearchBy = new System.Windows.Forms.ComboBox();
-            this.comboBoxPatient = new System.Windows.Forms.ComboBox();
             this.buttonRoomDisplay = new System.Windows.Forms.Button();
-            this.buttonRoomUpdate = new System.Windows.Forms.Button();
-            this.buttonRoomDelete = new System.Windows.Forms.Button();
-            this.buttonRoomInsert = new System.Windows.Forms.Button();
+            this.buttonRoomCancelApp = new System.Windows.Forms.Button();
+            this.buttonBookApp = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBoxInpatientID = new System.Windows.Forms.TextBox();
+            this.textBoxAppointmentID = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
@@ -83,62 +74,51 @@
             this.textBoxid = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.rOOMTableAdapter = new OOP_Project___Hospital_Management_System.HMS_DatabaseDataSet2TableAdapters.ROOMTableAdapter();
-            this.comboBoxRNo = new System.Windows.Forms.ComboBox();
-            this.comboBoxRFloor = new System.Windows.Forms.ComboBox();
-            this.comboBoxRType = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.textBoxPatName = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.textBoxDoctorID = new System.Windows.Forms.TextBox();
+            this.textBoxPatientId = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.dateTimePickerENDTIME = new System.Windows.Forms.DateTimePicker();
+            this.buttonReschedule = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewINP)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rOOMBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hMS_DatabaseDataSet2)).BeginInit();
             this.Content.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Raleway SemiBold", 14F, System.Drawing.FontStyle.Bold);
-            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.label14.Location = new System.Drawing.Point(67, 369);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(146, 34);
-            this.label14.TabIndex = 15;
-            this.label14.Text = "ROOM NO. :";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Raleway SemiBold", 14F, System.Drawing.FontStyle.Bold);
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.label13.Location = new System.Drawing.Point(67, 285);
+            this.label13.Location = new System.Drawing.Point(63, 231);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(158, 34);
+            this.label13.Size = new System.Drawing.Size(195, 34);
             this.label13.TabIndex = 16;
-            this.label13.Text = "ROOM TYPE:";
+            this.label13.Text = "DOCTOR NAME:";
             // 
-            // dateTimePickerDOD
+            // dateTimePickerDAY
             // 
-            this.dateTimePickerDOD.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerDOD.Location = new System.Drawing.Point(243, 171);
-            this.dateTimePickerDOD.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
-            this.dateTimePickerDOD.MinDate = new System.DateTime(2020, 1, 10, 0, 0, 0, 0);
-            this.dateTimePickerDOD.Name = "dateTimePickerDOD";
-            this.dateTimePickerDOD.Size = new System.Drawing.Size(254, 31);
-            this.dateTimePickerDOD.TabIndex = 14;
-            this.dateTimePickerDOD.Value = new System.DateTime(2020, 11, 6, 22, 21, 3, 0);
+            this.dateTimePickerDAY.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerDAY.Location = new System.Drawing.Point(243, 290);
+            this.dateTimePickerDAY.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
+            this.dateTimePickerDAY.MinDate = new System.DateTime(2020, 1, 10, 0, 0, 0, 0);
+            this.dateTimePickerDAY.Name = "dateTimePickerDAY";
+            this.dateTimePickerDAY.Size = new System.Drawing.Size(254, 31);
+            this.dateTimePickerDAY.TabIndex = 14;
+            this.dateTimePickerDAY.Value = new System.DateTime(2020, 11, 6, 22, 21, 3, 0);
             // 
-            // dateTimePickerDOA
+            // dateTimePickerSTARTTIME
             // 
-            this.dateTimePickerDOA.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerDOA.Location = new System.Drawing.Point(243, 205);
-            this.dateTimePickerDOA.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
-            this.dateTimePickerDOA.MinDate = new System.DateTime(2020, 1, 10, 0, 0, 0, 0);
-            this.dateTimePickerDOA.Name = "dateTimePickerDOA";
-            this.dateTimePickerDOA.Size = new System.Drawing.Size(254, 31);
-            this.dateTimePickerDOA.TabIndex = 14;
-            this.dateTimePickerDOA.Value = new System.DateTime(2020, 11, 6, 22, 21, 3, 0);
+            this.dateTimePickerSTARTTIME.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dateTimePickerSTARTTIME.Location = new System.Drawing.Point(243, 327);
+            this.dateTimePickerSTARTTIME.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
+            this.dateTimePickerSTARTTIME.MinDate = new System.DateTime(2020, 1, 10, 0, 0, 0, 0);
+            this.dateTimePickerSTARTTIME.Name = "dateTimePickerSTARTTIME";
+            this.dateTimePickerSTARTTIME.Size = new System.Drawing.Size(254, 31);
+            this.dateTimePickerSTARTTIME.TabIndex = 14;
+            this.dateTimePickerSTARTTIME.Value = new System.DateTime(2020, 11, 6, 22, 21, 3, 0);
             // 
             // comboBoxGender
             // 
@@ -173,87 +153,34 @@
             // 
             // dataGridViewINP
             // 
-            this.dataGridViewINP.AutoGenerateColumns = false;
             this.dataGridViewINP.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewINP.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(13)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewINP.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(13)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewINP.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewINP.ColumnHeadersHeight = 40;
             this.dataGridViewINP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dataGridViewINP.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDDataGridViewTextBoxColumn,
-            this.rOOMNODataGridViewTextBoxColumn,
-            this.rOOMSTATUSDataGridViewTextBoxColumn,
-            this.rOOMTYPEDataGridViewTextBoxColumn,
-            this.iNPATCODEDataGridViewTextBoxColumn});
-            this.dataGridViewINP.DataSource = this.rOOMBindingSource;
             this.dataGridViewINP.Location = new System.Drawing.Point(511, 132);
             this.dataGridViewINP.Name = "dataGridViewINP";
             this.dataGridViewINP.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewINP.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewINP.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewINP.RowHeadersWidth = 50;
             this.dataGridViewINP.RowTemplate.Height = 24;
             this.dataGridViewINP.Size = new System.Drawing.Size(683, 384);
             this.dataGridViewINP.TabIndex = 13;
-            // 
-            // iDDataGridViewTextBoxColumn
-            // 
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // rOOMNODataGridViewTextBoxColumn
-            // 
-            this.rOOMNODataGridViewTextBoxColumn.DataPropertyName = "ROOM_NO";
-            this.rOOMNODataGridViewTextBoxColumn.HeaderText = "ROOM_NO";
-            this.rOOMNODataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.rOOMNODataGridViewTextBoxColumn.Name = "rOOMNODataGridViewTextBoxColumn";
-            // 
-            // rOOMSTATUSDataGridViewTextBoxColumn
-            // 
-            this.rOOMSTATUSDataGridViewTextBoxColumn.DataPropertyName = "ROOM_STATUS";
-            this.rOOMSTATUSDataGridViewTextBoxColumn.HeaderText = "ROOM_STATUS";
-            this.rOOMSTATUSDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.rOOMSTATUSDataGridViewTextBoxColumn.Name = "rOOMSTATUSDataGridViewTextBoxColumn";
-            // 
-            // rOOMTYPEDataGridViewTextBoxColumn
-            // 
-            this.rOOMTYPEDataGridViewTextBoxColumn.DataPropertyName = "ROOM_TYPE";
-            this.rOOMTYPEDataGridViewTextBoxColumn.HeaderText = "ROOM_TYPE";
-            this.rOOMTYPEDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.rOOMTYPEDataGridViewTextBoxColumn.Name = "rOOMTYPEDataGridViewTextBoxColumn";
-            // 
-            // iNPATCODEDataGridViewTextBoxColumn
-            // 
-            this.iNPATCODEDataGridViewTextBoxColumn.DataPropertyName = "INPAT_CODE";
-            this.iNPATCODEDataGridViewTextBoxColumn.HeaderText = "INPAT_CODE";
-            this.iNPATCODEDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.iNPATCODEDataGridViewTextBoxColumn.Name = "iNPATCODEDataGridViewTextBoxColumn";
-            // 
-            // rOOMBindingSource
-            // 
-            this.rOOMBindingSource.DataMember = "ROOM";
-            this.rOOMBindingSource.DataSource = this.hMS_DatabaseDataSet2;
-            // 
-            // hMS_DatabaseDataSet2
-            // 
-            this.hMS_DatabaseDataSet2.DataSetName = "HMS_DatabaseDataSet2";
-            this.hMS_DatabaseDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.dataGridViewINP.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewINP_RowHeaderMouseClick);
             // 
             // buttonDisplay
             // 
@@ -287,17 +214,6 @@
             this.buttonUpdate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonUpdate.UseVisualStyleBackColor = false;
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Raleway SemiBold", 14F, System.Drawing.FontStyle.Bold);
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.label12.Location = new System.Drawing.Point(67, 327);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(153, 34);
-            this.label12.TabIndex = 15;
-            this.label12.Text = "FLOOR NO. :";
-            // 
             // buttonDelete
             // 
             this.buttonDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
@@ -329,25 +245,6 @@
             this.buttonInsert.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonInsert.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonInsert.UseVisualStyleBackColor = false;
-            // 
-            // comboBoxSearchValue
-            // 
-            this.comboBoxSearchValue.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboBoxSearchValue.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.comboBoxSearchValue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.comboBoxSearchValue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBoxSearchValue.Font = new System.Drawing.Font("Raleway", 14F);
-            this.comboBoxSearchValue.FormattingEnabled = true;
-            this.comboBoxSearchValue.Items.AddRange(new object[] {
-            "Doctor ID",
-            "Name",
-            "Number",
-            "Designation",
-            "Department"});
-            this.comboBoxSearchValue.Location = new System.Drawing.Point(1035, 86);
-            this.comboBoxSearchValue.Name = "comboBoxSearchValue";
-            this.comboBoxSearchValue.Size = new System.Drawing.Size(159, 40);
-            this.comboBoxSearchValue.TabIndex = 3;
             // 
             // Content
             // 
@@ -386,26 +283,28 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(13)))));
-            this.panel1.Controls.Add(this.label14);
+            this.panel1.Controls.Add(this.buttonReschedule);
+            this.panel1.Controls.Add(this.textBoxDoctorID);
+            this.panel1.Controls.Add(this.textBoxDoctorName);
             this.panel1.Controls.Add(this.label12);
+            this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label13);
-            this.panel1.Controls.Add(this.dateTimePickerDOD);
-            this.panel1.Controls.Add(this.dateTimePickerDOA);
+            this.panel1.Controls.Add(this.dateTimePickerDAY);
+            this.panel1.Controls.Add(this.dateTimePickerENDTIME);
+            this.panel1.Controls.Add(this.dateTimePickerSTARTTIME);
             this.panel1.Controls.Add(this.dataGridViewINP);
-            this.panel1.Controls.Add(this.comboBoxSearchValue);
             this.panel1.Controls.Add(this.comboBoxSearchBy);
-            this.panel1.Controls.Add(this.comboBoxRType);
-            this.panel1.Controls.Add(this.comboBoxRFloor);
-            this.panel1.Controls.Add(this.comboBoxRNo);
-            this.panel1.Controls.Add(this.comboBoxPatient);
             this.panel1.Controls.Add(this.buttonRoomDisplay);
-            this.panel1.Controls.Add(this.buttonRoomUpdate);
-            this.panel1.Controls.Add(this.buttonRoomDelete);
-            this.panel1.Controls.Add(this.buttonRoomInsert);
+            this.panel1.Controls.Add(this.buttonRoomCancelApp);
+            this.panel1.Controls.Add(this.label15);
+            this.panel1.Controls.Add(this.buttonBookApp);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.label16);
-            this.panel1.Controls.Add(this.textBoxInpatientID);
+            this.panel1.Controls.Add(this.textBoxPatientId);
+            this.panel1.Controls.Add(this.textBoxPatName);
+            this.panel1.Controls.Add(this.textBoxAppointmentID);
             this.panel1.Controls.Add(this.label17);
             this.panel1.Controls.Add(this.label18);
             this.panel1.Controls.Add(this.label19);
@@ -416,6 +315,27 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1264, 626);
             this.panel1.TabIndex = 12;
+            // 
+            // textBoxDoctorName
+            // 
+            this.textBoxDoctorName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.textBoxDoctorName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxDoctorName.Font = new System.Drawing.Font("Raleway SemiBold", 14F, System.Drawing.FontStyle.Bold);
+            this.textBoxDoctorName.Location = new System.Drawing.Point(268, 234);
+            this.textBoxDoctorName.Name = "textBoxDoctorName";
+            this.textBoxDoctorName.ReadOnly = true;
+            this.textBoxDoctorName.Size = new System.Drawing.Size(229, 28);
+            this.textBoxDoctorName.TabIndex = 18;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Raleway SemiBold", 14F, System.Drawing.FontStyle.Bold);
+            this.textBox1.Location = new System.Drawing.Point(1035, 92);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(159, 28);
+            this.textBox1.TabIndex = 17;
             // 
             // comboBoxSearchBy
             // 
@@ -436,21 +356,6 @@
             this.comboBoxSearchBy.Size = new System.Drawing.Size(136, 40);
             this.comboBoxSearchBy.TabIndex = 3;
             // 
-            // comboBoxPatient
-            // 
-            this.comboBoxPatient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.comboBoxPatient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBoxPatient.Font = new System.Drawing.Font("Raleway", 12F);
-            this.comboBoxPatient.FormattingEnabled = true;
-            this.comboBoxPatient.Items.AddRange(new object[] {
-            "Female",
-            "Male",
-            "Other"});
-            this.comboBoxPatient.Location = new System.Drawing.Point(243, 129);
-            this.comboBoxPatient.Name = "comboBoxPatient";
-            this.comboBoxPatient.Size = new System.Drawing.Size(254, 36);
-            this.comboBoxPatient.TabIndex = 3;
-            // 
             // buttonRoomDisplay
             // 
             this.buttonRoomDisplay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
@@ -458,7 +363,7 @@
             this.buttonRoomDisplay.Font = new System.Drawing.Font("Raleway", 10F, System.Drawing.FontStyle.Bold);
             this.buttonRoomDisplay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(13)))));
             this.buttonRoomDisplay.Image = ((System.Drawing.Image)(resources.GetObject("buttonRoomDisplay.Image")));
-            this.buttonRoomDisplay.Location = new System.Drawing.Point(295, 473);
+            this.buttonRoomDisplay.Location = new System.Drawing.Point(984, 20);
             this.buttonRoomDisplay.Name = "buttonRoomDisplay";
             this.buttonRoomDisplay.Size = new System.Drawing.Size(210, 43);
             this.buttonRoomDisplay.TabIndex = 5;
@@ -467,75 +372,83 @@
             this.buttonRoomDisplay.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonRoomDisplay.UseVisualStyleBackColor = false;
             // 
-            // buttonRoomUpdate
+            // buttonRoomCancelApp
             // 
-            this.buttonRoomUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.buttonRoomUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonRoomUpdate.Font = new System.Drawing.Font("Raleway", 10F, System.Drawing.FontStyle.Bold);
-            this.buttonRoomUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(13)))));
-            this.buttonRoomUpdate.Image = ((System.Drawing.Image)(resources.GetObject("buttonRoomUpdate.Image")));
-            this.buttonRoomUpdate.Location = new System.Drawing.Point(79, 473);
-            this.buttonRoomUpdate.Name = "buttonRoomUpdate";
-            this.buttonRoomUpdate.Size = new System.Drawing.Size(210, 43);
-            this.buttonRoomUpdate.TabIndex = 9;
-            this.buttonRoomUpdate.Text = " UPDATE ROOM";
-            this.buttonRoomUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonRoomUpdate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonRoomUpdate.UseVisualStyleBackColor = false;
+            this.buttonRoomCancelApp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.buttonRoomCancelApp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRoomCancelApp.Font = new System.Drawing.Font("Raleway", 10F, System.Drawing.FontStyle.Bold);
+            this.buttonRoomCancelApp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(13)))));
+            this.buttonRoomCancelApp.Image = ((System.Drawing.Image)(resources.GetObject("buttonRoomCancelApp.Image")));
+            this.buttonRoomCancelApp.Location = new System.Drawing.Point(79, 424);
+            this.buttonRoomCancelApp.Name = "buttonRoomCancelApp";
+            this.buttonRoomCancelApp.Size = new System.Drawing.Size(426, 43);
+            this.buttonRoomCancelApp.TabIndex = 10;
+            this.buttonRoomCancelApp.Text = " CANCEL APPOINTMENT";
+            this.buttonRoomCancelApp.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonRoomCancelApp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonRoomCancelApp.UseVisualStyleBackColor = false;
+            this.buttonRoomCancelApp.Click += new System.EventHandler(this.buttonRoomCancelApp_Click);
             // 
-            // buttonRoomDelete
+            // buttonBookApp
             // 
-            this.buttonRoomDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.buttonRoomDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonRoomDelete.Font = new System.Drawing.Font("Raleway", 10F, System.Drawing.FontStyle.Bold);
-            this.buttonRoomDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(13)))));
-            this.buttonRoomDelete.Image = ((System.Drawing.Image)(resources.GetObject("buttonRoomDelete.Image")));
-            this.buttonRoomDelete.Location = new System.Drawing.Point(295, 424);
-            this.buttonRoomDelete.Name = "buttonRoomDelete";
-            this.buttonRoomDelete.Size = new System.Drawing.Size(210, 43);
-            this.buttonRoomDelete.TabIndex = 10;
-            this.buttonRoomDelete.Text = " DELETE ROOM";
-            this.buttonRoomDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonRoomDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonRoomDelete.UseVisualStyleBackColor = false;
+            this.buttonBookApp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.buttonBookApp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBookApp.Font = new System.Drawing.Font("Raleway", 10F, System.Drawing.FontStyle.Bold);
+            this.buttonBookApp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(13)))));
+            this.buttonBookApp.Image = ((System.Drawing.Image)(resources.GetObject("buttonBookApp.Image")));
+            this.buttonBookApp.Location = new System.Drawing.Point(79, 522);
+            this.buttonBookApp.Name = "buttonBookApp";
+            this.buttonBookApp.Size = new System.Drawing.Size(426, 43);
+            this.buttonBookApp.TabIndex = 8;
+            this.buttonBookApp.Text = " BOOK APPOINTMENT";
+            this.buttonBookApp.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonBookApp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonBookApp.UseVisualStyleBackColor = false;
+            this.buttonBookApp.Click += new System.EventHandler(this.buttonBookApp_Click);
             // 
-            // buttonRoomInsert
+            // label11
             // 
-            this.buttonRoomInsert.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.buttonRoomInsert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonRoomInsert.Font = new System.Drawing.Font("Raleway", 10F, System.Drawing.FontStyle.Bold);
-            this.buttonRoomInsert.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(13)))));
-            this.buttonRoomInsert.Image = ((System.Drawing.Image)(resources.GetObject("buttonRoomInsert.Image")));
-            this.buttonRoomInsert.Location = new System.Drawing.Point(79, 424);
-            this.buttonRoomInsert.Name = "buttonRoomInsert";
-            this.buttonRoomInsert.Size = new System.Drawing.Size(210, 43);
-            this.buttonRoomInsert.TabIndex = 8;
-            this.buttonRoomInsert.Text = " INSERT ROOM";
-            this.buttonRoomInsert.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonRoomInsert.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonRoomInsert.UseVisualStyleBackColor = false;
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Raleway SemiBold", 14F, System.Drawing.FontStyle.Bold);
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.label11.Location = new System.Drawing.Point(67, 325);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(156, 34);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "START TIME:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Raleway SemiBold", 14F, System.Drawing.FontStyle.Bold);
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.label10.Location = new System.Drawing.Point(67, 288);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(65, 34);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "DAY:";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Raleway SemiBold", 14F, System.Drawing.FontStyle.Bold);
             this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.label16.Location = new System.Drawing.Point(67, 130);
+            this.label16.Location = new System.Drawing.Point(67, 129);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(116, 34);
+            this.label16.Size = new System.Drawing.Size(146, 34);
             this.label16.TabIndex = 0;
-            this.label16.Text = "PATIENT:";
+            this.label16.Text = "PATIENT ID:";
             // 
-            // textBoxInpatientID
+            // textBoxAppointmentID
             // 
-            this.textBoxInpatientID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.textBoxInpatientID.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxInpatientID.Font = new System.Drawing.Font("Raleway SemiBold", 14F, System.Drawing.FontStyle.Bold);
-            this.textBoxInpatientID.Location = new System.Drawing.Point(243, 95);
-            this.textBoxInpatientID.Name = "textBoxInpatientID";
-            this.textBoxInpatientID.ReadOnly = true;
-            this.textBoxInpatientID.Size = new System.Drawing.Size(254, 28);
-            this.textBoxInpatientID.TabIndex = 0;
+            this.textBoxAppointmentID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.textBoxAppointmentID.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxAppointmentID.Font = new System.Drawing.Font("Raleway SemiBold", 14F, System.Drawing.FontStyle.Bold);
+            this.textBoxAppointmentID.Location = new System.Drawing.Point(268, 98);
+            this.textBoxAppointmentID.Name = "textBoxAppointmentID";
+            this.textBoxAppointmentID.ReadOnly = true;
+            this.textBoxAppointmentID.Size = new System.Drawing.Size(229, 28);
+            this.textBoxAppointmentID.TabIndex = 0;
             // 
             // label17
             // 
@@ -564,11 +477,11 @@
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Raleway SemiBold", 14F, System.Drawing.FontStyle.Bold);
             this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.label19.Location = new System.Drawing.Point(67, 92);
+            this.label19.Location = new System.Drawing.Point(67, 95);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(171, 34);
+            this.label19.Size = new System.Drawing.Size(60, 34);
             this.label19.TabIndex = 0;
-            this.label19.Text = "INPATIENT ID:";
+            this.label19.Text = "AID:";
             // 
             // label20
             // 
@@ -577,9 +490,9 @@
             this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
             this.label20.Location = new System.Drawing.Point(19, 20);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(229, 55);
+            this.label20.Size = new System.Drawing.Size(336, 55);
             this.label20.TabIndex = 1;
-            this.label20.Text = "INPATIENT";
+            this.label20.Text = "APPOINTMENTS";
             // 
             // textBoxEmail
             // 
@@ -762,79 +675,100 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "PATIENT";
             // 
-            // rOOMTableAdapter
+            // textBoxPatName
             // 
-            this.rOOMTableAdapter.ClearBeforeFill = true;
+            this.textBoxPatName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.textBoxPatName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxPatName.Font = new System.Drawing.Font("Raleway SemiBold", 14F, System.Drawing.FontStyle.Bold);
+            this.textBoxPatName.Location = new System.Drawing.Point(268, 166);
+            this.textBoxPatName.Name = "textBoxPatName";
+            this.textBoxPatName.ReadOnly = true;
+            this.textBoxPatName.Size = new System.Drawing.Size(229, 28);
+            this.textBoxPatName.TabIndex = 0;
             // 
-            // comboBoxRNo
+            // label12
             // 
-            this.comboBoxRNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.comboBoxRNo.Enabled = false;
-            this.comboBoxRNo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBoxRNo.Font = new System.Drawing.Font("Raleway", 12F);
-            this.comboBoxRNo.FormattingEnabled = true;
-            this.comboBoxRNo.Items.AddRange(new object[] {
-            "Female",
-            "Male",
-            "Other"});
-            this.comboBoxRNo.Location = new System.Drawing.Point(243, 368);
-            this.comboBoxRNo.Name = "comboBoxRNo";
-            this.comboBoxRNo.Size = new System.Drawing.Size(254, 36);
-            this.comboBoxRNo.TabIndex = 3;
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Raleway SemiBold", 14F, System.Drawing.FontStyle.Bold);
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.label12.Location = new System.Drawing.Point(65, 197);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(150, 34);
+            this.label12.TabIndex = 16;
+            this.label12.Text = "DOCTOR ID:";
             // 
-            // comboBoxRFloor
+            // textBoxDoctorID
             // 
-            this.comboBoxRFloor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.comboBoxRFloor.Enabled = false;
-            this.comboBoxRFloor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBoxRFloor.Font = new System.Drawing.Font("Raleway", 12F);
-            this.comboBoxRFloor.FormattingEnabled = true;
-            this.comboBoxRFloor.Items.AddRange(new object[] {
-            "Female",
-            "Male",
-            "Other"});
-            this.comboBoxRFloor.Location = new System.Drawing.Point(243, 326);
-            this.comboBoxRFloor.Name = "comboBoxRFloor";
-            this.comboBoxRFloor.Size = new System.Drawing.Size(254, 36);
-            this.comboBoxRFloor.TabIndex = 3;
+            this.textBoxDoctorID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.textBoxDoctorID.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxDoctorID.Font = new System.Drawing.Font("Raleway SemiBold", 14F, System.Drawing.FontStyle.Bold);
+            this.textBoxDoctorID.Location = new System.Drawing.Point(268, 200);
+            this.textBoxDoctorID.Name = "textBoxDoctorID";
+            this.textBoxDoctorID.ReadOnly = true;
+            this.textBoxDoctorID.Size = new System.Drawing.Size(229, 28);
+            this.textBoxDoctorID.TabIndex = 18;
+            this.textBoxDoctorID.TextChanged += new System.EventHandler(this.textBoxDoctorID_TextChanged);
             // 
-            // comboBoxRType
+            // textBoxPatientId
             // 
-            this.comboBoxRType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.comboBoxRType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBoxRType.Font = new System.Drawing.Font("Raleway", 12F);
-            this.comboBoxRType.FormattingEnabled = true;
-            this.comboBoxRType.Items.AddRange(new object[] {
-            "Female",
-            "Male",
-            "Other"});
-            this.comboBoxRType.Location = new System.Drawing.Point(243, 284);
-            this.comboBoxRType.Name = "comboBoxRType";
-            this.comboBoxRType.Size = new System.Drawing.Size(254, 36);
-            this.comboBoxRType.TabIndex = 3;
-            this.comboBoxRType.SelectedIndexChanged += new System.EventHandler(this.comboBoxRType_SelectedIndexChanged);
+            this.textBoxPatientId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.textBoxPatientId.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxPatientId.Font = new System.Drawing.Font("Raleway SemiBold", 14F, System.Drawing.FontStyle.Bold);
+            this.textBoxPatientId.Location = new System.Drawing.Point(268, 132);
+            this.textBoxPatientId.Name = "textBoxPatientId";
+            this.textBoxPatientId.ReadOnly = true;
+            this.textBoxPatientId.Size = new System.Drawing.Size(229, 28);
+            this.textBoxPatientId.TabIndex = 0;
             // 
-            // label10
+            // label14
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Raleway SemiBold", 14F, System.Drawing.FontStyle.Bold);
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.label10.Location = new System.Drawing.Point(67, 169);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(154, 34);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "ADMISSION:";
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Raleway SemiBold", 14F, System.Drawing.FontStyle.Bold);
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.label14.Location = new System.Drawing.Point(67, 163);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(191, 34);
+            this.label14.TabIndex = 0;
+            this.label14.Text = "PATIENT NAME:";
             // 
-            // label11
+            // label15
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Raleway SemiBold", 14F, System.Drawing.FontStyle.Bold);
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.label11.Location = new System.Drawing.Point(67, 203);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(156, 34);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "DISCHARGE:";
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Raleway SemiBold", 14F, System.Drawing.FontStyle.Bold);
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.label15.Location = new System.Drawing.Point(67, 362);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(131, 34);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "END TIME:";
+            // 
+            // dateTimePickerENDTIME
+            // 
+            this.dateTimePickerENDTIME.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dateTimePickerENDTIME.Location = new System.Drawing.Point(243, 364);
+            this.dateTimePickerENDTIME.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
+            this.dateTimePickerENDTIME.MinDate = new System.DateTime(2020, 1, 10, 0, 0, 0, 0);
+            this.dateTimePickerENDTIME.Name = "dateTimePickerENDTIME";
+            this.dateTimePickerENDTIME.Size = new System.Drawing.Size(254, 31);
+            this.dateTimePickerENDTIME.TabIndex = 14;
+            this.dateTimePickerENDTIME.Value = new System.DateTime(2020, 11, 6, 22, 21, 3, 0);
+            // 
+            // buttonReschedule
+            // 
+            this.buttonReschedule.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.buttonReschedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonReschedule.Font = new System.Drawing.Font("Raleway", 10F, System.Drawing.FontStyle.Bold);
+            this.buttonReschedule.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(13)))));
+            this.buttonReschedule.Image = ((System.Drawing.Image)(resources.GetObject("buttonReschedule.Image")));
+            this.buttonReschedule.Location = new System.Drawing.Point(79, 473);
+            this.buttonReschedule.Name = "buttonReschedule";
+            this.buttonReschedule.Size = new System.Drawing.Size(426, 43);
+            this.buttonReschedule.TabIndex = 19;
+            this.buttonReschedule.Text = " RESCHEDULE APPOINTMENT";
+            this.buttonReschedule.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonReschedule.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonReschedule.UseVisualStyleBackColor = false;
+            this.buttonReschedule.Click += new System.EventHandler(this.buttonReschedule_Click);
             // 
             // OutPatientUserControl
             // 
@@ -842,9 +776,8 @@
             this.Controls.Add(this.Content);
             this.Name = "OutPatientUserControl";
             this.Size = new System.Drawing.Size(1264, 626);
+            this.Load += new System.EventHandler(this.OutPatientUserControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewINP)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rOOMBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hMS_DatabaseDataSet2)).EndInit();
             this.Content.ResumeLayout(false);
             this.Content.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -854,37 +787,24 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.DateTimePicker dateTimePickerDOD;
-        private System.Windows.Forms.DateTimePicker dateTimePickerDOA;
+        private System.Windows.Forms.DateTimePicker dateTimePickerDAY;
+        private System.Windows.Forms.DateTimePicker dateTimePickerSTARTTIME;
         private System.Windows.Forms.ComboBox comboBoxGender;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.DataGridView dataGridViewINP;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rOOMNODataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rOOMSTATUSDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rOOMTYPEDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iNPATCODEDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource rOOMBindingSource;
-        private HMS_DatabaseDataSet2 hMS_DatabaseDataSet2;
         private System.Windows.Forms.Button buttonDisplay;
         private System.Windows.Forms.Button buttonUpdate;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.Button buttonInsert;
-        private System.Windows.Forms.ComboBox comboBoxSearchValue;
         private System.Windows.Forms.Panel Content;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ComboBox comboBoxSearchBy;
-        private System.Windows.Forms.ComboBox comboBoxPatient;
         private System.Windows.Forms.Button buttonRoomDisplay;
-        private System.Windows.Forms.Button buttonRoomUpdate;
-        private System.Windows.Forms.Button buttonRoomDelete;
-        private System.Windows.Forms.Button buttonRoomInsert;
+        private System.Windows.Forms.Button buttonRoomCancelApp;
+        private System.Windows.Forms.Button buttonBookApp;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBoxInpatientID;
+        private System.Windows.Forms.TextBox textBoxAppointmentID;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
@@ -906,11 +826,17 @@
         private System.Windows.Forms.TextBox textBoxid;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private HMS_DatabaseDataSet2TableAdapters.ROOMTableAdapter rOOMTableAdapter;
-        private System.Windows.Forms.ComboBox comboBoxRType;
-        private System.Windows.Forms.ComboBox comboBoxRFloor;
-        private System.Windows.Forms.ComboBox comboBoxRNo;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox textBoxDoctorName;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxPatName;
+        private System.Windows.Forms.TextBox textBoxDoctorID;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox textBoxPatientId;
+        private System.Windows.Forms.DateTimePicker dateTimePickerENDTIME;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Button buttonReschedule;
     }
 }

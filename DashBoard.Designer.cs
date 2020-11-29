@@ -35,14 +35,14 @@
             this.buttonBack = new System.Windows.Forms.Button();
             this.Content = new System.Windows.Forms.Panel();
             this.SideBar = new System.Windows.Forms.Panel();
-            this.buttonLogout = new System.Windows.Forms.Button();
-            this.buttonSettings = new System.Windows.Forms.Button();
-            this.buttonHome = new System.Windows.Forms.Button();
-            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.buttonPatient = new System.Windows.Forms.Button();
             this.buttonDoctor = new System.Windows.Forms.Button();
             this.buttonBilling = new System.Windows.Forms.Button();
             this.buttonBed = new System.Windows.Forms.Button();
+            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
+            this.buttonHome = new System.Windows.Forms.Button();
+            this.buttonLogout = new System.Windows.Forms.Button();
+            this.buttonSettings = new System.Windows.Forms.Button();
             this.panelHead.SuspendLayout();
             this.SideBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
@@ -129,69 +129,6 @@
             this.SideBar.Size = new System.Drawing.Size(98, 689);
             this.SideBar.TabIndex = 0;
             // 
-            // buttonLogout
-            // 
-            this.buttonLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(41)))));
-            this.buttonLogout.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonLogout.BackgroundImage")));
-            this.buttonLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.buttonLogout.FlatAppearance.BorderSize = 0;
-            this.buttonLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonLogout.Location = new System.Drawing.Point(30, 611);
-            this.buttonLogout.Margin = new System.Windows.Forms.Padding(5);
-            this.buttonLogout.Name = "buttonLogout";
-            this.buttonLogout.Padding = new System.Windows.Forms.Padding(5);
-            this.buttonLogout.Size = new System.Drawing.Size(39, 37);
-            this.buttonLogout.TabIndex = 7;
-            this.buttonLogout.UseVisualStyleBackColor = false;
-            this.buttonLogout.Click += new System.EventHandler(this.buttonLogout_Click);
-            // 
-            // buttonSettings
-            // 
-            this.buttonSettings.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonSettings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(41)))));
-            this.buttonSettings.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonSettings.BackgroundImage")));
-            this.buttonSettings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.buttonSettings.FlatAppearance.BorderSize = 0;
-            this.buttonSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSettings.Location = new System.Drawing.Point(30, 477);
-            this.buttonSettings.Margin = new System.Windows.Forms.Padding(5);
-            this.buttonSettings.Name = "buttonSettings";
-            this.buttonSettings.Padding = new System.Windows.Forms.Padding(5);
-            this.buttonSettings.Size = new System.Drawing.Size(39, 37);
-            this.buttonSettings.TabIndex = 6;
-            this.buttonSettings.UseVisualStyleBackColor = false;
-            this.buttonSettings.Click += new System.EventHandler(this.buttonSettings_Click);
-            // 
-            // buttonHome
-            // 
-            this.buttonHome.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(41)))));
-            this.buttonHome.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonHome.BackgroundImage")));
-            this.buttonHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.buttonHome.FlatAppearance.BorderSize = 0;
-            this.buttonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonHome.Location = new System.Drawing.Point(30, 166);
-            this.buttonHome.Margin = new System.Windows.Forms.Padding(5);
-            this.buttonHome.Name = "buttonHome";
-            this.buttonHome.Padding = new System.Windows.Forms.Padding(5);
-            this.buttonHome.Size = new System.Drawing.Size(39, 37);
-            this.buttonHome.TabIndex = 1;
-            this.buttonHome.UseVisualStyleBackColor = false;
-            this.buttonHome.Click += new System.EventHandler(this.buttonHome_Click);
-            // 
-            // pictureBoxLogo
-            // 
-            this.pictureBoxLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.BackgroundImage")));
-            this.pictureBoxLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBoxLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBoxLogo.Location = new System.Drawing.Point(0, 0);
-            this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(98, 89);
-            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxLogo.TabIndex = 2;
-            this.pictureBoxLogo.TabStop = false;
-            // 
             // buttonPatient
             // 
             this.buttonPatient.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -213,7 +150,6 @@
             // 
             this.buttonDoctor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonDoctor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(41)))));
-            this.buttonDoctor.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonDoctor.BackgroundImage")));
             this.buttonDoctor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonDoctor.FlatAppearance.BorderSize = 0;
             this.buttonDoctor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -258,6 +194,70 @@
             this.buttonBed.Size = new System.Drawing.Size(39, 37);
             this.buttonBed.TabIndex = 11;
             this.buttonBed.UseVisualStyleBackColor = false;
+            this.buttonBed.Click += new System.EventHandler(this.buttonBed_Click);
+            // 
+            // pictureBoxLogo
+            // 
+            this.pictureBoxLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.BackgroundImage")));
+            this.pictureBoxLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBoxLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBoxLogo.Location = new System.Drawing.Point(0, 0);
+            this.pictureBoxLogo.Name = "pictureBoxLogo";
+            this.pictureBoxLogo.Size = new System.Drawing.Size(98, 89);
+            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxLogo.TabIndex = 2;
+            this.pictureBoxLogo.TabStop = false;
+            // 
+            // buttonHome
+            // 
+            this.buttonHome.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(41)))));
+            this.buttonHome.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonHome.BackgroundImage")));
+            this.buttonHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonHome.FlatAppearance.BorderSize = 0;
+            this.buttonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonHome.Location = new System.Drawing.Point(30, 166);
+            this.buttonHome.Margin = new System.Windows.Forms.Padding(5);
+            this.buttonHome.Name = "buttonHome";
+            this.buttonHome.Padding = new System.Windows.Forms.Padding(5);
+            this.buttonHome.Size = new System.Drawing.Size(39, 37);
+            this.buttonHome.TabIndex = 1;
+            this.buttonHome.UseVisualStyleBackColor = false;
+            this.buttonHome.Click += new System.EventHandler(this.buttonHome_Click);
+            // 
+            // buttonLogout
+            // 
+            this.buttonLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(41)))));
+            this.buttonLogout.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonLogout.BackgroundImage")));
+            this.buttonLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonLogout.FlatAppearance.BorderSize = 0;
+            this.buttonLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonLogout.Location = new System.Drawing.Point(30, 611);
+            this.buttonLogout.Margin = new System.Windows.Forms.Padding(5);
+            this.buttonLogout.Name = "buttonLogout";
+            this.buttonLogout.Padding = new System.Windows.Forms.Padding(5);
+            this.buttonLogout.Size = new System.Drawing.Size(39, 37);
+            this.buttonLogout.TabIndex = 7;
+            this.buttonLogout.UseVisualStyleBackColor = false;
+            this.buttonLogout.Click += new System.EventHandler(this.buttonLogout_Click);
+            // 
+            // buttonSettings
+            // 
+            this.buttonSettings.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonSettings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(41)))));
+            this.buttonSettings.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonSettings.BackgroundImage")));
+            this.buttonSettings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonSettings.FlatAppearance.BorderSize = 0;
+            this.buttonSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSettings.Location = new System.Drawing.Point(30, 477);
+            this.buttonSettings.Margin = new System.Windows.Forms.Padding(5);
+            this.buttonSettings.Name = "buttonSettings";
+            this.buttonSettings.Padding = new System.Windows.Forms.Padding(5);
+            this.buttonSettings.Size = new System.Drawing.Size(39, 37);
+            this.buttonSettings.TabIndex = 6;
+            this.buttonSettings.UseVisualStyleBackColor = false;
+            this.buttonSettings.Click += new System.EventHandler(this.buttonSettings_Click);
             // 
             // DashBoard
             // 

@@ -36,6 +36,7 @@ namespace OOP_Project___Hospital_Management_System
             DatabaseOps insertDoc = new DatabaseOps();
             insertDoc.insert(doctor);
             display();
+            doctor.addEmployee(doctor);
         }
 
         private void buttonDisplay_Click(object sender, EventArgs e)
@@ -64,7 +65,7 @@ namespace OOP_Project___Hospital_Management_System
 
         private void buttonUpdate_Click(object sender, EventArgs e)
         {
-            Doctor doctor1 = new Doctor()
+            Doctor doctor = new Doctor()
             {
                 ID = textBoxid.Text,
                 Name = textBoxName.Text,
@@ -76,8 +77,9 @@ namespace OOP_Project___Hospital_Management_System
                 Tel = textBoxTel.Text
             };
             DatabaseOps updateDoc = new DatabaseOps();
-            updateDoc.update(doctor1);
+            updateDoc.update(doctor);
             display();
+            doctor.addEmployee(doctor);
         }
 
         private void buttonDelete_Click(object sender, EventArgs e)

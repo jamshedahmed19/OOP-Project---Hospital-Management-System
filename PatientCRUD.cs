@@ -81,7 +81,7 @@ namespace OOP_Project___Hospital_Management_System
                 comboBoxPATGender.Text = "Female";
             }
             textBoxPATTel.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
-            textBoxPATEmail.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();          
+            textBoxPATEmail.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
             textBoxPATAddress.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
         }
 
@@ -105,6 +105,12 @@ namespace OOP_Project___Hospital_Management_System
         {
             DatabaseOps databaseOps = new DatabaseOps();
             dataGridView1.DataSource = databaseOps.search("PATIENTS", textBoxSearchVal.Text, comboBoxSearchBy.Text);
+        }
+
+        private void buttonPATDisplay_Click(object sender, EventArgs e)
+        {
+            OutPatientUserControl outPatientUserControl = new OutPatientUserControl(textBoxPATID.Text, textBoxPATName.Text, comboBoxDOCID.SelectedValue.ToString());
+            ControlClass.ShowControl(outPatientUserControl, Content);
         }
     }
 }

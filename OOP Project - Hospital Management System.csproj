@@ -69,6 +69,13 @@
     <Compile Include="BedAvailibilityUserControl.Designer.cs">
       <DependentUpon>BedAvailibilityUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Bill.cs" />
+    <Compile Include="BillingUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BillingUserControl.Designer.cs">
+      <DependentUpon>BillingUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="ControlClass.cs" />
     <Compile Include="CovidUserControl.cs">
       <SubType>UserControl</SubType>
@@ -96,12 +103,31 @@
     </Compile>
     <Compile Include="DatabaseOps.cs" />
     <Compile Include="Doctor.cs" />
+    <Compile Include="DoctorHomeUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DoctorHomeUserControl.Designer.cs">
+      <DependentUpon>DoctorHomeUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoctorsAppointmentUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DoctorsAppointmentUserControl.Designer.cs">
+      <DependentUpon>DoctorsAppointmentUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="DoctorSidebarUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="DoctorSidebarUserControl.Designer.cs">
       <DependentUpon>DoctorSidebarUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="DoctorsPatientListControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DoctorsPatientListControl.Designer.cs">
+      <DependentUpon>DoctorsPatientListControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee.cs" />
     <Compile Include="FindRoom.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -210,6 +236,9 @@
     <EmbeddedResource Include="BedAvailibilityUserControl.resx">
       <DependentUpon>BedAvailibilityUserControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BillingUserControl.resx">
+      <DependentUpon>BillingUserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CovidUserControl.resx">
       <DependentUpon>CovidUserControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -222,8 +251,17 @@
     <EmbeddedResource Include="AdminHomeControl.resx">
       <DependentUpon>AdminHomeControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DoctorHomeUserControl.resx">
+      <DependentUpon>DoctorHomeUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorsAppointmentUserControl.resx">
+      <DependentUpon>DoctorsAppointmentUserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DoctorSidebarUserControl.resx">
       <DependentUpon>DoctorSidebarUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorsPatientListControl.resx">
+      <DependentUpon>DoctorsPatientListControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FindRoom.resx">
       <DependentUpon>FindRoom.cs</DependentUpon>

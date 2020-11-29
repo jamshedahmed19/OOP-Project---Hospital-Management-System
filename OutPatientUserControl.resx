@@ -139,15 +139,6 @@
         PNyufXvNO1wRjPkLJXA0EdZEzd4AAAAASUVORK5CYII=
 </value>
   </data>
-  <metadata name="rOOMBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 60</value>
-  </metadata>
-  <metadata name="hMS_DatabaseDataSet2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>215, 60</value>
-  </metadata>
-  <metadata name="hMS_DatabaseDataSet2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>215, 60</value>
-  </metadata>
   <data name="buttonDisplay.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
@@ -212,20 +203,7 @@
         riqTLkjT7E8AfAIRDJS/R84uEQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="buttonRoomDisplay.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAB3RJ
-        TUUH5AofFAgeKjIQmwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAEhSURBVFhH
-        7ZdNCsIwEIUHik0LTQXRpQdQty7VKwiCB9EreATFi/hzI3+u4KrOtNNqW+OqGYX2wStJUzIfZAKv0CiT
-        G4zQC/TSsqnGkKuSOiEofUZHwj4BdDWACvc4uYGvJ0jjJFBW5YCnp3FNFe4QQF9xsOJFOSm9Rl9oEMVn
-        U1SxJ3y/zyvViPak2mUAQ0944YY/qEZGAKmeMAMI9cQXgM89UbX+GeABrp7zzJ6MAK32GJ8qmViUEUBK
-        DUAdARQ3eCJxALradMVTyQOkBVn1A8gCCEsQACNYMMM6d1DBlt9ZBqDwQvvmfQDoBfyFZQCKb7RnYop1
-        A1556Q3g16EUozFFMIrKYrE81xP4c6D0EV08M9vO90R8TnK/ZuWeqKkAnnIFvbrHMhU2AAAAAElFTkSu
-        QmCC
-</value>
-  </data>
-  <data name="buttonRoomUpdate.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="buttonReschedule.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
         JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAB3RJ
@@ -246,7 +224,20 @@
         V4zSV7FUEwgyDdJ+IU7bNgSVVF7LFa4ehPgPb6J1v9jv4O8AAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="buttonRoomDelete.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="buttonRoomDisplay.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAB3RJ
+        TUUH5AofFAgeKjIQmwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAEhSURBVFhH
+        7ZdNCsIwEIUHik0LTQXRpQdQty7VKwiCB9EreATFi/hzI3+u4KrOtNNqW+OqGYX2wStJUzIfZAKv0CiT
+        G4zQC/TSsqnGkKuSOiEofUZHwj4BdDWACvc4uYGvJ0jjJFBW5YCnp3FNFe4QQF9xsOJFOSm9Rl9oEMVn
+        U1SxJ3y/zyvViPak2mUAQ0944YY/qEZGAKmeMAMI9cQXgM89UbX+GeABrp7zzJ6MAK32GJ8qmViUEUBK
+        DUAdARQ3eCJxALradMVTyQOkBVn1A8gCCEsQACNYMMM6d1DBlt9ZBqDwQvvmfQDoBfyFZQCKb7RnYop1
+        A1556Q3g16EUozFFMIrKYrE81xP4c6D0EV08M9vO90R8TnK/ZuWeqKkAnnIFvbrHMhU2AAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+  <data name="buttonRoomCancelApp.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
         JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAB3RJ
@@ -261,7 +252,7 @@
         B8KzHfXTeVDhb6tsFKms6uDZNrZaEPILH6U1SDUYSX8AAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="buttonRoomInsert.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="buttonBookApp.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
         JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAB3RJ
@@ -276,7 +267,4 @@
         riqTLkjT7E8AfAIRDJS/R84uEQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <metadata name="rOOMTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>434, 60</value>
-  </metadata>
 </root>

@@ -19,8 +19,8 @@ namespace OOP_Project___Hospital_Management_System
 
         private void buttonOUTPAT_Click(object sender, EventArgs e)
         {
-            OutPatientUserControl outPatientUserControl = new OutPatientUserControl();
-            ControlClass.ShowControl(outPatientUserControl, Content);
+            //OutPatientUserControl outPatientUserControl = new OutPatientUserControl();
+            //ControlClass.ShowControl(outPatientUserControl, Content);
         }
 
         private void buttonINPAT_Click(object sender, EventArgs e)

@@ -72,7 +72,12 @@ namespace OOP_Project___Hospital_Management_System
         public void display()
         {
             DatabaseOps databaseOps = new DatabaseOps();
-            dataGridViewINP.DataSource = databaseOps.display("INPATIENT");
+            dataGridViewINP.DataSource = databaseOps.displayInPat();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 

@@ -50,6 +50,42 @@
                 MessageBox.Show(e.Message, "Error Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        public void insert(Employee employee)
+        {
+            try
+            {
+                sqlConnection.Open();
+                sqlCommand = new SqlCommand("INSERT INTO Employee(EMP_NAME, USERNAME, EMP_PASS, EMP_DEPART, EMP_TEL, EMP_EMAIL, EMP_GENDER, EMP_ADDRESS, EMP_DESIG, DEPART_ID, EMP_ROLE) VALUES (@NAME, @UNAME, @PASS, @DEPART, @TEL, @EMAIL, @GENDER, @ADDRESS, @DESIG, @DEPART_ID, @ROLE)", sqlConnection);
+                sqlCommand.Parameters.AddWithValue("@NAME", employee.Name);
+                sqlCommand.Parameters.AddWithValue("@UNAME", employee.Username);
+                sqlCommand.Parameters.AddWithValue("@PASS", employee.Pass);
+                sqlCommand.Parameters.AddWithValue("@DEPART", employee.Department);
+                sqlCommand.Parameters.AddWithValue("@TEL", employee.Tel);
+                sqlCommand.Parameters.AddWithValue("@EMAIL", employee.Email);
+                sqlCommand.Parameters.AddWithValue("@GENDER", employee.Gender);
+                sqlCommand.Parameters.AddWithValue("@ADDRESS", employee.Address);
+                sqlCommand.Parameters.AddWithValue("@DESIG", employee.Designation);
+                sqlCommand.Parameters.AddWithValue("@DEPART_ID", employee.Departmental_ID);
+                sqlCommand.Parameters.AddWithValue("@ROLE", employee.Role);
+                int a = sqlCommand.ExecuteNonQuery();
+                if (a > 0)
+                {
+                    MessageBox.Show("Registered Successfully", "Registered", MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Data not inserted", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                sqlConnection.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         public void insert(Patient patient)
         {
             try
@@ -137,6 +173,34 @@
             }
         }
 
+        public void insert(OutPatient outPatient)
+        {
+            try
+            {
+                sqlConnection.Open();
+                sqlCommand = new SqlCommand("INSERT INTO APPOINTMENT(CHECKUP_DATE, START_TIME, END_TIME, PAT_CODE) VALUES (@CHECK_UP_DATE, @START_TIME, @END_TIME, @PAT_CODE)", sqlConnection);
+                sqlCommand.Parameters.AddWithValue("@CHECK_UP_DATE", outPatient.Date_Of_Appointment);
+                sqlCommand.Parameters.AddWithValue("@START_TIME", outPatient.Start_Time_of_Appointment);
+                sqlCommand.Parameters.AddWithValue("@END_TIME", outPatient.End_Time_of_Appointment);
+                sqlCommand.Parameters.AddWithValue("@PAT_CODE", outPatient.PatID);
+                int a = sqlCommand.ExecuteNonQuery();
+                if (a > 0)
+                {
+                    MessageBox.Show("Appointment Booked Successfully", "Registered", MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Data not inserted", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                sqlConnection.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         public void update(Doctor doctor)
         {
             try
@@ -155,6 +219,69 @@
                 if (a > 0)
                 {
                     MessageBox.Show("Data Updated Successfully", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Unable to updated Data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                sqlConnection.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void update(OutPatient outPatient)
+        {
+            try
+            {
+                sqlConnection.Open();
+                sqlCommand = new SqlCommand("UPDATE APPOINTMENT SET CHECKUP_DATE = @CHECKUP_DATE, START_TIME = @START_TIME, END_TIME = @END_TIME, PAT_CODE = @PAT_CODE WHERE AID = @AID)", sqlConnection);
+                sqlCommand.Parameters.AddWithValue("@CHECK_UP_DATE", outPatient.Date_Of_Appointment);
+                sqlCommand.Parameters.AddWithValue("@START_TIME", outPatient.Start_Time_of_Appointment);
+                sqlCommand.Parameters.AddWithValue("@END_TIME", outPatient.End_Time_of_Appointment);
+                sqlCommand.Parameters.AddWithValue("@PAT_CODE", outPatient.PatID);
+                sqlCommand.Parameters.AddWithValue("@AID", outPatient.AID);
+                int a = sqlCommand.ExecuteNonQuery();
+                if (a > 0)
+                {
+                    MessageBox.Show("Data Updated Successfully", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Unable to updated Data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                sqlConnection.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void update(Employee employee)
+        {
+            try
+            {
+                sqlConnection.Open();
+                sqlCommand = new SqlCommand("UPDATE EMPLOYEE SET EMP_NAME = @NAME, USERNAME = @UNAME, EMP_PASS = @PASS, EMP_DEPART = @DEPART , EMP_TEL = @TEL, EMP_EMAIL = @EMAIL, EMP_GENDER = @GENDER, EMP_ADDRESS = @ADDRESS, EMP_ROLE = @ROLE, EMP_DESIG = @DESIG, DEPART_ID = @DEPART_ID WHERE DEPART_ID = @DEPART_ID", sqlConnection);
+                sqlCommand.Parameters.AddWithValue("@NAME", employee.Name);
+                sqlCommand.Parameters.AddWithValue("@UNAME", employee.Username);
+                sqlCommand.Parameters.AddWithValue("@PASS", employee.Pass);
+                sqlCommand.Parameters.AddWithValue("@DEPART", employee.Department);
+                sqlCommand.Parameters.AddWithValue("@TEL", employee.Tel);
+                sqlCommand.Parameters.AddWithValue("@EMAIL", employee.Email);
+                sqlCommand.Parameters.AddWithValue("@GENDER", employee.Gender);
+                sqlCommand.Parameters.AddWithValue("@ADDRESS", employee.Address);
+                sqlCommand.Parameters.AddWithValue("@DESIG", employee.Designation);
+                sqlCommand.Parameters.AddWithValue("@DEPART_ID", employee.Departmental_ID);
+                sqlCommand.Parameters.AddWithValue("@ROLE", employee.Role);
+                int a = sqlCommand.ExecuteNonQuery();
+                if (a > 0)
+                {
+                    MessageBox.Show("Updated Successfully", "Registered", MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
                 }
                 else
                 {
@@ -219,6 +346,12 @@
                     sqlConnection);
                     sqlCommand.Parameters.AddWithValue("@RID", id);
                 }
+                else if (tableValue == "APPOINTMET")
+                {
+                    sqlCommand = new SqlCommand("DELETE FROM " + tableValue + " WHERE ROOM_NO = @RID",
+                    sqlConnection);
+                    sqlCommand.Parameters.AddWithValue("@RID", id);
+                }
                 sqlCommand.ExecuteNonQuery();
                 int a = sqlCommand.ExecuteNonQuery();
                 if (a == 0)
@@ -242,12 +375,42 @@
             sqlConnection.Open();
             if (value == "PATIENTS")
             {
-                sqlDataAdapter = new SqlDataAdapter("SELECT PAT_ID, PAT_NAME, DOC_NAME, PAT_GENDER, PAT_TEL, PAT_EMAIL, PAT_ADDRESS, DOC_DESIG, DOC_DEPART FROM PATIENTS INNER JOIN DOCTORS ON DOC_CODE=DOCTORS.ID", sqlConnection);
+                sqlDataAdapter = new SqlDataAdapter("SELECT PATIENTS.ID, PAT_NAME, DOC_NAME, PAT_GENDER, PAT_TEL, PAT_EMAIL, PAT_ADDRESS, DOC_DESIG, DOC_DEPART FROM PATIENTS INNER JOIN DOCTORS ON DOC_CODE=DOCTORS.ID", sqlConnection);
             }
             else
             {
                 sqlDataAdapter = new SqlDataAdapter("SELECT * FROM " + value + "", sqlConnection);
             }
+            DataTable dataTable = new DataTable();
+            sqlDataAdapter.Fill(dataTable);
+            sqlConnection.Close();
+            return dataTable;
+        }
+
+        public DataTable displayInPat()
+        {
+            sqlConnection.Open();
+            sqlDataAdapter = new SqlDataAdapter("SELECT PATIENTS.ID, PAT_NAME, DATE_OF_AD, DATE_OF_DIS,DOC_NAME, ROOM.ROOM_NO, ROOM_TYPE FROM INPATIENT INNER JOIN PATIENTS ON PATIENTS.ID = PAT_CODE INNER JOIN DOCTORS ON DOCTORS.ID = DOC_CODE INNER JOIN ROOM ON ROOM.ID = ROOM_CODE", sqlConnection);
+            DataTable dataTable = new DataTable();
+            sqlDataAdapter.Fill(dataTable);
+            sqlConnection.Close();
+            return dataTable;
+        }
+
+        public DataTable displayAppointment(string Id)
+        {
+            sqlConnection.Open();
+            sqlDataAdapter = new SqlDataAdapter("SELECT AID, PAT_NAME, PAT_TEL, DOC_NAME, CHECKUP_DATE , START_TIME, END_TIME, PAT_CODE, DOC_CODE FROM APPOINTMENT INNER JOIN PATIENTS ON PATIENTS.ID = PATIENTS.ID INNER JOIN DOCTORS ON DOCTORS.ID = PATIENTS.DOC_CODE", sqlConnection);
+            DataTable dataTable = new DataTable();
+            sqlDataAdapter.Fill(dataTable);
+            sqlConnection.Close();
+            return dataTable;
+        }
+
+        public DataTable doctorAppointment(string Id)
+        {
+            sqlConnection.Open();
+            sqlDataAdapter = new SqlDataAdapter("SELECT AID, PAT_NAME, PAT_TEL, DOC_NAME, CHECKUP_DATE , START_TIME, END_TIME, PAT_CODE, DOC_CODE FROM APPOINTMENT INNER JOIN PATIENTS ON PATIENTS.ID = PAT_CODE INNER JOIN DOCTORS ON DOCTORS.ID = '" + Id + "'", sqlConnection);
             DataTable dataTable = new DataTable();
             sqlDataAdapter.Fill(dataTable);
             sqlConnection.Close();
@@ -381,6 +544,52 @@
             return dataTable;
         }
 
+        public DataTable searchPat(string searchValue, string searchByValue, string ID)
+        {
+            try
+            {
+                sqlConnection.Open();
+                if (searchByValue.ToLower() == "patient name")
+                {
+                    sqlDataAdapter = new SqlDataAdapter("SELECT * FROM PATIENTS WHERE PAT_NAME LIKE '%" + searchValue + "%' AND DOC_CODE=" + ID + "", sqlConnection);
+                }
+                else if (searchByValue.ToLower() == "patient number")
+                {
+                    sqlDataAdapter = new SqlDataAdapter("SELECT * FROM PATIENTS WHERE PAT_TEL LIKE '%" + searchValue + "%' AND DOC_CODE=" + ID + "", sqlConnection);
+                }
+                else
+                {
+                    sqlDataAdapter = new SqlDataAdapter("SELECT * FROM PATIENTS WHERE PAT_ID LIKE '%" + searchValue + "%' AND DOC_CODE=" + ID + "", sqlConnection);
+                }
+            }
+
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            DataTable dataTable = new DataTable();
+            sqlDataAdapter.Fill(dataTable);
+            sqlConnection.Close();
+            return dataTable;
+        }
+
+        public string getDoctorName(string doc_code)
+        {
+            try
+            {
+                sqlConnection.Open();
+                sqlCommand = new SqlCommand("SELECT DOC_NAME FROM DOCTORS WHERE ID = '" + doc_code + "'", sqlConnection);
+            }
+
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            string value = Convert.ToString(sqlCommand.ExecuteScalar());
+            sqlConnection.Close();
+            return value;
+        }
+
         public DataTable doctorList()
         {
             try
@@ -435,6 +644,42 @@
             return dataTable;
         }
 
+
+        public DataTable doctosPatient(string docID)
+        {
+            try
+            {
+                sqlConnection.Open();
+                sqlDataAdapter = new SqlDataAdapter("SELECT * FROM PATIENTS WHERE DOC_CODE = '" + docID + "'", sqlConnection);
+            }
+
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            DataTable dataTable = new DataTable();
+            sqlDataAdapter.Fill(dataTable);
+            sqlConnection.Close();
+            return dataTable;
+        }
+
+        public string getDoctorID(string email)
+        {
+            try
+            {
+                sqlConnection.Open();
+                sqlCommand = new SqlCommand("SELECT ID FROM DOCTORS WHERE DOC_EMAIL = '" + email + "'", sqlConnection);
+            }
+
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            string value = Convert.ToString(sqlCommand.ExecuteScalar());
+            sqlConnection.Close();
+            return value;
+        }
+
         public void login(UserLogin userLogin)
         {
             try
@@ -448,7 +693,8 @@
                     DashBoard dashBoard = new DashBoard()
                     {
                         ID = sqlDataReader.GetValue(0).ToString().ToLower(),
-                        Role = sqlDataReader.GetValue(10).ToString().ToLower()
+                        Role = sqlDataReader.GetValue(10).ToString().ToLower(),
+                        Departmental_ID = sqlDataReader.GetValue(12).ToString().ToLower()
                     };
                     dashBoard.Show();
                 }
@@ -462,5 +708,7 @@
                 MessageBox.Show(e.Message, "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+
     }
 }

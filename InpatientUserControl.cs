@@ -64,26 +64,65 @@ namespace OOP_Project___Hospital_Management_System
             display();
         }
 
-        private void comboBoxPatient_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         public void display()
         {
             DatabaseOps databaseOps = new DatabaseOps();
             dataGridViewINP.DataSource = databaseOps.displayInPat();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void buttonRoomUpdate_Click(object sender, EventArgs e)
         {
+            Inpatient inpatient = new Inpatient()
+            {
+                PatID = int.Parse(comboBoxPatient.SelectedValue.ToString()),
+                InPatID = int.Parse(textBoxInpatientID.Text),
+                RoomNo = comboBoxRNo.SelectedValue.ToString(),
+                Admission = dateTimePickerDOA.Value.Date,
+                Discharge = dateTimePickerDOD.Value.Date,
+            };
+            DatabaseOps databaseOps = new DatabaseOps();
+            databaseOps.update(inpatient);
+            display();
+        }
 
+        private void textBoxSearchVal_TextChanged(object sender, EventArgs e)
+        {
+            DatabaseOps databaseOps = new DatabaseOps();
+            dataGridViewINP.DataSource = databaseOps.search("INPATIENTS", textBoxSearchVal.Text, comboBoxSearchBy.Text);
+        }
+
+        private void dataGridViewINP_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            textBoxInpatientID.Text = dataGridViewINP.Rows[e.RowIndex].Cells[0].Value.ToString();
+            comboBoxPatient.SelectedValue = dataGridViewINP.Rows[e.RowIndex].Cells[1].Value.ToString();
+            comboBoxPatient.SelectedText = dataGridViewINP.Rows[e.RowIndex].Cells[2].Value.ToString();
+            textBoxPhone.Text = dataGridViewINP.Rows[e.RowIndex].Cells[3].Value.ToString();
+            dateTimePickerDOA.Value = Convert.ToDateTime(dataGridViewINP.Rows[e.RowIndex].Cells[4].Value);
+            dateTimePickerDOD.Value = Convert.ToDateTime(dataGridViewINP.Rows[e.RowIndex].Cells[5].Value);
+            comboBoxRNo.Text = dataGridViewINP.Rows[e.RowIndex].Cells[6].Value.ToString();
+            comboBoxRType.Text = dataGridViewINP.Rows[e.RowIndex].Cells[7].Value.ToString();
+        }
+
+        private void buttonRoomDelete_Click(object sender, EventArgs e)
+        {
+            if (textBoxInpatientID.Text.Length != 0)
+            {
+                DatabaseOps databaseOps = new DatabaseOps();
+                databaseOps.delete("INPATIENT", textBoxInpatientID.Text);
+                display();
+            }
+            else
+            {
+                MessageBox.Show("Unable to delete Data, Select a row which you want to delete", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            display();
         }
     }
 
     class Inpatient : Patient
     {
         public int PatID { get; set; }
+        public int InPatID { get; set; }
         public string RoomNo { get; set; }
         public DateTime Admission { get; set; }
         public DateTime Discharge { get; set; }

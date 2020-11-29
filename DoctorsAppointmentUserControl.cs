@@ -54,5 +54,10 @@ namespace OOP_Project___Hospital_Management_System
                 MessageBox.Show("Unable to Cancel Appointment, Select a row which you want to Cancel", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void buttonReschedule_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

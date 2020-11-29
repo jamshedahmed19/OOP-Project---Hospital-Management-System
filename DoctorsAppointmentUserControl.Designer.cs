@@ -68,6 +68,7 @@
             this.label20 = new System.Windows.Forms.Label();
             this.Content = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonReschedule = new System.Windows.Forms.Button();
             this.comboBoxGender = new System.Windows.Forms.ComboBox();
             this.button4 = new System.Windows.Forms.Button();
             this.buttonDisplay = new System.Windows.Forms.Button();
@@ -75,7 +76,6 @@
             this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonInsert = new System.Windows.Forms.Button();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
-            this.buttonReschedule = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewINP)).BeginInit();
             this.Content.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -558,6 +558,23 @@
             this.panel1.Size = new System.Drawing.Size(1264, 626);
             this.panel1.TabIndex = 12;
             // 
+            // buttonReschedule
+            // 
+            this.buttonReschedule.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.buttonReschedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonReschedule.Font = new System.Drawing.Font("Raleway", 10F, System.Drawing.FontStyle.Bold);
+            this.buttonReschedule.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(13)))));
+            this.buttonReschedule.Image = ((System.Drawing.Image)(resources.GetObject("buttonReschedule.Image")));
+            this.buttonReschedule.Location = new System.Drawing.Point(521, 559);
+            this.buttonReschedule.Name = "buttonReschedule";
+            this.buttonReschedule.Size = new System.Drawing.Size(330, 50);
+            this.buttonReschedule.TabIndex = 10;
+            this.buttonReschedule.Text = "RESCHEDULE APPOINTMENT";
+            this.buttonReschedule.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonReschedule.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonReschedule.UseVisualStyleBackColor = false;
+            this.buttonReschedule.Click += new System.EventHandler(this.buttonReschedule_Click);
+            // 
             // comboBoxGender
             // 
             this.comboBoxGender.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
@@ -662,22 +679,6 @@
             this.textBoxSearch.Name = "textBoxSearch";
             this.textBoxSearch.Size = new System.Drawing.Size(259, 44);
             this.textBoxSearch.TabIndex = 11;
-            // 
-            // buttonReschedule
-            // 
-            this.buttonReschedule.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.buttonReschedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonReschedule.Font = new System.Drawing.Font("Raleway", 10F, System.Drawing.FontStyle.Bold);
-            this.buttonReschedule.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(13)))));
-            this.buttonReschedule.Image = ((System.Drawing.Image)(resources.GetObject("buttonReschedule.Image")));
-            this.buttonReschedule.Location = new System.Drawing.Point(521, 559);
-            this.buttonReschedule.Name = "buttonReschedule";
-            this.buttonReschedule.Size = new System.Drawing.Size(330, 50);
-            this.buttonReschedule.TabIndex = 10;
-            this.buttonReschedule.Text = "RESCHEDULE APPOINTMENT";
-            this.buttonReschedule.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonReschedule.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonReschedule.UseVisualStyleBackColor = false;
             // 
             // DoctorsAppointmentUserControl
             // 

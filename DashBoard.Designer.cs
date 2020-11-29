@@ -32,12 +32,10 @@
             this.panelHead = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonExit = new System.Windows.Forms.Button();
-            this.buttonBack = new System.Windows.Forms.Button();
             this.Content = new System.Windows.Forms.Panel();
             this.SideBar = new System.Windows.Forms.Panel();
             this.buttonPatient = new System.Windows.Forms.Button();
             this.buttonDoctor = new System.Windows.Forms.Button();
-            this.buttonBilling = new System.Windows.Forms.Button();
             this.buttonBed = new System.Windows.Forms.Button();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.buttonHome = new System.Windows.Forms.Button();
@@ -53,7 +51,6 @@
             this.panelHead.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(41)))));
             this.panelHead.Controls.Add(this.label1);
             this.panelHead.Controls.Add(this.buttonExit);
-            this.panelHead.Controls.Add(this.buttonBack);
             this.panelHead.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHead.Location = new System.Drawing.Point(98, 0);
             this.panelHead.Name = "panelHead";
@@ -88,22 +85,6 @@
             this.buttonExit.UseVisualStyleBackColor = false;
             this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
-            // buttonBack
-            // 
-            this.buttonBack.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(41)))));
-            this.buttonBack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonBack.BackgroundImage")));
-            this.buttonBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.buttonBack.FlatAppearance.BorderSize = 0;
-            this.buttonBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonBack.Location = new System.Drawing.Point(8, 13);
-            this.buttonBack.Margin = new System.Windows.Forms.Padding(5);
-            this.buttonBack.Name = "buttonBack";
-            this.buttonBack.Padding = new System.Windows.Forms.Padding(5);
-            this.buttonBack.Size = new System.Drawing.Size(27, 27);
-            this.buttonBack.TabIndex = 8;
-            this.buttonBack.UseVisualStyleBackColor = false;
-            // 
             // Content
             // 
             this.Content.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -117,7 +98,6 @@
             this.SideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(41)))));
             this.SideBar.Controls.Add(this.buttonPatient);
             this.SideBar.Controls.Add(this.buttonDoctor);
-            this.SideBar.Controls.Add(this.buttonBilling);
             this.SideBar.Controls.Add(this.buttonBed);
             this.SideBar.Controls.Add(this.pictureBoxLogo);
             this.SideBar.Controls.Add(this.buttonHome);
@@ -161,23 +141,6 @@
             this.buttonDoctor.TabIndex = 9;
             this.buttonDoctor.UseVisualStyleBackColor = false;
             this.buttonDoctor.Click += new System.EventHandler(this.buttonDoctor_Click);
-            // 
-            // buttonBilling
-            // 
-            this.buttonBilling.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonBilling.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(41)))));
-            this.buttonBilling.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonBilling.BackgroundImage")));
-            this.buttonBilling.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.buttonBilling.FlatAppearance.BorderSize = 0;
-            this.buttonBilling.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonBilling.Location = new System.Drawing.Point(30, 416);
-            this.buttonBilling.Margin = new System.Windows.Forms.Padding(5);
-            this.buttonBilling.Name = "buttonBilling";
-            this.buttonBilling.Padding = new System.Windows.Forms.Padding(5);
-            this.buttonBilling.Size = new System.Drawing.Size(39, 37);
-            this.buttonBilling.TabIndex = 10;
-            this.buttonBilling.UseVisualStyleBackColor = false;
-            this.buttonBilling.Click += new System.EventHandler(this.buttonBilling_Click);
             // 
             // buttonBed
             // 
@@ -250,7 +213,7 @@
             this.buttonSettings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonSettings.FlatAppearance.BorderSize = 0;
             this.buttonSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSettings.Location = new System.Drawing.Point(30, 477);
+            this.buttonSettings.Location = new System.Drawing.Point(30, 429);
             this.buttonSettings.Margin = new System.Windows.Forms.Padding(5);
             this.buttonSettings.Name = "buttonSettings";
             this.buttonSettings.Padding = new System.Windows.Forms.Padding(5);
@@ -284,7 +247,6 @@
         #endregion
         private System.Windows.Forms.Panel panelHead;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button buttonBack;
         private System.Windows.Forms.Panel Content;
         private System.Windows.Forms.Button buttonExit;
         private System.Windows.Forms.Panel SideBar;
@@ -294,7 +256,6 @@
         private System.Windows.Forms.Button buttonSettings;
         private System.Windows.Forms.Button buttonPatient;
         private System.Windows.Forms.Button buttonDoctor;
-        private System.Windows.Forms.Button buttonBilling;
         private System.Windows.Forms.Button buttonBed;
     }
 }

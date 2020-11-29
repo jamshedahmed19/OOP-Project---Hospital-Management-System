@@ -35,7 +35,6 @@
             this.panel12 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
             this.buttonAppointments = new System.Windows.Forms.Button();
-            this.buttonAddPatient = new System.Windows.Forms.Button();
             this.buttondoctorspatient = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -114,31 +113,15 @@
             this.buttonAppointments.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold);
             this.buttonAppointments.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(13)))));
             this.buttonAppointments.Image = ((System.Drawing.Image)(resources.GetObject("buttonAppointments.Image")));
-            this.buttonAppointments.Location = new System.Drawing.Point(13, 148);
+            this.buttonAppointments.Location = new System.Drawing.Point(12, 115);
             this.buttonAppointments.Name = "buttonAppointments";
             this.buttonAppointments.Size = new System.Drawing.Size(348, 57);
             this.buttonAppointments.TabIndex = 1;
-            this.buttonAppointments.Text = "APPOINTMENTS";
+            this.buttonAppointments.Text = " APPOINTMENTS";
             this.buttonAppointments.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonAppointments.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonAppointments.UseVisualStyleBackColor = false;
             this.buttonAppointments.Click += new System.EventHandler(this.buttonAppointments_Click);
-            // 
-            // buttonAddPatient
-            // 
-            this.buttonAddPatient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.buttonAddPatient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAddPatient.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold);
-            this.buttonAddPatient.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(13)))));
-            this.buttonAddPatient.Image = ((System.Drawing.Image)(resources.GetObject("buttonAddPatient.Image")));
-            this.buttonAddPatient.Location = new System.Drawing.Point(13, 22);
-            this.buttonAddPatient.Name = "buttonAddPatient";
-            this.buttonAddPatient.Size = new System.Drawing.Size(348, 57);
-            this.buttonAddPatient.TabIndex = 1;
-            this.buttonAddPatient.Text = "INPATIENTS";
-            this.buttonAddPatient.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonAddPatient.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonAddPatient.UseVisualStyleBackColor = false;
             // 
             // buttondoctorspatient
             // 
@@ -147,11 +130,11 @@
             this.buttondoctorspatient.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold);
             this.buttondoctorspatient.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(13)))));
             this.buttondoctorspatient.Image = ((System.Drawing.Image)(resources.GetObject("buttondoctorspatient.Image")));
-            this.buttondoctorspatient.Location = new System.Drawing.Point(13, 85);
+            this.buttondoctorspatient.Location = new System.Drawing.Point(12, 52);
             this.buttondoctorspatient.Name = "buttondoctorspatient";
             this.buttondoctorspatient.Size = new System.Drawing.Size(348, 57);
             this.buttondoctorspatient.TabIndex = 1;
-            this.buttondoctorspatient.Text = "OUTPATIENTS";
+            this.buttondoctorspatient.Text = " PATIENTS LIST";
             this.buttondoctorspatient.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttondoctorspatient.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttondoctorspatient.UseVisualStyleBackColor = false;
@@ -175,7 +158,6 @@
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(13)))));
             this.panel8.Controls.Add(this.button5);
             this.panel8.Controls.Add(this.buttonAppointments);
-            this.panel8.Controls.Add(this.buttonAddPatient);
             this.panel8.Controls.Add(this.buttondoctorspatient);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel8.Location = new System.Drawing.Point(2, 83);
@@ -230,7 +212,6 @@
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button buttonAppointments;
-        private System.Windows.Forms.Button buttonAddPatient;
         private System.Windows.Forms.Button buttondoctorspatient;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel8;

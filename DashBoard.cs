@@ -27,26 +27,16 @@ namespace OOP_Project___Hospital_Management_System
             {
                 AdminHomeControl homeControl = new AdminHomeControl();
                 ControlClass.ShowControl(homeControl, Content);
-                buttonBilling.Enabled = true;
                 buttonDoctor.Image = (new Bitmap(Image.FromFile(@"C:\Users\User\OneDrive\Desktop\Icons\stethoscope.png"), new Size(32, 32)));
-                buttonDoctor.BackgroundImageLayout = ImageLayout.Stretch;
-            }
-            else if (Role == "doctor")
-            {
-                DoctorHomeUserControl doctorHomeUserControl = new DoctorHomeUserControl(ID, Departmental_ID);
-                ControlClass.ShowControl(doctorHomeUserControl, Content);
-                buttonBilling.Visible = false;
-                buttonBed.Visible = false;
-                //buttonDoctor.Visible = false;
-                buttonDoctor.Image = (new Bitmap(Image.FromFile(@"C:\Users\User\OneDrive\Desktop\Icons\appointment1.png"), new Size(32, 32)));
                 buttonDoctor.BackgroundImageLayout = ImageLayout.Stretch;
             }
             else
             {
-                AdminHomeControl homeControl = new AdminHomeControl();
-                ControlClass.ShowControl(homeControl, Content);
-                buttonBilling.Enabled = true;
-                buttonDoctor.Image = (new Bitmap(Image.FromFile(@"C:\Users\User\OneDrive\Desktop\Icons\stethoscope.png"), new Size(32, 32)));
+                DoctorHomeUserControl doctorHomeUserControl = new DoctorHomeUserControl(ID, Departmental_ID);
+                ControlClass.ShowControl(doctorHomeUserControl, Content);
+                buttonBed.Visible = false;
+                //buttonDoctor.Visible = false;
+                buttonDoctor.Image = (new Bitmap(Image.FromFile(@"C:\Users\User\OneDrive\Desktop\Icons\appointment1.png"), new Size(32, 32)));
                 buttonDoctor.BackgroundImageLayout = ImageLayout.Stretch;
             }
         }
@@ -58,16 +48,16 @@ namespace OOP_Project___Hospital_Management_System
                 AdminHomeControl homeControl = new AdminHomeControl();
                 ControlClass.ShowControl(homeControl, Content);
             }
-            else if (Role == "doctor")
+            else //if (Role == "doctor")
             {
                 DoctorHomeUserControl doctorHomeUserControl = new DoctorHomeUserControl(ID ,Departmental_ID);
                 ControlClass.ShowControl(doctorHomeUserControl, Content);
             }
-            else
-            {
-                AdminHomeControl homeControl = new AdminHomeControl();
-                ControlClass.ShowControl(homeControl, Content);
-            }
+            //else
+            //{
+            //    AdminHomeControl homeControl = new AdminHomeControl();
+            //    ControlClass.ShowControl(homeControl, Content);
+            //}
         }
 
         private void buttonExit_Click(object sender, EventArgs e)
@@ -100,16 +90,16 @@ namespace OOP_Project___Hospital_Management_System
                 CRUDDoctor cRUDDoctor = new CRUDDoctor();
                 ControlClass.ShowControl(cRUDDoctor, Content);
             }
-            else if (Role == "doctor")
+            else //if (Role == "doctor")
             {
                 DoctorsAppointmentUserControl doctorsAppointmentUserControl = new DoctorsAppointmentUserControl(Departmental_ID);
                 ControlClass.ShowControl(doctorsAppointmentUserControl, Content);
             }
-            else
-            {
-                CRUDDoctor cRUDDoctor = new CRUDDoctor();
-                ControlClass.ShowControl(cRUDDoctor, Content);
-            }
+            //else
+            //{
+            //    CRUDDoctor cRUDDoctor = new CRUDDoctor();
+            //    ControlClass.ShowControl(cRUDDoctor, Content);
+            //}
         }
 
         private void buttonBilling_Click(object sender, EventArgs e)
@@ -120,7 +110,7 @@ namespace OOP_Project___Hospital_Management_System
 
         private void buttonSettings_Click(object sender, EventArgs e)
         {
-            SettingUserControl settingUserControl = new SettingUserControl();
+            SettingUserControl settingUserControl = new SettingUserControl(ID);
             ControlClass.ShowControl(settingUserControl, Content);
         }
 
@@ -131,16 +121,16 @@ namespace OOP_Project___Hospital_Management_System
                 InpatientUserControl inpatientUserControl = new InpatientUserControl();
                 ControlClass.ShowControl(inpatientUserControl, Content);
             }
-            else if (Role == "doctor")
+            else //if (Role == "doctor")
             {
                 DoctorsPatientListControl doctorsPatientListControl = new DoctorsPatientListControl(Departmental_ID);
                 ControlClass.ShowControl(doctorsPatientListControl, Content);
             }
-            else
-            {
-                InpatientUserControl inpatientUserControl = new InpatientUserControl();
-                ControlClass.ShowControl(inpatientUserControl, Content);
-            }
+            //else
+            //{
+            //    InpatientUserControl inpatientUserControl = new InpatientUserControl();
+            //    ControlClass.ShowControl(inpatientUserControl, Content);
+            //}
         }
 
         private void buttonBed_Click(object sender, EventArgs e)

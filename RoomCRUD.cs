@@ -87,6 +87,12 @@ namespace OOP_Project___Hospital_Management_System
             }
         }
 
+        private void textBoxSearchValue_TextChanged(object sender, EventArgs e)
+        {
+            DatabaseOps databaseOps = new DatabaseOps();
+            dataGridView1.DataSource = databaseOps.search("ROOM", textBoxSearchValue.Text, comboBoxSearchBy.Text);
+        }
+
         private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             textBoxRoomID.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
@@ -95,12 +101,6 @@ namespace OOP_Project___Hospital_Management_System
             comboBoxStatus.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
             comboBoxType.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
             textBoxPrice.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
-        }
-
-        private void textBoxSearchValue_TextChanged(object sender, EventArgs e)
-        {
-            DatabaseOps databaseOps = new DatabaseOps();
-            dataGridView1.DataSource = databaseOps.search("ROOM", textBoxSearchValue.Text, comboBoxSearchBy.Text);
         }
     }
 }

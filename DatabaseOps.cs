@@ -232,6 +232,36 @@
             }
         }
 
+
+        public void update(Inpatient inpatient)
+        {
+            try
+            {
+                sqlConnection.Open();
+                sqlCommand = new SqlCommand("UPDATE INPATIENT SET DATE_OF_AD = @DATE_OF_AD, DATE_OF_DIS = @DATE_OF_DIS, ROOM_CODE = @ROOM_CODE, PAT_CODE = @PAT_CODE WHERE ID = @INPATID)", sqlConnection);
+                sqlCommand.Parameters.AddWithValue("@DATE_OF_AD", inpatient.Admission);
+                sqlCommand.Parameters.AddWithValue("@DATE_OF_DIS", inpatient.Discharge);
+                sqlCommand.Parameters.AddWithValue("@ADVANCE", inpatient.Advance);
+                sqlCommand.Parameters.AddWithValue("@ROOM_CODE", inpatient.RoomNo);
+                sqlCommand.Parameters.AddWithValue("@PAT_CODE", inpatient.PatID);
+                sqlCommand.Parameters.AddWithValue("@PAT_CODE", inpatient.InPatID);
+                int a = sqlCommand.ExecuteNonQuery();
+                if (a > 0)
+                {
+                    MessageBox.Show("Data Updated Successfully", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Unable to updated Data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                sqlConnection.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         public void update(OutPatient outPatient)
         {
             try
@@ -352,6 +382,12 @@
                     sqlConnection);
                     sqlCommand.Parameters.AddWithValue("@RID", id);
                 }
+                else if (tableValue == "INPATIENT")
+                {
+                    sqlCommand = new SqlCommand("DELETE FROM " + tableValue + " WHERE INPATIENT = @INPATID",
+                    sqlConnection);
+                    sqlCommand.Parameters.AddWithValue("@INPATID", id);
+                }
                 sqlCommand.ExecuteNonQuery();
                 int a = sqlCommand.ExecuteNonQuery();
                 if (a == 0)
@@ -370,6 +406,7 @@
                 MessageBox.Show(e.Message, "Error Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         public DataTable display(string value)
         {
             sqlConnection.Open();
@@ -390,7 +427,7 @@
         public DataTable displayInPat()
         {
             sqlConnection.Open();
-            sqlDataAdapter = new SqlDataAdapter("SELECT PATIENTS.ID, PAT_NAME, DATE_OF_AD, DATE_OF_DIS,DOC_NAME, ROOM.ROOM_NO, ROOM_TYPE FROM INPATIENT INNER JOIN PATIENTS ON PATIENTS.ID = PAT_CODE INNER JOIN DOCTORS ON DOCTORS.ID = DOC_CODE INNER JOIN ROOM ON ROOM.ID = ROOM_CODE", sqlConnection);
+            sqlDataAdapter = new SqlDataAdapter("SELECT INPATIENT.ID, PATIENTS.ID, PAT_NAME, PAT_TEL, DATE_OF_AD, DATE_OF_DIS,DOC_NAME, ROOM.ROOM_NO, ROOM_TYPE FROM INPATIENT INNER JOIN PATIENTS ON PATIENTS.ID = PAT_CODE INNER JOIN DOCTORS ON DOCTORS.ID = DOC_CODE INNER JOIN ROOM ON ROOM.ID = ROOM_CODE", sqlConnection);
             DataTable dataTable = new DataTable();
             sqlDataAdapter.Fill(dataTable);
             sqlConnection.Close();
@@ -400,7 +437,7 @@
         public DataTable displayAppointment(string Id)
         {
             sqlConnection.Open();
-            sqlDataAdapter = new SqlDataAdapter("SELECT AID, PAT_NAME, PAT_TEL, DOC_NAME, CHECKUP_DATE , START_TIME, END_TIME, PAT_CODE, DOC_CODE FROM APPOINTMENT INNER JOIN PATIENTS ON PATIENTS.ID = PATIENTS.ID INNER JOIN DOCTORS ON DOCTORS.ID = PATIENTS.DOC_CODE", sqlConnection);
+            sqlDataAdapter = new SqlDataAdapter("SELECT AID, PAT_NAME, PAT_TEL, DOC_NAME, CHECKUP_DATE , START_TIME, END_TIME, PAT_CODE, DOC_CODE FROM APPOINTMENT INNER JOIN PATIENTS ON PATIENTS.ID = PAT_CODE INNER JOIN DOCTORS ON DOCTORS.ID = PATIENTS.DOC_CODE", sqlConnection);
             DataTable dataTable = new DataTable();
             sqlDataAdapter.Fill(dataTable);
             sqlConnection.Close();
@@ -481,6 +518,34 @@
                     {
                         sqlDataAdapter = new SqlDataAdapter("SELECT PAT_ID, PAT_NAME, DOC_NAME, PAT_GENDER, PAT_TEL, PAT_EMAIL, PAT_ADDRESS, DOC_DESIG, DOC_DEPART FROM PATIENTS INNER JOIN DOCTORS ON PAT_ID LIKE '%" + searchValue + "%' AND DOC_CODE=DOCTORS.ID", sqlConnection);
                     }
+                }
+                else if (tableValue == "INPATIENTS")
+                {
+                    if (searchByValue.ToLower() == "date of discharge")
+                    {
+                        sqlDataAdapter = new SqlDataAdapter("SELECT INPATIENT.ID, PATIENTS.ID, PAT_NAME, PAT_TEL, DATE_OF_AD, DATE_OF_DIS, DOC_NAME, ROOM.ROOM_NO, ROOM_TYPE FROM INPATIENT INNER JOIN PATIENTS ON PATIENTS.ID = PAT_CODE INNER JOIN DOCTORS ON DOCTORS.ID = DOC_CODE INNER JOIN ROOM ON ROOM.ID = ROOM_CODE WHERE DATE_OF_DIS LIKE '%" + searchValue + "%'", sqlConnection);
+                    }
+                    else if (searchByValue.ToLower() == "patient tel")
+                    {
+                        sqlDataAdapter = new SqlDataAdapter("SELECT INPATIENT.ID, PATIENTS.ID, PAT_NAME, PAT_TEL, DATE_OF_AD, DATE_OF_DIS, DOC_NAME, ROOM.ROOM_NO, ROOM_TYPE FROM INPATIENT INNER JOIN PATIENTS ON PATIENTS.ID = PAT_CODE INNER JOIN DOCTORS ON DOCTORS.ID = DOC_CODE INNER JOIN ROOM ON ROOM.ID = ROOM_CODE WHERE PAT_TEL LIKE '%" + searchValue + "%'", sqlConnection);
+                    }
+                    else if (searchByValue.ToLower() == "room no")
+                    {
+                        sqlDataAdapter = new SqlDataAdapter("SELECT INPATIENT.ID, PATIENTS.ID, PAT_NAME, PAT_TEL, DATE_OF_AD, DATE_OF_DIS, DOC_NAME, ROOM.ROOM_NO, ROOM_TYPE FROM INPATIENT INNER JOIN PATIENTS ON PATIENTS.ID = PAT_CODE INNER JOIN DOCTORS ON DOCTORS.ID = DOC_CODE INNER JOIN ROOM ON ROOM.ID = ROOM_CODE WHERE ROOM_NO LIKE '%" + searchValue + "%'", sqlConnection);
+                    }
+                    else if (searchByValue.ToLower() == "room type")
+                    {
+                        sqlDataAdapter = new SqlDataAdapter("SELECT INPATIENT.ID, PATIENTS.ID, PAT_NAME, PAT_TEL, DATE_OF_AD, DATE_OF_DIS, DOC_NAME, ROOM.ROOM_NO, ROOM_TYPE FROM INPATIENT INNER JOIN PATIENTS ON PATIENTS.ID = PAT_CODE INNER JOIN DOCTORS ON DOCTORS.ID = DOC_CODE INNER JOIN ROOM ON ROOM.ID = ROOM_CODE WHERE ROOM_TYPE LIKE '%" + searchValue + "%'", sqlConnection);
+                    }
+                    else if (searchByValue.ToLower() == "date of admission")
+                    {
+                        sqlDataAdapter = new SqlDataAdapter("SELECT INPATIENT.ID, PATIENTS.ID, PAT_NAME, PAT_TEL, DATE_OF_AD, DATE_OF_DIS, DOC_NAME, ROOM.ROOM_NO, ROOM_TYPE FROM INPATIENT INNER JOIN PATIENTS ON PATIENTS.ID = PAT_CODE INNER JOIN DOCTORS ON DOCTORS.ID = DOC_CODE INNER JOIN ROOM ON ROOM.ID = ROOM_CODE WHERE DATE_OF_AD LIKE '%" + searchValue + "%'", sqlConnection);
+                    }
+                    else
+                    {
+                        sqlDataAdapter = new SqlDataAdapter("SELECT INPATIENT.ID, PATIENTS.ID, PAT_NAME, PAT_TEL, DATE_OF_AD, DATE_OF_DIS, DOC_NAME, ROOM.ROOM_NO, ROOM_TYPE FROM INPATIENT INNER JOIN PATIENTS ON PATIENTS.ID = PAT_CODE INNER JOIN DOCTORS ON DOCTORS.ID = DOC_CODE INNER JOIN ROOM ON ROOM.ID = ROOM_CODE WHERE PAT_NAME LIKE '%" + searchValue + "%'", sqlConnection);
+                    }
+
                 }
             }
             catch (Exception e)
@@ -709,6 +774,22 @@
             }
         }
 
+        public DataTable getEmployeeDetail(string id)
+        {
+            try
+            {
+                sqlConnection.Open();
+                sqlDataAdapter = new SqlDataAdapter("SELECT * FROM EMPLOYEE WHERE ID = '" + id + "'", sqlConnection);
+            }
 
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            DataTable dataTable = new DataTable();
+            sqlDataAdapter.Fill(dataTable);
+            sqlConnection.Close();
+            return dataTable;
+        }
     }
 }

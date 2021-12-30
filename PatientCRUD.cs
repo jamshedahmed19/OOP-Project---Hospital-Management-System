@@ -15,20 +15,20 @@ namespace OOP_Project___Hospital_Management_System
         public PatientCRUD()
         {
             InitializeComponent();
-            doctorList();
+            //doctorList();
             display();
         }
 
 
-        public void doctorList()
-        {
-            DatabaseOps databaseOps = new DatabaseOps();
-            DataTable dataTable = new DataTable();
-            dataTable = databaseOps.doctorList();
-            comboBoxDOCID.DataSource = dataTable;
-            comboBoxDOCID.ValueMember = "ID";
-            comboBoxDOCID.DisplayMember = "DOC_NAME";
-        }
+        //public void doctorList()
+        //{
+        //    DatabaseOps databaseOps = new DatabaseOps();
+        //    DataTable dataTable = new DataTable();
+        //    dataTable = databaseOps.doctorList();
+        //    comboBoxDOCID.DataSource = dataTable;
+        //    comboBoxDOCID.ValueMember = "ID";
+        //    comboBoxDOCID.DisplayMember = "DOC_NAME";
+        //}
 
         public void display()
         {
@@ -43,8 +43,9 @@ namespace OOP_Project___Hospital_Management_System
                 Name = textBoxPATName.Text,
                 Gender = comboBoxPATGender.Text,
                 Tel = textBoxPATTel.Text,
-                DocCode = int.Parse(comboBoxDOCID.SelectedValue.ToString()),
-                Email = textBoxPATEmail.Text,
+                CreatedBy = int.Parse(employeeid.Text),
+                Date = dateTimePicker1.Value,
+                Email = emailt.Text,
                 Address = textBoxPATAddress.Text,
             };
             DatabaseOps databaseOps = new DatabaseOps();
@@ -69,10 +70,10 @@ namespace OOP_Project___Hospital_Management_System
 
         private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            textBoxPATID.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-            textBoxPATName.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-            comboBoxDOCID.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-            if (dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString() == "Male")
+            textBoxPATID.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            textBoxPATName.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+            
+            if (dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString() == "Male")
             {
                 comboBoxPATGender.Text = "Male";
             }
@@ -80,8 +81,10 @@ namespace OOP_Project___Hospital_Management_System
             {
                 comboBoxPATGender.Text = "Female";
             }
-            textBoxPATTel.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
-            textBoxPATEmail.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+            textBoxPATTel.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+            emailt.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString(); 
+            employeeid.Text = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
+            dateTimePicker1.Value = Convert.ToDateTime(dataGridView1.Rows[e.RowIndex].Cells[8].Value);
             textBoxPATAddress.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
         }
 
@@ -89,15 +92,17 @@ namespace OOP_Project___Hospital_Management_System
         {
             Patient patient = new Patient()
             {
+                ID = textBoxPATID.Text,
                 Name = textBoxPATName.Text,
                 Gender = comboBoxPATGender.Text,
                 Tel = textBoxPATTel.Text,
-                DocCode = int.Parse(comboBoxDOCID.Text),
-                Email = textBoxPATEmail.Text,
+                Date = dateTimePicker1.Value,
+                CreatedBy = int.Parse(employeeid.Text),
+                Email = emailt.Text,
                 Address = textBoxPATAddress.Text,
             };
             DatabaseOps databaseOps = new DatabaseOps();
-            databaseOps.insert(patient);
+            databaseOps.update(patient);
             display();
         }
 
@@ -109,8 +114,8 @@ namespace OOP_Project___Hospital_Management_System
 
         private void buttonPATDisplay_Click(object sender, EventArgs e)
         {
-            OutPatientUserControl outPatientUserControl = new OutPatientUserControl(textBoxPATID.Text, textBoxPATName.Text, comboBoxDOCID.SelectedValue.ToString());
-            ControlClass.ShowControl(outPatientUserControl, Content);
+            //    OutPatientUserControl outPatientUserControl = new OutPatientUserControl(textBoxPATID.Text, textBoxPATName.Text, comboBoxDOCID.SelectedValue.ToString());
+            //    ControlClass.ShowControl(outPatientUserControl, Content);
         }
     }
 }

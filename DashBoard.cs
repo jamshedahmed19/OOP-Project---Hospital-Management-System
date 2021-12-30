@@ -23,22 +23,22 @@ namespace OOP_Project___Hospital_Management_System
 
         private void DashBoard_Load(object sender, EventArgs e)
         {
-            if (Role == "admin")
-            {
+            //if (Role !== "admin")
+            //{
                 AdminHomeControl homeControl = new AdminHomeControl();
                 ControlClass.ShowControl(homeControl, Content);
-                buttonDoctor.Image = (new Bitmap(Image.FromFile(@"C:\Users\User\OneDrive\Desktop\Icons\stethoscope.png"), new Size(32, 32)));
+                //buttonDoctor.Image = (new Bitmap(Image.FromFile(@"C:\Users\User\OneDrive\Desktop\Icons\stethoscope.png"), new Size(32, 32)));
                 buttonDoctor.BackgroundImageLayout = ImageLayout.Stretch;
-            }
-            else
-            {
-                DoctorHomeUserControl doctorHomeUserControl = new DoctorHomeUserControl(ID, Departmental_ID);
-                ControlClass.ShowControl(doctorHomeUserControl, Content);
-                buttonBed.Visible = false;
-                //buttonDoctor.Visible = false;
-                buttonDoctor.Image = (new Bitmap(Image.FromFile(@"C:\Users\User\OneDrive\Desktop\Icons\appointment1.png"), new Size(32, 32)));
-                buttonDoctor.BackgroundImageLayout = ImageLayout.Stretch;
-            }
+            //}
+            //else
+            //{
+            //    DoctorHomeUserControl doctorHomeUserControl = new DoctorHomeUserControl(ID, Departmental_ID);
+            //    ControlClass.ShowControl(doctorHomeUserControl, Content);
+            //    buttonBed.Visible = false;
+            //    //buttonDoctor.Visible = false;
+            //    //buttonDoctor.Image = (new Bitmap(Image.FromFile(@"C:\Users\User\OneDrive\Desktop\Icons\appointment1.png"), new Size(32, 32)));
+            //    buttonDoctor.BackgroundImageLayout = ImageLayout.Stretch;
+            //}
         }
 
         private void buttonHome_Click(object sender, EventArgs e)

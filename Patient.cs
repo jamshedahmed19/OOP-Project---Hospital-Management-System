@@ -8,11 +8,13 @@ namespace OOP_Project___Hospital_Management_System
 {
     class Patient : Person
     {
-        public int DocCode { get; set; }
+        public int CreatedBy { get; set; }
+        public DateTime Date { get; set; }
         public Patient() : base() { }
-        public Patient(string iD, string name, string email, string gender, string tel, string address, int doc_code) : base(iD, name, email, gender, tel, address)
+        public Patient(string iD, string name, string email, string gender, string tel, string address, int createdby,DateTime date) : base(iD, name, email, gender, tel, address)
         {
-            this.DocCode = doc_code;
+            this.CreatedBy = createdby;
+            this.Date = date;
         }
     }
 }

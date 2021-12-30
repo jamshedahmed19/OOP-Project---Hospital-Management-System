@@ -41,5 +41,17 @@ namespace OOP_Project___Hospital_Management_System
             RoomCRUD roomCRUD = new RoomCRUD();
             ControlClass.ShowControl(roomCRUD, Content);
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            CrudEmployee emp = new CrudEmployee();
+            emp.Show();
+            this.Hide();
+        }
     }
 }

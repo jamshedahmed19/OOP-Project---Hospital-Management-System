@@ -18,6 +18,7 @@ namespace OOP_Project___Hospital_Management_System
         {
             InitializeComponent();
             display();
+
         }
 
         private void buttonInsert_Click(object sender, EventArgs e)
@@ -27,8 +28,8 @@ namespace OOP_Project___Hospital_Management_System
             {
                 Name = textBoxName.Text,
                 Gender = comboBoxGender.Text,
-                Designation = textBoxDesignation.Text,
-                Department = textBoxDepartment.Text,
+                Designation = rolecbx.SelectedItem.ToString(),
+                Department = depcbx.SelectedItem.ToString(),
                 Email = textBoxEmail.Text,
                 Address = textBoxAddress.Text,
                 Tel = textBoxTel.Text
@@ -36,7 +37,7 @@ namespace OOP_Project___Hospital_Management_System
             DatabaseOps insertDoc = new DatabaseOps();
             insertDoc.insert(doctor);
             display();
-            doctor.addEmployee(doctor);
+            //doctor.addEmployee(doctor);
         }
 
         private void buttonDisplay_Click(object sender, EventArgs e)
@@ -48,7 +49,7 @@ namespace OOP_Project___Hospital_Management_System
         {
             textBoxid.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
             textBoxName.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-            textBoxDepartment.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+            depcbx.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
             textBoxTel.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
             textBoxEmail.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
             if (dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString() == "Male")
@@ -60,7 +61,7 @@ namespace OOP_Project___Hospital_Management_System
                 comboBoxGender.Text = "Female";
             }
             textBoxAddress.Text = dataGridView1.Rows[e.RowIndex].Cells[8].Value.ToString();
-            textBoxDesignation.Text = dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString();
+            rolecbx.Text = dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString();
         }
 
         private void buttonUpdate_Click(object sender, EventArgs e)
@@ -70,8 +71,8 @@ namespace OOP_Project___Hospital_Management_System
                 ID = textBoxid.Text,
                 Name = textBoxName.Text,
                 Gender = comboBoxGender.Text,
-                Designation = textBoxDesignation.Text,
-                Department = textBoxDepartment.Text,
+                Designation = rolecbx.SelectedItem.ToString(),
+                Department = depcbx.SelectedItem.ToString(),
                 Email = textBoxEmail.Text,
                 Address = textBoxAddress.Text,
                 Tel = textBoxTel.Text
@@ -79,7 +80,7 @@ namespace OOP_Project___Hospital_Management_System
             DatabaseOps updateDoc = new DatabaseOps();
             updateDoc.update(doctor);
             display();
-            doctor.addEmployee(doctor);
+            //doctor.addEmployee(doctor);
         }
 
         private void buttonDelete_Click(object sender, EventArgs e)
@@ -99,13 +100,132 @@ namespace OOP_Project___Hospital_Management_System
         public void display()
         {
             DatabaseOps databaseOps = new DatabaseOps();
+            DataTable dt = new DataTable();
             dataGridView1.DataSource = databaseOps.display("DOCTORS");
+            databaseOps.Showincbx(depcbx, "Department", "DepartmentName");
+            databaseOps.Showincbx(rolecbx, "DoctorRoles", "Rolename");
+
         }
 
         private void textBoxSearch_TextChanged(object sender, EventArgs e)
         {
             DatabaseOps databaseOps = new DatabaseOps();
             dataGridView1.DataSource = databaseOps.search("DOCTORS", textBoxSearch.Text, comboBoxSearchBy.Text);
+        }
+
+        private void Content_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void rolecbx_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void depcbx_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void comboBoxSearchBy_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxGender_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxEmail_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxAddress_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxTel_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxid_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dOCTORSBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

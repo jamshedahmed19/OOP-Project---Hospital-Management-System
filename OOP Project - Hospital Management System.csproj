@@ -89,6 +89,12 @@
     <Compile Include="CRUDDoctor.Designer.cs">
       <DependentUpon>CRUDDoctor.cs</DependentUpon>
     </Compile>
+    <Compile Include="CrudEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrudEmployee.Designer.cs">
+      <DependentUpon>CrudEmployee.cs</DependentUpon>
+    </Compile>
     <Compile Include="DashBoard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,6 +180,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>HMS_DatabaseDataSet7.xsd</DependentUpon>
     </Compile>
+    <Compile Include="HOSPITAL_MANAGEMENT_SYSTEMDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HOSPITAL_MANAGEMENT_SYSTEMDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="InpatientUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -244,6 +255,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CRUDDoctor.resx">
       <DependentUpon>CRUDDoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrudEmployee.resx">
+      <DependentUpon>CrudEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DashBoard.resx">
       <DependentUpon>DashBoard.cs</DependentUpon>
@@ -386,6 +400,17 @@
     </None>
     <None Include="HMS_DatabaseDataSet7.xss">
       <DependentUpon>HMS_DatabaseDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="HOSPITAL_MANAGEMENT_SYSTEMDataSet.xsc">
+      <DependentUpon>HOSPITAL_MANAGEMENT_SYSTEMDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HOSPITAL_MANAGEMENT_SYSTEMDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HOSPITAL_MANAGEMENT_SYSTEMDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HOSPITAL_MANAGEMENT_SYSTEMDataSet.xss">
+      <DependentUpon>HOSPITAL_MANAGEMENT_SYSTEMDataSet.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

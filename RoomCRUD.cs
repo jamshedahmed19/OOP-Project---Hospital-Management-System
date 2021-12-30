@@ -102,5 +102,10 @@ namespace OOP_Project___Hospital_Management_System
             comboBoxType.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
             textBoxPrice.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

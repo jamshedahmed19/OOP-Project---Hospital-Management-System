@@ -29,24 +29,24 @@ namespace OOP_Project___Hospital_Management_System
             return databaseOps.getDoctorID(email);
         }
 
-        public void addEmployee(Doctor doctor)
-        {
-            Employee employee = new Employee()
-            {
-                Name = doctor.Name,
-                Username = doctor.Email,
-                Pass = "0123456789",
-                Email = doctor.Email,
-                Tel = doctor.Tel,
-                Gender = doctor.Gender,
-                Address = doctor.Address,
-                Department = doctor.Department,
-                Designation = doctor.Designation,
-                Departmental_ID = getDoctorID(doctor.Email),
-                Role = "Doctor",
-            };
-            DatabaseOps databaseOps = new DatabaseOps();
-            databaseOps.insert(employee);
-        }
+        //public void addEmployee(Doctor doctor)
+        //{
+        //    Employee employee = new Employee()
+        //    {
+        //        Name = doctor.Name,
+        //        Username = doctor.Email,
+        //        Pass = "0123456789",
+        //        Email = doctor.Email,
+        //        Tel = doctor.Tel,
+        //        Gender = doctor.Gender,
+        //        Address = doctor.Address,
+        //        Department = doctor.Department,
+        //        Designation = doctor.Designation,
+        //        Departmental_ID = getDoctorID(doctor.Email),
+        //        Role = "Doctor",
+        //    };
+            //DatabaseOps databaseOps = new DatabaseOps();
+            //databaseOps.insert(employee);
+        //}
     }
 }

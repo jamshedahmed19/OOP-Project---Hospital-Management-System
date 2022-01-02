@@ -35,11 +35,11 @@
             this.button1 = new System.Windows.Forms.Button();
             this.textBoxPass = new System.Windows.Forms.TextBox();
             this.textBoxUsername = new System.Windows.Forms.TextBox();
+            this.textboxError = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.labelPassword = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.labelLoginTitle = new System.Windows.Forms.Label();
-            this.textboxError = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,7 +61,7 @@
             this.labelTitle.Location = new System.Drawing.Point(90, 41);
             this.labelTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(415, 29);
+            this.labelTitle.Size = new System.Drawing.Size(327, 24);
             this.labelTitle.TabIndex = 4;
             this.labelTitle.Text = "HOSPITAL MANAGEMENT SYSTEM";
             // 
@@ -84,7 +84,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(41)))));
             this.button1.Location = new System.Drawing.Point(23, 233);
             this.button1.Name = "button1";
@@ -98,34 +98,48 @@
             // 
             this.textBoxPass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(41)))));
             this.textBoxPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxPass.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxPass.ForeColor = System.Drawing.Color.White;
             this.textBoxPass.Location = new System.Drawing.Point(23, 160);
             this.textBoxPass.Name = "textBoxPass";
-            this.textBoxPass.Size = new System.Drawing.Size(379, 31);
+            this.textBoxPass.Size = new System.Drawing.Size(379, 26);
             this.textBoxPass.TabIndex = 2;
             // 
             // textBoxUsername
             // 
             this.textBoxUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(41)))));
             this.textBoxUsername.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxUsername.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxUsername.ForeColor = System.Drawing.Color.White;
             this.textBoxUsername.Location = new System.Drawing.Point(23, 88);
             this.textBoxUsername.Name = "textBoxUsername";
-            this.textBoxUsername.Size = new System.Drawing.Size(379, 31);
+            this.textBoxUsername.Size = new System.Drawing.Size(379, 26);
             this.textBoxUsername.TabIndex = 1;
+            // 
+            // textboxError
+            // 
+            this.textboxError.AutoSize = true;
+            this.textboxError.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(5)))), ((int)(((byte)(249)))));
+            this.textboxError.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textboxError.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.textboxError.Location = new System.Drawing.Point(60, 280);
+            this.textboxError.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.textboxError.Name = "textboxError";
+            this.textboxError.Size = new System.Drawing.Size(258, 17);
+            this.textboxError.TabIndex = 3;
+            this.textboxError.Text = "Please Enter Required Information";
+            this.textboxError.Visible = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(5)))), ((int)(((byte)(249)))));
-            this.label1.Font = new System.Drawing.Font("Fira Code", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(146)))), ((int)(((byte)(155)))));
             this.label1.Location = new System.Drawing.Point(118, 200);
             this.label1.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(212, 26);
+            this.label1.Size = new System.Drawing.Size(164, 17);
             this.label1.TabIndex = 3;
             this.label1.Text = "Forgot Password? -->";
             // 
@@ -133,12 +147,12 @@
             // 
             this.labelPassword.AutoSize = true;
             this.labelPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(5)))), ((int)(((byte)(249)))));
-            this.labelPassword.Font = new System.Drawing.Font("Raleway", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(146)))), ((int)(((byte)(155)))));
             this.labelPassword.Location = new System.Drawing.Point(12, 122);
             this.labelPassword.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.labelPassword.Name = "labelPassword";
-            this.labelPassword.Size = new System.Drawing.Size(93, 24);
+            this.labelPassword.Size = new System.Drawing.Size(82, 17);
             this.labelPassword.TabIndex = 0;
             this.labelPassword.Text = "Password:";
             // 
@@ -146,12 +160,12 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(5)))), ((int)(((byte)(249)))));
-            this.label2.Font = new System.Drawing.Font("Raleway", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(146)))), ((int)(((byte)(155)))));
             this.label2.Location = new System.Drawing.Point(10, 50);
             this.label2.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 24);
+            this.label2.Size = new System.Drawing.Size(86, 17);
             this.label2.TabIndex = 0;
             this.label2.Text = "Username:";
             // 
@@ -159,28 +173,14 @@
             // 
             this.labelLoginTitle.AutoSize = true;
             this.labelLoginTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(5)))), ((int)(((byte)(249)))));
-            this.labelLoginTitle.Font = new System.Drawing.Font("Raleway", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLoginTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelLoginTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(146)))), ((int)(((byte)(155)))));
             this.labelLoginTitle.Location = new System.Drawing.Point(171, 14);
             this.labelLoginTitle.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.labelLoginTitle.Name = "labelLoginTitle";
-            this.labelLoginTitle.Size = new System.Drawing.Size(92, 39);
+            this.labelLoginTitle.Size = new System.Drawing.Size(70, 26);
             this.labelLoginTitle.TabIndex = 0;
             this.labelLoginTitle.Text = "Login";
-            // 
-            // textboxError
-            // 
-            this.textboxError.AutoSize = true;
-            this.textboxError.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(5)))), ((int)(((byte)(249)))));
-            this.textboxError.Font = new System.Drawing.Font("Fira Code", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textboxError.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.textboxError.Location = new System.Drawing.Point(60, 280);
-            this.textboxError.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.textboxError.Name = "textboxError";
-            this.textboxError.Size = new System.Drawing.Size(342, 26);
-            this.textboxError.TabIndex = 3;
-            this.textboxError.Text = "Please Enter Required Information";
-            this.textboxError.Visible = false;
             // 
             // Login
             // 
@@ -195,6 +195,7 @@
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";
+            this.Load += new System.EventHandler(this.Login_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

@@ -18,6 +18,10 @@ namespace OOP_Project___Hospital_Management_System
         {
             InitializeComponent();
             display();
+            dateTimePicker1.Format = DateTimePickerFormat.Time;
+            dateTimePicker1.ShowUpDown = true;
+            dateTimePicker2.Format = DateTimePickerFormat.Time;
+            dateTimePicker2.ShowUpDown = true;
 
         }
 
@@ -32,7 +36,9 @@ namespace OOP_Project___Hospital_Management_System
                 Department = depcbx.SelectedItem.ToString(),
                 Email = textBoxEmail.Text,
                 Address = textBoxAddress.Text,
-                Tel = textBoxTel.Text
+                Tel = textBoxTel.Text,
+                starttime = dateTimePicker1.Value,
+                endtime = dateTimePicker2.Value,
             };
             DatabaseOps insertDoc = new DatabaseOps();
             insertDoc.insert(doctor);
@@ -62,6 +68,9 @@ namespace OOP_Project___Hospital_Management_System
             }
             textBoxAddress.Text = dataGridView1.Rows[e.RowIndex].Cells[8].Value.ToString();
             rolecbx.Text = dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString();
+            //dateTimePicker1.Value = Convert.ToDateTime(dataGridView1.Rows[e.RowIndex].Cells[10].Value.ToString());
+            //dateTimePicker2.Value = Convert.ToDateTime(dataGridView1.Rows[e.RowIndex].Cells[11].Value.ToString());
+
         }
 
         private void buttonUpdate_Click(object sender, EventArgs e)
@@ -75,7 +84,9 @@ namespace OOP_Project___Hospital_Management_System
                 Department = depcbx.SelectedItem.ToString(),
                 Email = textBoxEmail.Text,
                 Address = textBoxAddress.Text,
-                Tel = textBoxTel.Text
+                Tel = textBoxTel.Text,
+                starttime = dateTimePicker1.Value,
+                endtime = dateTimePicker2.Value,
             };
             DatabaseOps updateDoc = new DatabaseOps();
             updateDoc.update(doctor);
@@ -115,7 +126,7 @@ namespace OOP_Project___Hospital_Management_System
 
         private void Content_Paint(object sender, PaintEventArgs e)
         {
-
+            
         }
 
         private void rolecbx_SelectedIndexChanged(object sender, EventArgs e)

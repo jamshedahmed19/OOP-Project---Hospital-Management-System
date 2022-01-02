@@ -50,7 +50,7 @@ namespace OOP_Project___Hospital_Management_System
             }
             else //if (Role == "doctor")
             {
-                DoctorHomeUserControl doctorHomeUserControl = new DoctorHomeUserControl(ID ,Departmental_ID);
+                DoctorHomeUserControl doctorHomeUserControl = new DoctorHomeUserControl(ID, Departmental_ID);
                 ControlClass.ShowControl(doctorHomeUserControl, Content);
             }
             //else
@@ -121,16 +121,16 @@ namespace OOP_Project___Hospital_Management_System
                 InpatientUserControl inpatientUserControl = new InpatientUserControl();
                 ControlClass.ShowControl(inpatientUserControl, Content);
             }
-            else //if (Role == "doctor")
-            {
-                DoctorsPatientListControl doctorsPatientListControl = new DoctorsPatientListControl(Departmental_ID);
-                ControlClass.ShowControl(doctorsPatientListControl, Content);
-            }
-            //else
+            //else //if (Role == "doctor")
             //{
-            //    InpatientUserControl inpatientUserControl = new InpatientUserControl();
-            //    ControlClass.ShowControl(inpatientUserControl, Content);
+            //    DoctorsPatientListControl doctorsPatientListControl = new DoctorsPatientListControl(Departmental_ID);
+            //    ControlClass.ShowControl(doctorsPatientListControl, Content);
             //}
+            else
+            {
+                InpatientUserControl inpatientUserControl = new InpatientUserControl();
+                ControlClass.ShowControl(inpatientUserControl, Content);
+            }
         }
 
         private void buttonBed_Click(object sender, EventArgs e)

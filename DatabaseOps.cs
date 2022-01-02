@@ -9,7 +9,7 @@
 
     internal class DatabaseOps
     {
-        internal static string connection_string = @"Data Source=DESKTOP-3O5KR6I;Initial Catalog=HMS;Integrated Security=True";
+        internal static string connection_string = @"Data Source=Hammad-Waseem;Initial Catalog=HMS;Integrated Security=True";
         internal SqlConnection sqlConnection;
         internal SqlDataAdapter sqlDataAdapter;
         internal SqlCommand sqlCommand;
@@ -19,6 +19,25 @@
             sqlConnection = new SqlConnection(connection_string);
         }
 
+        public DataTable timeslotlist(int docid)
+        {
+            try
+            {
+                sqlConnection.Open();
+                sqlDataAdapter = new SqlDataAdapter("select id,Concat(slotstart,' ' ,slotend) as slotdec from timeSlots where slotdocid = " + docid +" and isavailable = 1", sqlConnection);
+                
+            }
+
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            DataTable dataTable = new DataTable();
+            sqlDataAdapter.Fill(dataTable);
+            sqlConnection.Close();
+            return dataTable;
+        }
+
         public void update(Doctor doctor)
         {
             try
@@ -26,7 +45,7 @@
                 int id = GetIDbyName("Department", doctor.Department, "DepartmentName", "ID");
                 int rid = GetIDbyName("DoctorRoles", doctor.Designation, "Rolename", "ID");
                 sqlConnection.Open();
-                sqlCommand = new SqlCommand("UPDATE DOCTORS SET DOC_NAME = @NAME, DOC_GENDER = @GENDER, DOC_ADDRESS = @ADDRESS, DOC_tel = @TEL, DOC_Role_ID  = @DESIG, DOC_DEP_ID = @DEPART, DOC_EMAIL = @EMAIL WHERE DOC_ID = @DID", sqlConnection);
+                sqlCommand = new SqlCommand("UPDATE DOCTORS SET DOC_NAME = @NAME, DOC_GENDER = @GENDER, DOC_ADDRESS = @ADDRESS, DOC_tel = @TEL, DOC_Role_ID  = @DESIG, DOC_DEP_ID = @DEPART, DOC_EMAIL = @EMAIL, Doc_timing_start = @st, Doc_timing_end = @et WHERE DOC_ID = @DID ", sqlConnection);
                 sqlCommand.Parameters.AddWithValue("@DID", doctor.ID);
                 sqlCommand.Parameters.AddWithValue("@NAME", doctor.Name);
                 sqlCommand.Parameters.AddWithValue("@GENDER", doctor.Gender);
@@ -35,6 +54,8 @@
                 sqlCommand.Parameters.AddWithValue("@DESIG", rid);
                 sqlCommand.Parameters.AddWithValue("@EMAIL", doctor.Email);
                 sqlCommand.Parameters.AddWithValue("@DEPART", id);
+                sqlCommand.Parameters.AddWithValue("@st", doctor.starttime);
+                sqlCommand.Parameters.AddWithValue("@et", doctor.endtime);
                 int a = sqlCommand.ExecuteNonQuery();
                 if (a > 0)
                 {
@@ -55,8 +76,8 @@
 
         public void insert(Doctor doctor)
         {
-            try
-            {
+            //try
+            //{
                 int id = GetIDbyName("Department", doctor.Department, "DepartmentName", "ID");
                 int rid = GetIDbyName("DoctorRoles", doctor.Designation, "Rolename", "ID");
                 sqlConnection.Open();
@@ -72,19 +93,43 @@
                 int a = sqlCommand.ExecuteNonQuery();
                 if (a > 0)
                 {
-                    MessageBox.Show("Registered Successfully", "Registered", MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
+                    sqlConnection.Close();
+                    insertavailability(doctor);
+                    
                 }
                 else
                 {
                     MessageBox.Show("Data not inserted", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 sqlConnection.Close();
-            }
-            catch (Exception e)
-            {
+            //}
+            //catch (Exception e)
+            //{
 
-                MessageBox.Show(e.Message, "Error Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    MessageBox.Show(e.Message, "Error Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
+        }
+
+        public void insertavailability(Doctor doctor)
+        {
+            
+            int docid = GetIDbyName("DOCTORS", doctor.Tel, "DOC_TEL", "ID");
+            sqlConnection.Open();
+            sqlCommand = new SqlCommand("createAvailability", sqlConnection);
+            sqlCommand.CommandType = CommandType.StoredProcedure;
+            sqlCommand.Parameters.Add("@AvailabilityId",1);
+            sqlCommand.Parameters.Add("@SlotStart", doctor.starttime);
+            sqlCommand.Parameters.Add("@SlotEnd", doctor.endtime);
+            sqlCommand.Parameters.Add("@SlotDoctorId", docid);
+            int b = sqlCommand.ExecuteNonQuery();
+            if (b > 0)
+            {
+                MessageBox.Show("Registered Successfully", "Registered", MessageBoxButtons.OK,
+                MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Error in Creating Doctor Availability", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -101,6 +146,8 @@
             sqlConnection.Close();
             return Convert.ToInt32(dataTable.Rows[0][colname2].ToString());
         }
+
+
 
         public void insert(Employee employee)
         {
@@ -202,12 +249,11 @@
             try
             {
                 sqlConnection.Open();
-                sqlCommand = new SqlCommand("INSERT INTO INPATIENT(DATE_OF_AD, DATE_OF_DIS, ADVANCE, ROOM_CODE, PAT_CODE) VALUES (@DATE_OF_AD, @DATE_OF_DIS, @ADVANCE, @ROOM_CODE, @PAT_CODE)", sqlConnection);
+                sqlCommand = new SqlCommand("INSERT INTO INPATIENT(DATE_OF_AD, DATE_OF_DIS, PAT_CODE,ROOM_CODE) VALUES (@DATE_OF_AD, @DATE_OF_DIS, @PAT_CODE, @ROOM_CODE)", sqlConnection);
                 sqlCommand.Parameters.AddWithValue("@DATE_OF_AD", inpatient.Admission);
                 sqlCommand.Parameters.AddWithValue("@DATE_OF_DIS", inpatient.Discharge);
-                sqlCommand.Parameters.AddWithValue("@ADVANCE", inpatient.Advance);
-                sqlCommand.Parameters.AddWithValue("@ROOM_CODE", inpatient.RoomNo);
                 sqlCommand.Parameters.AddWithValue("@PAT_CODE", inpatient.PatID);
+                sqlCommand.Parameters.AddWithValue("@ROOM_CODE", inpatient.RoomNo);
                 int a = sqlCommand.ExecuteNonQuery();
                 if (a > 0)
                 {
@@ -291,13 +337,12 @@
             try
             {
                 sqlConnection.Open();
-                sqlCommand = new SqlCommand("UPDATE INPATIENT SET DATE_OF_AD = @DATE_OF_AD, DATE_OF_DIS = @DATE_OF_DIS, ROOM_CODE = @ROOM_CODE, PAT_CODE = @PAT_CODE WHERE ID = @INPATID)", sqlConnection);
+                sqlCommand = new SqlCommand("UPDATE INPATIENT SET DATE_OF_AD = @DATE_OF_AD, DATE_OF_DIS = @DATE_OF_DIS, ROOM_CODE = @ROOM_CODE, PAT_CODE = @PAT_CODE WHERE ID = @INPATID", sqlConnection);
                 sqlCommand.Parameters.AddWithValue("@DATE_OF_AD", inpatient.Admission);
                 sqlCommand.Parameters.AddWithValue("@DATE_OF_DIS", inpatient.Discharge);
-                sqlCommand.Parameters.AddWithValue("@ADVANCE", inpatient.Advance);
                 sqlCommand.Parameters.AddWithValue("@ROOM_CODE", inpatient.RoomNo);
                 sqlCommand.Parameters.AddWithValue("@PAT_CODE", inpatient.PatID);
-                sqlCommand.Parameters.AddWithValue("@PAT_CODE", inpatient.InPatID);
+                sqlCommand.Parameters.AddWithValue("@INPATID", inpatient.InPatID);
                 int a = sqlCommand.ExecuteNonQuery();
                 if (a > 0)
                 {
@@ -343,6 +388,33 @@
             }
         }
 
+        public void makeslotsavailable()
+        {
+            try
+            {
+                sqlConnection.Open();
+                sqlCommand = new SqlCommand("makeslotsavailable", sqlConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.Add("@dateof", DateTime.Now.ToString("yyyy-MM-dd"));
+                sqlCommand.ExecuteNonQuery();
+                
+                int a = sqlCommand.ExecuteNonQuery();
+                if (a > 0)
+                {
+                    MessageBox.Show("Data Updated Successfully", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Unable to updated Data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                sqlConnection.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         public void update(Employee employee)
         {
             int id = GetIDbyName("Department", employee.Department, "DepartmentName", "ID");
@@ -368,6 +440,31 @@
                 else
                 {
                     MessageBox.Show("Unable to updated Data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                sqlConnection.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void updateRoomAvailability(int id,string status)
+        {
+            try
+            {
+                sqlConnection.Open();
+                sqlCommand = new SqlCommand("UPDATE ROOM set ROOM_STATUS = '"+ status +"', WHERE ROOM_NO = @ROOM_NO", sqlConnection);
+                sqlCommand.Parameters.AddWithValue("@ROOM_NO", id);
+          
+                int a = sqlCommand.ExecuteNonQuery();
+                if (a > 0)
+                {
+                    MessageBox.Show("Room Updated Successfully", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Unable to update Room", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 sqlConnection.Close();
             }
@@ -442,7 +539,7 @@
                 }
                 else if (tableValue == "INPATIENT")
                 {
-                    sqlCommand = new SqlCommand("DELETE FROM " + tableValue + " WHERE INPATIENT = @INPATID",
+                    sqlCommand = new SqlCommand("DELETE FROM " + tableValue + " WHERE ID = @INPATID",
                     sqlConnection);
                     sqlCommand.Parameters.AddWithValue("@INPATID", id);
                 }
@@ -474,7 +571,7 @@
             //}
             /*else */if (value == "DOCTORS")
             {
-                sqlDataAdapter = new SqlDataAdapter("SELECT Doctors.ID,Doctors.DOC_ID,Doctors.DOC_NAME,Department.DepartmentName,Doctors.DOC_TEL,Doctors.DOC_EMAIL,Doctors.DOC_PASS,Doctors.DOC_GENDER,Doctors.DOC_ADDRESS,DoctorRoles.Rolename from Doctors inner join Department on Department.ID = Doctors.DOC_DEP_ID inner join DoctorRoles on DoctorRoles.ID = Doctors.DOC_Role_ID", sqlConnection);
+                sqlDataAdapter = new SqlDataAdapter("SELECT Doctors.ID,Doctors.DOC_ID,Doctors.DOC_NAME,Department.DepartmentName,Doctors.DOC_TEL,Doctors.DOC_EMAIL,Doctors.DOC_PASS,Doctors.DOC_GENDER,Doctors.DOC_ADDRESS,DoctorRoles.Rolename  from Doctors inner join Department on Department.ID = Doctors.DOC_DEP_ID inner join DoctorRoles on DoctorRoles.ID = Doctors.DOC_Role_ID", sqlConnection);
 
             }
             else if (value == "EMPLOYEE")
@@ -496,7 +593,7 @@
         public DataTable displayInPat()
         {
             sqlConnection.Open();
-            sqlDataAdapter = new SqlDataAdapter("SELECT INPATIENT.ID, PATIENTS.ID, PAT_NAME, PAT_TEL, DATE_OF_AD, DATE_OF_DIS,DOC_NAME, ROOM.ROOM_NO, ROOM_TYPE FROM INPATIENT INNER JOIN PATIENTS ON PATIENTS.ID = PAT_CODE INNER JOIN DOCTORS ON DOCTORS.ID = DOC_CODE INNER JOIN ROOM ON ROOM.ID = ROOM_CODE", sqlConnection);
+            sqlDataAdapter = new SqlDataAdapter("SELECT INPATIENT.ID, PATIENTS.ID, PAT_NAME, PAT_TEL, DATE_OF_AD, DATE_OF_DIS, ROOM.ID, ROOM_TYPE FROM INPATIENT INNER JOIN PATIENTS ON PATIENTS.ID = PAT_CODE INNER JOIN ROOM ON ROOM.ID = ROOM_CODE", sqlConnection);
             DataTable dataTable = new DataTable();
             sqlDataAdapter.Fill(dataTable);
             sqlConnection.Close();
@@ -608,7 +705,7 @@
                 {
                     if (searchByValue.ToLower() == "date of discharge")
                     {
-                        sqlDataAdapter = new SqlDataAdapter("SELECT INPATIENT.ID, PATIENTS.ID, PAT_NAME, PAT_TEL, DATE_OF_AD, DATE_OF_DIS, DOC_NAME, ROOM.ROOM_NO, ROOM_TYPE FROM INPATIENT INNER JOIN PATIENTS ON PATIENTS.ID = PAT_CODE INNER JOIN DOCTORS ON DOCTORS.ID = DOC_CODE INNER JOIN ROOM ON ROOM.ID = ROOM_CODE WHERE DATE_OF_DIS LIKE '%" + searchValue + "%'", sqlConnection);
+                        sqlDataAdapter = new SqlDataAdapter("SELECT INPATIENT.ID, PATIENTS.ID, PAT_NAME, PAT_TEL, DATE_OF_AD, DATE_OF_DIS, ROOM.ROOM_NO, ROOM_TYPE FROM INPATIENT INNER JOIN PATIENTS ON PATIENTS.ID = PAT_CODE INNER JOIN DOCTORS ON DOCTORS.ID = DOC_CODE INNER JOIN ROOM ON ROOM.ID = ROOM_CODE WHERE DATE_OF_DIS LIKE '%" + searchValue + "%'", sqlConnection);
                     }
                     else if (searchByValue.ToLower() == "patient tel")
                     {
@@ -781,7 +878,7 @@
             try
             {
                 sqlConnection.Open();
-                sqlDataAdapter = new SqlDataAdapter("SELECT * FROM ROOM WHERE ROOM_STATUS = 'AVAILABLE' AND ROOM_TYPE = '" + roomType + "'", sqlConnection);
+                sqlDataAdapter = new SqlDataAdapter("SELECT * FROM ROOM WHERE ID not in (SELECT ROOM_CODE FROM INPATIENT INNER JOIN PATIENTS ON PATIENTS.ID = PAT_CODE INNER JOIN ROOM ON ROOM.ID = ROOM_CODE where DATE_OF_DIS >= '"+ DateTime.Now.ToString("yyyy-MM-dd") + "' ) AND ROOM_TYPE = '" + roomType + "'", sqlConnection);
             }
 
             catch (Exception e)

@@ -15,6 +15,10 @@ namespace OOP_Project___Hospital_Management_System
         public string Department { get; set; }
         public string Departmental_ID { get; set; }
         public Employee Employee { get; set; }
+
+        public DateTime starttime { get; set; }
+
+        public DateTime endtime { get; set; }
         public Doctor() : base() { }
         public Doctor(string iD, string name, string email, string gender, string tel, string address, string doc_desig, string depart) : base(iD, name, email, gender, tel, address)
         {

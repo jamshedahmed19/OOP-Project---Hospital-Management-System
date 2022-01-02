@@ -19,6 +19,7 @@ namespace OOP_Project___Hospital_Management_System
             display();
         }
 
+
         public void roomList()
         {
             DatabaseOps databaseOps = new DatabaseOps();
@@ -54,13 +55,22 @@ namespace OOP_Project___Hospital_Management_System
         private void buttonRoomInsert_Click(object sender, EventArgs e)
         {
             Inpatient inpatient = new Inpatient();
+            Room patient = new Room();
             inpatient.PatID = int.Parse(comboBoxPatient.SelectedValue.ToString());
             inpatient.RoomNo = comboBoxRNo.SelectedValue.ToString();
             inpatient.Admission = dateTimePickerDOA.Value.Date;
             inpatient.Discharge = dateTimePickerDOD.Value.Date;
-            inpatient.Advance = 10000;
             DatabaseOps databaseOps = new DatabaseOps();
-            databaseOps.insert(inpatient);
+            if (inpatient.ifinpatientalreadyexisted(inpatient.PatID,inpatient.Admission)== true)
+            {
+                databaseOps.insert(inpatient);
+                databaseOps.updateRoomAvailability(Convert.ToInt32(inpatient.RoomNo), "Unavailable");
+            }
+            else
+            {
+                MessageBox.Show("Unable to Assign room because room already assignes", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+           
             display();
         }
 
@@ -87,8 +97,8 @@ namespace OOP_Project___Hospital_Management_System
 
         private void textBoxSearchVal_TextChanged(object sender, EventArgs e)
         {
-            DatabaseOps databaseOps = new DatabaseOps();
-            dataGridViewINP.DataSource = databaseOps.search("INPATIENTS", textBoxSearchVal.Text, comboBoxSearchBy.Text);
+            //DatabaseOps databaseOps = new DatabaseOps();
+            //dataGridViewINP.DataSource = databaseOps.search("INPATIENTS", textBoxSearchVal.Text, comboBoxSearchBy.Text);
         }
 
         private void dataGridViewINP_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -117,6 +127,16 @@ namespace OOP_Project___Hospital_Management_System
             }
             display();
         }
+
+        private void dataGridViewINP_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 
     class Inpatient : Patient
@@ -127,5 +147,35 @@ namespace OOP_Project___Hospital_Management_System
         public DateTime Admission { get; set; }
         public DateTime Discharge { get; set; }
         public int Advance { get; set; }
+
+
+        public bool ifinpatientalreadyexisted(int pid,DateTime stdate)
+        {
+            DatabaseOps databaseOps = new DatabaseOps();
+            DataTable dt = new DataTable();
+            dt = databaseOps.displayInPat();
+
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                if(pid ==Convert.ToInt32(dt.Rows[i][1].ToString()))
+                {
+                    if(stdate> Convert.ToDateTime(dt.Rows[i]["DATE_OF_DIS"]))
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+
+                }
+                else
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
     }
 }

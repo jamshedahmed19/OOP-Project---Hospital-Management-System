@@ -33,10 +33,17 @@ namespace OOP_Project___Hospital_Management_System
             {
                 textboxError.Visible = true;
                 button1.BackColor = Color.FromArgb(textboxError.ForeColor.ToArgb());
-                //DashBoard dashBoard = new DashBoard();
-                //dashBoard.Show();
-                //this.Close();
+                DashBoard dashBoard = new DashBoard();
+                dashBoard.Show();
+                this.Close();
             }
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            DatabaseOps db = new DatabaseOps();
+            db.makeslotsavailable();
+            
         }
     }
 

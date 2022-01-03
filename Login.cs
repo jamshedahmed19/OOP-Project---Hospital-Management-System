@@ -45,6 +45,13 @@ namespace OOP_Project___Hospital_Management_System
             db.makeslotsavailable();
             
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            DoctorLogin doctorLogin = new DoctorLogin();
+            doctorLogin.Show();
+            this.Close();
+        }
     }
 
     public class UserLogin
@@ -55,7 +62,7 @@ namespace OOP_Project___Hospital_Management_System
         public void login(UserLogin userLogin)
         {
             DatabaseOps databaseOps = new DatabaseOps();
-            databaseOps.login(userLogin);
+            databaseOps.login(userLogin, "");
         }
     }
 }

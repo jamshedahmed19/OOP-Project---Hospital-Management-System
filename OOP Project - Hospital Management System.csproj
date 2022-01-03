@@ -191,6 +191,12 @@
     <Compile Include="InpatientUserControl.Designer.cs">
       <DependentUpon>InpatientUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="DoctorLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorLogin.Designer.cs">
+      <DependentUpon>DoctorLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="OutPatientUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -282,6 +288,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InpatientUserControl.resx">
       <DependentUpon>InpatientUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorLogin.resx">
+      <DependentUpon>DoctorLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OutPatientUserControl.resx">
       <DependentUpon>OutPatientUserControl.cs</DependentUpon>

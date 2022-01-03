@@ -1,6 +1,6 @@
 ﻿namespace OOP_Project___Hospital_Management_System
 {
-    partial class Login
+    partial class DoctorLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DoctorLogin));
             this.panel5 = new System.Windows.Forms.Panel();
             this.labelTitle = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -36,10 +36,10 @@
             this.textBoxPass = new System.Windows.Forms.TextBox();
             this.textBoxUsername = new System.Windows.Forms.TextBox();
             this.textboxError = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.labelPassword = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.labelLoginTitle = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,11 +67,11 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.textBoxPass);
             this.panel1.Controls.Add(this.textBoxUsername);
             this.panel1.Controls.Add(this.textboxError);
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.labelPassword);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.labelLoginTitle);
@@ -100,7 +100,7 @@
             this.textBoxPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxPass.ForeColor = System.Drawing.Color.White;
-            this.textBoxPass.Location = new System.Drawing.Point(23, 149);
+            this.textBoxPass.Location = new System.Drawing.Point(23, 160);
             this.textBoxPass.Name = "textBoxPass";
             this.textBoxPass.Size = new System.Drawing.Size(379, 26);
             this.textBoxPass.TabIndex = 2;
@@ -129,6 +129,20 @@
             this.textboxError.TabIndex = 3;
             this.textboxError.Text = "Please Enter Required Information";
             this.textboxError.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(5)))), ((int)(((byte)(249)))));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(146)))), ((int)(((byte)(155)))));
+            this.label1.Location = new System.Drawing.Point(144, 200);
+            this.label1.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(144, 17);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Login as employee";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // labelPassword
             // 
@@ -162,28 +176,14 @@
             this.labelLoginTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(5)))), ((int)(((byte)(249)))));
             this.labelLoginTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelLoginTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(146)))), ((int)(((byte)(155)))));
-            this.labelLoginTitle.Location = new System.Drawing.Point(117, 12);
+            this.labelLoginTitle.Location = new System.Drawing.Point(122, 13);
             this.labelLoginTitle.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.labelLoginTitle.Name = "labelLoginTitle";
-            this.labelLoginTitle.Size = new System.Drawing.Size(183, 26);
+            this.labelLoginTitle.Size = new System.Drawing.Size(147, 26);
             this.labelLoginTitle.TabIndex = 0;
-            this.labelLoginTitle.Text = "Employee Login";
+            this.labelLoginTitle.Text = "Dcotor Login";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(5)))), ((int)(((byte)(249)))));
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(146)))), ((int)(((byte)(155)))));
-            this.label3.Location = new System.Drawing.Point(140, 196);
-            this.label3.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(121, 17);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Login as doctor";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // Login
+            // DoctorLogin
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(41)))));
@@ -193,7 +193,7 @@
             this.Controls.Add(this.labelTitle);
             this.Controls.Add(this.panel5);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Login";
+            this.Name = "DoctorLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";
             this.Load += new System.EventHandler(this.Login_Load);
@@ -215,7 +215,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label labelLoginTitle;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label textboxError;
-        private System.Windows.Forms.Label label3;
     }
 }

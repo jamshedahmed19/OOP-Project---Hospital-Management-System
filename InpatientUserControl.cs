@@ -61,7 +61,7 @@ namespace OOP_Project___Hospital_Management_System
             inpatient.Admission = dateTimePickerDOA.Value.Date;
             inpatient.Discharge = dateTimePickerDOD.Value.Date;
             DatabaseOps databaseOps = new DatabaseOps();
-            if (inpatient.ifinpatientalreadyexisted(inpatient.PatID,inpatient.Admission)== true)
+            if (inpatient.ifinpatientalreadyexisted(inpatient.PatID, inpatient.Admission) == true)
             {
                 databaseOps.insert(inpatient);
                 databaseOps.updateRoomAvailability(Convert.ToInt32(inpatient.RoomNo), "Unavailable");
@@ -70,7 +70,7 @@ namespace OOP_Project___Hospital_Management_System
             {
                 MessageBox.Show("Unable to Assign room because room already assignes", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-           
+
             display();
         }
 
@@ -149,31 +149,31 @@ namespace OOP_Project___Hospital_Management_System
         public int Advance { get; set; }
 
 
-        public bool ifinpatientalreadyexisted(int pid,DateTime stdate)
+        public bool ifinpatientalreadyexisted(int pid, DateTime stdate)
         {
             DatabaseOps databaseOps = new DatabaseOps();
             DataTable dt = new DataTable();
             dt = databaseOps.displayInPat();
 
-            for (int i = 0; i < dt.Rows.Count; i++)
-            {
-                if(pid ==Convert.ToInt32(dt.Rows[i][1].ToString()))
-                {
-                    if(stdate> Convert.ToDateTime(dt.Rows[i]["DATE_OF_DIS"]))
-                    {
-                        return true;
-                    }
-                    else
-                    {
-                        return false;
-                    }
+            //for (int i = 0; i < dt.Rows.Count; i++)
+            //{
+            //    if (pid == Convert.ToInt32(dt.Rows[i][1].ToString()))
+            //    {
+            //        if (stdate > Convert.ToDateTime(dt.Rows[i]["DATE_OF_DIS"]))
+            //        {
+            //            return true;
+            //        }
+            //        else
+            //        {
+            //            return false;
+            //        }
 
-                }
-                else
-                {
-                    return false;
-                }
-            }
+            //    }
+            //    else
+            //    {
+            //        return false;
+            //    }
+            //}
 
             return true;
         }

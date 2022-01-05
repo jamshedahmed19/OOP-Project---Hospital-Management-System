@@ -70,12 +70,6 @@
       <DependentUpon>BedAvailibilityUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Bill.cs" />
-    <Compile Include="BillingUserControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="BillingUserControl.Designer.cs">
-      <DependentUpon>BillingUserControl.cs</DependentUpon>
-    </Compile>
     <Compile Include="ControlClass.cs" />
     <Compile Include="CovidUserControl.cs">
       <SubType>UserControl</SubType>
@@ -140,51 +134,6 @@
     <Compile Include="FindRoom.Designer.cs">
       <DependentUpon>FindRoom.cs</DependentUpon>
     </Compile>
-    <Compile Include="HMS_DatabaseDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>HMS_DatabaseDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="HMS_DatabaseDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>HMS_DatabaseDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="HMS_DatabaseDataSet2.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>HMS_DatabaseDataSet2.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="HMS_DatabaseDataSet3.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>HMS_DatabaseDataSet3.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="HMS_DatabaseDataSet4.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>HMS_DatabaseDataSet4.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="HMS_DatabaseDataSet5.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>HMS_DatabaseDataSet5.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="HMS_DatabaseDataSet6.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>HMS_DatabaseDataSet6.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="HMS_DatabaseDataSet7.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>HMS_DatabaseDataSet7.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="HOSPITAL_MANAGEMENT_SYSTEMDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>HOSPITAL_MANAGEMENT_SYSTEMDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="InpatientUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -196,12 +145,6 @@
     </Compile>
     <Compile Include="DoctorLogin.Designer.cs">
       <DependentUpon>DoctorLogin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="OutPatientUserControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="OutPatientUserControl.Designer.cs">
-      <DependentUpon>OutPatientUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Patient.cs" />
     <Compile Include="PatientCRUD.cs">
@@ -253,9 +196,6 @@
     <EmbeddedResource Include="BedAvailibilityUserControl.resx">
       <DependentUpon>BedAvailibilityUserControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BillingUserControl.resx">
-      <DependentUpon>BillingUserControl.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="CovidUserControl.resx">
       <DependentUpon>CovidUserControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -292,9 +232,6 @@
     <EmbeddedResource Include="DoctorLogin.resx">
       <DependentUpon>DoctorLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OutPatientUserControl.resx">
-      <DependentUpon>OutPatientUserControl.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="PatientCRUD.resx">
       <DependentUpon>PatientCRUD.cs</DependentUpon>
     </EmbeddedResource>
@@ -322,105 +259,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="HMS_DatabaseDataSet.xsc">
-      <DependentUpon>HMS_DatabaseDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="HMS_DatabaseDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>HMS_DatabaseDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="HMS_DatabaseDataSet.xss">
-      <DependentUpon>HMS_DatabaseDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="HMS_DatabaseDataSet1.xsc">
-      <DependentUpon>HMS_DatabaseDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="HMS_DatabaseDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>HMS_DatabaseDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="HMS_DatabaseDataSet1.xss">
-      <DependentUpon>HMS_DatabaseDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="HMS_DatabaseDataSet2.xsc">
-      <DependentUpon>HMS_DatabaseDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="HMS_DatabaseDataSet2.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>HMS_DatabaseDataSet2.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="HMS_DatabaseDataSet2.xss">
-      <DependentUpon>HMS_DatabaseDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="HMS_DatabaseDataSet3.xsc">
-      <DependentUpon>HMS_DatabaseDataSet3.xsd</DependentUpon>
-    </None>
-    <None Include="HMS_DatabaseDataSet3.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>HMS_DatabaseDataSet3.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="HMS_DatabaseDataSet3.xss">
-      <DependentUpon>HMS_DatabaseDataSet3.xsd</DependentUpon>
-    </None>
-    <None Include="HMS_DatabaseDataSet4.xsc">
-      <DependentUpon>HMS_DatabaseDataSet4.xsd</DependentUpon>
-    </None>
-    <None Include="HMS_DatabaseDataSet4.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>HMS_DatabaseDataSet4.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="HMS_DatabaseDataSet4.xss">
-      <DependentUpon>HMS_DatabaseDataSet4.xsd</DependentUpon>
-    </None>
-    <None Include="HMS_DatabaseDataSet5.xsc">
-      <DependentUpon>HMS_DatabaseDataSet5.xsd</DependentUpon>
-    </None>
-    <None Include="HMS_DatabaseDataSet5.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>HMS_DatabaseDataSet5.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="HMS_DatabaseDataSet5.xss">
-      <DependentUpon>HMS_DatabaseDataSet5.xsd</DependentUpon>
-    </None>
-    <None Include="HMS_DatabaseDataSet6.xsc">
-      <DependentUpon>HMS_DatabaseDataSet6.xsd</DependentUpon>
-    </None>
-    <None Include="HMS_DatabaseDataSet6.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>HMS_DatabaseDataSet6.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="HMS_DatabaseDataSet6.xss">
-      <DependentUpon>HMS_DatabaseDataSet6.xsd</DependentUpon>
-    </None>
-    <None Include="HMS_DatabaseDataSet7.xsc">
-      <DependentUpon>HMS_DatabaseDataSet7.xsd</DependentUpon>
-    </None>
-    <None Include="HMS_DatabaseDataSet7.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>HMS_DatabaseDataSet7.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="HMS_DatabaseDataSet7.xss">
-      <DependentUpon>HMS_DatabaseDataSet7.xsd</DependentUpon>
-    </None>
-    <None Include="HOSPITAL_MANAGEMENT_SYSTEMDataSet.xsc">
-      <DependentUpon>HOSPITAL_MANAGEMENT_SYSTEMDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="HOSPITAL_MANAGEMENT_SYSTEMDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>HOSPITAL_MANAGEMENT_SYSTEMDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="HOSPITAL_MANAGEMENT_SYSTEMDataSet.xss">
-      <DependentUpon>HOSPITAL_MANAGEMENT_SYSTEMDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -32,7 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CrudEmployee));
-            this.hMS_DatabaseDataSet5 = new OOP_Project___Hospital_Management_System.HMS_DatabaseDataSet5();
+            //this.hMS_DatabaseDataSet5 = new OOP_Project___Hospital_Management_System.HMS_DatabaseDataSet5();
             this.rolecbx = new System.Windows.Forms.ComboBox();
             this.depcbx = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -40,17 +40,17 @@
             this.comboBoxGender = new System.Windows.Forms.ComboBox();
             this.buttonDisplay = new System.Windows.Forms.Button();
             this.buttonUpdate = new System.Windows.Forms.Button();
-            this.dOCTORSTableAdapter = new OOP_Project___Hospital_Management_System.HMS_DatabaseDataSetTableAdapters.DOCTORSTableAdapter();
+            //this.dOCTORSTableAdapter = new OOP_Project___Hospital_Management_System.HMS_DatabaseDataSetTableAdapters.DOCTORSTableAdapter();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.textBoxAddress = new System.Windows.Forms.TextBox();
-            this.hMS_DatabaseDataSet6 = new OOP_Project___Hospital_Management_System.HMS_DatabaseDataSet6();
+            //this.hMS_DatabaseDataSet6 = new OOP_Project___Hospital_Management_System.HMS_DatabaseDataSet6();
             this.buttonInsert = new System.Windows.Forms.Button();
             this.dOCTORSBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.hMS_DatabaseDataSet = new OOP_Project___Hospital_Management_System.HMS_DatabaseDataSet();
+            //this.hMS_DatabaseDataSet = new OOP_Project___Hospital_Management_System.HMS_DatabaseDataSet();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.textBoxTel = new System.Windows.Forms.TextBox();
@@ -66,18 +66,18 @@
             this.Content = new System.Windows.Forms.Panel();
             this.password = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.hMS_DatabaseDataSet5)).BeginInit();
+            //((System.ComponentModel.ISupportInitialize)(this.hMS_DatabaseDataSet5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hMS_DatabaseDataSet6)).BeginInit();
+            //((System.ComponentModel.ISupportInitialize)(this.hMS_DatabaseDataSet6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dOCTORSBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hMS_DatabaseDataSet)).BeginInit();
+            //((System.ComponentModel.ISupportInitialize)(this.hMS_DatabaseDataSet)).BeginInit();
             this.Content.SuspendLayout();
             this.SuspendLayout();
             // 
             // hMS_DatabaseDataSet5
             // 
-            this.hMS_DatabaseDataSet5.DataSetName = "HMS_DatabaseDataSet5";
-            this.hMS_DatabaseDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            //this.hMS_DatabaseDataSet5.DataSetName = "HMS_DatabaseDataSet5";
+            //this.hMS_DatabaseDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // rolecbx
             // 
@@ -208,7 +208,7 @@
             // 
             // dOCTORSTableAdapter
             // 
-            this.dOCTORSTableAdapter.ClearBeforeFill = true;
+            //this.dOCTORSTableAdapter.ClearBeforeFill = true;
             // 
             // buttonDelete
             // 
@@ -283,8 +283,8 @@
             // 
             // hMS_DatabaseDataSet6
             // 
-            this.hMS_DatabaseDataSet6.DataSetName = "HMS_DatabaseDataSet6";
-            this.hMS_DatabaseDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            //this.hMS_DatabaseDataSet6.DataSetName = "HMS_DatabaseDataSet6";
+            //this.hMS_DatabaseDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // buttonInsert
             // 
@@ -305,8 +305,8 @@
             // 
             // hMS_DatabaseDataSet
             // 
-            this.hMS_DatabaseDataSet.DataSetName = "HMS_DatabaseDataSet";
-            this.hMS_DatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            //this.hMS_DatabaseDataSet.DataSetName = "HMS_DatabaseDataSet";
+            //this.hMS_DatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label7
             // 
@@ -507,11 +507,11 @@
             this.Name = "CrudEmployee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CrudEmployee";
-            ((System.ComponentModel.ISupportInitialize)(this.hMS_DatabaseDataSet5)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.hMS_DatabaseDataSet5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hMS_DatabaseDataSet6)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.hMS_DatabaseDataSet6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dOCTORSBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hMS_DatabaseDataSet)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.hMS_DatabaseDataSet)).EndInit();
             this.Content.ResumeLayout(false);
             this.Content.PerformLayout();
             this.ResumeLayout(false);
@@ -520,7 +520,7 @@
 
         #endregion
 
-        private HMS_DatabaseDataSet5 hMS_DatabaseDataSet5;
+        //private HMS_DatabaseDataSet5 hMS_DatabaseDataSet5;
         private System.Windows.Forms.ComboBox rolecbx;
         private System.Windows.Forms.ComboBox depcbx;
         private System.Windows.Forms.DataGridView dataGridView1;
@@ -528,17 +528,17 @@
         private System.Windows.Forms.ComboBox comboBoxGender;
         private System.Windows.Forms.Button buttonDisplay;
         private System.Windows.Forms.Button buttonUpdate;
-        private HMS_DatabaseDataSetTableAdapters.DOCTORSTableAdapter dOCTORSTableAdapter;
+        //private HMS_DatabaseDataSetTableAdapters.DOCTORSTableAdapter dOCTORSTableAdapter;
         private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.TextBox textBoxSearch;
         private System.Windows.Forms.TextBox textBoxEmail;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBoxAddress;
-        private HMS_DatabaseDataSet6 hMS_DatabaseDataSet6;
+        //private HMS_DatabaseDataSet6 hMS_DatabaseDataSet6;
         private System.Windows.Forms.Button buttonInsert;
         private System.Windows.Forms.BindingSource dOCTORSBindingSource;
-        private HMS_DatabaseDataSet hMS_DatabaseDataSet;
+        //private HMS_DatabaseDataSet hMS_DatabaseDataSet;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBoxTel;

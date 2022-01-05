@@ -24,7 +24,7 @@ namespace OOP_Project___Hospital_Management_System
         public void display()
         {
             DatabaseOps databaseOps = new DatabaseOps();
-            dataGridViewINP.DataSource = databaseOps.doctorAppointment(ID);
+            dataGridViewINP.DataSource = databaseOps.doctorAppointment();
         }
 
         public void patientList()
@@ -58,26 +58,37 @@ namespace OOP_Project___Hospital_Management_System
 
         private void DoctorsAppointmentUserControl_Load(object sender, EventArgs e)
         {
-            //display();
+            display();
             patientList();
             DoctorList();
         }
 
         private void dataGridViewINP_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            //textBoxAppointmentID.Text = dataGridViewINP.Rows[e.RowIndex].Cells[0].Value.ToString();
-            //textBoxPatName.Text = dataGridViewINP.Rows[e.RowIndex].Cells[1].Value.ToString();
-            //dateTimePickerDAY.Value = Convert.ToDateTime(dataGridViewINP.Rows[e.RowIndex].Cells[4].Value);
-            //dateTimePickerSTARTTIME.Value = Convert.ToDateTime(dataGridViewINP.Rows[e.RowIndex].Cells[5].Value.ToString());
-            //dateTimePickerENDTIME.Value = Convert.ToDateTime(dataGridViewINP.Rows[e.RowIndex].Cells[6].Value.ToString());
-            //textBoxPatientId.Text = dataGridViewINP.Rows[e.RowIndex].Cells[7].Value.ToString();
+
+            comboBoxDoctor.Text = "";
+            comboBoxpatient.Text = "";
+            comboBoxslots.Text = "";
+            textBoxAppointmentID.Text = dataGridViewINP.Rows[e.RowIndex].Cells[0].Value.ToString();
+            comboBoxDoctor.SelectedText = dataGridViewINP.Rows[e.RowIndex].Cells[1].Value.ToString();
+            comboBoxpatient.SelectedText = dataGridViewINP.Rows[e.RowIndex].Cells[2].Value.ToString();
+            dateTimePickerENDTIME.Value = Convert.ToDateTime(dataGridViewINP.Rows[e.RowIndex].Cells[3].Value.ToString());
+            comboBoxslots.SelectedText = "";
+            comboBoxslots.SelectedText = dataGridViewINP.Rows[e.RowIndex].Cells[4].Value.ToString();
+            
+            
+           
         }
 
         private void buttonCancelAppointment_Click(object sender, EventArgs e)
         {
             if(textBoxAppointmentID.Text.Length != 0)
             {
+                
                 DatabaseOps databaseOps = new DatabaseOps();
+                
+                int oldslotid = databaseOps.gettimeslotidfromappointment(textBoxAppointmentID.Text);
+                databaseOps.updatetimeslotavailability(oldslotid, 1);
                 databaseOps.delete("APPOINTMENT", textBoxAppointmentID.Text);
                 display();
             }
@@ -89,7 +100,18 @@ namespace OOP_Project___Hospital_Management_System
 
         private void buttonReschedule_Click(object sender, EventArgs e)
         {
-
+            Appointment appointment = new Appointment();
+            appointment.AppointmentID = textBoxAppointmentID.Text;
+            appointment.AppointmentDate = Convert.ToDateTime(dateTimePickerENDTIME.Value.ToString("yyyy-MM-dd"));
+            appointment.TimeslotID = Convert.ToInt32(comboBoxslots.SelectedValue.ToString());
+            appointment.DoctorID = Convert.ToInt32(comboBoxDoctor.SelectedValue.ToString());
+            appointment.PatientID = Convert.ToInt32(comboBoxpatient.SelectedValue.ToString());
+            DatabaseOps update = new DatabaseOps();
+            int oldslotid = update.gettimeslotidfromappointment(appointment.AppointmentID);
+            update.updatetimeslotavailability(oldslotid, 1);
+            update.update(appointment);
+            update.updatetimeslotavailability(appointment.TimeslotID, 0);
+            display();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -105,6 +127,25 @@ namespace OOP_Project___Hospital_Management_System
         private void comboBoxDoctor_SelectionChangeCommitted(object sender, EventArgs e)
         {
             TimeSlotlist();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Appointment appointment = new Appointment();
+            appointment.AppointmentDate = dateTimePickerENDTIME.Value;
+            appointment.TimeslotID = Convert.ToInt32(comboBoxslots.SelectedValue.ToString());
+            appointment.DoctorID = Convert.ToInt32(comboBoxDoctor.SelectedValue.ToString());
+            appointment.PatientID = Convert.ToInt32(comboBoxpatient.SelectedValue.ToString());
+            DatabaseOps insert = new DatabaseOps();
+            insert.insert(appointment);
+            insert.updatetimeslotavailability(appointment.TimeslotID, 0);
+            display();
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

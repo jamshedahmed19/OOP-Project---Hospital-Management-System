@@ -117,5 +117,10 @@ namespace OOP_Project___Hospital_Management_System
             //    OutPatientUserControl outPatientUserControl = new OutPatientUserControl(textBoxPATID.Text, textBoxPATName.Text, comboBoxDOCID.SelectedValue.ToString());
             //    ControlClass.ShowControl(outPatientUserControl, Content);
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

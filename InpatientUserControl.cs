@@ -55,11 +55,11 @@ namespace OOP_Project___Hospital_Management_System
         private void buttonRoomInsert_Click(object sender, EventArgs e)
         {
             Inpatient inpatient = new Inpatient();
-            Room patient = new Room();
             inpatient.PatID = int.Parse(comboBoxPatient.SelectedValue.ToString());
             inpatient.RoomNo = comboBoxRNo.SelectedValue.ToString();
             inpatient.Admission = dateTimePickerDOA.Value.Date;
             inpatient.Discharge = dateTimePickerDOD.Value.Date;
+            inpatient.TotalAmount = int.Parse(textBox1.Text);
             DatabaseOps databaseOps = new DatabaseOps();
             if (inpatient.ifinpatientalreadyexisted(inpatient.PatID, inpatient.Admission) == true)
             {
@@ -89,6 +89,7 @@ namespace OOP_Project___Hospital_Management_System
                 RoomNo = comboBoxRNo.SelectedValue.ToString(),
                 Admission = dateTimePickerDOA.Value.Date,
                 Discharge = dateTimePickerDOD.Value.Date,
+                TotalAmount = int.Parse(textBox1.Text),
             };
             DatabaseOps databaseOps = new DatabaseOps();
             databaseOps.update(inpatient);
@@ -97,8 +98,8 @@ namespace OOP_Project___Hospital_Management_System
 
         private void textBoxSearchVal_TextChanged(object sender, EventArgs e)
         {
-            //DatabaseOps databaseOps = new DatabaseOps();
-            //dataGridViewINP.DataSource = databaseOps.search("INPATIENTS", textBoxSearchVal.Text, comboBoxSearchBy.Text);
+            DatabaseOps databaseOps = new DatabaseOps();
+            dataGridViewINP.DataSource = databaseOps.search("INPATIENTS", textBoxSearchVal.Text, comboBoxSearchBy.Text);
         }
 
         private void dataGridViewINP_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -111,6 +112,7 @@ namespace OOP_Project___Hospital_Management_System
             dateTimePickerDOD.Value = Convert.ToDateTime(dataGridViewINP.Rows[e.RowIndex].Cells[5].Value);
             comboBoxRNo.Text = dataGridViewINP.Rows[e.RowIndex].Cells[6].Value.ToString();
             comboBoxRType.Text = dataGridViewINP.Rows[e.RowIndex].Cells[7].Value.ToString();
+            textBox1.Text = dataGridViewINP.Rows[e.RowIndex].Cells[8].Value.ToString();
         }
 
         private void buttonRoomDelete_Click(object sender, EventArgs e)
@@ -137,6 +139,18 @@ namespace OOP_Project___Hospital_Management_System
         {
 
         }
+        int noofdays;
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Room patientroom = new Room();
+            patientroom.Room_type = comboBoxRType.SelectedItem.ToString();
+            patientroom.setPricePerHour();
+            DateTime dt1 = dateTimePickerDOA.Value;
+            DateTime dt2 = dateTimePickerDOD.Value;
+            TimeSpan t = dt2 - dt1;
+            noofdays = Convert.ToInt32(t.TotalDays);
+            textBox1.Text = Convert.ToString(noofdays * patientroom.Price_Per_Hour);
+        }
     }
 
     class Inpatient : Patient
@@ -146,7 +160,7 @@ namespace OOP_Project___Hospital_Management_System
         public string RoomNo { get; set; }
         public DateTime Admission { get; set; }
         public DateTime Discharge { get; set; }
-        public int Advance { get; set; }
+        public int TotalAmount { get; set; }
 
 
         public bool ifinpatientalreadyexisted(int pid, DateTime stdate)
@@ -155,25 +169,25 @@ namespace OOP_Project___Hospital_Management_System
             DataTable dt = new DataTable();
             dt = databaseOps.displayInPat();
 
-            //for (int i = 0; i < dt.Rows.Count; i++)
-            //{
-            //    if (pid == Convert.ToInt32(dt.Rows[i][1].ToString()))
-            //    {
-            //        if (stdate > Convert.ToDateTime(dt.Rows[i]["DATE_OF_DIS"]))
-            //        {
-            //            return true;
-            //        }
-            //        else
-            //        {
-            //            return false;
-            //        }
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                if (pid == Convert.ToInt32(dt.Rows[i][1].ToString()))
+                {
+                    if (stdate > Convert.ToDateTime(dt.Rows[i]["DATE_OF_DIS"]))
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
 
-            //    }
-            //    else
-            //    {
-            //        return false;
-            //    }
-            //}
+                }
+                else
+                {
+                    return false;
+                }
+            }
 
             return true;
         }

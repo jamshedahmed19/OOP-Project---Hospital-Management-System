@@ -39,6 +39,7 @@ namespace OOP_Project___Hospital_Management_System
                 Tel = textBoxTel.Text,
                 starttime = dateTimePicker1.Value,
                 endtime = dateTimePicker2.Value,
+                PricePerAppointment = int.Parse(priceperappointment.Text),
             };
             DatabaseOps insertDoc = new DatabaseOps();
             insertDoc.insert(doctor);
@@ -69,7 +70,8 @@ namespace OOP_Project___Hospital_Management_System
             textBoxAddress.Text = dataGridView1.Rows[e.RowIndex].Cells[8].Value.ToString();
             rolecbx.Text = dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString();
             //dateTimePicker1.Value = Convert.ToDateTime(dataGridView1.Rows[e.RowIndex].Cells[10].Value.ToString());
-            //dateTimePicker2.Value = Convert.ToDateTime(dataGridView1.Rows[e.RowIndex].Cells[11].Value.ToString());
+            //dateTimePicker2.Value = Convert.ToDateTime();
+            priceperappointment.Text = dataGridView1.Rows[e.RowIndex].Cells[10].Value.ToString();
 
         }
 
@@ -87,6 +89,7 @@ namespace OOP_Project___Hospital_Management_System
                 Tel = textBoxTel.Text,
                 starttime = dateTimePicker1.Value,
                 endtime = dateTimePicker2.Value,
+                PricePerAppointment = int.Parse(priceperappointment.Text),
             };
             DatabaseOps updateDoc = new DatabaseOps();
             updateDoc.update(doctor);

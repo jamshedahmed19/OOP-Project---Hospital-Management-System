@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DoctorsAppointmentUserControl));
             this.label5 = new System.Windows.Forms.Label();
             this.textBoxTel = new System.Windows.Forms.TextBox();
@@ -63,6 +63,10 @@
             this.label20 = new System.Windows.Forms.Label();
             this.Content = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBoxslots = new System.Windows.Forms.ComboBox();
+            this.comboBoxpatient = new System.Windows.Forms.ComboBox();
+            this.comboBoxDoctor = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.buttonReschedule = new System.Windows.Forms.Button();
             this.comboBoxGender = new System.Windows.Forms.ComboBox();
             this.button4 = new System.Windows.Forms.Button();
@@ -71,10 +75,6 @@
             this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonInsert = new System.Windows.Forms.Button();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBoxDoctor = new System.Windows.Forms.ComboBox();
-            this.comboBoxpatient = new System.Windows.Forms.ComboBox();
-            this.comboBoxslots = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewINP)).BeginInit();
             this.Content.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -87,7 +87,7 @@
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
             this.label5.Location = new System.Drawing.Point(362, 153);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(106, 17);
+            this.label5.Size = new System.Drawing.Size(128, 20);
             this.label5.TabIndex = 0;
             this.label5.Text = "DESIGNATION:";
             // 
@@ -98,7 +98,7 @@
             this.textBoxTel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.textBoxTel.Location = new System.Drawing.Point(511, 131);
             this.textBoxTel.Name = "textBoxTel";
-            this.textBoxTel.Size = new System.Drawing.Size(123, 16);
+            this.textBoxTel.Size = new System.Drawing.Size(123, 20);
             this.textBoxTel.TabIndex = 4;
             // 
             // label9
@@ -108,7 +108,7 @@
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
             this.label9.Location = new System.Drawing.Point(362, 127);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(63, 17);
+            this.label9.Size = new System.Drawing.Size(75, 20);
             this.label9.TabIndex = 0;
             this.label9.Text = "TEL NO:";
             // 
@@ -119,7 +119,7 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
             this.label4.Location = new System.Drawing.Point(362, 99);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 17);
+            this.label4.Size = new System.Drawing.Size(86, 20);
             this.label4.TabIndex = 0;
             this.label4.Text = "GENDER:";
             // 
@@ -130,7 +130,7 @@
             this.textBoxName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.textBoxName.Location = new System.Drawing.Point(216, 131);
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(123, 16);
+            this.textBoxName.Size = new System.Drawing.Size(123, 20);
             this.textBoxName.TabIndex = 1;
             // 
             // textBoxDesignation
@@ -140,7 +140,7 @@
             this.textBoxDesignation.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.textBoxDesignation.Location = new System.Drawing.Point(511, 157);
             this.textBoxDesignation.Name = "textBoxDesignation";
-            this.textBoxDesignation.Size = new System.Drawing.Size(123, 16);
+            this.textBoxDesignation.Size = new System.Drawing.Size(123, 20);
             this.textBoxDesignation.TabIndex = 5;
             // 
             // label3
@@ -150,7 +150,7 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
             this.label3.Location = new System.Drawing.Point(67, 127);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 17);
+            this.label3.Size = new System.Drawing.Size(62, 20);
             this.label3.TabIndex = 0;
             this.label3.Text = "NAME:";
             // 
@@ -162,7 +162,7 @@
             this.textBoxid.Location = new System.Drawing.Point(216, 105);
             this.textBoxid.Name = "textBoxid";
             this.textBoxid.ReadOnly = true;
-            this.textBoxid.Size = new System.Drawing.Size(123, 16);
+            this.textBoxid.Size = new System.Drawing.Size(123, 20);
             this.textBoxid.TabIndex = 0;
             // 
             // textBox1
@@ -172,45 +172,46 @@
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.textBox1.Location = new System.Drawing.Point(1035, 92);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(159, 22);
+            this.textBox1.Size = new System.Drawing.Size(159, 27);
             this.textBox1.TabIndex = 17;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // dateTimePickerENDTIME
             // 
             this.dateTimePickerENDTIME.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.dateTimePickerENDTIME.Location = new System.Drawing.Point(221, 548);
             this.dateTimePickerENDTIME.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
-            this.dateTimePickerENDTIME.MinDate = new System.DateTime(2020, 1, 10, 0, 0, 0, 0);
+            this.dateTimePickerENDTIME.MinDate = new System.DateTime(2022, 4, 15, 0, 0, 0, 0);
             this.dateTimePickerENDTIME.Name = "dateTimePickerENDTIME";
-            this.dateTimePickerENDTIME.Size = new System.Drawing.Size(254, 26);
+            this.dateTimePickerENDTIME.Size = new System.Drawing.Size(254, 30);
             this.dateTimePickerENDTIME.TabIndex = 14;
-            this.dateTimePickerENDTIME.Value = new System.DateTime(2020, 11, 6, 22, 21, 3, 0);
+            this.dateTimePickerENDTIME.Value = new System.DateTime(2022, 4, 15, 0, 0, 0, 0);
             // 
             // dataGridViewINP
             // 
             this.dataGridViewINP.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewINP.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(13)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewINP.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(13)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewINP.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewINP.ColumnHeadersHeight = 40;
             this.dataGridViewINP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridViewINP.Location = new System.Drawing.Point(46, 149);
             this.dataGridViewINP.Name = "dataGridViewINP";
             this.dataGridViewINP.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewINP.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewINP.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewINP.RowHeadersWidth = 50;
             this.dataGridViewINP.RowTemplate.Height = 24;
             this.dataGridViewINP.Size = new System.Drawing.Size(1148, 318);
@@ -224,7 +225,7 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
             this.label2.Location = new System.Drawing.Point(19, 20);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(160, 37);
+            this.label2.Size = new System.Drawing.Size(195, 46);
             this.label2.TabIndex = 1;
             this.label2.Text = "PATIENT";
             // 
@@ -244,7 +245,7 @@
             "Pat Number"});
             this.comboBoxSearchBy.Location = new System.Drawing.Point(673, 86);
             this.comboBoxSearchBy.Name = "comboBoxSearchBy";
-            this.comboBoxSearchBy.Size = new System.Drawing.Size(136, 32);
+            this.comboBoxSearchBy.Size = new System.Drawing.Size(136, 37);
             this.comboBoxSearchBy.TabIndex = 3;
             // 
             // buttonCancelAppointment
@@ -271,7 +272,7 @@
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
             this.label15.Location = new System.Drawing.Point(45, 546);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(58, 24);
+            this.label15.Size = new System.Drawing.Size(74, 29);
             this.label15.TabIndex = 0;
             this.label15.Text = "Date:";
             // 
@@ -282,7 +283,7 @@
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
             this.label11.Location = new System.Drawing.Point(45, 509);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(61, 24);
+            this.label11.Size = new System.Drawing.Size(79, 29);
             this.label11.TabIndex = 0;
             this.label11.Text = "Slots:";
             // 
@@ -293,7 +294,7 @@
             this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
             this.label16.Location = new System.Drawing.Point(45, 585);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(103, 24);
+            this.label16.Size = new System.Drawing.Size(130, 29);
             this.label16.TabIndex = 0;
             this.label16.Text = "PATIENT:";
             // 
@@ -305,7 +306,7 @@
             this.textBoxAppointmentID.Location = new System.Drawing.Point(294, 92);
             this.textBoxAppointmentID.Name = "textBoxAppointmentID";
             this.textBoxAppointmentID.ReadOnly = true;
-            this.textBoxAppointmentID.Size = new System.Drawing.Size(203, 22);
+            this.textBoxAppointmentID.Size = new System.Drawing.Size(203, 27);
             this.textBoxAppointmentID.TabIndex = 0;
             // 
             // label17
@@ -315,7 +316,7 @@
             this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
             this.label17.Location = new System.Drawing.Point(515, 89);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(122, 24);
+            this.label17.Size = new System.Drawing.Size(155, 29);
             this.label17.TabIndex = 0;
             this.label17.Text = "SEARCH BY:";
             // 
@@ -326,7 +327,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
             this.label1.Location = new System.Drawing.Point(67, 101);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 17);
+            this.label1.Size = new System.Drawing.Size(109, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "DOCTOR ID:";
             // 
@@ -337,7 +338,7 @@
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
             this.label10.Location = new System.Drawing.Point(45, 473);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(103, 24);
+            this.label10.Size = new System.Drawing.Size(131, 29);
             this.label10.TabIndex = 0;
             this.label10.Text = "DOCTOR:";
             // 
@@ -348,7 +349,7 @@
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
             this.label18.Location = new System.Drawing.Point(831, 89);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(160, 24);
+            this.label18.Size = new System.Drawing.Size(199, 29);
             this.label18.TabIndex = 0;
             this.label18.Text = "SEARCH VALUE:";
             // 
@@ -359,7 +360,7 @@
             this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
             this.label19.Location = new System.Drawing.Point(67, 89);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(189, 24);
+            this.label19.Size = new System.Drawing.Size(239, 29);
             this.label19.TabIndex = 0;
             this.label19.Text = "APPOINTMENT ID:";
             // 
@@ -370,7 +371,7 @@
             this.textBoxEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.textBoxEmail.Location = new System.Drawing.Point(216, 183);
             this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(418, 16);
+            this.textBoxEmail.Size = new System.Drawing.Size(418, 20);
             this.textBoxEmail.TabIndex = 6;
             // 
             // label6
@@ -380,7 +381,7 @@
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
             this.label6.Location = new System.Drawing.Point(67, 179);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(52, 17);
+            this.label6.Size = new System.Drawing.Size(64, 20);
             this.label6.TabIndex = 0;
             this.label6.Text = "EMAIL:";
             // 
@@ -391,7 +392,7 @@
             this.textBoxDepartment.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.textBoxDepartment.Location = new System.Drawing.Point(216, 157);
             this.textBoxDepartment.Name = "textBoxDepartment";
-            this.textBoxDepartment.Size = new System.Drawing.Size(123, 16);
+            this.textBoxDepartment.Size = new System.Drawing.Size(123, 20);
             this.textBoxDepartment.TabIndex = 2;
             // 
             // label8
@@ -401,7 +402,7 @@
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
             this.label8.Location = new System.Drawing.Point(67, 153);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(107, 17);
+            this.label8.Size = new System.Drawing.Size(129, 20);
             this.label8.TabIndex = 0;
             this.label8.Text = "DEPARTMENT:";
             // 
@@ -423,7 +424,7 @@
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
             this.label7.Location = new System.Drawing.Point(67, 205);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(78, 17);
+            this.label7.Size = new System.Drawing.Size(96, 20);
             this.label7.TabIndex = 0;
             this.label7.Text = "ADDRESS:";
             // 
@@ -434,7 +435,7 @@
             this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
             this.label20.Location = new System.Drawing.Point(19, 20);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(282, 37);
+            this.label20.Size = new System.Drawing.Size(347, 46);
             this.label20.TabIndex = 1;
             this.label20.Text = "APPOINTMENTS";
             // 
@@ -502,6 +503,74 @@
             this.panel1.TabIndex = 12;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // comboBoxslots
+            // 
+            this.comboBoxslots.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBoxslots.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.comboBoxslots.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBoxslots.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.comboBoxslots.FormattingEnabled = true;
+            this.comboBoxslots.Items.AddRange(new object[] {
+            "B",
+            "G",
+            "1",
+            "2",
+            "3",
+            "4"});
+            this.comboBoxslots.Location = new System.Drawing.Point(221, 510);
+            this.comboBoxslots.Name = "comboBoxslots";
+            this.comboBoxslots.Size = new System.Drawing.Size(254, 39);
+            this.comboBoxslots.TabIndex = 21;
+            // 
+            // comboBoxpatient
+            // 
+            this.comboBoxpatient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.comboBoxpatient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBoxpatient.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.comboBoxpatient.FormattingEnabled = true;
+            this.comboBoxpatient.Location = new System.Drawing.Point(221, 585);
+            this.comboBoxpatient.Name = "comboBoxpatient";
+            this.comboBoxpatient.Size = new System.Drawing.Size(254, 33);
+            this.comboBoxpatient.TabIndex = 20;
+            // 
+            // comboBoxDoctor
+            // 
+            this.comboBoxDoctor.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBoxDoctor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.comboBoxDoctor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBoxDoctor.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.comboBoxDoctor.FormattingEnabled = true;
+            this.comboBoxDoctor.Items.AddRange(new object[] {
+            "B",
+            "G",
+            "1",
+            "2",
+            "3",
+            "4"});
+            this.comboBoxDoctor.Location = new System.Drawing.Point(221, 469);
+            this.comboBoxDoctor.Name = "comboBoxDoctor";
+            this.comboBoxDoctor.Size = new System.Drawing.Size(254, 39);
+            this.comboBoxDoctor.TabIndex = 19;
+            this.comboBoxDoctor.SelectedIndexChanged += new System.EventHandler(this.comboBoxDoctor_SelectedIndexChanged);
+            this.comboBoxDoctor.SelectionChangeCommitted += new System.EventHandler(this.comboBoxDoctor_SelectionChangeCommitted);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(13)))));
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(864, 503);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(330, 50);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "Appoint";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // buttonReschedule
             // 
             this.buttonReschedule.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
@@ -531,7 +600,7 @@
             "Other"});
             this.comboBoxGender.Location = new System.Drawing.Point(511, 103);
             this.comboBoxGender.Name = "comboBoxGender";
-            this.comboBoxGender.Size = new System.Drawing.Size(123, 17);
+            this.comboBoxGender.Size = new System.Drawing.Size(123, 21);
             this.comboBoxGender.TabIndex = 3;
             // 
             // button4
@@ -621,75 +690,8 @@
             this.textBoxSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
             this.textBoxSearch.Location = new System.Drawing.Point(706, 262);
             this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(259, 34);
+            this.textBoxSearch.Size = new System.Drawing.Size(259, 42);
             this.textBoxSearch.TabIndex = 11;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(13)))));
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(864, 503);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(330, 50);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "Appoint";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // comboBoxDoctor
-            // 
-            this.comboBoxDoctor.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboBoxDoctor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.comboBoxDoctor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBoxDoctor.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.comboBoxDoctor.FormattingEnabled = true;
-            this.comboBoxDoctor.Items.AddRange(new object[] {
-            "B",
-            "G",
-            "1",
-            "2",
-            "3",
-            "4"});
-            this.comboBoxDoctor.Location = new System.Drawing.Point(221, 469);
-            this.comboBoxDoctor.Name = "comboBoxDoctor";
-            this.comboBoxDoctor.Size = new System.Drawing.Size(254, 33);
-            this.comboBoxDoctor.TabIndex = 19;
-            this.comboBoxDoctor.SelectedIndexChanged += new System.EventHandler(this.comboBoxDoctor_SelectedIndexChanged);
-            this.comboBoxDoctor.SelectionChangeCommitted += new System.EventHandler(this.comboBoxDoctor_SelectionChangeCommitted);
-            // 
-            // comboBoxpatient
-            // 
-            this.comboBoxpatient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.comboBoxpatient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBoxpatient.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.comboBoxpatient.FormattingEnabled = true;
-            this.comboBoxpatient.Location = new System.Drawing.Point(221, 585);
-            this.comboBoxpatient.Name = "comboBoxpatient";
-            this.comboBoxpatient.Size = new System.Drawing.Size(254, 28);
-            this.comboBoxpatient.TabIndex = 20;
-            // 
-            // comboBoxslots
-            // 
-            this.comboBoxslots.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboBoxslots.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.comboBoxslots.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBoxslots.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.comboBoxslots.FormattingEnabled = true;
-            this.comboBoxslots.Items.AddRange(new object[] {
-            "B",
-            "G",
-            "1",
-            "2",
-            "3",
-            "4"});
-            this.comboBoxslots.Location = new System.Drawing.Point(221, 510);
-            this.comboBoxslots.Name = "comboBoxslots";
-            this.comboBoxslots.Size = new System.Drawing.Size(254, 33);
-            this.comboBoxslots.TabIndex = 21;
             // 
             // DoctorsAppointmentUserControl
             // 

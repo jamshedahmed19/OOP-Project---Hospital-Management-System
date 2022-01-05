@@ -33,6 +33,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CRUDDoctor));
             this.Content = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.rolecbx = new System.Windows.Forms.ComboBox();
             this.depcbx = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -59,26 +63,26 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.hMS_DatabaseDataSet5 = new OOP_Project___Hospital_Management_System.HMS_DatabaseDataSet5();
-            this.hMS_DatabaseDataSet6 = new OOP_Project___Hospital_Management_System.HMS_DatabaseDataSet6();
-            this.dOCTORSTableAdapter = new OOP_Project___Hospital_Management_System.HMS_DatabaseDataSetTableAdapters.DOCTORSTableAdapter();
-            this.hMS_DatabaseDataSet = new OOP_Project___Hospital_Management_System.HMS_DatabaseDataSet();
+            //this.hMS_DatabaseDataSet5 = new OOP_Project___Hospital_Management_System.HMS_DatabaseDataSet5();
+            //this.hMS_DatabaseDataSet6 = new OOP_Project___Hospital_Management_System.HMS_DatabaseDataSet6();
+            //this.dOCTORSTableAdapter = new OOP_Project___Hospital_Management_System.HMS_DatabaseDataSetTableAdapters.DOCTORSTableAdapter();
+            //this.hMS_DatabaseDataSet = new OOP_Project___Hospital_Management_System.HMS_DatabaseDataSet();
             this.dOCTORSBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.priceperappointment = new System.Windows.Forms.TextBox();
             this.Content.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hMS_DatabaseDataSet5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hMS_DatabaseDataSet6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hMS_DatabaseDataSet)).BeginInit();
+            //((System.ComponentModel.ISupportInitialize)(this.hMS_DatabaseDataSet5)).BeginInit();
+            //((System.ComponentModel.ISupportInitialize)(this.hMS_DatabaseDataSet6)).BeginInit();
+            //((System.ComponentModel.ISupportInitialize)(this.hMS_DatabaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dOCTORSBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // Content
             // 
             this.Content.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(13)))));
+            this.Content.Controls.Add(this.priceperappointment);
+            this.Content.Controls.Add(this.label14);
             this.Content.Controls.Add(this.label13);
             this.Content.Controls.Add(this.label12);
             this.Content.Controls.Add(this.dateTimePicker2);
@@ -117,6 +121,42 @@
             this.Content.TabIndex = 2;
             this.Content.Paint += new System.Windows.Forms.PaintEventHandler(this.Content_Paint);
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.label13.Location = new System.Drawing.Point(361, 60);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(133, 29);
+            this.label13.TabIndex = 18;
+            this.label13.Text = "End Time:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.label12.Location = new System.Drawing.Point(358, 30);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(141, 29);
+            this.label12.TabIndex = 17;
+            this.label12.Text = "Start Time:";
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(492, 60);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(200, 30);
+            this.dateTimePicker2.TabIndex = 16;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(492, 28);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 30);
+            this.dateTimePicker1.TabIndex = 15;
+            // 
             // rolecbx
             // 
             this.rolecbx.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
@@ -127,7 +167,7 @@
             this.rolecbx.FormattingEnabled = true;
             this.rolecbx.Location = new System.Drawing.Point(569, 168);
             this.rolecbx.Name = "rolecbx";
-            this.rolecbx.Size = new System.Drawing.Size(123, 33);
+            this.rolecbx.Size = new System.Drawing.Size(123, 39);
             this.rolecbx.TabIndex = 14;
             this.rolecbx.SelectedIndexChanged += new System.EventHandler(this.rolecbx_SelectedIndexChanged);
             // 
@@ -141,7 +181,7 @@
             this.depcbx.FormattingEnabled = true;
             this.depcbx.Location = new System.Drawing.Point(243, 165);
             this.depcbx.Name = "depcbx";
-            this.depcbx.Size = new System.Drawing.Size(123, 33);
+            this.depcbx.Size = new System.Drawing.Size(123, 39);
             this.depcbx.TabIndex = 13;
             this.depcbx.SelectedIndexChanged += new System.EventHandler(this.depcbx_SelectedIndexChanged);
             // 
@@ -189,11 +229,10 @@
             "Doctor ID",
             "Name",
             "Number",
-            "Designation",
-            "Department"});
+            ""});
             this.comboBoxSearchBy.Location = new System.Drawing.Point(860, 220);
             this.comboBoxSearchBy.Name = "comboBoxSearchBy";
-            this.comboBoxSearchBy.Size = new System.Drawing.Size(370, 33);
+            this.comboBoxSearchBy.Size = new System.Drawing.Size(370, 39);
             this.comboBoxSearchBy.TabIndex = 3;
             this.comboBoxSearchBy.SelectedIndexChanged += new System.EventHandler(this.comboBoxSearchBy_SelectedIndexChanged);
             // 
@@ -211,7 +250,7 @@
             "Other"});
             this.comboBoxGender.Location = new System.Drawing.Point(569, 92);
             this.comboBoxGender.Name = "comboBoxGender";
-            this.comboBoxGender.Size = new System.Drawing.Size(123, 33);
+            this.comboBoxGender.Size = new System.Drawing.Size(123, 39);
             this.comboBoxGender.TabIndex = 3;
             this.comboBoxGender.SelectedIndexChanged += new System.EventHandler(this.comboBoxGender_SelectedIndexChanged);
             // 
@@ -290,7 +329,7 @@
             this.textBoxSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.textBoxSearch.Location = new System.Drawing.Point(906, 266);
             this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(324, 25);
+            this.textBoxSearch.Size = new System.Drawing.Size(324, 31);
             this.textBoxSearch.TabIndex = 6;
             this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
             // 
@@ -301,7 +340,7 @@
             this.textBoxEmail.Font = new System.Drawing.Font("Segoe UI", 13.8F);
             this.textBoxEmail.Location = new System.Drawing.Point(243, 211);
             this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(449, 25);
+            this.textBoxEmail.Size = new System.Drawing.Size(449, 31);
             this.textBoxEmail.TabIndex = 6;
             this.textBoxEmail.TextChanged += new System.EventHandler(this.textBoxEmail_TextChanged);
             // 
@@ -312,7 +351,7 @@
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
             this.label6.Location = new System.Drawing.Point(67, 207);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(77, 24);
+            this.label6.Size = new System.Drawing.Size(95, 29);
             this.label6.TabIndex = 0;
             this.label6.Text = "EMAIL:";
             this.label6.Click += new System.EventHandler(this.label6_Click);
@@ -324,7 +363,7 @@
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
             this.label8.Location = new System.Drawing.Point(67, 170);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(157, 24);
+            this.label8.Size = new System.Drawing.Size(197, 29);
             this.label8.TabIndex = 0;
             this.label8.Text = "DEPARTMENT:";
             this.label8.Click += new System.EventHandler(this.label8_Click);
@@ -348,7 +387,7 @@
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
             this.label7.Location = new System.Drawing.Point(67, 240);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(112, 24);
+            this.label7.Size = new System.Drawing.Size(141, 29);
             this.label7.TabIndex = 0;
             this.label7.Text = "ADDRESS:";
             this.label7.Click += new System.EventHandler(this.label7_Click);
@@ -360,7 +399,7 @@
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
             this.label5.Location = new System.Drawing.Point(383, 174);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 24);
+            this.label5.Size = new System.Drawing.Size(75, 29);
             this.label5.TabIndex = 0;
             this.label5.Text = "Role:";
             this.label5.Click += new System.EventHandler(this.label5_Click);
@@ -372,7 +411,7 @@
             this.textBoxTel.Font = new System.Drawing.Font("Segoe UI", 13.8F);
             this.textBoxTel.Location = new System.Drawing.Point(569, 137);
             this.textBoxTel.Name = "textBoxTel";
-            this.textBoxTel.Size = new System.Drawing.Size(123, 25);
+            this.textBoxTel.Size = new System.Drawing.Size(123, 31);
             this.textBoxTel.TabIndex = 4;
             this.textBoxTel.TextChanged += new System.EventHandler(this.textBoxTel_TextChanged);
             // 
@@ -383,7 +422,7 @@
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
             this.label9.Location = new System.Drawing.Point(383, 135);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(91, 24);
+            this.label9.Size = new System.Drawing.Size(114, 29);
             this.label9.TabIndex = 0;
             this.label9.Text = "TEL NO:";
             this.label9.Click += new System.EventHandler(this.label9_Click);
@@ -395,7 +434,7 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
             this.label4.Location = new System.Drawing.Point(383, 94);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(102, 24);
+            this.label4.Size = new System.Drawing.Size(128, 29);
             this.label4.TabIndex = 0;
             this.label4.Text = "GENDER:";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -407,7 +446,7 @@
             this.textBoxName.Font = new System.Drawing.Font("Segoe UI", 13.8F);
             this.textBoxName.Location = new System.Drawing.Point(243, 137);
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(123, 25);
+            this.textBoxName.Size = new System.Drawing.Size(123, 31);
             this.textBoxName.TabIndex = 1;
             this.textBoxName.TextChanged += new System.EventHandler(this.textBoxName_TextChanged);
             // 
@@ -418,7 +457,7 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
             this.label3.Location = new System.Drawing.Point(67, 135);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 24);
+            this.label3.Size = new System.Drawing.Size(93, 29);
             this.label3.TabIndex = 0;
             this.label3.Text = "NAME:";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -431,7 +470,7 @@
             this.textBoxid.Location = new System.Drawing.Point(243, 96);
             this.textBoxid.Name = "textBoxid";
             this.textBoxid.ReadOnly = true;
-            this.textBoxid.Size = new System.Drawing.Size(123, 25);
+            this.textBoxid.Size = new System.Drawing.Size(123, 31);
             this.textBoxid.TabIndex = 0;
             this.textBoxid.TextChanged += new System.EventHandler(this.textBoxid_TextChanged);
             // 
@@ -442,7 +481,7 @@
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
             this.label11.Location = new System.Drawing.Point(702, 220);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(122, 24);
+            this.label11.Size = new System.Drawing.Size(155, 29);
             this.label11.TabIndex = 0;
             this.label11.Text = "SEARCH BY:";
             this.label11.Click += new System.EventHandler(this.label11_Click);
@@ -454,7 +493,7 @@
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
             this.label10.Location = new System.Drawing.Point(702, 265);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(160, 24);
+            this.label10.Size = new System.Drawing.Size(199, 29);
             this.label10.TabIndex = 0;
             this.label10.Text = "SEARCH VALUE:";
             this.label10.Click += new System.EventHandler(this.label10_Click);
@@ -466,7 +505,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
             this.label1.Location = new System.Drawing.Point(67, 94);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(128, 24);
+            this.label1.Size = new System.Drawing.Size(163, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "DOCTOR ID:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -478,71 +517,56 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
             this.label2.Location = new System.Drawing.Point(19, 20);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(161, 37);
+            this.label2.Size = new System.Drawing.Size(199, 46);
             this.label2.TabIndex = 1;
             this.label2.Text = "DOCTOR";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // hMS_DatabaseDataSet5
             // 
-            this.hMS_DatabaseDataSet5.DataSetName = "HMS_DatabaseDataSet5";
-            this.hMS_DatabaseDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            //this.hMS_DatabaseDataSet5.DataSetName = "HMS_DatabaseDataSet5";
+            //this.hMS_DatabaseDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // hMS_DatabaseDataSet6
             // 
-            this.hMS_DatabaseDataSet6.DataSetName = "HMS_DatabaseDataSet6";
-            this.hMS_DatabaseDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            //this.hMS_DatabaseDataSet6.DataSetName = "HMS_DatabaseDataSet6";
+            //this.hMS_DatabaseDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dOCTORSTableAdapter
             // 
-            this.dOCTORSTableAdapter.ClearBeforeFill = true;
+            //this.dOCTORSTableAdapter.ClearBeforeFill = true;
             // 
             // hMS_DatabaseDataSet
             // 
-            this.hMS_DatabaseDataSet.DataSetName = "HMS_DatabaseDataSet";
-            this.hMS_DatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            //this.hMS_DatabaseDataSet.DataSetName = "HMS_DatabaseDataSet";
+            //this.hMS_DatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dOCTORSBindingSource
             // 
             this.dOCTORSBindingSource.DataMember = "DOCTORS";
-            this.dOCTORSBindingSource.DataSource = this.hMS_DatabaseDataSet;
+            //this.dOCTORSBindingSource.DataSource = this.hMS_DatabaseDataSet;
             this.dOCTORSBindingSource.CurrentChanged += new System.EventHandler(this.dOCTORSBindingSource_CurrentChanged);
             // 
-            // dateTimePicker1
+            // label14
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(492, 28);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 26);
-            this.dateTimePicker1.TabIndex = 15;
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.label14.Location = new System.Drawing.Point(810, 37);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(280, 29);
+            this.label14.TabIndex = 20;
+            this.label14.Text = "Price per Appointment:";
             // 
-            // dateTimePicker2
+            // priceperappointment
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(492, 60);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 26);
-            this.dateTimePicker2.TabIndex = 16;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.label12.Location = new System.Drawing.Point(358, 30);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(110, 24);
-            this.label12.TabIndex = 17;
-            this.label12.Text = "Start Time:";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
-            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.label13.Location = new System.Drawing.Point(361, 60);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(107, 24);
-            this.label13.TabIndex = 18;
-            this.label13.Text = "End Time:";
+            this.priceperappointment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.priceperappointment.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.priceperappointment.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.priceperappointment.Location = new System.Drawing.Point(1107, 37);
+            this.priceperappointment.Name = "priceperappointment";
+            this.priceperappointment.Size = new System.Drawing.Size(123, 31);
+            this.priceperappointment.TabIndex = 21;
             // 
             // CRUDDoctor
             // 
@@ -553,9 +577,9 @@
             this.Content.ResumeLayout(false);
             this.Content.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hMS_DatabaseDataSet5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hMS_DatabaseDataSet6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hMS_DatabaseDataSet)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.hMS_DatabaseDataSet5)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.hMS_DatabaseDataSet6)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.hMS_DatabaseDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dOCTORSBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -588,10 +612,10 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox comboBoxSearchBy;
-        private HMS_DatabaseDataSet5 hMS_DatabaseDataSet5;
-        private HMS_DatabaseDataSet6 hMS_DatabaseDataSet6;
-        private HMS_DatabaseDataSetTableAdapters.DOCTORSTableAdapter dOCTORSTableAdapter;
-        private HMS_DatabaseDataSet hMS_DatabaseDataSet;
+        //private HMS_DatabaseDataSet5 hMS_DatabaseDataSet5;
+        //private HMS_DatabaseDataSet6 hMS_DatabaseDataSet6;
+        //private HMS_DatabaseDataSetTableAdapters.DOCTORSTableAdapter dOCTORSTableAdapter;
+        //private HMS_DatabaseDataSet hMS_DatabaseDataSet;
         private System.Windows.Forms.BindingSource dOCTORSBindingSource;
         private System.Windows.Forms.ComboBox rolecbx;
         private System.Windows.Forms.ComboBox depcbx;
@@ -599,5 +623,7 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox priceperappointment;
     }
 }

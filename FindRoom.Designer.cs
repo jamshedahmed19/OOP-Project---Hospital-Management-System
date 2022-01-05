@@ -45,10 +45,10 @@
             this.label13 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.rOOMBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.hMS_DatabaseDataSet4 = new OOP_Project___Hospital_Management_System.HMS_DatabaseDataSet4();
+            //this.hMS_DatabaseDataSet4 = new OOP_Project___Hospital_Management_System.HMS_DatabaseDataSet4();
             this.buttonFindRoom = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.rOOMTableAdapter = new OOP_Project___Hospital_Management_System.HMS_DatabaseDataSet4TableAdapters.ROOMTableAdapter();
+            //this.rOOMTableAdapter = new OOP_Project___Hospital_Management_System.HMS_DatabaseDataSet4TableAdapters.ROOMTableAdapter();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rOOMNODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fLOORNODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,7 +58,7 @@
             this.SELECT = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rOOMBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hMS_DatabaseDataSet4)).BeginInit();
+            //((System.ComponentModel.ISupportInitialize)(this.hMS_DatabaseDataSet4)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonExit
@@ -217,12 +217,12 @@
             // rOOMBindingSource
             // 
             this.rOOMBindingSource.DataMember = "ROOM";
-            this.rOOMBindingSource.DataSource = this.hMS_DatabaseDataSet4;
+            //this.rOOMBindingSource.DataSource = this.hMS_DatabaseDataSet4;
             // 
             // hMS_DatabaseDataSet4
             // 
-            this.hMS_DatabaseDataSet4.DataSetName = "HMS_DatabaseDataSet4";
-            this.hMS_DatabaseDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            //this.hMS_DatabaseDataSet4.DataSetName = "HMS_DatabaseDataSet4";
+            //this.hMS_DatabaseDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // buttonFindRoom
             // 
@@ -254,7 +254,7 @@
             // 
             // rOOMTableAdapter
             // 
-            this.rOOMTableAdapter.ClearBeforeFill = true;
+            //this.rOOMTableAdapter.ClearBeforeFill = true;
             // 
             // iDDataGridViewTextBoxColumn
             // 
@@ -341,7 +341,7 @@
             this.Load += new System.EventHandler(this.FindRoom_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rOOMBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hMS_DatabaseDataSet4)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.hMS_DatabaseDataSet4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -360,9 +360,9 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button buttonFindRoom;
         private System.Windows.Forms.Label label1;
-        private HMS_DatabaseDataSet4 hMS_DatabaseDataSet4;
+        //private HMS_DatabaseDataSet4 hMS_DatabaseDataSet4;
         private System.Windows.Forms.BindingSource rOOMBindingSource;
-        private HMS_DatabaseDataSet4TableAdapters.ROOMTableAdapter rOOMTableAdapter;
+        //private HMS_DatabaseDataSet4TableAdapters.ROOMTableAdapter rOOMTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rOOMNODataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fLOORNODataGridViewTextBoxColumn;

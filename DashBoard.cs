@@ -50,6 +50,9 @@ namespace OOP_Project___Hospital_Management_System
             {
                 AdminHomeControl homeControl = new AdminHomeControl();
                 ControlClass.ShowControl(homeControl, Content);
+
+                //DoctorHomeUserControl doctorHomeUserControl = new DoctorHomeUserControl(ID, Departmental_ID);
+                //ControlClass.ShowControl(doctorHomeUserControl, Content);
             }
             else
             {
@@ -97,8 +100,8 @@ namespace OOP_Project___Hospital_Management_System
 
         private void buttonBilling_Click(object sender, EventArgs e)
         {
-            BillingUserControl billingUserControl = new BillingUserControl();
-            ControlClass.ShowControl(billingUserControl, Content);
+            //BillingUserControl billingUserControl = new BillingUserControl();
+            //ControlClass.ShowControl(billingUserControl, Content);
         }
 
         private void buttonSettings_Click(object sender, EventArgs e)
@@ -125,6 +128,17 @@ namespace OOP_Project___Hospital_Management_System
         {
             RoomCRUD roomCRUD = new RoomCRUD();
             ControlClass.ShowControl(roomCRUD, Content);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //DoctorsAppointmentUserControl appointmentUserControl = new DoctorsAppointmentUserControl();
+            //appointmentUserControl.Show();
+        }
+
+        private void Content_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

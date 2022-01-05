@@ -87,6 +87,12 @@ namespace OOP_Project___Hospital_Management_System
             }
         }
 
+
+        //public int GetPricePerDay()
+        //{
+        //    return price_per_hour;
+        //}
+
         public string Room_type
         {
             get => room_type;
@@ -102,5 +108,11 @@ namespace OOP_Project___Hospital_Management_System
                 }
             }
         }
+
+
+        //public int GetTotalAmount()
+        //{
+
+        //}
     }
 }

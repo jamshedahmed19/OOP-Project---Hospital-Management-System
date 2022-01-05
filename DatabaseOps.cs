@@ -90,7 +90,7 @@
                 int id = GetIDbyName("Department", doctor.Department, "DepartmentName", "ID");
                 int rid = GetIDbyName("DoctorRoles", doctor.Designation, "Rolename", "ID");
                 sqlConnection.Open();
-                sqlCommand = new SqlCommand("UPDATE DOCTORS SET DOC_NAME = @NAME, DOC_GENDER = @GENDER, DOC_ADDRESS = @ADDRESS, DOC_tel = @TEL, DOC_Role_ID  = @DESIG, DOC_DEP_ID = @DEPART, DOC_EMAIL = @EMAIL, Doc_timing_start = @st, Doc_timing_end = @et ,PricePerAppointment = @ppa WHERE DOC_ID = @DID", sqlConnection);
+                sqlCommand = new SqlCommand("UPDATE DOCTORS SET DOC_NAME = @NAME, DOC_GENDER = @GENDER, DOC_ADDRESS = @ADDRESS, DOC_tel = @TEL, DOC_Role_ID  = @DESIG, DOC_DEP_ID = @DEPART, DOC_EMAIL = @EMAIL ,PricePerAppointment = @ppa WHERE DOC_ID = @DID", sqlConnection);
                 sqlCommand.Parameters.AddWithValue("@DID", doctor.ID);
                 sqlCommand.Parameters.AddWithValue("@NAME", doctor.Name);
                 sqlCommand.Parameters.AddWithValue("@GENDER", doctor.Gender);
@@ -99,13 +99,14 @@
                 sqlCommand.Parameters.AddWithValue("@DESIG", rid);
                 sqlCommand.Parameters.AddWithValue("@EMAIL", doctor.Email);
                 sqlCommand.Parameters.AddWithValue("@DEPART", id);
-                sqlCommand.Parameters.AddWithValue("@st", doctor.starttime);
-                sqlCommand.Parameters.AddWithValue("@et", doctor.endtime);
+                //sqlCommand.Parameters.AddWithValue("@st", doctor.starttime);
+                //sqlCommand.Parameters.AddWithValue("@et", doctor.endtime);
                 sqlCommand.Parameters.AddWithValue("@ppa", doctor.PricePerAppointment);
                 int a = sqlCommand.ExecuteNonQuery();
                 if (a > 0)
                 {
-                    MessageBox.Show("Data Updated Successfully", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    sqlConnection.Close();
+                    insertavailability(doctor);
                 }
                 else
                 {
@@ -591,6 +592,15 @@
             }
         }
 
+        public void DeleteTimeSlots(int id)
+        {
+            sqlConnection.Open();
+            sqlCommand = new SqlCommand("DELETE FROM timeSlots WHERE slotdocid = @sdi", sqlConnection);
+            sqlCommand.Parameters.AddWithValue("@sdi", id);
+            sqlCommand.ExecuteNonQuery();
+            sqlConnection.Close();
+        }
+
         public void delete(string tableValue, string id)
         {
             try
@@ -668,7 +678,9 @@
             /*else */
             if (value == "DOCTORS")
             {
-                sqlDataAdapter = new SqlDataAdapter("SELECT Doctors.ID,Doctors.DOC_ID,Doctors.DOC_NAME,Department.DepartmentName,Doctors.DOC_TEL,Doctors.DOC_EMAIL,Doctors.DOC_PASS,Doctors.DOC_GENDER,Doctors.DOC_ADDRESS,DoctorRoles.Rolename,DOCTORS.PricePerAppointment from Doctors inner join Department on Department.ID = Doctors.DOC_DEP_ID inner join DoctorRoles on DoctorRoles.ID = Doctors.DOC_Role_ID", sqlConnection);
+                sqlDataAdapter = new SqlDataAdapter(@"SELECT Doctors.ID,Doctors.DOC_ID,Doctors.DOC_NAME,Department.DepartmentName,Doctors.DOC_TEL,Doctors.DOC_EMAIL,Doctors.DOC_PASS,Doctors.DOC_GENDER,Doctors.DOC_ADDRESS,DoctorRoles.Rolename,DOCTORS.PricePerAppointment from Doctors 
+inner join Department on Department.ID = Doctors.DOC_DEP_ID
+inner join DoctorRoles on DoctorRoles.ID = Doctors.DOC_Role_ID", sqlConnection);
 
             }
             else if (value == "EMPLOYEE")

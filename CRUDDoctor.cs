@@ -51,9 +51,10 @@ namespace OOP_Project___Hospital_Management_System
         {
             display();
         }
-
+        int DoctorID;
         private void dataGridView1_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
+            DoctorID = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
             textBoxid.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
             textBoxName.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
             depcbx.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
@@ -72,6 +73,8 @@ namespace OOP_Project___Hospital_Management_System
             //dateTimePicker1.Value = Convert.ToDateTime(dataGridView1.Rows[e.RowIndex].Cells[10].Value.ToString());
             //dateTimePicker2.Value = Convert.ToDateTime();
             priceperappointment.Text = dataGridView1.Rows[e.RowIndex].Cells[10].Value.ToString();
+            //dateTimePicker1.Value = Convert.ToDateTime(dataGridView1.Rows[e.RowIndex].Cells[11].Value.ToString());
+            //dateTimePicker2.Value = Convert.ToDateTime(dataGridView1.Rows[e.RowIndex].Cells[12].Value.ToString());
 
         }
 
@@ -92,6 +95,7 @@ namespace OOP_Project___Hospital_Management_System
                 PricePerAppointment = int.Parse(priceperappointment.Text),
             };
             DatabaseOps updateDoc = new DatabaseOps();
+            updateDoc.DeleteTimeSlots(DoctorID);
             updateDoc.update(doctor);
             display();
             //doctor.addEmployee(doctor);
@@ -102,7 +106,9 @@ namespace OOP_Project___Hospital_Management_System
             if (textBoxid.Text.Length != 0)
             {
                 DatabaseOps databaseOps = new DatabaseOps();
-                databaseOps.delete("DOCTORS", textBoxid.Text);
+                DatabaseOps db = new DatabaseOps();
+                databaseOps.DeleteTimeSlots(DoctorID);
+                db.delete("DOCTORS", textBoxid.Text);
                 display();
             }
             else

@@ -780,17 +780,45 @@ inner join DoctorRoles on DoctorRoles.ID = Doctors.DOC_Role_ID", sqlConnection);
                 {
                     if (searchByValue.ToLower() == "patient name")
                     {
-                        sqlDataAdapter = new SqlDataAdapter("SELECT * FROM PATIENTS ON PAT_NAME LIKE '%" + searchValue + "%'", sqlConnection);
+                        sqlDataAdapter = new SqlDataAdapter("SELECT * FROM PATIENTS WHERE PAT_NAME LIKE '%" + searchValue + "%'", sqlConnection);
                     }
 
                     else if (searchByValue.ToLower() == "patient number")
                     {
-                        sqlDataAdapter = new SqlDataAdapter("SELECT * FROM PATIENTS ON PAT_TEL LIKE '%" + searchValue + "%'", sqlConnection);
+                        sqlDataAdapter = new SqlDataAdapter("SELECT * FROM PATIENTS WHERE PAT_TEL LIKE '%" + searchValue + "%'", sqlConnection);
                     }
                     
                     else
                     {
-                        sqlDataAdapter = new SqlDataAdapter("SELECT * FROM PATIENTS PAT_ID LIKE '%" + searchValue + "%'", sqlConnection);
+                        sqlDataAdapter = new SqlDataAdapter("SELECT * FROM PATIENTS WHERE PAT_ID LIKE '%" + searchValue + "%'", sqlConnection);
+                    }
+                }
+
+                else if (tableValue == "EMPLOYEE")
+                {
+                    if (searchByValue.ToLower() == "name")
+                    {
+                        sqlDataAdapter = new SqlDataAdapter("select EMPLOYEE.ID,EMPLOYEE.EMP_ID,EMPLOYEE.EMP_NAME,EMPLOYEE.EMP_GENDER,EMPLOYEE.EMP_PASS,Department.DepartmentName,EMPLOYEE.EMP_TEL,EMPLOYEE.EMP_EMAIL,EMPLOYEE.EMP_ADDRESS,EmployeeRoles.RoleName from Employee inner join Department on EMPLOYEE.DepartmentID = Department.ID inner join EmployeeRoles on EMPLOYEE.RoleID = EmployeeRoles.ID WHERE EMP_NAME LIKE '%" + searchValue + "%'", sqlConnection);
+                    }
+
+                    else if (searchByValue.ToLower() == "number")
+                    {
+                        sqlDataAdapter = new SqlDataAdapter("select EMPLOYEE.ID,EMPLOYEE.EMP_ID,EMPLOYEE.EMP_NAME,EMPLOYEE.EMP_GENDER,EMPLOYEE.EMP_PASS,Department.DepartmentName,EMPLOYEE.EMP_TEL,EMPLOYEE.EMP_EMAIL,EMPLOYEE.EMP_ADDRESS,EmployeeRoles.RoleName from Employee inner join Department on EMPLOYEE.DepartmentID = Department.ID inner join EmployeeRoles on EMPLOYEE.RoleID = EmployeeRoles.ID WHERE EMP_TEL LIKE '%" + searchValue + "%'", sqlConnection);
+                    }
+
+                    else if (searchByValue.ToLower() == "email")
+                    {
+                        sqlDataAdapter = new SqlDataAdapter("select EMPLOYEE.ID,EMPLOYEE.EMP_ID,EMPLOYEE.EMP_NAME,EMPLOYEE.EMP_GENDER,EMPLOYEE.EMP_PASS,Department.DepartmentName,EMPLOYEE.EMP_TEL,EMPLOYEE.EMP_EMAIL,EMPLOYEE.EMP_ADDRESS,EmployeeRoles.RoleName from Employee inner join Department on EMPLOYEE.DepartmentID = Department.ID inner join EmployeeRoles on EMPLOYEE.RoleID = EmployeeRoles.ID WHERE EMP_EMAIL LIKE '%" + searchValue + "%'", sqlConnection);
+                    }
+
+                    else if (searchByValue.ToLower() == "role")
+                    {
+                        sqlDataAdapter = new SqlDataAdapter("select EMPLOYEE.ID,EMPLOYEE.EMP_ID,EMPLOYEE.EMP_NAME,EMPLOYEE.EMP_GENDER,EMPLOYEE.EMP_PASS,Department.DepartmentName,EMPLOYEE.EMP_TEL,EMPLOYEE.EMP_EMAIL,EMPLOYEE.EMP_ADDRESS,EmployeeRoles.RoleName from Employee inner join Department on EMPLOYEE.DepartmentID = Department.ID inner join EmployeeRoles on EMPLOYEE.RoleID = EmployeeRoles.ID WHERE EMP_EMAIL LIKE '%" + searchValue + "%'", sqlConnection);
+                    }
+
+                    else
+                    {
+                        sqlDataAdapter = new SqlDataAdapter("select EMPLOYEE.ID,EMPLOYEE.EMP_ID,EMPLOYEE.EMP_NAME,EMPLOYEE.EMP_GENDER,EMPLOYEE.EMP_PASS,Department.DepartmentName,EMPLOYEE.EMP_TEL,EMPLOYEE.EMP_EMAIL,EMPLOYEE.EMP_ADDRESS,EmployeeRoles.RoleName from Employee inner join Department on EMPLOYEE.DepartmentID = Department.ID inner join EmployeeRoles on EMPLOYEE.RoleID = EmployeeRoles.ID WHERE EMP_ID LIKE '%" + searchValue + "%'", sqlConnection);
                     }
                 }
 
@@ -801,22 +829,22 @@ inner join DoctorRoles on DoctorRoles.ID = Doctors.DOC_Role_ID", sqlConnection);
                 {
                     if (searchByValue.ToLower() == "Room No")
                     {
-                        sqlDataAdapter = new SqlDataAdapter("SELECT * FROM ROOM ON ID LIKE '%" + searchValue + "%'", sqlConnection);
+                        sqlDataAdapter = new SqlDataAdapter("SELECT * FROM ROOM WHERE ID LIKE '%" + searchValue + "%'", sqlConnection);
                     }
 
                     else if (searchByValue.ToLower() == "Type")
                     {
-                        sqlDataAdapter = new SqlDataAdapter("SELECT * FROM ROOM ON ROOM_TYPE LIKE '%" + searchValue + "%'", sqlConnection);
+                        sqlDataAdapter = new SqlDataAdapter("SELECT * FROM ROOM WHERE ROOM_TYPE LIKE '%" + searchValue + "%'", sqlConnection);
                     }
 
                     else if (searchByValue.ToLower() == "Floor No")
                     {
-                        sqlDataAdapter = new SqlDataAdapter("SELECT * FROM ROOM ON FLOOR_NO LIKE '%" + searchValue + "%'", sqlConnection);
+                        sqlDataAdapter = new SqlDataAdapter("SELECT * FROM ROOM WHERE FLOOR_NO LIKE '%" + searchValue + "%'", sqlConnection);
                     }
 
                     else if(searchByValue.ToLower() == "Price")
                     {
-                        sqlDataAdapter = new SqlDataAdapter("SELECT * FROM ROOM ON PRICE_PER_DAY LIKE '%" + searchValue + "%'", sqlConnection);
+                        sqlDataAdapter = new SqlDataAdapter("SELECT * FROM ROOM WHERE PRICE_PER_DAY LIKE '%" + searchValue + "%'", sqlConnection);
                     }
                 }
                 else if (tableValue == "INPATIENTS")
@@ -845,7 +873,6 @@ inner join DoctorRoles on DoctorRoles.ID = Doctors.DOC_Role_ID", sqlConnection);
                     {
                         sqlDataAdapter = new SqlDataAdapter("SELECT INPATIENT.ID, PATIENTS.ID As Patient_ID, PAT_NAME, PAT_TEL, DATE_OF_AD, DATE_OF_DIS, ROOM.ID AS ROOM_NUMBER, ROOM_TYPE, TotalAmount FROM INPATIENT INNER JOIN PATIENTS ON PATIENTS.ID = PAT_CODE INNER JOIN ROOM ON ROOM.ID = ROOM_CODE WHERE PAT_NAME LIKE '%" + searchValue + "%'", sqlConnection);
                     }
-
                 }
             }
             catch (Exception e)
@@ -865,7 +892,7 @@ inner join DoctorRoles on DoctorRoles.ID = Doctors.DOC_Role_ID", sqlConnection);
                 sqlConnection.Open();
                 if (searchByValue.ToLower() == "room no")
                 {
-                    sqlDataAdapter = new SqlDataAdapter("SELECT * FROM ROOM WHERE ROOM_STATUS = 'AVAILABLE' AND ROOM_NO LIKE '%" + searchValue + "%'", sqlConnection);
+                    sqlDataAdapter = new SqlDataAdapter("SELECT * FROM ROOM WHERE ROOM_NO LIKE '%" + searchValue + "%'", sqlConnection);
                 }
                 else if (searchByValue.ToLower() == "type")
                 {

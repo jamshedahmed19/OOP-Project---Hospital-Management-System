@@ -87,8 +87,8 @@ namespace OOP_Project___Hospital_Management_System
 
         private void textBoxSearch_TextChanged(object sender, EventArgs e)
         {
-            //DatabaseOps databaseOps = new DatabaseOps();
-            //dataGridView1.DataSource = databaseOps.search("EMPLOYEE", textBoxSearch.Text, comboBoxSearchBy.Text);
+            DatabaseOps databaseOps = new DatabaseOps();
+            dataGridView1.DataSource = databaseOps.search("EMPLOYEE", textBoxSearch.Text, comboBoxSearchBy.Text);
 
         }
 

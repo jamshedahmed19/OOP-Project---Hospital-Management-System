@@ -40,5 +40,15 @@ namespace OOP_Project___Hospital_Management_System
             textBoxAddress.Text = dataTable.Rows[0][9].ToString();
             textBoxPass.Text = dataTable.Rows[0][4].ToString();
         }
+
+        private void buttonInsert_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

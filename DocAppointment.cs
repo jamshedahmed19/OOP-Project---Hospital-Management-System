@@ -31,5 +31,27 @@ namespace OOP_Project___Hospital_Management_System
         {
 
         }
+
+        private void dataGridViewINP_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void comboBoxSearchBy_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if(comboBoxSearchBy.SelectedItem.ToString()== "Current Appointments")
+            {
+                DatabaseOps doctor = new DatabaseOps();
+                dataGridViewINP.DataSource = doctor.GetAppointmentofDoctor(this.ID,"Current Appointment");
+            }
+
+            else 
+            {
+
+                DatabaseOps doctor = new DatabaseOps();
+                dataGridViewINP.DataSource = doctor.GetAppointmentofDoctor(this.ID);
+            }
+           
+        }
     }
 }

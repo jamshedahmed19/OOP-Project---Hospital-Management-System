@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Docappointment));
             this.textBoxAddress = new System.Windows.Forms.TextBox();
             this.Content = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dataGridViewINP = new System.Windows.Forms.DataGridView();
             this.comboBoxpatient = new System.Windows.Forms.ComboBox();
             this.dateTimePickerENDTIME = new System.Windows.Forms.DateTimePicker();
-            this.dataGridViewINP = new System.Windows.Forms.DataGridView();
             this.buttonReschedule = new System.Windows.Forms.Button();
             this.buttonCancelAppointment = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
@@ -64,6 +64,8 @@
             this.textBoxid = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.comboBoxSearchBy = new System.Windows.Forms.ComboBox();
+            this.label17 = new System.Windows.Forms.Label();
             this.Content.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewINP)).BeginInit();
@@ -117,9 +119,11 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(13)))));
+            this.panel1.Controls.Add(this.comboBoxSearchBy);
+            this.panel1.Controls.Add(this.dataGridViewINP);
+            this.panel1.Controls.Add(this.label17);
             this.panel1.Controls.Add(this.comboBoxpatient);
             this.panel1.Controls.Add(this.dateTimePickerENDTIME);
-            this.panel1.Controls.Add(this.dataGridViewINP);
             this.panel1.Controls.Add(this.buttonReschedule);
             this.panel1.Controls.Add(this.buttonCancelAppointment);
             this.panel1.Controls.Add(this.label15);
@@ -132,6 +136,37 @@
             this.panel1.Size = new System.Drawing.Size(1261, 550);
             this.panel1.TabIndex = 12;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // dataGridViewINP
+            // 
+            this.dataGridViewINP.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewINP.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(13)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewINP.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridViewINP.ColumnHeadersHeight = 40;
+            this.dataGridViewINP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dataGridViewINP.Location = new System.Drawing.Point(27, 87);
+            this.dataGridViewINP.Name = "dataGridViewINP";
+            this.dataGridViewINP.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewINP.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridViewINP.RowHeadersWidth = 50;
+            this.dataGridViewINP.RowTemplate.Height = 24;
+            this.dataGridViewINP.Size = new System.Drawing.Size(431, 178);
+            this.dataGridViewINP.TabIndex = 21;
+            this.dataGridViewINP.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewINP_CellContentClick);
             // 
             // comboBoxpatient
             // 
@@ -154,36 +189,6 @@
             this.dateTimePickerENDTIME.Size = new System.Drawing.Size(254, 30);
             this.dateTimePickerENDTIME.TabIndex = 14;
             this.dateTimePickerENDTIME.Value = new System.DateTime(2022, 4, 15, 0, 0, 0, 0);
-            // 
-            // dataGridViewINP
-            // 
-            this.dataGridViewINP.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridViewINP.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(13)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewINP.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewINP.ColumnHeadersHeight = 40;
-            this.dataGridViewINP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dataGridViewINP.Location = new System.Drawing.Point(71, 77);
-            this.dataGridViewINP.Name = "dataGridViewINP";
-            this.dataGridViewINP.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewINP.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewINP.RowHeadersWidth = 50;
-            this.dataGridViewINP.RowTemplate.Height = 24;
-            this.dataGridViewINP.Size = new System.Drawing.Size(341, 176);
-            this.dataGridViewINP.TabIndex = 13;
             // 
             // buttonReschedule
             // 
@@ -515,6 +520,34 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "PATIENT";
             // 
+            // comboBoxSearchBy
+            // 
+            this.comboBoxSearchBy.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBoxSearchBy.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.comboBoxSearchBy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.comboBoxSearchBy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBoxSearchBy.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.comboBoxSearchBy.FormattingEnabled = true;
+            this.comboBoxSearchBy.Items.AddRange(new object[] {
+            "Current Appointments",
+            "All Appointments"});
+            this.comboBoxSearchBy.Location = new System.Drawing.Point(321, 47);
+            this.comboBoxSearchBy.Name = "comboBoxSearchBy";
+            this.comboBoxSearchBy.Size = new System.Drawing.Size(136, 37);
+            this.comboBoxSearchBy.TabIndex = 11;
+            this.comboBoxSearchBy.SelectedIndexChanged += new System.EventHandler(this.comboBoxSearchBy_SelectedIndexChanged_1);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.label17.Location = new System.Drawing.Point(163, 50);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(119, 29);
+            this.label17.TabIndex = 10;
+            this.label17.Text = "SELECT: ";
+            // 
             // Docappointment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -538,7 +571,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ComboBox comboBoxpatient;
         private System.Windows.Forms.DateTimePicker dateTimePickerENDTIME;
-        private System.Windows.Forms.DataGridView dataGridViewINP;
         private System.Windows.Forms.Button buttonReschedule;
         private System.Windows.Forms.Button buttonCancelAppointment;
         private System.Windows.Forms.Label label15;
@@ -566,5 +598,8 @@
         private System.Windows.Forms.TextBox textBoxid;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridView dataGridViewINP;
+        private System.Windows.Forms.ComboBox comboBoxSearchBy;
+        private System.Windows.Forms.Label label17;
     }
 }

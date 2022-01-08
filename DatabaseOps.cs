@@ -63,6 +63,29 @@ where APPOINTMENT.DOC_CODE = " + docid + "", sqlConnection);
             return dataTable;
         }
 
+
+        public DataTable GetAppointmentofDoctor(int docid,string by)
+        {
+            try
+            {
+                sqlConnection.Open();
+                sqlDataAdapter = new SqlDataAdapter(@"select slotstart as Start_Timings,slotend as End_Timings,CHECKUP_DATE,PATIENTS.PAT_NAME,DOCTORS.DOC_NAME from APPOINTMENT inner join timeSlots on timeSlots.id =Slot_ID
+inner join DOCTORS on DOCTORS.ID = DOC_CODE
+inner join PATIENTS on PATIENTS.ID = PAT_CODE
+where APPOINTMENT.DOC_CODE = " + docid + "and CHECKUP_DATE ='" + DateTime.Now.ToString("yyyy-MM-dd") + "'", sqlConnection);
+
+            }
+
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            DataTable dataTable = new DataTable();
+            sqlDataAdapter.Fill(dataTable);
+            sqlConnection.Close();
+            return dataTable;
+        }
+
         public int gettimeslotidfromappointment(string apid)
         {
             try

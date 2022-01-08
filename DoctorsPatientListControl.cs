@@ -40,16 +40,16 @@ namespace OOP_Project___Hospital_Management_System
 
         private void buttonPATDelete_Click(object sender, EventArgs e)
         {
-            if (textBoxInpatientID.Text.Length != 0)
-            {
-                DatabaseOps databaseOps = new DatabaseOps();
-                databaseOps.delete("PATIENTS", textBoxInpatientID.Text);
-                display();
-            }
-            else
-            {
-                MessageBox.Show("Please select Patient to be Deleted by Clicking Row Header", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            //if (textBoxInpatientID.Text.Length != 0)
+            //{
+            //    DatabaseOps databaseOps = new DatabaseOps();
+            //    databaseOps.delete("PATIENTS", textBoxInpatientID.Text);
+            //    display();
+            //}
+            //else
+            //{
+                MessageBox.Show("Sorry You Cannot Delete Any Patient", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            //}
         }
 
         private void textBoxSearchValue_TextChanged(object sender, EventArgs e)

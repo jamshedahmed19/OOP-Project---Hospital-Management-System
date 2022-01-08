@@ -70,11 +70,11 @@ namespace OOP_Project___Hospital_Management_System
             comboBoxpatient.Text = "";
             comboBoxslots.Text = "";
             textBoxAppointmentID.Text = dataGridViewINP.Rows[e.RowIndex].Cells[0].Value.ToString();
-            comboBoxDoctor.SelectedText = dataGridViewINP.Rows[e.RowIndex].Cells[1].Value.ToString();
-            comboBoxpatient.SelectedText = dataGridViewINP.Rows[e.RowIndex].Cells[2].Value.ToString();
+            comboBoxDoctor.Text = dataGridViewINP.Rows[e.RowIndex].Cells[1].Value.ToString();
+            comboBoxpatient.Text = dataGridViewINP.Rows[e.RowIndex].Cells[2].Value.ToString();
             dateTimePicker1.Value = Convert.ToDateTime(dataGridViewINP.Rows[e.RowIndex].Cells[3].Value.ToString());
-            comboBoxslots.SelectedText = "";
-            comboBoxslots.SelectedText = dataGridViewINP.Rows[e.RowIndex].Cells[4].Value.ToString();
+            comboBoxslots.Text = "";
+            comboBoxslots.Text = dataGridViewINP.Rows[e.RowIndex].Cells[4].Value.ToString();
             
             
            

@@ -169,25 +169,25 @@ namespace OOP_Project___Hospital_Management_System
             DataTable dt = new DataTable();
             dt = databaseOps.displayInPat();
 
-            for (int i = 0; i < dt.Rows.Count; i++)
-            {
-                if (pid == Convert.ToInt32(dt.Rows[i][1].ToString()))
-                {
-                    if (stdate > Convert.ToDateTime(dt.Rows[i]["DATE_OF_DIS"]))
-                    {
-                        return true;
-                    }
-                    else
-                    {
-                        return false;
-                    }
+            //for (int i = 0; i < dt.Rows.Count; i++)
+            //{
+            //    if (pid == Convert.ToInt32(dt.Rows[i][1].ToString()))
+            //    {
+            //        if (stdate > Convert.ToDateTime(dt.Rows[i]["DATE_OF_DIS"]))
+            //        {
+            //            return true;
+            //        }
+            //        else
+            //        {
+            //            return false;
+            //        }
 
-                }
-                else
-                {
-                    return false;
-                }
-            }
+            //    }
+            //    else
+            //    {
+            //        return false;
+            //    }
+            //}
 
             return true;
         }

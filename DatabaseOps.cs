@@ -9,6 +9,8 @@
 
     internal class DatabaseOps
     {
+        public static bool isDoctorLogin = true;
+        public static int ID = 0;
         internal static string connection_string = @"Data Source=HAMMAD-WASEEM;Initial Catalog=HMS;Integrated Security=True";
         internal SqlConnection sqlConnection;
         internal SqlDataAdapter sqlDataAdapter;
@@ -25,6 +27,29 @@
             {
                 sqlConnection.Open();
                 sqlDataAdapter = new SqlDataAdapter("select id,Concat(slotstart,' ' ,slotend) as slotdec from timeSlots where slotdocid = " + docid + " and isavailable = 1", sqlConnection);
+
+            }
+
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            DataTable dataTable = new DataTable();
+            sqlDataAdapter.Fill(dataTable);
+            sqlConnection.Close();
+            return dataTable;
+        }
+
+
+        public DataTable GetAppointmentofDoctor(int docid)
+        {
+            try
+            {
+                sqlConnection.Open();
+                sqlDataAdapter = new SqlDataAdapter(@"select slotstart as Start_Timings,slotend as End_Timings,CHECKUP_DATE,PATIENTS.PAT_NAME,DOCTORS.DOC_NAME from APPOINTMENT inner join timeSlots on timeSlots.id =Slot_ID
+inner join DOCTORS on DOCTORS.ID = DOC_CODE
+inner join PATIENTS on PATIENTS.ID = PAT_CODE
+where APPOINTMENT.DOC_CODE = " + docid + "", sqlConnection);
 
             }
 
@@ -83,6 +108,56 @@
                 MessageBox.Show(e.Message, "Error Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        public void update(Doctor doctor,string DoctorLogin)
+        {
+            try
+            {
+                //int id = GetIDbyName("Department", doctor.Department, "DepartmentName", "ID");
+                //int rid = GetIDbyName("DoctorRoles", doctor.Designation, "Rolename", "ID");
+                sqlConnection.Open();
+                sqlCommand = new SqlCommand("UPDATE DOCTORS SET DOC_NAME = @NAME, DOC_GENDER = @GENDER, DOC_ADDRESS = @ADDRESS,DOC_PASS =@pass, DOC_tel = @TEL, DOC_Role_ID  = @DESIG, DOC_DEP_ID = @DEPART, DOC_EMAIL = @EMAIL ,PricePerAppointment = @ppa WHERE DOC_ID = @DID", sqlConnection);
+                sqlCommand.Parameters.AddWithValue("@DID", doctor.ID);
+                sqlCommand.Parameters.AddWithValue("@NAME", doctor.Name);
+                sqlCommand.Parameters.AddWithValue("@GENDER", doctor.Gender);
+                sqlCommand.Parameters.AddWithValue("@pass", doctor.Password);
+                sqlCommand.Parameters.AddWithValue("@ADDRESS", doctor.Address);
+                sqlCommand.Parameters.AddWithValue("@TEL", doctor.Tel);
+                sqlCommand.Parameters.AddWithValue("@DESIG", int.Parse(doctor.Designation));
+                sqlCommand.Parameters.AddWithValue("@EMAIL", doctor.Email);
+                sqlCommand.Parameters.AddWithValue("@DEPART", int.Parse(doctor.Department));
+                //sqlCommand.Parameters.AddWithValue("@st", doctor.starttime);
+                //sqlCommand.Parameters.AddWithValue("@et", doctor.endtime);
+                sqlCommand.Parameters.AddWithValue("@ppa", doctor.PricePerAppointment);
+                int a = sqlCommand.ExecuteNonQuery();
+                if (a > 0)
+                {
+                    sqlConnection.Close();
+                    MessageBox.Show("Data Updated Successfully", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Unable to updated Data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                sqlConnection.Close();
+        }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
+
+
+}
+
+
+
+
+
+
+
+
         public void update(Doctor doctor)
         {
             try
@@ -90,10 +165,11 @@
                 int id = GetIDbyName("Department", doctor.Department, "DepartmentName", "ID");
                 int rid = GetIDbyName("DoctorRoles", doctor.Designation, "Rolename", "ID");
                 sqlConnection.Open();
-                sqlCommand = new SqlCommand("UPDATE DOCTORS SET DOC_NAME = @NAME, DOC_GENDER = @GENDER, DOC_ADDRESS = @ADDRESS, DOC_tel = @TEL, DOC_Role_ID  = @DESIG, DOC_DEP_ID = @DEPART, DOC_EMAIL = @EMAIL ,PricePerAppointment = @ppa WHERE DOC_ID = @DID", sqlConnection);
+                sqlCommand = new SqlCommand("UPDATE DOCTORS SET DOC_NAME = @NAME, DOC_GENDER = @GENDER, DOC_ADDRESS = @ADDRESS,DOC_PASS =@pass, DOC_tel = @TEL, DOC_Role_ID  = @DESIG, DOC_DEP_ID = @DEPART, DOC_EMAIL = @EMAIL ,PricePerAppointment = @ppa WHERE DOC_ID = @DID", sqlConnection);
                 sqlCommand.Parameters.AddWithValue("@DID", doctor.ID);
                 sqlCommand.Parameters.AddWithValue("@NAME", doctor.Name);
                 sqlCommand.Parameters.AddWithValue("@GENDER", doctor.Gender);
+                sqlCommand.Parameters.AddWithValue("@pass", doctor.Password);
                 sqlCommand.Parameters.AddWithValue("@ADDRESS", doctor.Address);
                 sqlCommand.Parameters.AddWithValue("@TEL", doctor.Tel);
                 sqlCommand.Parameters.AddWithValue("@DESIG", rid);
@@ -107,18 +183,23 @@
                 {
                     sqlConnection.Close();
                     insertavailability(doctor);
-                }
+            }
                 else
                 {
                     MessageBox.Show("Unable to updated Data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 sqlConnection.Close();
-            }
+        }
             catch (Exception e)
             {
                 MessageBox.Show(e.Message, "Error Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
+
+
+
+
+}
+
         public void update(Appointment appointment)
         {
             try
@@ -171,9 +252,9 @@
         }
         public void insert(Doctor doctor)
         {
-            //try
-            //{
-            int id = GetIDbyName("Department", doctor.Department, "DepartmentName", "ID");
+            try
+            {
+                int id = GetIDbyName("Department", doctor.Department, "DepartmentName", "ID");
             int rid = GetIDbyName("DoctorRoles", doctor.Designation, "Rolename", "ID");
             sqlConnection.Open();
             sqlCommand = new SqlCommand("INSERT INTO DOCTORS(DOC_NAME, DOC_DEP_ID, DOC_TEL, DOC_EMAIL, DOC_PASS, DOC_GENDER, DOC_ADDRESS, DOC_Role_ID,PricePerAppointment) VALUES (@name, @depart, @tel, @email, @pass, @gender, @address, @desig,@ppa)", sqlConnection);
@@ -198,13 +279,13 @@
                 MessageBox.Show("Data not inserted", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             sqlConnection.Close();
-            //}
-            //catch (Exception e)
-            //{
-
-            //    MessageBox.Show(e.Message, "Error Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
         }
+            catch (Exception e)
+            {
+
+                MessageBox.Show(e.Message, "Error Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+}
 
         public void insertavailability(Doctor doctor)
         {
@@ -218,15 +299,15 @@
             sqlCommand.Parameters.AddWithValue("@SlotEnd", doctor.endtime);
             sqlCommand.Parameters.AddWithValue("@SlotDoctorId", docid);
             int b = sqlCommand.ExecuteNonQuery();
-            //if (b > 0)
-            //{
-            //    MessageBox.Show("Registered Successfully", "Registered", MessageBoxButtons.OK,
-            //    MessageBoxIcon.Information);
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Error in Creating Doctor Availability", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
+            if (b > 0)
+            {
+                MessageBox.Show("Registered Successfully", "Registered", MessageBoxButtons.OK,
+                MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Error in Creating Doctor Availability", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
 
@@ -496,7 +577,7 @@
                 sqlCommand.Parameters.AddWithValue("@dateof", DateTime.Now.ToString("yyyy-MM-dd"));
                 sqlCommand.ExecuteNonQuery();
 
-                int a = sqlCommand.ExecuteNonQuery();
+                sqlCommand.ExecuteNonQuery();
                 sqlConnection.Close();
             }
             catch (Exception e)
@@ -678,7 +759,7 @@
             /*else */
             if (value == "DOCTORS")
             {
-                sqlDataAdapter = new SqlDataAdapter(@"SELECT Doctors.ID,Doctors.DOC_ID,Doctors.DOC_NAME,Department.DepartmentName,Doctors.DOC_TEL,Doctors.DOC_EMAIL,Doctors.DOC_PASS,Doctors.DOC_GENDER,Doctors.DOC_ADDRESS,DoctorRoles.Rolename,DOCTORS.PricePerAppointment from Doctors 
+                sqlDataAdapter = new SqlDataAdapter(@"SELECT Doctors.ID,Doctors.DOC_ID,Doctors.DOC_NAME,Department.DepartmentName,Doctors.DOC_TEL,Doctors.DOC_EMAIL,Doctors.DOC_GENDER,Doctors.DOC_ADDRESS,DoctorRoles.Rolename,DOCTORS.PricePerAppointment from Doctors 
 inner join Department on Department.ID = Doctors.DOC_DEP_ID
 inner join DoctorRoles on DoctorRoles.ID = Doctors.DOC_Role_ID", sqlConnection);
 
@@ -943,15 +1024,15 @@ inner join DoctorRoles on DoctorRoles.ID = Doctors.DOC_Role_ID", sqlConnection);
                 sqlConnection.Open();
                 if (searchByValue.ToLower() == "patient name")
                 {
-                    sqlDataAdapter = new SqlDataAdapter("SELECT * FROM PATIENTS WHERE PAT_NAME LIKE '%" + searchValue + "%' AND DOC_CODE=" + ID + "", sqlConnection);
+                    sqlDataAdapter = new SqlDataAdapter("SELECT PAT_ID, PAT_NAME, PAT_GENDER, PAT_TEL, PAT_EMAIL, PAT_ADDRESS FROM PATIENTS INNER JOIN APPOINTMENT ON APPOINTMENT.PAT_CODE =PATIENTS.ID  where PAT_NAME LIKE '%" + searchValue + "%' AND DOC_CODE=" + ID + "", sqlConnection);
                 }
                 else if (searchByValue.ToLower() == "patient number")
                 {
-                    sqlDataAdapter = new SqlDataAdapter("SELECT * FROM PATIENTS WHERE PAT_TEL LIKE '%" + searchValue + "%' AND DOC_CODE=" + ID + "", sqlConnection);
+                    sqlDataAdapter = new SqlDataAdapter("SELECT PAT_ID, PAT_NAME, PAT_GENDER, PAT_TEL, PAT_EMAIL, PAT_ADDRESS FROM PATIENTS INNER JOIN APPOINTMENT ON APPOINTMENT.PAT_CODE =PATIENTS.ID  WHERE PAT_TEL LIKE '%" + searchValue + "%' AND DOC_CODE=" + ID + "", sqlConnection);
                 }
                 else
                 {
-                    sqlDataAdapter = new SqlDataAdapter("SELECT * FROM PATIENTS WHERE PAT_ID LIKE '%" + searchValue + "%' AND DOC_CODE=" + ID + "", sqlConnection);
+                    sqlDataAdapter = new SqlDataAdapter("SELECT PAT_ID, PAT_NAME, PAT_GENDER, PAT_TEL, PAT_EMAIL, PAT_ADDRESS FROM PATIENTS INNER JOIN APPOINTMENT ON APPOINTMENT.PAT_CODE =PATIENTS.ID  WHERE PAT_ID LIKE '%" + searchValue + "%' AND DOC_CODE=" + ID + "", sqlConnection);
                 }
             }
 
@@ -1000,6 +1081,44 @@ inner join DoctorRoles on DoctorRoles.ID = Doctors.DOC_Role_ID", sqlConnection);
             return dataTable;
         }
 
+        public DataTable DepartmentList()
+        {
+            try
+            {
+                sqlConnection.Open();
+                sqlDataAdapter = new SqlDataAdapter("SELECT * FROM Department ORDER BY DepartmentName", sqlConnection);
+            }
+
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            DataTable dataTable = new DataTable();
+            sqlDataAdapter.Fill(dataTable);
+            sqlConnection.Close();
+            return dataTable;
+        }
+
+        public DataTable RoleList()
+        {
+            try
+            {
+                sqlConnection.Open();
+                sqlDataAdapter = new SqlDataAdapter("SELECT * FROM DoctorRoles ORDER BY Rolename", sqlConnection);
+            }
+
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            DataTable dataTable = new DataTable();
+            sqlDataAdapter.Fill(dataTable);
+            sqlConnection.Close();
+            return dataTable;
+        }
+
+
+
         public DataTable patientList()
         {
             try
@@ -1042,7 +1161,7 @@ inner join DoctorRoles on DoctorRoles.ID = Doctors.DOC_Role_ID", sqlConnection);
             try
             {
                 sqlConnection.Open();
-                sqlDataAdapter = new SqlDataAdapter("SELECT * FROM PATIENTS WHERE DOC_CODE = '" + docID + "'", sqlConnection);
+                sqlDataAdapter = new SqlDataAdapter("SELECT PAT_ID, PAT_NAME, PAT_GENDER, PAT_TEL, PAT_EMAIL, PAT_ADDRESS FROM PATIENTS INNER JOIN APPOINTMENT ON APPOINTMENT.PAT_CODE =PATIENTS.ID  where  DOC_CODE = '" + docID + "'", sqlConnection);
             }
 
             catch (Exception e)
@@ -1091,6 +1210,8 @@ inner join DoctorRoles on DoctorRoles.ID = Doctors.DOC_Role_ID", sqlConnection);
                         Role = sqlDataReader.GetValue(1).ToString().ToLower(),
                         Departmental_ID = sqlDataReader.GetValue(2).ToString().ToLower(),
                     };
+
+                    ID = Convert.ToInt32(sqlDataReader.GetValue(0).ToString().ToLower());
                     dashBoard.Show();
                 }
                 else
@@ -1120,7 +1241,9 @@ inner join DoctorRoles on DoctorRoles.ID = Doctors.DOC_Role_ID", sqlConnection);
             try
             {
                 sqlConnection.Open();
-                sqlDataAdapter = new SqlDataAdapter("SELECT * FROM EMPLOYEE WHERE ID = '" + id + "'", sqlConnection);
+                sqlDataAdapter = new SqlDataAdapter(@"SELECT Doctors.ID,Doctors.DOC_ID,Doctors.DOC_NAME,Department.DepartmentName,Doctors.DOC_TEL,Doctors.DOC_EMAIL,Doctors.DOC_PASS,Doctors.DOC_GENDER,Doctors.DOC_ADDRESS,DoctorRoles.Rolename,DOCTORS.PricePerAppointment from Doctors 
+inner join Department on Department.ID = Doctors.DOC_DEP_ID
+inner join DoctorRoles on DoctorRoles.ID = Doctors.DOC_Role_ID WHERE Doctors.ID = " + int.Parse(id) + "", sqlConnection);
             }
 
             catch (Exception e)

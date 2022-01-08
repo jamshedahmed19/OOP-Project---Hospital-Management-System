@@ -57,5 +57,10 @@ namespace OOP_Project___Hospital_Management_System
             DatabaseOps databaseOps = new DatabaseOps();
             dataGridViewINP.DataSource = databaseOps.searchPat(textBoxSearchValue.Text, comboBoxSearchBy.Text, ID);
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

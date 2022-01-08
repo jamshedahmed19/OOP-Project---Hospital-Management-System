@@ -89,6 +89,7 @@ namespace OOP_Project___Hospital_Management_System
                 Department = depcbx.SelectedItem.ToString(),
                 Email = textBoxEmail.Text,
                 Address = textBoxAddress.Text,
+                Password = "123456865",
                 Tel = textBoxTel.Text,
                 starttime = dateTimePicker1.Value,
                 endtime = dateTimePicker2.Value,

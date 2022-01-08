@@ -56,6 +56,7 @@
             this.panelHead.Name = "panelHead";
             this.panelHead.Size = new System.Drawing.Size(1264, 63);
             this.panelHead.TabIndex = 1;
+            this.panelHead.Paint += new System.Windows.Forms.PaintEventHandler(this.panelHead_Paint);
             // 
             // label1
             // 

@@ -40,7 +40,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxid = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dateTimePickerENDTIME = new System.Windows.Forms.DateTimePicker();
             this.dataGridViewINP = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBoxSearchBy = new System.Windows.Forms.ComboBox();
@@ -63,6 +62,7 @@
             this.label20 = new System.Windows.Forms.Label();
             this.Content = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.comboBoxslots = new System.Windows.Forms.ComboBox();
             this.comboBoxpatient = new System.Windows.Forms.ComboBox();
             this.comboBoxDoctor = new System.Windows.Forms.ComboBox();
@@ -90,6 +90,7 @@
             this.label5.Size = new System.Drawing.Size(128, 20);
             this.label5.TabIndex = 0;
             this.label5.Text = "DESIGNATION:";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // textBoxTel
             // 
@@ -100,6 +101,7 @@
             this.textBoxTel.Name = "textBoxTel";
             this.textBoxTel.Size = new System.Drawing.Size(123, 20);
             this.textBoxTel.TabIndex = 4;
+            this.textBoxTel.TextChanged += new System.EventHandler(this.textBoxTel_TextChanged);
             // 
             // label9
             // 
@@ -111,6 +113,7 @@
             this.label9.Size = new System.Drawing.Size(75, 20);
             this.label9.TabIndex = 0;
             this.label9.Text = "TEL NO:";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // label4
             // 
@@ -122,6 +125,7 @@
             this.label4.Size = new System.Drawing.Size(86, 20);
             this.label4.TabIndex = 0;
             this.label4.Text = "GENDER:";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // textBoxName
             // 
@@ -132,6 +136,7 @@
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(123, 20);
             this.textBoxName.TabIndex = 1;
+            this.textBoxName.TextChanged += new System.EventHandler(this.textBoxName_TextChanged);
             // 
             // textBoxDesignation
             // 
@@ -142,6 +147,7 @@
             this.textBoxDesignation.Name = "textBoxDesignation";
             this.textBoxDesignation.Size = new System.Drawing.Size(123, 20);
             this.textBoxDesignation.TabIndex = 5;
+            this.textBoxDesignation.TextChanged += new System.EventHandler(this.textBoxDesignation_TextChanged);
             // 
             // label3
             // 
@@ -153,6 +159,7 @@
             this.label3.Size = new System.Drawing.Size(62, 20);
             this.label3.TabIndex = 0;
             this.label3.Text = "NAME:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // textBoxid
             // 
@@ -164,6 +171,7 @@
             this.textBoxid.ReadOnly = true;
             this.textBoxid.Size = new System.Drawing.Size(123, 20);
             this.textBoxid.TabIndex = 0;
+            this.textBoxid.TextChanged += new System.EventHandler(this.textBoxid_TextChanged);
             // 
             // textBox1
             // 
@@ -175,17 +183,6 @@
             this.textBox1.Size = new System.Drawing.Size(159, 27);
             this.textBox1.TabIndex = 17;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // dateTimePickerENDTIME
-            // 
-            this.dateTimePickerENDTIME.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePickerENDTIME.Location = new System.Drawing.Point(221, 548);
-            this.dateTimePickerENDTIME.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
-            this.dateTimePickerENDTIME.MinDate = new System.DateTime(2022, 4, 15, 0, 0, 0, 0);
-            this.dateTimePickerENDTIME.Name = "dateTimePickerENDTIME";
-            this.dateTimePickerENDTIME.Size = new System.Drawing.Size(254, 30);
-            this.dateTimePickerENDTIME.TabIndex = 14;
-            this.dateTimePickerENDTIME.Value = new System.DateTime(2022, 4, 15, 0, 0, 0, 0);
             // 
             // dataGridViewINP
             // 
@@ -216,6 +213,7 @@
             this.dataGridViewINP.RowTemplate.Height = 24;
             this.dataGridViewINP.Size = new System.Drawing.Size(1148, 318);
             this.dataGridViewINP.TabIndex = 13;
+            this.dataGridViewINP.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewINP_CellContentClick);
             this.dataGridViewINP.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewINP_RowHeaderMouseClick);
             // 
             // label2
@@ -228,6 +226,7 @@
             this.label2.Size = new System.Drawing.Size(195, 46);
             this.label2.TabIndex = 1;
             this.label2.Text = "PATIENT";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // comboBoxSearchBy
             // 
@@ -247,6 +246,7 @@
             this.comboBoxSearchBy.Name = "comboBoxSearchBy";
             this.comboBoxSearchBy.Size = new System.Drawing.Size(136, 37);
             this.comboBoxSearchBy.TabIndex = 3;
+            this.comboBoxSearchBy.SelectedIndexChanged += new System.EventHandler(this.comboBoxSearchBy_SelectedIndexChanged);
             // 
             // buttonCancelAppointment
             // 
@@ -275,6 +275,7 @@
             this.label15.Size = new System.Drawing.Size(74, 29);
             this.label15.TabIndex = 0;
             this.label15.Text = "Date:";
+            this.label15.Click += new System.EventHandler(this.label15_Click);
             // 
             // label11
             // 
@@ -286,6 +287,7 @@
             this.label11.Size = new System.Drawing.Size(79, 29);
             this.label11.TabIndex = 0;
             this.label11.Text = "Slots:";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // label16
             // 
@@ -297,6 +299,7 @@
             this.label16.Size = new System.Drawing.Size(130, 29);
             this.label16.TabIndex = 0;
             this.label16.Text = "PATIENT:";
+            this.label16.Click += new System.EventHandler(this.label16_Click);
             // 
             // textBoxAppointmentID
             // 
@@ -308,6 +311,7 @@
             this.textBoxAppointmentID.ReadOnly = true;
             this.textBoxAppointmentID.Size = new System.Drawing.Size(203, 27);
             this.textBoxAppointmentID.TabIndex = 0;
+            this.textBoxAppointmentID.TextChanged += new System.EventHandler(this.textBoxAppointmentID_TextChanged);
             // 
             // label17
             // 
@@ -319,6 +323,7 @@
             this.label17.Size = new System.Drawing.Size(155, 29);
             this.label17.TabIndex = 0;
             this.label17.Text = "SEARCH BY:";
+            this.label17.Click += new System.EventHandler(this.label17_Click);
             // 
             // label1
             // 
@@ -330,6 +335,7 @@
             this.label1.Size = new System.Drawing.Size(109, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "DOCTOR ID:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label10
             // 
@@ -341,6 +347,7 @@
             this.label10.Size = new System.Drawing.Size(131, 29);
             this.label10.TabIndex = 0;
             this.label10.Text = "DOCTOR:";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // label18
             // 
@@ -352,6 +359,7 @@
             this.label18.Size = new System.Drawing.Size(199, 29);
             this.label18.TabIndex = 0;
             this.label18.Text = "SEARCH VALUE:";
+            this.label18.Click += new System.EventHandler(this.label18_Click);
             // 
             // label19
             // 
@@ -363,6 +371,7 @@
             this.label19.Size = new System.Drawing.Size(239, 29);
             this.label19.TabIndex = 0;
             this.label19.Text = "APPOINTMENT ID:";
+            this.label19.Click += new System.EventHandler(this.label19_Click);
             // 
             // textBoxEmail
             // 
@@ -373,6 +382,7 @@
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(418, 20);
             this.textBoxEmail.TabIndex = 6;
+            this.textBoxEmail.TextChanged += new System.EventHandler(this.textBoxEmail_TextChanged);
             // 
             // label6
             // 
@@ -384,6 +394,7 @@
             this.label6.Size = new System.Drawing.Size(64, 20);
             this.label6.TabIndex = 0;
             this.label6.Text = "EMAIL:";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // textBoxDepartment
             // 
@@ -394,6 +405,7 @@
             this.textBoxDepartment.Name = "textBoxDepartment";
             this.textBoxDepartment.Size = new System.Drawing.Size(123, 20);
             this.textBoxDepartment.TabIndex = 2;
+            this.textBoxDepartment.TextChanged += new System.EventHandler(this.textBoxDepartment_TextChanged);
             // 
             // label8
             // 
@@ -405,6 +417,7 @@
             this.label8.Size = new System.Drawing.Size(129, 20);
             this.label8.TabIndex = 0;
             this.label8.Text = "DEPARTMENT:";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // textBoxAddress
             // 
@@ -416,6 +429,7 @@
             this.textBoxAddress.Name = "textBoxAddress";
             this.textBoxAddress.Size = new System.Drawing.Size(418, 56);
             this.textBoxAddress.TabIndex = 7;
+            this.textBoxAddress.TextChanged += new System.EventHandler(this.textBoxAddress_TextChanged);
             // 
             // label7
             // 
@@ -427,6 +441,7 @@
             this.label7.Size = new System.Drawing.Size(96, 20);
             this.label7.TabIndex = 0;
             this.label7.Text = "ADDRESS:";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label20
             // 
@@ -438,6 +453,7 @@
             this.label20.Size = new System.Drawing.Size(347, 46);
             this.label20.TabIndex = 1;
             this.label20.Text = "APPOINTMENTS";
+            this.label20.Click += new System.EventHandler(this.label20_Click);
             // 
             // Content
             // 
@@ -472,16 +488,17 @@
             this.Content.Name = "Content";
             this.Content.Size = new System.Drawing.Size(1264, 626);
             this.Content.TabIndex = 8;
+            this.Content.Paint += new System.Windows.Forms.PaintEventHandler(this.Content_Paint);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(13)))));
+            this.panel1.Controls.Add(this.dateTimePicker1);
             this.panel1.Controls.Add(this.comboBoxslots);
             this.panel1.Controls.Add(this.comboBoxpatient);
             this.panel1.Controls.Add(this.comboBoxDoctor);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.dateTimePickerENDTIME);
             this.panel1.Controls.Add(this.dataGridViewINP);
             this.panel1.Controls.Add(this.comboBoxSearchBy);
             this.panel1.Controls.Add(this.buttonReschedule);
@@ -503,6 +520,14 @@
             this.panel1.TabIndex = 12;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Enabled = false;
+            this.dateTimePicker1.Location = new System.Drawing.Point(221, 549);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(254, 30);
+            this.dateTimePicker1.TabIndex = 22;
+            // 
             // comboBoxslots
             // 
             this.comboBoxslots.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
@@ -521,6 +546,7 @@
             this.comboBoxslots.Name = "comboBoxslots";
             this.comboBoxslots.Size = new System.Drawing.Size(254, 39);
             this.comboBoxslots.TabIndex = 21;
+            this.comboBoxslots.SelectedIndexChanged += new System.EventHandler(this.comboBoxslots_SelectedIndexChanged);
             // 
             // comboBoxpatient
             // 
@@ -532,6 +558,7 @@
             this.comboBoxpatient.Name = "comboBoxpatient";
             this.comboBoxpatient.Size = new System.Drawing.Size(254, 33);
             this.comboBoxpatient.TabIndex = 20;
+            this.comboBoxpatient.SelectedIndexChanged += new System.EventHandler(this.comboBoxpatient_SelectedIndexChanged);
             // 
             // comboBoxDoctor
             // 
@@ -602,6 +629,7 @@
             this.comboBoxGender.Name = "comboBoxGender";
             this.comboBoxGender.Size = new System.Drawing.Size(123, 21);
             this.comboBoxGender.TabIndex = 3;
+            this.comboBoxGender.SelectedIndexChanged += new System.EventHandler(this.comboBoxGender_SelectedIndexChanged);
             // 
             // button4
             // 
@@ -618,6 +646,7 @@
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // buttonDisplay
             // 
@@ -634,6 +663,7 @@
             this.buttonDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonDisplay.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonDisplay.UseVisualStyleBackColor = false;
+            this.buttonDisplay.Click += new System.EventHandler(this.buttonDisplay_Click);
             // 
             // buttonUpdate
             // 
@@ -650,6 +680,7 @@
             this.buttonUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonUpdate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonUpdate.UseVisualStyleBackColor = false;
+            this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
             // 
             // buttonDelete
             // 
@@ -666,6 +697,7 @@
             this.buttonDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonDelete.UseVisualStyleBackColor = false;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // buttonInsert
             // 
@@ -682,6 +714,7 @@
             this.buttonInsert.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonInsert.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonInsert.UseVisualStyleBackColor = false;
+            this.buttonInsert.Click += new System.EventHandler(this.buttonInsert_Click);
             // 
             // textBoxSearch
             // 
@@ -692,6 +725,7 @@
             this.textBoxSearch.Name = "textBoxSearch";
             this.textBoxSearch.Size = new System.Drawing.Size(259, 42);
             this.textBoxSearch.TabIndex = 11;
+            this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
             // 
             // DoctorsAppointmentUserControl
             // 
@@ -720,7 +754,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBoxid;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePickerENDTIME;
         private System.Windows.Forms.DataGridView dataGridViewINP;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBoxSearchBy;
@@ -755,5 +788,6 @@
         private System.Windows.Forms.ComboBox comboBoxDoctor;
         private System.Windows.Forms.ComboBox comboBoxslots;
         private System.Windows.Forms.ComboBox comboBoxpatient;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

@@ -12,10 +12,10 @@ namespace OOP_Project___Hospital_Management_System
 {
     public partial class DoctorsAppointmentUserControl : UserControl
     {
-        public DoctorsAppointmentUserControl(string id)
+        public DoctorsAppointmentUserControl()
         {
             InitializeComponent();
-            ID = id;
+           dateTimePicker1.Value = DateTime.Today;
 
         }
 
@@ -72,7 +72,7 @@ namespace OOP_Project___Hospital_Management_System
             textBoxAppointmentID.Text = dataGridViewINP.Rows[e.RowIndex].Cells[0].Value.ToString();
             comboBoxDoctor.SelectedText = dataGridViewINP.Rows[e.RowIndex].Cells[1].Value.ToString();
             comboBoxpatient.SelectedText = dataGridViewINP.Rows[e.RowIndex].Cells[2].Value.ToString();
-            dateTimePickerENDTIME.Value = Convert.ToDateTime(dataGridViewINP.Rows[e.RowIndex].Cells[3].Value.ToString());
+            dateTimePicker1.Value = Convert.ToDateTime(dataGridViewINP.Rows[e.RowIndex].Cells[3].Value.ToString());
             comboBoxslots.SelectedText = "";
             comboBoxslots.SelectedText = dataGridViewINP.Rows[e.RowIndex].Cells[4].Value.ToString();
             
@@ -102,7 +102,7 @@ namespace OOP_Project___Hospital_Management_System
         {
             Appointment appointment = new Appointment();
             appointment.AppointmentID = textBoxAppointmentID.Text;
-            appointment.AppointmentDate = Convert.ToDateTime(dateTimePickerENDTIME.Value.ToString("yyyy-MM-dd"));
+            appointment.AppointmentDate = Convert.ToDateTime(dateTimePicker1.Value.ToString("yyyy-MM-dd"));
             appointment.TimeslotID = Convert.ToInt32(comboBoxslots.SelectedValue.ToString());
             appointment.DoctorID = Convert.ToInt32(comboBoxDoctor.SelectedValue.ToString());
             appointment.PatientID = Convert.ToInt32(comboBoxpatient.SelectedValue.ToString());
@@ -132,7 +132,7 @@ namespace OOP_Project___Hospital_Management_System
         private void button1_Click(object sender, EventArgs e)
         {
             Appointment appointment = new Appointment();
-            appointment.AppointmentDate = dateTimePickerENDTIME.Value;
+            appointment.AppointmentDate = dateTimePicker1.Value;
             appointment.TimeslotID = Convert.ToInt32(comboBoxslots.SelectedValue.ToString());
             appointment.DoctorID = Convert.ToInt32(comboBoxDoctor.SelectedValue.ToString());
             appointment.PatientID = Convert.ToInt32(comboBoxpatient.SelectedValue.ToString());
@@ -144,6 +144,196 @@ namespace OOP_Project___Hospital_Management_System
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxTel_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxDesignation_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxid_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePickerENDTIME_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridViewINP_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxSearchBy_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxAppointmentID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label19_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxEmail_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxDepartment_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxAddress_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label20_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Content_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxslots_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxpatient_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxGender_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonDisplay_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonUpdate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonInsert_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxSearch_TextChanged(object sender, EventArgs e)
         {
 
         }

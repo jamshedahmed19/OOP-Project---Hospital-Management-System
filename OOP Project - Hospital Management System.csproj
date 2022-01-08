@@ -102,6 +102,12 @@
       <DependentUpon>AdminHomeControl.cs</DependentUpon>
     </Compile>
     <Compile Include="DatabaseOps.cs" />
+    <Compile Include="DocAppointment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DocAppointment.Designer.cs">
+      <DependentUpon>DocAppointment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Doctor.cs" />
     <Compile Include="DoctorHomeUserControl.cs">
       <SubType>UserControl</SubType>
@@ -210,6 +216,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminHomeControl.resx">
       <DependentUpon>AdminHomeControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DocAppointment.resx">
+      <DependentUpon>DocAppointment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DoctorHomeUserControl.resx">
       <DependentUpon>DoctorHomeUserControl.cs</DependentUpon>

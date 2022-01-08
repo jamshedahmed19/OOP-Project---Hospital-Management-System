@@ -23,13 +23,13 @@ namespace OOP_Project___Hospital_Management_System
         public string Departmental_ID { get; set; }
         private void buttondoctorspatient_Click(object sender, EventArgs e)
         {
-            DoctorsPatientListControl doctorsPatientListControl = new DoctorsPatientListControl(Departmental_ID);
+            DoctorsPatientListControl doctorsPatientListControl = new DoctorsPatientListControl(ID);
             ControlClass.ShowControl(doctorsPatientListControl, Content);
         }
 
         private void buttonAppointments_Click(object sender, EventArgs e)
         {
-            DoctorsAppointmentUserControl doctorsAppointmentUserControl = new DoctorsAppointmentUserControl(Departmental_ID);
+            Docappointment doctorsAppointmentUserControl = new Docappointment(Convert.ToInt32(this.ID));
             ControlClass.ShowControl(doctorsAppointmentUserControl, Content);
         }
     }

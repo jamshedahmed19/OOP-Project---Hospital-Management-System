@@ -32,6 +32,9 @@ namespace OOP_Project___Hospital_Management_System
                 ControlClass.ShowControl(homeControl, Content);
                 //buttonDoctor.Image = (new Bitmap(Image.FromFile(@"C:\Users\User\OneDrive\Desktop\Icons\stethoscope.png"), new Size(32, 32)));
                 buttonDoctor.BackgroundImageLayout = ImageLayout.Stretch;
+                buttonSettings.Hide();
+                buttonPatient.Hide();
+                buttonBed.Hide();
             }
             else
             {
@@ -93,7 +96,7 @@ namespace OOP_Project___Hospital_Management_System
             }
             else
             {
-                DoctorsAppointmentUserControl doctorsAppointmentUserControl = new DoctorsAppointmentUserControl(Departmental_ID);
+                Docappointment doctorsAppointmentUserControl = new Docappointment(Convert.ToInt32((ID)));
                 ControlClass.ShowControl(doctorsAppointmentUserControl, Content);
             }
         }
@@ -119,8 +122,8 @@ namespace OOP_Project___Hospital_Management_System
             }
             else
             {
-                InpatientUserControl inpatientUserControl = new InpatientUserControl();
-                ControlClass.ShowControl(inpatientUserControl, Content);
+                DoctorsPatientListControl doctorsPatientListControl = new DoctorsPatientListControl(ID);
+                ControlClass.ShowControl(doctorsPatientListControl, Content);
             }
         }
 
@@ -137,6 +140,11 @@ namespace OOP_Project___Hospital_Management_System
         }
 
         private void Content_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelHead_Paint(object sender, PaintEventArgs e)
         {
 
         }

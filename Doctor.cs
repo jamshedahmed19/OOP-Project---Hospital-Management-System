@@ -15,6 +15,8 @@ namespace OOP_Project___Hospital_Management_System
         public string Department { get; set; }
         public string Departmental_ID { get; set; }
 
+        public string Password { get; set; }
+
         public int PricePerAppointment { get; set; }
         public Employee Employee { get; set; }
 

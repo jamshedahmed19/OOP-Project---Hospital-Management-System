@@ -60,7 +60,7 @@ namespace OOP_Project___Hospital_Management_System
             depcbx.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
             textBoxTel.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
             textBoxEmail.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
-            if (dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString() == "Male")
+            if (dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString() == "Male")
             {
                 comboBoxGender.Text = "Male";
             }
@@ -68,11 +68,11 @@ namespace OOP_Project___Hospital_Management_System
             {
                 comboBoxGender.Text = "Female";
             }
-            textBoxAddress.Text = dataGridView1.Rows[e.RowIndex].Cells[8].Value.ToString();
-            rolecbx.Text = dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString();
+            textBoxAddress.Text = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
+            rolecbx.Text = dataGridView1.Rows[e.RowIndex].Cells[8].Value.ToString();
             //dateTimePicker1.Value = Convert.ToDateTime(dataGridView1.Rows[e.RowIndex].Cells[10].Value.ToString());
             //dateTimePicker2.Value = Convert.ToDateTime();
-            priceperappointment.Text = dataGridView1.Rows[e.RowIndex].Cells[10].Value.ToString();
+            priceperappointment.Text = dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString();
             //dateTimePicker1.Value = Convert.ToDateTime(dataGridView1.Rows[e.RowIndex].Cells[11].Value.ToString());
             //dateTimePicker2.Value = Convert.ToDateTime(dataGridView1.Rows[e.RowIndex].Cells[12].Value.ToString());
 

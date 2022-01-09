@@ -21,7 +21,7 @@ namespace OOP_Project___Hospital_Management_System
         private void FindRoom_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'hMS_DatabaseDataSet4.ROOM' table. You can move, or remove it, as needed.
-            this.rOOMTableAdapter.Fill(this.hMS_DatabaseDataSet4.ROOM);
+            //this.rOOMTableAdapter.Fill(this.hMS_DatabaseDataSet4.ROOM);
         }
 
         private void textBoxRoomNo_TextChanged(object sender, EventArgs e)

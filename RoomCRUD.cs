@@ -90,7 +90,7 @@ namespace OOP_Project___Hospital_Management_System
         private void textBoxSearchValue_TextChanged(object sender, EventArgs e)
         {
             DatabaseOps databaseOps = new DatabaseOps();
-            dataGridView1.DataSource = databaseOps.search("ROOM", textBoxSearchValue.Text, comboBoxSearchBy.Text);
+            dataGridView1.DataSource = databaseOps.search(textBoxSearchValue.Text, comboBoxSearchBy.Text);
         }
 
         private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)

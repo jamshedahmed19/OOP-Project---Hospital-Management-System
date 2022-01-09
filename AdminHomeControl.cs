@@ -53,5 +53,11 @@ namespace OOP_Project___Hospital_Management_System
             emp.Show();
             this.Hide();
         }
+
+        private void buttonAppointments_Click(object sender, EventArgs e)
+        {
+            DoctorsAppointmentUserControl doctorsAppointmentUserControl = new DoctorsAppointmentUserControl();
+            ControlClass.ShowControl(doctorsAppointmentUserControl, Content);
+        }
     }
 }

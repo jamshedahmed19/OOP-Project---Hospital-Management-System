@@ -14,6 +14,10 @@ namespace OOP_Project___Hospital_Management_System
         public string Designation { get; set; }
         public string Department { get; set; }
         public string Departmental_ID { get; set; }
+
+        public string Password { get; set; }
+
+        public int PricePerAppointment { get; set; }
         public Employee Employee { get; set; }
 
         public DateTime starttime { get; set; }
@@ -52,5 +56,15 @@ namespace OOP_Project___Hospital_Management_System
             //DatabaseOps databaseOps = new DatabaseOps();
             //databaseOps.insert(employee);
         //}
+    }
+
+
+    public class Appointment
+    {
+        public string AppointmentID { get; set; }
+        public DateTime AppointmentDate { get; set; }
+        public int TimeslotID { get; set; }
+        public int PatientID { get; set; }
+        public int DoctorID { get; set; }
     }
 }

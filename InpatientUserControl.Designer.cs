@@ -50,6 +50,9 @@
             this.buttonRoomInsert = new System.Windows.Forms.Button();
             this.label20 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.textBoxPhone = new System.Windows.Forms.TextBox();
             this.textBoxSearchVal = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -91,7 +94,7 @@
             this.textBoxEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.textBoxEmail.Location = new System.Drawing.Point(216, 183);
             this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(418, 16);
+            this.textBoxEmail.Size = new System.Drawing.Size(418, 20);
             this.textBoxEmail.TabIndex = 6;
             // 
             // textBoxDepartment
@@ -101,7 +104,7 @@
             this.textBoxDepartment.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.textBoxDepartment.Location = new System.Drawing.Point(216, 157);
             this.textBoxDepartment.Name = "textBoxDepartment";
-            this.textBoxDepartment.Size = new System.Drawing.Size(123, 16);
+            this.textBoxDepartment.Size = new System.Drawing.Size(123, 20);
             this.textBoxDepartment.TabIndex = 2;
             // 
             // label8
@@ -111,7 +114,7 @@
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
             this.label8.Location = new System.Drawing.Point(67, 153);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(107, 17);
+            this.label8.Size = new System.Drawing.Size(129, 20);
             this.label8.TabIndex = 0;
             this.label8.Text = "DEPARTMENT:";
             // 
@@ -133,7 +136,7 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
             this.label2.Location = new System.Drawing.Point(19, 20);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(160, 37);
+            this.label2.Size = new System.Drawing.Size(195, 46);
             this.label2.TabIndex = 1;
             this.label2.Text = "PATIENT";
             // 
@@ -151,7 +154,7 @@
             this.dataGridViewINP.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewINP.ColumnHeadersHeight = 40;
             this.dataGridViewINP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dataGridViewINP.Location = new System.Drawing.Point(511, 132);
+            this.dataGridViewINP.Location = new System.Drawing.Point(443, 132);
             this.dataGridViewINP.Name = "dataGridViewINP";
             this.dataGridViewINP.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -164,7 +167,7 @@
             this.dataGridViewINP.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewINP.RowHeadersWidth = 50;
             this.dataGridViewINP.RowTemplate.Height = 24;
-            this.dataGridViewINP.Size = new System.Drawing.Size(683, 384);
+            this.dataGridViewINP.Size = new System.Drawing.Size(815, 384);
             this.dataGridViewINP.TabIndex = 13;
             this.dataGridViewINP.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewINP_CellContentClick);
             this.dataGridViewINP.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewINP_RowHeaderMouseClick);
@@ -175,9 +178,9 @@
             this.comboBoxPatient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBoxPatient.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.comboBoxPatient.FormattingEnabled = true;
-            this.comboBoxPatient.Location = new System.Drawing.Point(243, 141);
+            this.comboBoxPatient.Location = new System.Drawing.Point(243, 115);
             this.comboBoxPatient.Name = "comboBoxPatient";
-            this.comboBoxPatient.Size = new System.Drawing.Size(254, 28);
+            this.comboBoxPatient.Size = new System.Drawing.Size(176, 33);
             this.comboBoxPatient.TabIndex = 3;
             // 
             // label16
@@ -185,9 +188,9 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.label16.Location = new System.Drawing.Point(67, 142);
+            this.label16.Location = new System.Drawing.Point(26, 116);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(103, 24);
+            this.label16.Size = new System.Drawing.Size(130, 29);
             this.label16.TabIndex = 0;
             this.label16.Text = "PATIENT:";
             // 
@@ -196,10 +199,10 @@
             this.textBoxInpatientID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
             this.textBoxInpatientID.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxInpatientID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
-            this.textBoxInpatientID.Location = new System.Drawing.Point(243, 95);
+            this.textBoxInpatientID.Location = new System.Drawing.Point(243, 69);
             this.textBoxInpatientID.Name = "textBoxInpatientID";
             this.textBoxInpatientID.ReadOnly = true;
-            this.textBoxInpatientID.Size = new System.Drawing.Size(254, 22);
+            this.textBoxInpatientID.Size = new System.Drawing.Size(176, 27);
             this.textBoxInpatientID.TabIndex = 0;
             // 
             // label17
@@ -209,7 +212,7 @@
             this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
             this.label17.Location = new System.Drawing.Point(515, 89);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(122, 24);
+            this.label17.Size = new System.Drawing.Size(155, 29);
             this.label17.TabIndex = 0;
             this.label17.Text = "SEARCH BY:";
             // 
@@ -220,7 +223,7 @@
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
             this.label18.Location = new System.Drawing.Point(831, 89);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(160, 24);
+            this.label18.Size = new System.Drawing.Size(199, 29);
             this.label18.TabIndex = 0;
             this.label18.Text = "SEARCH VALUE:";
             // 
@@ -229,9 +232,9 @@
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.label19.Location = new System.Drawing.Point(67, 92);
+            this.label19.Location = new System.Drawing.Point(26, 66);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(148, 24);
+            this.label19.Size = new System.Drawing.Size(188, 29);
             this.label19.TabIndex = 0;
             this.label19.Text = "INPATIENT ID:";
             // 
@@ -242,7 +245,7 @@
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
             this.label6.Location = new System.Drawing.Point(67, 179);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(52, 17);
+            this.label6.Size = new System.Drawing.Size(64, 20);
             this.label6.TabIndex = 0;
             this.label6.Text = "EMAIL:";
             // 
@@ -263,7 +266,7 @@
             "Date Of Admission"});
             this.comboBoxSearchBy.Location = new System.Drawing.Point(673, 86);
             this.comboBoxSearchBy.Name = "comboBoxSearchBy";
-            this.comboBoxSearchBy.Size = new System.Drawing.Size(136, 32);
+            this.comboBoxSearchBy.Size = new System.Drawing.Size(136, 37);
             this.comboBoxSearchBy.TabIndex = 3;
             // 
             // buttonRoomUpdate
@@ -273,9 +276,9 @@
             this.buttonRoomUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.buttonRoomUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(13)))));
             this.buttonRoomUpdate.Image = ((System.Drawing.Image)(resources.GetObject("buttonRoomUpdate.Image")));
-            this.buttonRoomUpdate.Location = new System.Drawing.Point(79, 424);
+            this.buttonRoomUpdate.Location = new System.Drawing.Point(19, 450);
             this.buttonRoomUpdate.Name = "buttonRoomUpdate";
-            this.buttonRoomUpdate.Size = new System.Drawing.Size(418, 43);
+            this.buttonRoomUpdate.Size = new System.Drawing.Size(400, 43);
             this.buttonRoomUpdate.TabIndex = 9;
             this.buttonRoomUpdate.Text = " UPDATE INPATIENT";
             this.buttonRoomUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -290,9 +293,9 @@
             this.buttonRoomDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.buttonRoomDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(13)))));
             this.buttonRoomDelete.Image = ((System.Drawing.Image)(resources.GetObject("buttonRoomDelete.Image")));
-            this.buttonRoomDelete.Location = new System.Drawing.Point(79, 473);
+            this.buttonRoomDelete.Location = new System.Drawing.Point(19, 499);
             this.buttonRoomDelete.Name = "buttonRoomDelete";
-            this.buttonRoomDelete.Size = new System.Drawing.Size(418, 43);
+            this.buttonRoomDelete.Size = new System.Drawing.Size(400, 43);
             this.buttonRoomDelete.TabIndex = 10;
             this.buttonRoomDelete.Text = " DELETE INPATIENT";
             this.buttonRoomDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -307,9 +310,9 @@
             this.buttonRoomInsert.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.buttonRoomInsert.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(13)))));
             this.buttonRoomInsert.Image = ((System.Drawing.Image)(resources.GetObject("buttonRoomInsert.Image")));
-            this.buttonRoomInsert.Location = new System.Drawing.Point(79, 375);
+            this.buttonRoomInsert.Location = new System.Drawing.Point(19, 401);
             this.buttonRoomInsert.Name = "buttonRoomInsert";
-            this.buttonRoomInsert.Size = new System.Drawing.Size(418, 43);
+            this.buttonRoomInsert.Size = new System.Drawing.Size(400, 43);
             this.buttonRoomInsert.TabIndex = 8;
             this.buttonRoomInsert.Text = " ADMIT INPATIENT";
             this.buttonRoomInsert.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -324,13 +327,16 @@
             this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
             this.label20.Location = new System.Drawing.Point(19, 20);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(194, 37);
+            this.label20.Size = new System.Drawing.Size(236, 46);
             this.label20.TabIndex = 1;
             this.label20.Text = "INPATIENT";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(13)))));
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.label15);
             this.panel1.Controls.Add(this.textBoxPhone);
             this.panel1.Controls.Add(this.textBoxSearchVal);
             this.panel1.Controls.Add(this.label14);
@@ -362,14 +368,53 @@
             this.panel1.TabIndex = 12;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(13)))));
+            this.button1.Location = new System.Drawing.Point(382, 349);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(37, 31);
+            this.button1.TabIndex = 30;
+            this.button1.Text = "P";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Enabled = false;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.textBox1.Location = new System.Drawing.Point(243, 351);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(130, 27);
+            this.textBox1.TabIndex = 29;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.label15.Location = new System.Drawing.Point(22, 351);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(229, 29);
+            this.label15.TabIndex = 28;
+            this.label15.Text = "TOTAL AMOUNT :";
+            // 
             // textBoxPhone
             // 
             this.textBoxPhone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
             this.textBoxPhone.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.textBoxPhone.Location = new System.Drawing.Point(243, 183);
+            this.textBoxPhone.Location = new System.Drawing.Point(243, 157);
             this.textBoxPhone.Name = "textBoxPhone";
-            this.textBoxPhone.Size = new System.Drawing.Size(254, 25);
+            this.textBoxPhone.Size = new System.Drawing.Size(176, 31);
             this.textBoxPhone.TabIndex = 27;
             this.textBoxPhone.TextChanged += new System.EventHandler(this.textBoxSearchVal_TextChanged);
             // 
@@ -380,7 +425,7 @@
             this.textBoxSearchVal.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.textBoxSearchVal.Location = new System.Drawing.Point(1035, 93);
             this.textBoxSearchVal.Name = "textBoxSearchVal";
-            this.textBoxSearchVal.Size = new System.Drawing.Size(159, 25);
+            this.textBoxSearchVal.Size = new System.Drawing.Size(159, 31);
             this.textBoxSearchVal.TabIndex = 27;
             this.textBoxSearchVal.TextChanged += new System.EventHandler(this.textBoxSearchVal_TextChanged);
             // 
@@ -389,48 +434,49 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.label14.Location = new System.Drawing.Point(67, 333);
+            this.label14.Location = new System.Drawing.Point(26, 307);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(128, 24);
+            this.label14.Size = new System.Drawing.Size(152, 29);
             this.label14.TabIndex = 24;
-            this.label14.Text = "ROOM NO. :";
+            this.label14.Text = "ROOM NO :";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.label13.Location = new System.Drawing.Point(67, 291);
+            this.label13.Location = new System.Drawing.Point(26, 265);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(138, 24);
+            this.label13.Size = new System.Drawing.Size(174, 29);
             this.label13.TabIndex = 26;
             this.label13.Text = "ROOM TYPE:";
             // 
             // dateTimePickerDOD
             // 
             this.dateTimePickerDOD.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerDOD.Location = new System.Drawing.Point(243, 251);
+            this.dateTimePickerDOD.Location = new System.Drawing.Point(243, 225);
             this.dateTimePickerDOD.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
             this.dateTimePickerDOD.MinDate = new System.DateTime(2020, 1, 10, 0, 0, 0, 0);
             this.dateTimePickerDOD.Name = "dateTimePickerDOD";
-            this.dateTimePickerDOD.Size = new System.Drawing.Size(254, 26);
+            this.dateTimePickerDOD.Size = new System.Drawing.Size(176, 30);
             this.dateTimePickerDOD.TabIndex = 22;
             this.dateTimePickerDOD.Value = new System.DateTime(2020, 11, 6, 22, 21, 3, 0);
             // 
             // dateTimePickerDOA
             // 
             this.dateTimePickerDOA.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerDOA.Location = new System.Drawing.Point(243, 217);
+            this.dateTimePickerDOA.Location = new System.Drawing.Point(243, 191);
             this.dateTimePickerDOA.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
             this.dateTimePickerDOA.MinDate = new System.DateTime(2020, 1, 10, 0, 0, 0, 0);
             this.dateTimePickerDOA.Name = "dateTimePickerDOA";
-            this.dateTimePickerDOA.Size = new System.Drawing.Size(254, 26);
+            this.dateTimePickerDOA.Size = new System.Drawing.Size(176, 30);
             this.dateTimePickerDOA.TabIndex = 23;
             this.dateTimePickerDOA.Value = new System.DateTime(2020, 11, 6, 22, 21, 3, 0);
             // 
             // comboBoxRType
             // 
             this.comboBoxRType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.comboBoxRType.Cursor = System.Windows.Forms.Cursors.SizeNWSE;
             this.comboBoxRType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBoxRType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.comboBoxRType.FormattingEnabled = true;
@@ -438,9 +484,9 @@
             "Deluxe",
             "Private",
             "Ward"});
-            this.comboBoxRType.Location = new System.Drawing.Point(243, 290);
+            this.comboBoxRType.Location = new System.Drawing.Point(243, 264);
             this.comboBoxRType.Name = "comboBoxRType";
-            this.comboBoxRType.Size = new System.Drawing.Size(254, 28);
+            this.comboBoxRType.Size = new System.Drawing.Size(176, 33);
             this.comboBoxRType.TabIndex = 19;
             this.comboBoxRType.SelectedIndexChanged += new System.EventHandler(this.comboBoxRType_SelectedIndexChanged);
             // 
@@ -455,9 +501,9 @@
             "Female",
             "Male",
             "Other"});
-            this.comboBoxRNo.Location = new System.Drawing.Point(243, 332);
+            this.comboBoxRNo.Location = new System.Drawing.Point(243, 306);
             this.comboBoxRNo.Name = "comboBoxRNo";
-            this.comboBoxRNo.Size = new System.Drawing.Size(254, 28);
+            this.comboBoxRNo.Size = new System.Drawing.Size(176, 33);
             this.comboBoxRNo.TabIndex = 21;
             // 
             // label11
@@ -465,9 +511,9 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.label11.Location = new System.Drawing.Point(67, 251);
+            this.label11.Location = new System.Drawing.Point(26, 225);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(134, 24);
+            this.label11.Size = new System.Drawing.Size(168, 29);
             this.label11.TabIndex = 17;
             this.label11.Text = "DISCHARGE:";
             // 
@@ -476,9 +522,9 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.label10.Location = new System.Drawing.Point(67, 217);
+            this.label10.Location = new System.Drawing.Point(26, 191);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(128, 24);
+            this.label10.Size = new System.Drawing.Size(162, 29);
             this.label10.TabIndex = 18;
             this.label10.Text = "ADMISSION:";
             // 
@@ -487,9 +533,9 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
-            this.label12.Location = new System.Drawing.Point(67, 182);
+            this.label12.Location = new System.Drawing.Point(26, 156);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(147, 24);
+            this.label12.Size = new System.Drawing.Size(185, 29);
             this.label12.TabIndex = 0;
             this.label12.Text = "PATIENT TEL:";
             // 
@@ -505,7 +551,7 @@
             "Other"});
             this.comboBoxGender.Location = new System.Drawing.Point(511, 103);
             this.comboBoxGender.Name = "comboBoxGender";
-            this.comboBoxGender.Size = new System.Drawing.Size(123, 17);
+            this.comboBoxGender.Size = new System.Drawing.Size(123, 21);
             this.comboBoxGender.TabIndex = 3;
             // 
             // button4
@@ -595,7 +641,7 @@
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
             this.label7.Location = new System.Drawing.Point(67, 205);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(78, 17);
+            this.label7.Size = new System.Drawing.Size(96, 20);
             this.label7.TabIndex = 0;
             this.label7.Text = "ADDRESS:";
             // 
@@ -606,7 +652,7 @@
             this.textBoxSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
             this.textBoxSearch.Location = new System.Drawing.Point(706, 262);
             this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(259, 34);
+            this.textBoxSearch.Size = new System.Drawing.Size(259, 42);
             this.textBoxSearch.TabIndex = 11;
             // 
             // label5
@@ -616,7 +662,7 @@
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
             this.label5.Location = new System.Drawing.Point(362, 153);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(106, 17);
+            this.label5.Size = new System.Drawing.Size(128, 20);
             this.label5.TabIndex = 0;
             this.label5.Text = "DESIGNATION:";
             // 
@@ -627,7 +673,7 @@
             this.textBoxDesignation.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.textBoxDesignation.Location = new System.Drawing.Point(511, 157);
             this.textBoxDesignation.Name = "textBoxDesignation";
-            this.textBoxDesignation.Size = new System.Drawing.Size(123, 16);
+            this.textBoxDesignation.Size = new System.Drawing.Size(123, 20);
             this.textBoxDesignation.TabIndex = 5;
             // 
             // textBoxTel
@@ -637,7 +683,7 @@
             this.textBoxTel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.textBoxTel.Location = new System.Drawing.Point(511, 131);
             this.textBoxTel.Name = "textBoxTel";
-            this.textBoxTel.Size = new System.Drawing.Size(123, 16);
+            this.textBoxTel.Size = new System.Drawing.Size(123, 20);
             this.textBoxTel.TabIndex = 4;
             // 
             // label9
@@ -647,7 +693,7 @@
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
             this.label9.Location = new System.Drawing.Point(362, 127);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(63, 17);
+            this.label9.Size = new System.Drawing.Size(75, 20);
             this.label9.TabIndex = 0;
             this.label9.Text = "TEL NO:";
             // 
@@ -658,7 +704,7 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
             this.label4.Location = new System.Drawing.Point(362, 99);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 17);
+            this.label4.Size = new System.Drawing.Size(86, 20);
             this.label4.TabIndex = 0;
             this.label4.Text = "GENDER:";
             // 
@@ -669,7 +715,7 @@
             this.textBoxName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.textBoxName.Location = new System.Drawing.Point(216, 131);
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(123, 16);
+            this.textBoxName.Size = new System.Drawing.Size(123, 20);
             this.textBoxName.TabIndex = 1;
             // 
             // label3
@@ -679,7 +725,7 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
             this.label3.Location = new System.Drawing.Point(67, 127);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 17);
+            this.label3.Size = new System.Drawing.Size(62, 20);
             this.label3.TabIndex = 0;
             this.label3.Text = "NAME:";
             // 
@@ -691,7 +737,7 @@
             this.textBoxid.Location = new System.Drawing.Point(216, 105);
             this.textBoxid.Name = "textBoxid";
             this.textBoxid.ReadOnly = true;
-            this.textBoxid.Size = new System.Drawing.Size(123, 16);
+            this.textBoxid.Size = new System.Drawing.Size(123, 20);
             this.textBoxid.TabIndex = 0;
             // 
             // label1
@@ -701,7 +747,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
             this.label1.Location = new System.Drawing.Point(67, 101);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 17);
+            this.label1.Size = new System.Drawing.Size(109, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "DOCTOR ID:";
             // 
@@ -804,5 +850,8 @@
         private System.Windows.Forms.TextBox textBoxSearchVal;
         private System.Windows.Forms.TextBox textBoxPhone;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label15;
     }
 }

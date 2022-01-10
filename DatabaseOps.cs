@@ -648,7 +648,7 @@ where APPOINTMENT.DOC_CODE = " + docid + "and CHECKUP_DATE ='" + DateTime.Now.To
             try
             {
                 sqlConnection.Open();
-                sqlCommand = new SqlCommand("UPDATE ROOM set ROOM_STATUS = '" + status + "', WHERE ROOM_NO = @ROOM_NO", sqlConnection);
+                sqlCommand = new SqlCommand("UPDATE ROOM set ROOM_STATUS = '" + status + "'  WHERE ROOM_NO = @ROOM_NO", sqlConnection);
                 sqlCommand.Parameters.AddWithValue("@ROOM_NO", id);
 
                 int a = sqlCommand.ExecuteNonQuery();

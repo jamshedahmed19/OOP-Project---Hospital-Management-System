@@ -64,7 +64,7 @@ namespace OOP_Project___Hospital_Management_System
             if (inpatient.ifinpatientalreadyexisted(inpatient.PatID, inpatient.Admission) == true)
             {
                 databaseOps.insert(inpatient);
-                databaseOps.updateRoomAvailability(Convert.ToInt32(inpatient.RoomNo), "Unavailable");
+                //databaseOps.updateRoomAvailability(Convert.ToInt32(inpatient.RoomNo), "Unavailable");
             }
             else
             {

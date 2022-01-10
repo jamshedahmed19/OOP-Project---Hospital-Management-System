@@ -12,10 +12,11 @@ namespace OOP_Project___Hospital_Management_System
 {
     public partial class AdminHomeControl : UserControl
     {
-        public AdminHomeControl()
-
+        public string employeeID { get; set; }
+        public AdminHomeControl(string id)
         {
             InitializeComponent();
+            employeeID = id;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -26,7 +27,7 @@ namespace OOP_Project___Hospital_Management_System
 
         private void button9_Click(object sender, EventArgs e)
         {
-            PatientCRUD cRUDPatient = new PatientCRUD();
+            PatientCRUD cRUDPatient = new PatientCRUD(employeeID);
             ControlClass.ShowControl(cRUDPatient, Content);
         }
 

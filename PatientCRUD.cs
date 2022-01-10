@@ -12,23 +12,13 @@ namespace OOP_Project___Hospital_Management_System
 {
     public partial class PatientCRUD : UserControl
     {
-        public PatientCRUD()
+        public PatientCRUD(string id)
         {
             InitializeComponent();
-            //doctorList();
             display();
+            employeeid.Text = id;
         }
 
-
-        //public void doctorList()
-        //{
-        //    DatabaseOps databaseOps = new DatabaseOps();
-        //    DataTable dataTable = new DataTable();
-        //    dataTable = databaseOps.doctorList();
-        //    comboBoxDOCID.DataSource = dataTable;
-        //    comboBoxDOCID.ValueMember = "ID";
-        //    comboBoxDOCID.DisplayMember = "DOC_NAME";
-        //}
 
         public void display()
         {
@@ -114,8 +104,8 @@ namespace OOP_Project___Hospital_Management_System
 
         private void buttonPATDisplay_Click(object sender, EventArgs e)
         {
-            //    OutPatientUserControl outPatientUserControl = new OutPatientUserControl(textBoxPATID.Text, textBoxPATName.Text, comboBoxDOCID.SelectedValue.ToString());
-            //    ControlClass.ShowControl(outPatientUserControl, Content);
+            DoctorsAppointmentUserControl doctorsAppointmentUserControl = new DoctorsAppointmentUserControl();
+            doctorsAppointmentUserControl.Show(); 
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

@@ -28,7 +28,7 @@ namespace OOP_Project___Hospital_Management_System
             roles = databaseOps.getRoles();
             if (roles.Contains(Role))
             {
-                AdminHomeControl homeControl = new AdminHomeControl();
+                AdminHomeControl homeControl = new AdminHomeControl(ID);
                 ControlClass.ShowControl(homeControl, Content);
                 //buttonDoctor.Image = (new Bitmap(Image.FromFile(@"C:\Users\User\OneDrive\Desktop\Icons\stethoscope.png"), new Size(32, 32)));
                 buttonDoctor.BackgroundImageLayout = ImageLayout.Stretch;
@@ -51,7 +51,7 @@ namespace OOP_Project___Hospital_Management_System
         {
             if (roles.Contains(Role))
             {
-                AdminHomeControl homeControl = new AdminHomeControl();
+                AdminHomeControl homeControl = new AdminHomeControl(ID);
                 ControlClass.ShowControl(homeControl, Content);
 
                 //DoctorHomeUserControl doctorHomeUserControl = new DoctorHomeUserControl(ID, Departmental_ID);

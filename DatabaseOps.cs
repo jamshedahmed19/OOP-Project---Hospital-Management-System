@@ -11,7 +11,7 @@
     {
         public static bool isDoctorLogin = true;
         public static int ID = 0;
-        internal static string connection_string = @"Data Source=HAMMAD-WASEEM;Initial Catalog=HMS;Integrated Security=True";
+        internal static string connection_string = @"Data Source=DESKTOP-3O5KR6I;Initial Catalog=HMS;Integrated Security=True";
         internal SqlConnection sqlConnection;
         internal SqlDataAdapter sqlDataAdapter;
         internal SqlCommand sqlCommand;

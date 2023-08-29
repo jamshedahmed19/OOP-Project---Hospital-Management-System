@@ -15,6 +15,7 @@ namespace OOP_Project___Hospital_Management_System
             control.Dock = DockStyle.Fill;
             control.BringToFront();
             content.Controls.Add(control);
+            //rameen was here
         }
 
         public static void ShowPreviousControl(System.Windows.Forms.Control control)
